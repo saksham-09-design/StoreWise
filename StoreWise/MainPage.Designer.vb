@@ -53,21 +53,30 @@ Partial Class MainPage
         Me.ModifyToolStripMenuItem4 = New System.Windows.Forms.ToolStripMenuItem()
         Me.DeleteToolStripMenuItem4 = New System.Windows.Forms.ToolStripMenuItem()
         Me.DisplayToolStripMenuItem4 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.addItem = New System.Windows.Forms.Button()
+        Me.addCustomer = New System.Windows.Forms.Button()
+        Me.addSupplier = New System.Windows.Forms.Button()
+        Me.addSale = New System.Windows.Forms.Button()
+        Me.addPurchase = New System.Windows.Forms.Button()
+        Me.dashboard = New System.Windows.Forms.Button()
+        Me.DashboardToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ExitToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ManageToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UserToolStripMenuItem, Me.ItemToolStripMenuItem, Me.CustomerToolStripMenuItem, Me.TransactionsToolStripMenuItem, Me.SupplierToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UserToolStripMenuItem, Me.ItemToolStripMenuItem, Me.CustomerToolStripMenuItem, Me.TransactionsToolStripMenuItem, Me.SupplierToolStripMenuItem, Me.DashboardToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(1321, 28)
+        Me.MenuStrip1.Size = New System.Drawing.Size(1902, 28)
         Me.MenuStrip1.TabIndex = 1
         Me.MenuStrip1.Text = "MenuStrip1"
         '
         'UserToolStripMenuItem
         '
-        Me.UserToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ManageToolStripMenuItem, Me.ExitToolStripMenuItem})
+        Me.UserToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ManageToolStripMenuItem, Me.ExitToolStripMenuItem, Me.ExitToolStripMenuItem1, Me.ManageToolStripMenuItem1})
         Me.UserToolStripMenuItem.Name = "UserToolStripMenuItem"
         Me.UserToolStripMenuItem.Size = New System.Drawing.Size(50, 24)
         Me.UserToolStripMenuItem.Text = "User"
@@ -76,13 +85,13 @@ Partial Class MainPage
         '
         Me.ManageToolStripMenuItem.Name = "ManageToolStripMenuItem"
         Me.ManageToolStripMenuItem.Size = New System.Drawing.Size(152, 24)
-        Me.ManageToolStripMenuItem.Text = "Manage"
+        Me.ManageToolStripMenuItem.Text = "Login"
         '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
         Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(152, 24)
-        Me.ExitToolStripMenuItem.Text = "Exit"
+        Me.ExitToolStripMenuItem.Text = "Logout"
         '
         'ItemToolStripMenuItem
         '
@@ -252,11 +261,101 @@ Partial Class MainPage
         Me.DisplayToolStripMenuItem4.Size = New System.Drawing.Size(152, 24)
         Me.DisplayToolStripMenuItem4.Text = "Display"
         '
+        'addItem
+        '
+        Me.addItem.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.addItem.ForeColor = System.Drawing.SystemColors.Highlight
+        Me.addItem.Location = New System.Drawing.Point(1686, 47)
+        Me.addItem.Name = "addItem"
+        Me.addItem.Size = New System.Drawing.Size(308, 65)
+        Me.addItem.TabIndex = 2
+        Me.addItem.Text = "Add &item"
+        Me.addItem.UseVisualStyleBackColor = True
+        '
+        'addCustomer
+        '
+        Me.addCustomer.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.addCustomer.ForeColor = System.Drawing.SystemColors.Highlight
+        Me.addCustomer.Location = New System.Drawing.Point(1686, 142)
+        Me.addCustomer.Name = "addCustomer"
+        Me.addCustomer.Size = New System.Drawing.Size(308, 65)
+        Me.addCustomer.TabIndex = 3
+        Me.addCustomer.Text = "Add &customer"
+        Me.addCustomer.UseVisualStyleBackColor = True
+        '
+        'addSupplier
+        '
+        Me.addSupplier.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.addSupplier.ForeColor = System.Drawing.SystemColors.Highlight
+        Me.addSupplier.Location = New System.Drawing.Point(1686, 237)
+        Me.addSupplier.Name = "addSupplier"
+        Me.addSupplier.Size = New System.Drawing.Size(308, 65)
+        Me.addSupplier.TabIndex = 4
+        Me.addSupplier.Text = "Add supp&lier"
+        Me.addSupplier.UseVisualStyleBackColor = True
+        '
+        'addSale
+        '
+        Me.addSale.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.addSale.ForeColor = System.Drawing.SystemColors.Highlight
+        Me.addSale.Location = New System.Drawing.Point(1686, 329)
+        Me.addSale.Name = "addSale"
+        Me.addSale.Size = New System.Drawing.Size(308, 65)
+        Me.addSale.TabIndex = 5
+        Me.addSale.Text = "Add &sale"
+        Me.addSale.UseVisualStyleBackColor = True
+        '
+        'addPurchase
+        '
+        Me.addPurchase.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.addPurchase.ForeColor = System.Drawing.SystemColors.Highlight
+        Me.addPurchase.Location = New System.Drawing.Point(1686, 418)
+        Me.addPurchase.Name = "addPurchase"
+        Me.addPurchase.Size = New System.Drawing.Size(308, 65)
+        Me.addPurchase.TabIndex = 6
+        Me.addPurchase.Text = "Add &purchase"
+        Me.addPurchase.UseVisualStyleBackColor = True
+        '
+        'dashboard
+        '
+        Me.dashboard.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dashboard.ForeColor = System.Drawing.SystemColors.Highlight
+        Me.dashboard.Location = New System.Drawing.Point(1686, 508)
+        Me.dashboard.Name = "dashboard"
+        Me.dashboard.Size = New System.Drawing.Size(308, 65)
+        Me.dashboard.TabIndex = 7
+        Me.dashboard.Text = "&Dashboard"
+        Me.dashboard.UseVisualStyleBackColor = True
+        '
+        'DashboardToolStripMenuItem
+        '
+        Me.DashboardToolStripMenuItem.Name = "DashboardToolStripMenuItem"
+        Me.DashboardToolStripMenuItem.Size = New System.Drawing.Size(94, 24)
+        Me.DashboardToolStripMenuItem.Text = "Dashboard"
+        '
+        'ExitToolStripMenuItem1
+        '
+        Me.ExitToolStripMenuItem1.Name = "ExitToolStripMenuItem1"
+        Me.ExitToolStripMenuItem1.Size = New System.Drawing.Size(152, 24)
+        Me.ExitToolStripMenuItem1.Text = "Exit"
+        '
+        'ManageToolStripMenuItem1
+        '
+        Me.ManageToolStripMenuItem1.Name = "ManageToolStripMenuItem1"
+        Me.ManageToolStripMenuItem1.Size = New System.Drawing.Size(152, 24)
+        Me.ManageToolStripMenuItem1.Text = "Manage"
+        '
         'MainPage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1321, 731)
+        Me.ClientSize = New System.Drawing.Size(1902, 1033)
+        Me.Controls.Add(Me.dashboard)
+        Me.Controls.Add(Me.addPurchase)
+        Me.Controls.Add(Me.addSale)
+        Me.Controls.Add(Me.addSupplier)
+        Me.Controls.Add(Me.addCustomer)
+        Me.Controls.Add(Me.addItem)
         Me.Controls.Add(Me.MenuStrip1)
         Me.IsMdiContainer = True
         Me.MainMenuStrip = Me.MenuStrip1
@@ -300,4 +399,13 @@ Partial Class MainPage
     Friend WithEvents ModifyToolStripMenuItem4 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents DeleteToolStripMenuItem4 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents DisplayToolStripMenuItem4 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents addItem As System.Windows.Forms.Button
+    Friend WithEvents addCustomer As System.Windows.Forms.Button
+    Friend WithEvents addSupplier As System.Windows.Forms.Button
+    Friend WithEvents addSale As System.Windows.Forms.Button
+    Friend WithEvents addPurchase As System.Windows.Forms.Button
+    Friend WithEvents dashboard As System.Windows.Forms.Button
+    Friend WithEvents DashboardToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ExitToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ManageToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
 End Class

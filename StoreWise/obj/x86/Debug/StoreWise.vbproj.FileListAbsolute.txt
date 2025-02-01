@@ -1,0 +1,10 @@
+c:\users\saksham\documents\visual studio 2010\Projects\StoreWise\StoreWise\bin\Debug\StoreWise.exe
+c:\users\saksham\documents\visual studio 2010\Projects\StoreWise\StoreWise\bin\Debug\StoreWise.pdb
+c:\users\saksham\documents\visual studio 2010\Projects\StoreWise\StoreWise\bin\Debug\StoreWise.xml
+c:\users\saksham\documents\visual studio 2010\Projects\StoreWise\StoreWise\obj\x86\Debug\StoreWise.Resources.resources
+c:\users\saksham\documents\visual studio 2010\Projects\StoreWise\StoreWise\obj\x86\Debug\StoreWise.vbproj.GenerateResource.Cache
+c:\users\saksham\documents\visual studio 2010\Projects\StoreWise\StoreWise\obj\x86\Debug\StoreWise.exe
+c:\users\saksham\documents\visual studio 2010\Projects\StoreWise\StoreWise\obj\x86\Debug\StoreWise.xml
+c:\users\saksham\documents\visual studio 2010\Projects\StoreWise\StoreWise\obj\x86\Debug\StoreWise.pdb
+C:\Users\Saksham\documents\visual studio 2010\Projects\StoreWise\StoreWise\obj\x86\Debug\StoreWise.Splash.resources
+C:\Users\Saksham\documents\visual studio 2010\Projects\StoreWise\StoreWise\obj\x86\Debug\StoreWise.MainPage.resources

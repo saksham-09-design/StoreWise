@@ -73,6 +73,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="loginPage.Designer.vb">
+      <DependentUpon>loginPage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="loginPage.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Splash.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +109,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="loginPage.resx">
+      <DependentUpon>loginPage.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Splash.resx">
       <DependentUpon>Splash.vb</DependentUpon>
     </EmbeddedResource>

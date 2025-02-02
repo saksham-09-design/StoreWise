@@ -79,6 +79,12 @@
     <Compile Include="AddItem.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ModifyItem.Designer.vb">
+      <DependentUpon>ModifyItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ModifyItem.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="loginPage.Designer.vb">
       <DependentUpon>loginPage.vb</DependentUpon>
     </Compile>
@@ -120,6 +126,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="loginPage.resx">
       <DependentUpon>loginPage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModifyItem.resx">
+      <DependentUpon>ModifyItem.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Splash.resx">
       <DependentUpon>Splash.vb</DependentUpon>

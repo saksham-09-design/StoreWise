@@ -4,9 +4,9 @@
         If ProgressBar1.Value < 1000 Then
             ProgressBar1.Value += 100
         Else
-            MainPage.Show()
-            Timer1.Enabled = False
             Me.Hide()
+            loginPage.Show()
+            Timer1.Enabled = False
         End If
     End Sub
 End Class

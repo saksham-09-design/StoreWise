@@ -374,7 +374,7 @@ Partial Class MainPage
         Me.IsMdiContainer = True
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "MainPage"
-        Me.Text = "Form2"
+        Me.Text = "Store Wise"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()

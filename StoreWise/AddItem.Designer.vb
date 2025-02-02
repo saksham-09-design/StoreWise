@@ -233,7 +233,7 @@ Partial Class AddItem
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Name = "AddItem"
-        Me.Text = "Form1"
+        Me.Text = "Add Item"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

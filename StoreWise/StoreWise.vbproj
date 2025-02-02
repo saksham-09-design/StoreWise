@@ -79,6 +79,18 @@
     <Compile Include="AddItem.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="DeleteItem.Designer.vb">
+      <DependentUpon>DeleteItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteItem.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchItem.Designer.vb">
+      <DependentUpon>SearchItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SearchItem.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ModifyItem.Designer.vb">
       <DependentUpon>ModifyItem.vb</DependentUpon>
     </Compile>
@@ -124,11 +136,17 @@
     <EmbeddedResource Include="AddItem.resx">
       <DependentUpon>AddItem.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DeleteItem.resx">
+      <DependentUpon>DeleteItem.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="loginPage.resx">
       <DependentUpon>loginPage.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModifyItem.resx">
       <DependentUpon>ModifyItem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchItem.resx">
+      <DependentUpon>SearchItem.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Splash.resx">
       <DependentUpon>Splash.vb</DependentUpon>

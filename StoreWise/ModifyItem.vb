@@ -18,6 +18,7 @@
         Modify.Visible = True
         clear.Visible = True
         cancle.Visible = True
+        itemName.Text = ComboBox1.SelectedItem
     End Sub
 
     Private Sub Modify_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Modify.Click
@@ -46,5 +47,9 @@
             e.Handled = True
             MessageBox.Show("Price must be in Numbers.")
         End If
+    End Sub
+
+    Private Sub cancle_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cancle.Click
+        Me.Close()
     End Sub
 End Class

@@ -21,4 +21,16 @@
         modifyItem.MdiParent = Me
         modifyItem.Show()
     End Sub
+
+    Private Sub DeleteToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DeleteToolStripMenuItem.Click
+        Dim deleteItem As New DeleteItem
+        deleteItem.MdiParent = Me
+        deleteItem.Show()
+    End Sub
+
+    Private Sub SearchToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SearchToolStripMenuItem.Click
+        Dim searchItem As New SearchItem
+        searchItem.MdiParent = Me
+        searchItem.Show()
+    End Sub
 End Class

@@ -33,4 +33,10 @@
         searchItem.MdiParent = Me
         searchItem.Show()
     End Sub
+
+    Private Sub UpdateToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles UpdateToolStripMenuItem.Click
+        Dim updateStock As New updateStock
+        updateStock.MdiParent = Me
+        updateStock.Show()
+    End Sub
 End Class

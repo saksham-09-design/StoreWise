@@ -39,4 +39,17 @@
         updateStock.MdiParent = Me
         updateStock.Show()
     End Sub
+
+    Private Sub AddItemToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AddItemToolStripMenuItem.Click
+        Dim addItem As New AddItem
+        addItem.MdiParent = Me
+        addItem.Show()
+    End Sub
+
+    Private Sub UpdateStockToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles UpdateStockToolStripMenuItem.Click
+        Dim updateStock As New updateStock
+        updateStock.MdiParent = Me
+        updateStock.Show()
+    End Sub
+
 End Class

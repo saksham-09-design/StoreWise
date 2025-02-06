@@ -1,4 +1,4 @@
-﻿Public Class SalesPage
+﻿Public Class ModifySales
 
     Private Sub phone_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles phone.KeyPress
         If (Not Char.IsNumber(e.KeyChar) And Not e.KeyChar = Chr(Keys.Back) And Not e.KeyChar = Chr(Keys.Delete)) Then
@@ -27,6 +27,7 @@
     End Sub
 
     Private Sub save_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles save.Click
+
         If (itemName.Text.Trim = "" Or itemQuantity.Text.Trim = "" Or customerName.Text.Trim = "" Or phone.Text.Trim = "" Or itemQuantity.Text.Trim = "") Then
             MessageBox.Show("Please Fill All Fields")
         Else
@@ -34,7 +35,7 @@
         End If
     End Sub
 
-    Private Sub GroupBox1_Enter(ByVal sender As System.Object, ByVal e As System.EventArgs)
+    Private Sub ModifySales_Load(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
     End Sub
 End Class

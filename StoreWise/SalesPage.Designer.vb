@@ -46,6 +46,7 @@ Partial Class SalesPage
         Me.clear = New System.Windows.Forms.Button()
         Me.save = New System.Windows.Forms.Button()
         Me.itemName = New System.Windows.Forms.ComboBox()
+        Me.Add = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -163,6 +164,7 @@ Partial Class SalesPage
         Me.tID.ReadOnly = True
         Me.tID.Size = New System.Drawing.Size(308, 39)
         Me.tID.TabIndex = 14
+        Me.tID.Text = "1"
         '
         'Label7
         '
@@ -249,7 +251,7 @@ Partial Class SalesPage
         Me.DataGridView1.Location = New System.Drawing.Point(45, 434)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(1236, 198)
+        Me.DataGridView1.Size = New System.Drawing.Size(1270, 198)
         Me.DataGridView1.TabIndex = 70
         '
         'cancle
@@ -258,11 +260,11 @@ Partial Class SalesPage
         Me.cancle.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.cancle.Font = New System.Drawing.Font("Now", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cancle.ForeColor = System.Drawing.Color.Ivory
-        Me.cancle.Location = New System.Drawing.Point(750, 658)
+        Me.cancle.Location = New System.Drawing.Point(870, 661)
         Me.cancle.Name = "cancle"
         Me.cancle.Size = New System.Drawing.Size(168, 52)
         Me.cancle.TabIndex = 73
-        Me.cancle.Text = "Cancle"
+        Me.cancle.Text = "&Cancle"
         Me.cancle.UseVisualStyleBackColor = False
         '
         'clear
@@ -271,7 +273,7 @@ Partial Class SalesPage
         Me.clear.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.clear.Font = New System.Drawing.Font("Now", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.clear.ForeColor = System.Drawing.Color.Ivory
-        Me.clear.Location = New System.Drawing.Point(565, 658)
+        Me.clear.Location = New System.Drawing.Point(685, 661)
         Me.clear.Name = "clear"
         Me.clear.Size = New System.Drawing.Size(168, 52)
         Me.clear.TabIndex = 72
@@ -283,11 +285,11 @@ Partial Class SalesPage
         Me.save.BackColor = System.Drawing.Color.Red
         Me.save.Font = New System.Drawing.Font("Now", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.save.ForeColor = System.Drawing.Color.Ivory
-        Me.save.Location = New System.Drawing.Point(381, 658)
+        Me.save.Location = New System.Drawing.Point(501, 661)
         Me.save.Name = "save"
         Me.save.Size = New System.Drawing.Size(168, 52)
         Me.save.TabIndex = 71
-        Me.save.Text = "Save"
+        Me.save.Text = "&Save"
         Me.save.UseVisualStyleBackColor = False
         '
         'itemName
@@ -302,13 +304,26 @@ Partial Class SalesPage
         Me.itemName.Size = New System.Drawing.Size(308, 38)
         Me.itemName.TabIndex = 74
         '
+        'Add
+        '
+        Me.Add.BackColor = System.Drawing.Color.Red
+        Me.Add.Font = New System.Drawing.Font("Now", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Add.ForeColor = System.Drawing.Color.Ivory
+        Me.Add.Location = New System.Drawing.Point(315, 661)
+        Me.Add.Name = "Add"
+        Me.Add.Size = New System.Drawing.Size(168, 52)
+        Me.Add.TabIndex = 75
+        Me.Add.Text = "Add"
+        Me.Add.UseVisualStyleBackColor = False
+        '
         'SalesPage
         '
-        Me.AcceptButton = Me.save
+        Me.AcceptButton = Me.Add
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.clear
         Me.ClientSize = New System.Drawing.Size(1351, 743)
+        Me.Controls.Add(Me.Add)
         Me.Controls.Add(Me.itemName)
         Me.Controls.Add(Me.cancle)
         Me.Controls.Add(Me.clear)
@@ -364,4 +379,5 @@ Partial Class SalesPage
     Friend WithEvents clear As System.Windows.Forms.Button
     Friend WithEvents save As System.Windows.Forms.Button
     Friend WithEvents itemName As System.Windows.Forms.ComboBox
+    Friend WithEvents Add As System.Windows.Forms.Button
 End Class

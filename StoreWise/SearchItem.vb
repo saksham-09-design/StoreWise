@@ -16,9 +16,15 @@
         itemSP.Visible = True
         itemGST.Visible = True
         cancle.Visible = True
+        reOrder.Visible = True
+        Label5.Visible = True
         itemName.Text = ComboBox1.SelectedItem
     End Sub
     Private Sub cancle_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cancle.Click
         Me.Close()
+    End Sub
+
+    Private Sub SearchItem_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
     End Sub
 End Class

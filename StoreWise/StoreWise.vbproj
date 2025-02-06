@@ -85,6 +85,12 @@
     <Compile Include="DeleteItem.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ModifySales.Designer.vb">
+      <DependentUpon>ModifySales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ModifySales.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="SalesPage.Designer.vb">
       <DependentUpon>SalesPage.vb</DependentUpon>
     </Compile>
@@ -150,6 +156,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DeleteItem.resx">
       <DependentUpon>DeleteItem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModifySales.resx">
+      <DependentUpon>ModifySales.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SalesPage.resx">
       <DependentUpon>SalesPage.vb</DependentUpon>

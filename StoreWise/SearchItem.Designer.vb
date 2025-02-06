@@ -38,6 +38,8 @@ Partial Class SearchItem
         Me.itemName = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.reOrder = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'ComboBox1
@@ -69,7 +71,7 @@ Partial Class SearchItem
         Me.cancle.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.cancle.Font = New System.Drawing.Font("Now", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cancle.ForeColor = System.Drawing.Color.Ivory
-        Me.cancle.Location = New System.Drawing.Point(426, 562)
+        Me.cancle.Location = New System.Drawing.Point(426, 607)
         Me.cancle.Name = "cancle"
         Me.cancle.Size = New System.Drawing.Size(168, 52)
         Me.cancle.TabIndex = 74
@@ -85,7 +87,7 @@ Partial Class SearchItem
         Me.itemGST.Font = New System.Drawing.Font("Now Medium", 15.0!)
         Me.itemGST.FormattingEnabled = True
         Me.itemGST.Items.AddRange(New Object() {"5%", "12%", "18%", "28%", "Exempt"})
-        Me.itemGST.Location = New System.Drawing.Point(521, 479)
+        Me.itemGST.Location = New System.Drawing.Point(521, 524)
         Me.itemGST.Name = "itemGST"
         Me.itemGST.Size = New System.Drawing.Size(388, 38)
         Me.itemGST.TabIndex = 65
@@ -96,7 +98,7 @@ Partial Class SearchItem
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Now", 16.0!, System.Drawing.FontStyle.Bold)
         Me.Label8.ForeColor = System.Drawing.Color.Red
-        Me.Label8.Location = New System.Drawing.Point(106, 485)
+        Me.Label8.Location = New System.Drawing.Point(106, 530)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(133, 32)
         Me.Label8.TabIndex = 73
@@ -106,7 +108,7 @@ Partial Class SearchItem
         'itemSP
         '
         Me.itemSP.Font = New System.Drawing.Font("Now Medium", 15.0!)
-        Me.itemSP.Location = New System.Drawing.Point(521, 415)
+        Me.itemSP.Location = New System.Drawing.Point(521, 460)
         Me.itemSP.Name = "itemSP"
         Me.itemSP.ReadOnly = True
         Me.itemSP.Size = New System.Drawing.Size(388, 37)
@@ -118,7 +120,7 @@ Partial Class SearchItem
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Now", 16.0!, System.Drawing.FontStyle.Bold)
         Me.Label7.ForeColor = System.Drawing.Color.Red
-        Me.Label7.Location = New System.Drawing.Point(106, 420)
+        Me.Label7.Location = New System.Drawing.Point(106, 465)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(314, 32)
         Me.Label7.TabIndex = 72
@@ -128,7 +130,7 @@ Partial Class SearchItem
         'itemCost
         '
         Me.itemCost.Font = New System.Drawing.Font("Now Medium", 15.0!)
-        Me.itemCost.Location = New System.Drawing.Point(521, 351)
+        Me.itemCost.Location = New System.Drawing.Point(521, 396)
         Me.itemCost.Name = "itemCost"
         Me.itemCost.ReadOnly = True
         Me.itemCost.Size = New System.Drawing.Size(388, 37)
@@ -140,7 +142,7 @@ Partial Class SearchItem
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Now", 16.0!, System.Drawing.FontStyle.Bold)
         Me.Label6.ForeColor = System.Drawing.Color.Red
-        Me.Label6.Location = New System.Drawing.Point(106, 356)
+        Me.Label6.Location = New System.Drawing.Point(106, 401)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(201, 32)
         Me.Label6.TabIndex = 71
@@ -228,11 +230,35 @@ Partial Class SearchItem
         Me.Label1.TabIndex = 66
         Me.Label1.Text = "Search Item"
         '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Now", 16.0!, System.Drawing.FontStyle.Bold)
+        Me.Label9.ForeColor = System.Drawing.Color.Red
+        Me.Label9.Location = New System.Drawing.Point(106, 349)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(232, 32)
+        Me.Label9.TabIndex = 78
+        Me.Label9.Text = "Re-Order Level:"
+        Me.Label9.Visible = False
+        '
+        'reOrder
+        '
+        Me.reOrder.Font = New System.Drawing.Font("Now Medium", 15.0!)
+        Me.reOrder.Location = New System.Drawing.Point(521, 344)
+        Me.reOrder.Name = "reOrder"
+        Me.reOrder.ReadOnly = True
+        Me.reOrder.Size = New System.Drawing.Size(388, 37)
+        Me.reOrder.TabIndex = 77
+        Me.reOrder.Visible = False
+        '
         'SearchItem
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1014, 645)
+        Me.ClientSize = New System.Drawing.Size(1020, 690)
+        Me.Controls.Add(Me.Label9)
+        Me.Controls.Add(Me.reOrder)
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.cancle)
@@ -271,4 +297,6 @@ Partial Class SearchItem
     Friend WithEvents itemName As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents Label9 As System.Windows.Forms.Label
+    Friend WithEvents reOrder As System.Windows.Forms.TextBox
 End Class

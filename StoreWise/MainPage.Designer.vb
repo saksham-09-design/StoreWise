@@ -23,6 +23,7 @@ Partial Class MainPage
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainPage))
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.UserToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExitToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
@@ -53,10 +54,6 @@ Partial Class MainPage
         Me.DisplayToolStripMenuItem4 = New System.Windows.Forms.ToolStripMenuItem()
         Me.SearchToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
         Me.DashboardToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.addItem = New System.Windows.Forms.Button()
-        Me.addSupplier = New System.Windows.Forms.Button()
-        Me.addSale = New System.Windows.Forms.Button()
-        Me.addPurchase = New System.Windows.Forms.Button()
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.AddItemToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AddSalesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -65,10 +62,13 @@ Partial Class MainPage
         Me.UpdateStockToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripSeparator()
         Me.SearchToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.searchTransaction = New System.Windows.Forms.Button()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.ContextMenuStrip1.SuspendLayout()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -238,8 +238,8 @@ Partial Class MainPage
         '
         Me.AddToolStripMenuItem4.Name = "AddToolStripMenuItem4"
         Me.AddToolStripMenuItem4.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Alt) _
-                    Or System.Windows.Forms.Keys.P), System.Windows.Forms.Keys)
-        Me.AddToolStripMenuItem4.Size = New System.Drawing.Size(185, 24)
+                    Or System.Windows.Forms.Keys.L), System.Windows.Forms.Keys)
+        Me.AddToolStripMenuItem4.Size = New System.Drawing.Size(184, 24)
         Me.AddToolStripMenuItem4.Text = "Add"
         '
         'ModifyToolStripMenuItem4
@@ -273,50 +273,6 @@ Partial Class MainPage
                     Or System.Windows.Forms.Keys.D), System.Windows.Forms.Keys)
         Me.DashboardToolStripMenuItem.Size = New System.Drawing.Size(94, 24)
         Me.DashboardToolStripMenuItem.Text = "Dashboard"
-        '
-        'addItem
-        '
-        Me.addItem.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.addItem.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.addItem.Location = New System.Drawing.Point(1686, 47)
-        Me.addItem.Name = "addItem"
-        Me.addItem.Size = New System.Drawing.Size(308, 65)
-        Me.addItem.TabIndex = 2
-        Me.addItem.Text = "Add Item"
-        Me.addItem.UseVisualStyleBackColor = True
-        '
-        'addSupplier
-        '
-        Me.addSupplier.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.addSupplier.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.addSupplier.Location = New System.Drawing.Point(1686, 138)
-        Me.addSupplier.Name = "addSupplier"
-        Me.addSupplier.Size = New System.Drawing.Size(308, 65)
-        Me.addSupplier.TabIndex = 4
-        Me.addSupplier.Text = "Add supplier"
-        Me.addSupplier.UseVisualStyleBackColor = True
-        '
-        'addSale
-        '
-        Me.addSale.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.addSale.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.addSale.Location = New System.Drawing.Point(1686, 230)
-        Me.addSale.Name = "addSale"
-        Me.addSale.Size = New System.Drawing.Size(308, 65)
-        Me.addSale.TabIndex = 5
-        Me.addSale.Text = "Add sale"
-        Me.addSale.UseVisualStyleBackColor = True
-        '
-        'addPurchase
-        '
-        Me.addPurchase.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.addPurchase.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.addPurchase.Location = New System.Drawing.Point(1686, 319)
-        Me.addPurchase.Name = "addPurchase"
-        Me.addPurchase.Size = New System.Drawing.Size(308, 65)
-        Me.addPurchase.TabIndex = 6
-        Me.addPurchase.Text = "Add purchase"
-        Me.addPurchase.UseVisualStyleBackColor = True
         '
         'ContextMenuStrip1
         '
@@ -364,20 +320,43 @@ Partial Class MainPage
         Me.SearchToolStripMenuItem1.Size = New System.Drawing.Size(201, 24)
         Me.SearchToolStripMenuItem1.Text = "Search Transaction"
         '
-        'searchTransaction
-        '
-        Me.searchTransaction.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.searchTransaction.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.searchTransaction.Location = New System.Drawing.Point(1686, 406)
-        Me.searchTransaction.Name = "searchTransaction"
-        Me.searchTransaction.Size = New System.Drawing.Size(308, 65)
-        Me.searchTransaction.TabIndex = 8
-        Me.searchTransaction.Text = "Search Tansaction"
-        Me.searchTransaction.UseVisualStyleBackColor = True
-        '
         'ToolTip1
         '
         Me.ToolTip1.ToolTipTitle = "Click here to logout"
+        '
+        'Panel1
+        '
+        Me.Panel1.BackgroundImage = CType(resources.GetObject("Panel1.BackgroundImage"), System.Drawing.Image)
+        Me.Panel1.Controls.Add(Me.Label2)
+        Me.Panel1.Controls.Add(Me.Label1)
+        Me.Panel1.Location = New System.Drawing.Point(1430, 796)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(619, 190)
+        Me.Panel1.TabIndex = 13
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Now Black", 50.0!, System.Drawing.FontStyle.Bold)
+        Me.Label1.ForeColor = System.Drawing.Color.Yellow
+        Me.Label1.Location = New System.Drawing.Point(61, 18)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(498, 101)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "Store Wise"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Font = New System.Drawing.Font("Now Black", 20.0!, System.Drawing.FontStyle.Bold)
+        Me.Label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label2.Location = New System.Drawing.Point(71, 119)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(455, 41)
+        Me.Label2.TabIndex = 1
+        Me.Label2.Text = "Saksham BCA III(B) 5556"
         '
         'MainPage
         '
@@ -385,11 +364,7 @@ Partial Class MainPage
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1902, 1033)
         Me.ContextMenuStrip = Me.ContextMenuStrip1
-        Me.Controls.Add(Me.searchTransaction)
-        Me.Controls.Add(Me.addPurchase)
-        Me.Controls.Add(Me.addSale)
-        Me.Controls.Add(Me.addSupplier)
-        Me.Controls.Add(Me.addItem)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.IsMdiContainer = True
         Me.MainMenuStrip = Me.MenuStrip1
@@ -399,6 +374,8 @@ Partial Class MainPage
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.ContextMenuStrip1.ResumeLayout(False)
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -426,10 +403,6 @@ Partial Class MainPage
     Friend WithEvents ModifyToolStripMenuItem4 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents DeleteToolStripMenuItem4 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents DisplayToolStripMenuItem4 As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents addItem As System.Windows.Forms.Button
-    Friend WithEvents addSupplier As System.Windows.Forms.Button
-    Friend WithEvents addSale As System.Windows.Forms.Button
-    Friend WithEvents addPurchase As System.Windows.Forms.Button
     Friend WithEvents DashboardToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ExitToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents SearchToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
@@ -445,6 +418,8 @@ Partial Class MainPage
     Friend WithEvents UpdateStockToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripMenuItem2 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents SearchToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents searchTransaction As System.Windows.Forms.Button
     Friend WithEvents ToolTip1 As System.Windows.Forms.ToolTip
+    Friend WithEvents Panel1 As System.Windows.Forms.Panel
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents Label2 As System.Windows.Forms.Label
 End Class

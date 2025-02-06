@@ -66,6 +66,7 @@ Partial Class MainPage
         Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripSeparator()
         Me.SearchToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.searchTransaction = New System.Windows.Forms.Button()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.MenuStrip1.SuspendLayout()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -85,11 +86,12 @@ Partial Class MainPage
         Me.UserToolStripMenuItem.Name = "UserToolStripMenuItem"
         Me.UserToolStripMenuItem.Size = New System.Drawing.Size(50, 24)
         Me.UserToolStripMenuItem.Text = "User"
+        Me.UserToolStripMenuItem.ToolTipText = "User"
         '
         'ExitToolStripMenuItem1
         '
         Me.ExitToolStripMenuItem1.Name = "ExitToolStripMenuItem1"
-        Me.ExitToolStripMenuItem1.Size = New System.Drawing.Size(152, 24)
+        Me.ExitToolStripMenuItem1.Size = New System.Drawing.Size(125, 24)
         Me.ExitToolStripMenuItem1.Text = "Logout"
         '
         'ItemToolStripMenuItem
@@ -373,6 +375,10 @@ Partial Class MainPage
         Me.searchTransaction.Text = "Search Tansaction"
         Me.searchTransaction.UseVisualStyleBackColor = True
         '
+        'ToolTip1
+        '
+        Me.ToolTip1.ToolTipTitle = "Click here to logout"
+        '
         'MainPage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -440,4 +446,5 @@ Partial Class MainPage
     Friend WithEvents ToolStripMenuItem2 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents SearchToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents searchTransaction As System.Windows.Forms.Button
+    Friend WithEvents ToolTip1 As System.Windows.Forms.ToolTip
 End Class

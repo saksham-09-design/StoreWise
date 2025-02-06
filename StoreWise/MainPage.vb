@@ -52,4 +52,9 @@
         updateStock.Show()
     End Sub
 
+    Private Sub AddToolStripMenuItem2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AddToolStripMenuItem2.Click
+        Dim addSales As New SalesPage
+        addSales.MdiParent = Me
+        addSales.Show()
+    End Sub
 End Class

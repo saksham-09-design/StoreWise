@@ -46,4 +46,8 @@
             MessageBox.Show("Price must be in Numbers.")
         End If
     End Sub
+
+    Private Sub itemQuantity_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles itemQuantity.TextChanged
+
+    End Sub
 End Class

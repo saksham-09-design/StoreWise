@@ -96,6 +96,7 @@ Partial Class loginPage
         'cancle
         '
         Me.cancle.BackColor = System.Drawing.Color.Red
+        Me.cancle.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.cancle.Font = New System.Drawing.Font("Now", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cancle.ForeColor = System.Drawing.Color.Ivory
         Me.cancle.Location = New System.Drawing.Point(374, 364)

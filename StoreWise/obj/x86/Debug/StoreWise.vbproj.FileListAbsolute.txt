@@ -14,3 +14,4 @@ C:\Users\Saksham\documents\visual studio 2010\Projects\StoreWise\StoreWise\obj\x
 C:\Users\Saksham\documents\visual studio 2010\Projects\StoreWise\StoreWise\obj\x86\Debug\StoreWise.DeleteItem.resources
 C:\Users\Saksham\documents\visual studio 2010\Projects\StoreWise\StoreWise\obj\x86\Debug\StoreWise.SearchItem.resources
 C:\Users\Saksham\documents\visual studio 2010\Projects\StoreWise\StoreWise\obj\x86\Debug\StoreWise.updateStock.resources
+C:\Users\Saksham\documents\visual studio 2010\Projects\StoreWise\StoreWise\obj\x86\Debug\StoreWise.SalesPage.resources

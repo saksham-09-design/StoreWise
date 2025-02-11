@@ -8,17 +8,16 @@
         itemName.Clear()
         itemUnit.SelectedIndex = 5
         reOrder.Clear()
-        itemQuantity.Clear()
         itemCost.Clear()
         itemSP.Clear()
         itemGST.SelectedIndex = 4
     End Sub
 
     Private Sub save_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles save.Click
-        If (itemName.Text.Trim = "" Or itemQuantity.Text.Trim = "" Or itemCost.Text.Trim = "" Or itemSP.Text.Trim = "" Or reOrder.Text.Trim = "") Then
+        If (itemName.Text.Trim = "" Or itemCost.Text.Trim = "" Or itemSP.Text.Trim = "" Or reOrder.Text.Trim = "") Then
             MessageBox.Show("Please Fill All Fields")
         Else
-            MessageBox.Show("Entered Data is: " & itemName.Text & itemQuantity.Text & itemCost.Text & itemSP.Text & itemUnit.SelectedItem & itemGST.SelectedItem)
+            MessageBox.Show("Entered Data is: " & itemName.Text & itemCost.Text & itemSP.Text & itemUnit.SelectedItem & itemGST.SelectedItem)
         End If
     End Sub
 
@@ -27,7 +26,7 @@
         itemGST.SelectedIndex = 4
     End Sub
 
-    Private Sub itemQuantity_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles itemQuantity.KeyPress
+    Private Sub itemQuantity_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
         If (Not Char.IsNumber(e.KeyChar) And Not e.KeyChar = Chr(Keys.Back) And Not e.KeyChar = Chr(Keys.Delete)) Then
             e.Handled = True
             MessageBox.Show("Quantity must be in Numbers.")

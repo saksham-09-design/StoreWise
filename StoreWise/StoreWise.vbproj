@@ -85,22 +85,46 @@
     <Compile Include="DeleteItem.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="deleteSales.Designer.vb">
+      <DependentUpon>deleteSales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="deleteSales.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modifyPurchase.Designer.vb">
+      <DependentUpon>modifyPurchase.vb</DependentUpon>
+    </Compile>
+    <Compile Include="modifyPurchase.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addPurchase.Designer.vb">
+      <DependentUpon>addPurchase.vb</DependentUpon>
+    </Compile>
+    <Compile Include="addPurchase.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="purchase.Designer.vb">
+      <DependentUpon>purchase.vb</DependentUpon>
+    </Compile>
+    <Compile Include="purchase.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sales.Designer.vb">
+      <DependentUpon>sales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="sales.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ModifySales.Designer.vb">
       <DependentUpon>ModifySales.vb</DependentUpon>
     </Compile>
     <Compile Include="ModifySales.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SalesPage.Designer.vb">
-      <DependentUpon>SalesPage.vb</DependentUpon>
+    <Compile Include="addSales.Designer.vb">
+      <DependentUpon>addSales.vb</DependentUpon>
     </Compile>
-    <Compile Include="SalesPage.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="updateStock.Designer.vb">
-      <DependentUpon>updateStock.vb</DependentUpon>
-    </Compile>
-    <Compile Include="updateStock.vb">
+    <Compile Include="addSales.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SearchItem.Designer.vb">
@@ -157,11 +181,26 @@
     <EmbeddedResource Include="DeleteItem.resx">
       <DependentUpon>DeleteItem.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="deleteSales.resx">
+      <DependentUpon>deleteSales.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="modifyPurchase.resx">
+      <DependentUpon>modifyPurchase.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addPurchase.resx">
+      <DependentUpon>addPurchase.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="purchase.resx">
+      <DependentUpon>purchase.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sales.resx">
+      <DependentUpon>sales.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ModifySales.resx">
       <DependentUpon>ModifySales.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SalesPage.resx">
-      <DependentUpon>SalesPage.vb</DependentUpon>
+    <EmbeddedResource Include="addSales.resx">
+      <DependentUpon>addSales.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="loginPage.resx">
       <DependentUpon>loginPage.vb</DependentUpon>
@@ -183,9 +222,6 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="updateStock.resx">
-      <DependentUpon>updateStock.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

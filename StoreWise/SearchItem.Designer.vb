@@ -75,7 +75,7 @@ Partial Class SearchItem
         Me.cancle.Name = "cancle"
         Me.cancle.Size = New System.Drawing.Size(168, 52)
         Me.cancle.TabIndex = 74
-        Me.cancle.Text = "Cancle"
+        Me.cancle.Text = "Cancel"
         Me.cancle.UseVisualStyleBackColor = False
         Me.cancle.Visible = False
         '
@@ -256,6 +256,7 @@ Partial Class SearchItem
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.CancelButton = Me.cancle
         Me.ClientSize = New System.Drawing.Size(1020, 690)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.reOrder)

@@ -52,7 +52,7 @@ Partial Class ModifyItem
         Me.cancle.Name = "cancle"
         Me.cancle.Size = New System.Drawing.Size(168, 52)
         Me.cancle.TabIndex = 38
-        Me.cancle.Text = "Cancle"
+        Me.cancle.Text = "Cancel"
         Me.cancle.UseVisualStyleBackColor = False
         Me.cancle.Visible = False
         '

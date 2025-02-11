@@ -103,7 +103,7 @@ Partial Class loginPage
         Me.cancle.Name = "cancle"
         Me.cancle.Size = New System.Drawing.Size(168, 52)
         Me.cancle.TabIndex = 6
-        Me.cancle.Text = "Cancle"
+        Me.cancle.Text = "Cancel"
         Me.cancle.UseVisualStyleBackColor = False
         '
         'loginPage

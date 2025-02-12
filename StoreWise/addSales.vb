@@ -45,8 +45,18 @@
     Private Sub Add_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Add.Click
         If itemQuantity.Text <> "" Then
             If CInt(itemQuantity.Text) > 0 Then
+                Dim price As Single
+                Dim quantity As Integer
+                Dim fAmt As Single
+                Dim diss As Single
                 itemList.Items.Add(itemName.Text)
                 quantityList.Items.Add(itemQuantity.Text)
+                priceList.Items.Add("100")
+                price = CSng(priceList.Items.Item(priceList.Items.Count - 1))
+                quantity = CInt(quantityList.Items.Item(quantityList.Items.Count - 1))
+                fAmt = price * quantity
+                totalPrice.Items.Add(fAmt)
+
                 itemQuantity.Text = ""
                 itemName.SelectedIndex = 0
             Else
@@ -71,7 +81,10 @@
 
     End Sub
 
-    Private Sub quantityList_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles quantityList.SelectedIndexChanged
-
+    Private Sub Discount_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles Discount.KeyPress
+        If (Not Char.IsNumber(e.KeyChar) And Not e.KeyChar = Chr(Keys.Back) And Not e.KeyChar = Chr(Keys.Delete)) Then
+            e.Handled = True
+            MessageBox.Show("Price must be in Numbers.")
+        End If
     End Sub
 End Class

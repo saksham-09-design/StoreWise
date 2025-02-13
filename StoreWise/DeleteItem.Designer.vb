@@ -39,6 +39,8 @@ Partial Class DeleteItem
         Me.itemName = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.Label9 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'ComboBox1
@@ -70,7 +72,7 @@ Partial Class DeleteItem
         Me.cancle.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.cancle.Font = New System.Drawing.Font("Now", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cancle.ForeColor = System.Drawing.Color.Ivory
-        Me.cancle.Location = New System.Drawing.Point(609, 576)
+        Me.cancle.Location = New System.Drawing.Point(609, 626)
         Me.cancle.Name = "cancle"
         Me.cancle.Size = New System.Drawing.Size(168, 52)
         Me.cancle.TabIndex = 57
@@ -86,7 +88,7 @@ Partial Class DeleteItem
         Me.itemGST.Font = New System.Drawing.Font("Now Medium", 15.0!)
         Me.itemGST.FormattingEnabled = True
         Me.itemGST.Items.AddRange(New Object() {"5%", "12%", "18%", "28%", "Exempt"})
-        Me.itemGST.Location = New System.Drawing.Point(529, 503)
+        Me.itemGST.Location = New System.Drawing.Point(529, 553)
         Me.itemGST.Name = "itemGST"
         Me.itemGST.Size = New System.Drawing.Size(388, 38)
         Me.itemGST.TabIndex = 47
@@ -97,7 +99,7 @@ Partial Class DeleteItem
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Now", 16.0!, System.Drawing.FontStyle.Bold)
         Me.Label8.ForeColor = System.Drawing.Color.Red
-        Me.Label8.Location = New System.Drawing.Point(114, 509)
+        Me.Label8.Location = New System.Drawing.Point(114, 559)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(133, 32)
         Me.Label8.TabIndex = 56
@@ -107,7 +109,7 @@ Partial Class DeleteItem
         'itemSP
         '
         Me.itemSP.Font = New System.Drawing.Font("Now Medium", 15.0!)
-        Me.itemSP.Location = New System.Drawing.Point(529, 439)
+        Me.itemSP.Location = New System.Drawing.Point(529, 489)
         Me.itemSP.Name = "itemSP"
         Me.itemSP.ReadOnly = True
         Me.itemSP.Size = New System.Drawing.Size(388, 37)
@@ -119,7 +121,7 @@ Partial Class DeleteItem
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Now", 16.0!, System.Drawing.FontStyle.Bold)
         Me.Label7.ForeColor = System.Drawing.Color.Red
-        Me.Label7.Location = New System.Drawing.Point(114, 444)
+        Me.Label7.Location = New System.Drawing.Point(114, 494)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(314, 32)
         Me.Label7.TabIndex = 55
@@ -129,7 +131,7 @@ Partial Class DeleteItem
         'itemCost
         '
         Me.itemCost.Font = New System.Drawing.Font("Now Medium", 15.0!)
-        Me.itemCost.Location = New System.Drawing.Point(529, 375)
+        Me.itemCost.Location = New System.Drawing.Point(529, 425)
         Me.itemCost.Name = "itemCost"
         Me.itemCost.ReadOnly = True
         Me.itemCost.Size = New System.Drawing.Size(388, 37)
@@ -141,7 +143,7 @@ Partial Class DeleteItem
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Now", 16.0!, System.Drawing.FontStyle.Bold)
         Me.Label6.ForeColor = System.Drawing.Color.Red
-        Me.Label6.Location = New System.Drawing.Point(114, 380)
+        Me.Label6.Location = New System.Drawing.Point(114, 430)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(201, 32)
         Me.Label6.TabIndex = 54
@@ -153,7 +155,7 @@ Partial Class DeleteItem
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Now", 16.0!, System.Drawing.FontStyle.Bold)
         Me.Label5.ForeColor = System.Drawing.Color.Red
-        Me.Label5.Location = New System.Drawing.Point(114, 317)
+        Me.Label5.Location = New System.Drawing.Point(114, 367)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(144, 32)
         Me.Label5.TabIndex = 53
@@ -168,7 +170,7 @@ Partial Class DeleteItem
         Me.itemUnit.Font = New System.Drawing.Font("Now Medium", 15.0!)
         Me.itemUnit.FormattingEnabled = True
         Me.itemUnit.Items.AddRange(New Object() {"Pcs.", "Kgs.", "Dozen", "Gms.", "Meter", "Units"})
-        Me.itemUnit.Location = New System.Drawing.Point(529, 251)
+        Me.itemUnit.Location = New System.Drawing.Point(529, 301)
         Me.itemUnit.Name = "itemUnit"
         Me.itemUnit.Size = New System.Drawing.Size(388, 38)
         Me.itemUnit.TabIndex = 43
@@ -177,7 +179,7 @@ Partial Class DeleteItem
         'itemQuantity
         '
         Me.itemQuantity.Font = New System.Drawing.Font("Now Medium", 15.0!)
-        Me.itemQuantity.Location = New System.Drawing.Point(529, 312)
+        Me.itemQuantity.Location = New System.Drawing.Point(529, 362)
         Me.itemQuantity.Name = "itemQuantity"
         Me.itemQuantity.ReadOnly = True
         Me.itemQuantity.Size = New System.Drawing.Size(388, 37)
@@ -189,7 +191,7 @@ Partial Class DeleteItem
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Now", 16.0!, System.Drawing.FontStyle.Bold)
         Me.Label4.ForeColor = System.Drawing.Color.Red
-        Me.Label4.Location = New System.Drawing.Point(114, 257)
+        Me.Label4.Location = New System.Drawing.Point(114, 307)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(82, 32)
         Me.Label4.TabIndex = 52
@@ -201,7 +203,7 @@ Partial Class DeleteItem
         Me.Delete.BackColor = System.Drawing.Color.Red
         Me.Delete.Font = New System.Drawing.Font("Now", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Delete.ForeColor = System.Drawing.Color.Ivory
-        Me.Delete.Location = New System.Drawing.Point(240, 576)
+        Me.Delete.Location = New System.Drawing.Point(240, 626)
         Me.Delete.Name = "Delete"
         Me.Delete.Size = New System.Drawing.Size(168, 52)
         Me.Delete.TabIndex = 50
@@ -212,7 +214,7 @@ Partial Class DeleteItem
         'itemName
         '
         Me.itemName.Font = New System.Drawing.Font("Now Medium", 15.8!)
-        Me.itemName.Location = New System.Drawing.Point(529, 191)
+        Me.itemName.Location = New System.Drawing.Point(529, 241)
         Me.itemName.Name = "itemName"
         Me.itemName.ReadOnly = True
         Me.itemName.Size = New System.Drawing.Size(388, 39)
@@ -224,7 +226,7 @@ Partial Class DeleteItem
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Now", 16.0!, System.Drawing.FontStyle.Bold)
         Me.Label2.ForeColor = System.Drawing.Color.Red
-        Me.Label2.Location = New System.Drawing.Point(114, 200)
+        Me.Label2.Location = New System.Drawing.Point(114, 250)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(176, 32)
         Me.Label2.TabIndex = 49
@@ -242,11 +244,37 @@ Partial Class DeleteItem
         Me.Label1.TabIndex = 48
         Me.Label1.Text = "Delete Item"
         '
+        'ComboBox2
+        '
+        Me.ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox2.Enabled = False
+        Me.ComboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.ComboBox2.Font = New System.Drawing.Font("Now Medium", 15.0!)
+        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Items.AddRange(New Object() {"Sunfeast", "Cremica", "Nestle"})
+        Me.ComboBox2.Location = New System.Drawing.Point(529, 188)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(388, 38)
+        Me.ComboBox2.TabIndex = 60
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Now", 16.0!, System.Drawing.FontStyle.Bold)
+        Me.Label9.ForeColor = System.Drawing.Color.Red
+        Me.Label9.Location = New System.Drawing.Point(114, 194)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(137, 32)
+        Me.Label9.TabIndex = 61
+        Me.Label9.Text = "Supplier:"
+        '
         'DeleteItem
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1031, 692)
+        Me.Controls.Add(Me.ComboBox2)
+        Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.cancle)
@@ -287,4 +315,6 @@ Partial Class DeleteItem
     Friend WithEvents itemName As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents ComboBox2 As System.Windows.Forms.ComboBox
+    Friend WithEvents Label9 As System.Windows.Forms.Label
 End Class

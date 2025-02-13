@@ -38,6 +38,8 @@ Partial Class AddItem
         Me.cancle = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.reOrder = New System.Windows.Forms.TextBox()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Label1
@@ -57,7 +59,7 @@ Partial Class AddItem
         Me.clear.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.clear.Font = New System.Drawing.Font("Now", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.clear.ForeColor = System.Drawing.Color.Ivory
-        Me.clear.Location = New System.Drawing.Point(336, 498)
+        Me.clear.Location = New System.Drawing.Point(336, 569)
         Me.clear.Name = "clear"
         Me.clear.Size = New System.Drawing.Size(168, 52)
         Me.clear.TabIndex = 12
@@ -69,7 +71,7 @@ Partial Class AddItem
         Me.save.BackColor = System.Drawing.Color.Red
         Me.save.Font = New System.Drawing.Font("Now", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.save.ForeColor = System.Drawing.Color.Ivory
-        Me.save.Location = New System.Drawing.Point(152, 498)
+        Me.save.Location = New System.Drawing.Point(152, 569)
         Me.save.Name = "save"
         Me.save.Size = New System.Drawing.Size(168, 52)
         Me.save.TabIndex = 11
@@ -79,7 +81,7 @@ Partial Class AddItem
         'itemName
         '
         Me.itemName.Font = New System.Drawing.Font("Now Medium", 15.8!)
-        Me.itemName.Location = New System.Drawing.Point(441, 110)
+        Me.itemName.Location = New System.Drawing.Point(441, 173)
         Me.itemName.Name = "itemName"
         Me.itemName.Size = New System.Drawing.Size(388, 39)
         Me.itemName.TabIndex = 1
@@ -89,7 +91,7 @@ Partial Class AddItem
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Now", 16.0!, System.Drawing.FontStyle.Bold)
         Me.Label2.ForeColor = System.Drawing.Color.Red
-        Me.Label2.Location = New System.Drawing.Point(26, 119)
+        Me.Label2.Location = New System.Drawing.Point(26, 182)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(176, 32)
         Me.Label2.TabIndex = 7
@@ -100,7 +102,7 @@ Partial Class AddItem
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Now", 16.0!, System.Drawing.FontStyle.Bold)
         Me.Label4.ForeColor = System.Drawing.Color.Red
-        Me.Label4.Location = New System.Drawing.Point(26, 176)
+        Me.Label4.Location = New System.Drawing.Point(26, 239)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(82, 32)
         Me.Label4.TabIndex = 13
@@ -113,7 +115,7 @@ Partial Class AddItem
         Me.itemUnit.Font = New System.Drawing.Font("Now Medium", 15.0!)
         Me.itemUnit.FormattingEnabled = True
         Me.itemUnit.Items.AddRange(New Object() {"Pcs.", "Kgs.", "Dozen", "Gms.", "Meter", "Units"})
-        Me.itemUnit.Location = New System.Drawing.Point(441, 170)
+        Me.itemUnit.Location = New System.Drawing.Point(441, 233)
         Me.itemUnit.Name = "itemUnit"
         Me.itemUnit.Size = New System.Drawing.Size(388, 38)
         Me.itemUnit.TabIndex = 3
@@ -123,7 +125,7 @@ Partial Class AddItem
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Now", 16.0!, System.Drawing.FontStyle.Bold)
         Me.Label6.ForeColor = System.Drawing.Color.Red
-        Me.Label6.Location = New System.Drawing.Point(26, 302)
+        Me.Label6.Location = New System.Drawing.Point(26, 365)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(201, 32)
         Me.Label6.TabIndex = 17
@@ -132,7 +134,7 @@ Partial Class AddItem
         'itemCost
         '
         Me.itemCost.Font = New System.Drawing.Font("Now Medium", 15.0!)
-        Me.itemCost.Location = New System.Drawing.Point(441, 297)
+        Me.itemCost.Location = New System.Drawing.Point(441, 360)
         Me.itemCost.Name = "itemCost"
         Me.itemCost.Size = New System.Drawing.Size(388, 37)
         Me.itemCost.TabIndex = 5
@@ -142,7 +144,7 @@ Partial Class AddItem
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Now", 16.0!, System.Drawing.FontStyle.Bold)
         Me.Label7.ForeColor = System.Drawing.Color.Red
-        Me.Label7.Location = New System.Drawing.Point(26, 366)
+        Me.Label7.Location = New System.Drawing.Point(26, 429)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(314, 32)
         Me.Label7.TabIndex = 19
@@ -151,7 +153,7 @@ Partial Class AddItem
         'itemSP
         '
         Me.itemSP.Font = New System.Drawing.Font("Now Medium", 15.0!)
-        Me.itemSP.Location = New System.Drawing.Point(441, 361)
+        Me.itemSP.Location = New System.Drawing.Point(441, 424)
         Me.itemSP.Name = "itemSP"
         Me.itemSP.Size = New System.Drawing.Size(388, 37)
         Me.itemSP.TabIndex = 6
@@ -161,7 +163,7 @@ Partial Class AddItem
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Now", 16.0!, System.Drawing.FontStyle.Bold)
         Me.Label8.ForeColor = System.Drawing.Color.Red
-        Me.Label8.Location = New System.Drawing.Point(26, 431)
+        Me.Label8.Location = New System.Drawing.Point(26, 494)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(133, 32)
         Me.Label8.TabIndex = 21
@@ -174,7 +176,7 @@ Partial Class AddItem
         Me.itemGST.Font = New System.Drawing.Font("Now Medium", 15.0!)
         Me.itemGST.FormattingEnabled = True
         Me.itemGST.Items.AddRange(New Object() {"5%", "12%", "18%", "28%", "Exempt"})
-        Me.itemGST.Location = New System.Drawing.Point(441, 425)
+        Me.itemGST.Location = New System.Drawing.Point(441, 488)
         Me.itemGST.Name = "itemGST"
         Me.itemGST.Size = New System.Drawing.Size(388, 38)
         Me.itemGST.TabIndex = 7
@@ -185,7 +187,7 @@ Partial Class AddItem
         Me.cancle.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.cancle.Font = New System.Drawing.Font("Now", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cancle.ForeColor = System.Drawing.Color.Ivory
-        Me.cancle.Location = New System.Drawing.Point(521, 498)
+        Me.cancle.Location = New System.Drawing.Point(521, 569)
         Me.cancle.Name = "cancle"
         Me.cancle.Size = New System.Drawing.Size(168, 52)
         Me.cancle.TabIndex = 22
@@ -197,7 +199,7 @@ Partial Class AddItem
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Now", 16.0!, System.Drawing.FontStyle.Bold)
         Me.Label3.ForeColor = System.Drawing.Color.Red
-        Me.Label3.Location = New System.Drawing.Point(26, 236)
+        Me.Label3.Location = New System.Drawing.Point(26, 299)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(232, 32)
         Me.Label3.TabIndex = 24
@@ -206,16 +208,41 @@ Partial Class AddItem
         'reOrder
         '
         Me.reOrder.Font = New System.Drawing.Font("Now Medium", 15.0!)
-        Me.reOrder.Location = New System.Drawing.Point(441, 231)
+        Me.reOrder.Location = New System.Drawing.Point(441, 294)
         Me.reOrder.Name = "reOrder"
         Me.reOrder.Size = New System.Drawing.Size(388, 37)
         Me.reOrder.TabIndex = 23
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.ComboBox1.Font = New System.Drawing.Font("Now Medium", 15.0!)
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"Sunfeast", "Cremica", "Nestle"})
+        Me.ComboBox1.Location = New System.Drawing.Point(441, 121)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(388, 38)
+        Me.ComboBox1.TabIndex = 25
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Now", 16.0!, System.Drawing.FontStyle.Bold)
+        Me.Label5.ForeColor = System.Drawing.Color.Red
+        Me.Label5.Location = New System.Drawing.Point(26, 127)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(137, 32)
+        Me.Label5.TabIndex = 26
+        Me.Label5.Text = "Supplier:"
         '
         'AddItem
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(877, 579)
+        Me.ClientSize = New System.Drawing.Size(877, 661)
+        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.reOrder)
         Me.Controls.Add(Me.cancle)
@@ -254,4 +281,6 @@ Partial Class AddItem
     Friend WithEvents cancle As System.Windows.Forms.Button
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents reOrder As System.Windows.Forms.TextBox
+    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
+    Friend WithEvents Label5 As System.Windows.Forms.Label
 End Class

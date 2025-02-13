@@ -172,4 +172,8 @@
 
         fBill.Text = "₹" & (fAmount - disAmt) & "/-"
     End Sub
+
+    Private Sub itemQuantity_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles itemQuantity.TextChanged
+
+    End Sub
 End Class

@@ -151,25 +151,25 @@
         If Discount.Text <> "" Then
             If CSng(Discount.Text) > 100 Then
                 MessageBox.Show("Discount Should be less than 100%", "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-            Else
-                Discount_Cal()
             End If
         End If
+        Discount_Cal()
     End Sub
 
     Private Sub Discount_Cal()
         Dim fAmount As Single
+        Dim discountRate As Single
+
         For Each i In totalPrice.Items  'calculating the total price
             fAmount += CSng(i)
         Next
         If Discount.Text = "" Then
-            fBill.Text = "₹" & fAmount & "/-"
+            discountRate = 0
         Else
-            Dim finalAmount = CSng(fAmount)
-            Dim discountRate = CSng(Discount.Text)
-            Dim disAmt = (finalAmount * discountRate) / 100     'calculating the discount
-
-            fBill.Text = "₹" & (finalAmount - disAmt) & "/-"
+            discountRate = CSng(Discount.Text)
         End If
+        Dim disAmt = (fAmount * discountRate) / 100     'calculating the discount
+
+        fBill.Text = "₹" & (fAmount - disAmt) & "/-"
     End Sub
 End Class

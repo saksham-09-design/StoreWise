@@ -75,7 +75,7 @@
                 fAmount = fAmount.Replace("-"c, "")
                 finalAmount = CSng(fAmount)
                 finalAmount += fAmt
-                fBill.Text = "₹" & finalAmount & "/-"
+                fBill.Text = "₹" & Format(finalAmount, "Standard") & "/-"
                 If Discount.Text <> "" Then
                     Discount_Cal()
                 End If
@@ -120,7 +120,7 @@
                 finalAmount = CSng(fAmount)
                 fAmt = finalAmount - ((price + gst - (((price + gst) * disc) / 100)) * quantity)
                 finalAmount = fAmt
-                fBill.Text = "₹" & finalAmount & "/-"
+                fBill.Text = "₹" & Format(finalAmount, "Standard") & "/-"
 
 
 
@@ -170,7 +170,7 @@
         End If
         Dim disAmt = (fAmount * discountRate) / 100     'calculating the discount
 
-        fBill.Text = "₹" & (fAmount - disAmt) & "/-"
+        fBill.Text = "₹" & Format((fAmount - disAmt), "Standard") & "/-"
     End Sub
 
     Private Sub itemQuantity_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles itemQuantity.TextChanged

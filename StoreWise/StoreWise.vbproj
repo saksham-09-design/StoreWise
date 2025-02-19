@@ -73,6 +73,12 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="addSupplier.Designer.vb">
+      <DependentUpon>addSupplier.vb</DependentUpon>
+    </Compile>
+    <Compile Include="addSupplier.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ApplicationEvents.vb" />
     <Compile Include="AddItem.Designer.vb">
       <DependentUpon>AddItem.vb</DependentUpon>
@@ -92,6 +98,12 @@
     <Compile Include="deleteSales.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="deleteSupplier.Designer.vb">
+      <DependentUpon>deleteSupplier.vb</DependentUpon>
+    </Compile>
+    <Compile Include="deleteSupplier.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="modifyPurchase.Designer.vb">
       <DependentUpon>modifyPurchase.vb</DependentUpon>
     </Compile>
@@ -102,6 +114,12 @@
       <DependentUpon>addPurchase.vb</DependentUpon>
     </Compile>
     <Compile Include="addPurchase.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modifySupplier.Designer.vb">
+      <DependentUpon>modifySupplier.vb</DependentUpon>
+    </Compile>
+    <Compile Include="modifySupplier.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="purchase.Designer.vb">
@@ -179,17 +197,26 @@
     <EmbeddedResource Include="AddItem.resx">
       <DependentUpon>AddItem.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="addSupplier.resx">
+      <DependentUpon>addSupplier.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DeleteItem.resx">
       <DependentUpon>DeleteItem.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="deleteSales.resx">
       <DependentUpon>deleteSales.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="deleteSupplier.resx">
+      <DependentUpon>deleteSupplier.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="modifyPurchase.resx">
       <DependentUpon>modifyPurchase.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="addPurchase.resx">
       <DependentUpon>addPurchase.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="modifySupplier.resx">
+      <DependentUpon>modifySupplier.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="purchase.resx">
       <DependentUpon>purchase.vb</DependentUpon>

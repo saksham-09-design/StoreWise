@@ -40,7 +40,7 @@ Partial Class ModifyItem
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.reOrder = New System.Windows.Forms.TextBox()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.supplier = New System.Windows.Forms.ComboBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
@@ -253,17 +253,18 @@ Partial Class ModifyItem
         Me.reOrder.TabIndex = 42
         Me.reOrder.Visible = False
         '
-        'ComboBox2
+        'supplier
         '
-        Me.ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.ComboBox2.Font = New System.Drawing.Font("Now Medium", 15.0!)
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Items.AddRange(New Object() {"Sunfeast", "Cremica", "Nestle"})
-        Me.ComboBox2.Location = New System.Drawing.Point(468, 138)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(388, 38)
-        Me.ComboBox2.TabIndex = 44
+        Me.supplier.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.supplier.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.supplier.Font = New System.Drawing.Font("Now Medium", 15.0!)
+        Me.supplier.FormattingEnabled = True
+        Me.supplier.Items.AddRange(New Object() {"Sunfeast", "Cremica", "Nestle"})
+        Me.supplier.Location = New System.Drawing.Point(468, 138)
+        Me.supplier.Name = "supplier"
+        Me.supplier.Size = New System.Drawing.Size(388, 38)
+        Me.supplier.TabIndex = 44
+        Me.supplier.Visible = False
         '
         'Label9
         '
@@ -275,13 +276,14 @@ Partial Class ModifyItem
         Me.Label9.Size = New System.Drawing.Size(137, 32)
         Me.Label9.TabIndex = 45
         Me.Label9.Text = "Supplier:"
+        Me.Label9.Visible = False
         '
         'ModifyItem
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(929, 620)
-        Me.Controls.Add(Me.ComboBox2)
+        Me.Controls.Add(Me.supplier)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.reOrder)
@@ -325,6 +327,6 @@ Partial Class ModifyItem
     Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents reOrder As System.Windows.Forms.TextBox
-    Friend WithEvents ComboBox2 As System.Windows.Forms.ComboBox
+    Friend WithEvents supplier As System.Windows.Forms.ComboBox
     Friend WithEvents Label9 As System.Windows.Forms.Label
 End Class

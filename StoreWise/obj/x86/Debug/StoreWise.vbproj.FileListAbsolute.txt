@@ -20,3 +20,6 @@ C:\Users\Saksham\documents\visual studio 2010\Projects\StoreWise\StoreWise\obj\x
 C:\Users\Saksham\documents\visual studio 2010\Projects\StoreWise\StoreWise\obj\x86\Debug\StoreWise.addPurchase.resources
 C:\Users\Saksham\documents\visual studio 2010\Projects\StoreWise\StoreWise\obj\x86\Debug\StoreWise.purchase.resources
 C:\Users\Saksham\documents\visual studio 2010\Projects\StoreWise\StoreWise\obj\x86\Debug\StoreWise.addSales.resources
+C:\Users\Saksham\documents\visual studio 2010\Projects\StoreWise\StoreWise\obj\x86\Debug\StoreWise.addSupplier.resources
+C:\Users\Saksham\documents\visual studio 2010\Projects\StoreWise\StoreWise\obj\x86\Debug\StoreWise.modifySupplier.resources
+C:\Users\Saksham\documents\visual studio 2010\Projects\StoreWise\StoreWise\obj\x86\Debug\StoreWise.deleteSupplier.resources

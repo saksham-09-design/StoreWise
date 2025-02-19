@@ -39,13 +39,17 @@ Partial Class MainPage
         Me.ModifyToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
         Me.DeleteToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
         Me.DisplayToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PurchaseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AddToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ModifyToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DeleteToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SearchToolStripMenuItem4 = New System.Windows.Forms.ToolStripMenuItem()
         Me.SearchToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
         Me.SupplierToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AddToolStripMenuItem4 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ModifyToolStripMenuItem4 = New System.Windows.Forms.ToolStripMenuItem()
         Me.DeleteToolStripMenuItem4 = New System.Windows.Forms.ToolStripMenuItem()
         Me.DisplayToolStripMenuItem4 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.SearchToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
         Me.DashboardToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.AddItemToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -59,11 +63,6 @@ Partial Class MainPage
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.PurchaseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AddToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ModifyToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DeleteToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.SearchToolStripMenuItem4 = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -89,7 +88,7 @@ Partial Class MainPage
         'ExitToolStripMenuItem1
         '
         Me.ExitToolStripMenuItem1.Name = "ExitToolStripMenuItem1"
-        Me.ExitToolStripMenuItem1.Size = New System.Drawing.Size(152, 24)
+        Me.ExitToolStripMenuItem1.Size = New System.Drawing.Size(125, 24)
         Me.ExitToolStripMenuItem1.Text = "Logout"
         '
         'ItemToolStripMenuItem
@@ -171,6 +170,37 @@ Partial Class MainPage
         Me.DisplayToolStripMenuItem.Size = New System.Drawing.Size(185, 24)
         Me.DisplayToolStripMenuItem.Text = "Display"
         '
+        'PurchaseToolStripMenuItem
+        '
+        Me.PurchaseToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddToolStripMenuItem1, Me.ModifyToolStripMenuItem1, Me.DeleteToolStripMenuItem1, Me.SearchToolStripMenuItem4})
+        Me.PurchaseToolStripMenuItem.Name = "PurchaseToolStripMenuItem"
+        Me.PurchaseToolStripMenuItem.Size = New System.Drawing.Size(200, 24)
+        Me.PurchaseToolStripMenuItem.Text = "Purchase"
+        '
+        'AddToolStripMenuItem1
+        '
+        Me.AddToolStripMenuItem1.Name = "AddToolStripMenuItem1"
+        Me.AddToolStripMenuItem1.Size = New System.Drawing.Size(127, 24)
+        Me.AddToolStripMenuItem1.Text = "Add"
+        '
+        'ModifyToolStripMenuItem1
+        '
+        Me.ModifyToolStripMenuItem1.Name = "ModifyToolStripMenuItem1"
+        Me.ModifyToolStripMenuItem1.Size = New System.Drawing.Size(127, 24)
+        Me.ModifyToolStripMenuItem1.Text = "Modify"
+        '
+        'DeleteToolStripMenuItem1
+        '
+        Me.DeleteToolStripMenuItem1.Name = "DeleteToolStripMenuItem1"
+        Me.DeleteToolStripMenuItem1.Size = New System.Drawing.Size(127, 24)
+        Me.DeleteToolStripMenuItem1.Text = "Delete"
+        '
+        'SearchToolStripMenuItem4
+        '
+        Me.SearchToolStripMenuItem4.Name = "SearchToolStripMenuItem4"
+        Me.SearchToolStripMenuItem4.Size = New System.Drawing.Size(127, 24)
+        Me.SearchToolStripMenuItem4.Text = "Display"
+        '
         'SearchToolStripMenuItem2
         '
         Me.SearchToolStripMenuItem2.Name = "SearchToolStripMenuItem2"
@@ -181,7 +211,7 @@ Partial Class MainPage
         '
         'SupplierToolStripMenuItem
         '
-        Me.SupplierToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddToolStripMenuItem4, Me.ModifyToolStripMenuItem4, Me.DeleteToolStripMenuItem4, Me.DisplayToolStripMenuItem4, Me.SearchToolStripMenuItem3})
+        Me.SupplierToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddToolStripMenuItem4, Me.ModifyToolStripMenuItem4, Me.DeleteToolStripMenuItem4, Me.DisplayToolStripMenuItem4})
         Me.SupplierToolStripMenuItem.Name = "SupplierToolStripMenuItem"
         Me.SupplierToolStripMenuItem.Size = New System.Drawing.Size(76, 24)
         Me.SupplierToolStripMenuItem.Text = "Supplier"
@@ -211,12 +241,6 @@ Partial Class MainPage
         Me.DisplayToolStripMenuItem4.Name = "DisplayToolStripMenuItem4"
         Me.DisplayToolStripMenuItem4.Size = New System.Drawing.Size(184, 24)
         Me.DisplayToolStripMenuItem4.Text = "Display"
-        '
-        'SearchToolStripMenuItem3
-        '
-        Me.SearchToolStripMenuItem3.Name = "SearchToolStripMenuItem3"
-        Me.SearchToolStripMenuItem3.Size = New System.Drawing.Size(184, 24)
-        Me.SearchToolStripMenuItem3.Text = "Search"
         '
         'DashboardToolStripMenuItem
         '
@@ -310,37 +334,6 @@ Partial Class MainPage
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Store Wise"
         '
-        'PurchaseToolStripMenuItem
-        '
-        Me.PurchaseToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddToolStripMenuItem1, Me.ModifyToolStripMenuItem1, Me.DeleteToolStripMenuItem1, Me.SearchToolStripMenuItem4})
-        Me.PurchaseToolStripMenuItem.Name = "PurchaseToolStripMenuItem"
-        Me.PurchaseToolStripMenuItem.Size = New System.Drawing.Size(200, 24)
-        Me.PurchaseToolStripMenuItem.Text = "Purchase"
-        '
-        'AddToolStripMenuItem1
-        '
-        Me.AddToolStripMenuItem1.Name = "AddToolStripMenuItem1"
-        Me.AddToolStripMenuItem1.Size = New System.Drawing.Size(152, 24)
-        Me.AddToolStripMenuItem1.Text = "Add"
-        '
-        'ModifyToolStripMenuItem1
-        '
-        Me.ModifyToolStripMenuItem1.Name = "ModifyToolStripMenuItem1"
-        Me.ModifyToolStripMenuItem1.Size = New System.Drawing.Size(152, 24)
-        Me.ModifyToolStripMenuItem1.Text = "Modify"
-        '
-        'DeleteToolStripMenuItem1
-        '
-        Me.DeleteToolStripMenuItem1.Name = "DeleteToolStripMenuItem1"
-        Me.DeleteToolStripMenuItem1.Size = New System.Drawing.Size(152, 24)
-        Me.DeleteToolStripMenuItem1.Text = "Delete"
-        '
-        'SearchToolStripMenuItem4
-        '
-        Me.SearchToolStripMenuItem4.Name = "SearchToolStripMenuItem4"
-        Me.SearchToolStripMenuItem4.Size = New System.Drawing.Size(152, 24)
-        Me.SearchToolStripMenuItem4.Text = "Display"
-        '
         'MainPage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -385,7 +378,6 @@ Partial Class MainPage
     Friend WithEvents ExitToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents SearchToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents SearchToolStripMenuItem2 As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents SearchToolStripMenuItem3 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ContextMenuStrip1 As System.Windows.Forms.ContextMenuStrip
     Friend WithEvents AddItemToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents AddSalesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem

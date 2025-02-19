@@ -8,6 +8,7 @@
         Label6.Visible = True
         Label7.Visible = True
         Label8.Visible = True
+        Label9.Visible = True
         itemName.Visible = True
         itemUnit.Visible = True
         itemCost.Visible = True
@@ -18,6 +19,8 @@
         cancle.Visible = True
         reOrder.Visible = True
         Label5.Visible = True
+        supplier.Visible = True
+
         itemName.Text = ComboBox1.SelectedItem
     End Sub
 

@@ -256,6 +256,7 @@ Partial Class DeleteItem
         Me.ComboBox2.Name = "ComboBox2"
         Me.ComboBox2.Size = New System.Drawing.Size(388, 38)
         Me.ComboBox2.TabIndex = 60
+        Me.ComboBox2.Visible = False
         '
         'Label9
         '
@@ -267,6 +268,7 @@ Partial Class DeleteItem
         Me.Label9.Size = New System.Drawing.Size(137, 32)
         Me.Label9.TabIndex = 61
         Me.Label9.Text = "Supplier:"
+        Me.Label9.Visible = False
         '
         'DeleteItem
         '

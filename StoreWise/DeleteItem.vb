@@ -9,6 +9,8 @@
         Label6.Visible = True
         Label7.Visible = True
         Label8.Visible = True
+        Label9.Visible = True
+        ComboBox2.Visible = True
         itemName.Visible = True
         itemUnit.Visible = True
         itemQuantity.Visible = True

@@ -41,7 +41,6 @@
     End Sub
 
     Private Sub MainPage_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-
     End Sub
 
     Private Sub Panel1_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles Panel1.Paint
@@ -64,5 +63,23 @@
         Dim sales As New sales()
         sales.MdiParent = Me
         sales.Show()
+    End Sub
+
+    Private Sub AddToolStripMenuItem4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AddToolStripMenuItem4.Click
+        Dim supplier As New addSupplier()
+        supplier.MdiParent = Me
+        supplier.Show()
+    End Sub
+
+    Private Sub ModifyToolStripMenuItem4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ModifyToolStripMenuItem4.Click
+        Dim supplier As New modifySupplier()
+        supplier.MdiParent = Me
+        supplier.Show()
+    End Sub
+
+    Private Sub DeleteToolStripMenuItem4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DeleteToolStripMenuItem4.Click
+        Dim supplier As New deleteSupplier()
+        supplier.MdiParent = Me
+        supplier.Show()
     End Sub
 End Class

@@ -51,13 +51,6 @@
         itemSP.ForeColor = Color.FromArgb(255, 240, 246, 252)
     End Sub
 
-    Private Sub itemQuantity_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
-        If (Not Char.IsNumber(e.KeyChar) And Not e.KeyChar = Chr(Keys.Back) And Not e.KeyChar = Chr(Keys.Delete)) Then
-            e.Handled = True
-            MessageBox.Show("Quantity must be in Numbers.")
-        End If
-    End Sub
-
     Private Sub itemCost_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles itemCost.KeyPress
         If Not Char.IsDigit(e.KeyChar) AndAlso Not e.KeyChar = "."c AndAlso Not e.KeyChar = Chr(Keys.Back) Then
             e.Handled = True
@@ -86,9 +79,5 @@
             e.Handled = True
             MessageBox.Show("Only one decimal point is allowed.", "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         End If
-    End Sub
-
-    Private Sub itemCost_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles itemCost.TextChanged
-
     End Sub
 End Class

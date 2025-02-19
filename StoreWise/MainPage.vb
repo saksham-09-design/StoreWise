@@ -22,7 +22,7 @@
         deleteItem.Show()
     End Sub
 
-    Private Sub SearchToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SearchToolStripMenuItem.Click
+    Private Sub SearchToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Dim searchItem As New SearchItem
         searchItem.MdiParent = Me
         searchItem.Show()

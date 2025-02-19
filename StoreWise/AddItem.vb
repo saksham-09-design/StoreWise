@@ -24,6 +24,31 @@
     Private Sub AddItem_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         itemUnit.SelectedIndex = 5
         itemGST.SelectedIndex = 4
+        Me.BackColor = Color.FromArgb(255, 13, 17, 23)
+        For i = 1 To 8
+            Dim lbl As Label = Me.Controls("Label" & i)
+            lbl.ForeColor = Color.FromArgb(255, 240, 246, 252)
+        Next
+        save.BackColor = Color.FromArgb(255, 31, 111, 235)
+        clear.BackColor = Color.FromArgb(255, 31, 111, 235)
+        cancle.BackColor = Color.FromArgb(255, 31, 111, 235)
+        save.ForeColor = Color.FromArgb(255, Color.White)
+        clear.ForeColor = Color.FromArgb(255, Color.White)
+        cancle.ForeColor = Color.FromArgb(255, Color.White)
+        ComboBox1.BackColor = Color.FromArgb(255, 33, 40, 48)
+        ComboBox1.ForeColor = Color.FromArgb(255, 240, 246, 252)
+        itemName.BackColor = Color.FromArgb(255, 33, 40, 48)
+        itemName.ForeColor = Color.FromArgb(255, 240, 246, 252)
+        itemUnit.BackColor = Color.FromArgb(255, 33, 40, 48)
+        itemUnit.ForeColor = Color.FromArgb(255, 240, 246, 252)
+        reOrder.BackColor = Color.FromArgb(255, 33, 40, 48)
+        reOrder.ForeColor = Color.FromArgb(255, 240, 246, 252) '
+        itemCost.BackColor = Color.FromArgb(255, 33, 40, 48)
+        itemCost.ForeColor = Color.FromArgb(255, 240, 246, 252)
+        itemGST.BackColor = Color.FromArgb(255, 33, 40, 48)
+        itemGST.ForeColor = Color.FromArgb(255, 240, 246, 252)
+        itemSP.BackColor = Color.FromArgb(255, 33, 40, 48)
+        itemSP.ForeColor = Color.FromArgb(255, 240, 246, 252)
     End Sub
 
     Private Sub itemQuantity_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
@@ -34,23 +59,36 @@
     End Sub
 
     Private Sub itemCost_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles itemCost.KeyPress
-        If (Not Char.IsNumber(e.KeyChar) And Not e.KeyChar = Chr(Keys.Back) And Not e.KeyChar = Chr(Keys.Delete)) Then
+        If Not Char.IsDigit(e.KeyChar) AndAlso Not e.KeyChar = "."c AndAlso Not e.KeyChar = Chr(Keys.Back) Then
             e.Handled = True
-            MessageBox.Show("Price must be in Numbers.")
+            MessageBox.Show("Quantity must be in Numbers.", "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+        ElseIf e.KeyChar = "."c AndAlso itemCost.Text.Contains(".") Then
+            e.Handled = True
+            MessageBox.Show("Only one decimal point is allowed.", "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         End If
     End Sub
 
     Private Sub itemSP_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles itemSP.KeyPress
-        If (Not Char.IsNumber(e.KeyChar) And Not e.KeyChar = Chr(Keys.Back) And Not e.KeyChar = Chr(Keys.Delete)) Then
+        If Not Char.IsDigit(e.KeyChar) AndAlso Not e.KeyChar = "."c AndAlso Not e.KeyChar = Chr(Keys.Back) Then
             e.Handled = True
-            MessageBox.Show("Price must be in Numbers.")
+            MessageBox.Show("Quantity must be in Numbers.", "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+        ElseIf e.KeyChar = "."c AndAlso itemSP.Text.Contains(".") Then
+            e.Handled = True
+            MessageBox.Show("Only one decimal point is allowed.", "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         End If
     End Sub
 
     Private Sub reOrder_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles reOrder.KeyPress
-        If (Not Char.IsNumber(e.KeyChar) And Not e.KeyChar = Chr(Keys.Back) And Not e.KeyChar = Chr(Keys.Delete)) Then
+        If Not Char.IsDigit(e.KeyChar) AndAlso Not e.KeyChar = "."c AndAlso Not e.KeyChar = Chr(Keys.Back) Then
             e.Handled = True
-            MessageBox.Show("Quantity must be in Numbers.")
+            MessageBox.Show("Quantity must be in Numbers.", "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+        ElseIf e.KeyChar = "."c AndAlso reOrder.Text.Contains(".") Then
+            e.Handled = True
+            MessageBox.Show("Only one decimal point is allowed.", "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         End If
+    End Sub
+
+    Private Sub itemCost_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles itemCost.TextChanged
+
     End Sub
 End Class

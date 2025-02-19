@@ -32,7 +32,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.StoreWise.Splash
+            Me.MainForm = Global.StoreWise.MainPage
         End Sub
     End Class
 End Namespace

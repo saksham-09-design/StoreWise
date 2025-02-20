@@ -86,6 +86,7 @@
     <Compile Include="AddItem.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="DarkMode.vb" />
     <Compile Include="DeleteItem.Designer.vb">
       <DependentUpon>DeleteItem.vb</DependentUpon>
     </Compile>
@@ -120,6 +121,12 @@
       <DependentUpon>modifySupplier.vb</DependentUpon>
     </Compile>
     <Compile Include="modifySupplier.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modifyUser.Designer.vb">
+      <DependentUpon>modifyUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="modifyUser.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="purchase.Designer.vb">
@@ -217,6 +224,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="modifySupplier.resx">
       <DependentUpon>modifySupplier.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="modifyUser.resx">
+      <DependentUpon>modifyUser.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="purchase.resx">
       <DependentUpon>purchase.vb</DependentUpon>

@@ -61,6 +61,8 @@ Partial Class MainPage
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.ChangeCredentialsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ChangeThemeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -77,7 +79,7 @@ Partial Class MainPage
         '
         'UserToolStripMenuItem
         '
-        Me.UserToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ExitToolStripMenuItem1})
+        Me.UserToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ChangeCredentialsToolStripMenuItem, Me.ChangeThemeToolStripMenuItem, Me.ExitToolStripMenuItem1})
         Me.UserToolStripMenuItem.Name = "UserToolStripMenuItem"
         Me.UserToolStripMenuItem.Size = New System.Drawing.Size(50, 24)
         Me.UserToolStripMenuItem.Text = "User"
@@ -86,7 +88,7 @@ Partial Class MainPage
         'ExitToolStripMenuItem1
         '
         Me.ExitToolStripMenuItem1.Name = "ExitToolStripMenuItem1"
-        Me.ExitToolStripMenuItem1.Size = New System.Drawing.Size(125, 24)
+        Me.ExitToolStripMenuItem1.Size = New System.Drawing.Size(177, 24)
         Me.ExitToolStripMenuItem1.Text = "Logout"
         '
         'ItemToolStripMenuItem
@@ -133,7 +135,7 @@ Partial Class MainPage
         '
         Me.SaleToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddToolStripMenuItem2, Me.ModifyToolStripMenuItem2, Me.DeleteToolStripMenuItem2, Me.DisplayToolStripMenuItem})
         Me.SaleToolStripMenuItem.Name = "SaleToolStripMenuItem"
-        Me.SaleToolStripMenuItem.Size = New System.Drawing.Size(200, 24)
+        Me.SaleToolStripMenuItem.Size = New System.Drawing.Size(136, 24)
         Me.SaleToolStripMenuItem.Text = "Sale"
         '
         'AddToolStripMenuItem2
@@ -166,7 +168,7 @@ Partial Class MainPage
         '
         Me.PurchaseToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddToolStripMenuItem1, Me.ModifyToolStripMenuItem1, Me.DeleteToolStripMenuItem1, Me.SearchToolStripMenuItem4})
         Me.PurchaseToolStripMenuItem.Name = "PurchaseToolStripMenuItem"
-        Me.PurchaseToolStripMenuItem.Size = New System.Drawing.Size(200, 24)
+        Me.PurchaseToolStripMenuItem.Size = New System.Drawing.Size(136, 24)
         Me.PurchaseToolStripMenuItem.Text = "Purchase"
         '
         'AddToolStripMenuItem1
@@ -318,6 +320,18 @@ Partial Class MainPage
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Store Wise"
         '
+        'ChangeCredentialsToolStripMenuItem
+        '
+        Me.ChangeCredentialsToolStripMenuItem.Name = "ChangeCredentialsToolStripMenuItem"
+        Me.ChangeCredentialsToolStripMenuItem.Size = New System.Drawing.Size(177, 24)
+        Me.ChangeCredentialsToolStripMenuItem.Text = "Modify User"
+        '
+        'ChangeThemeToolStripMenuItem
+        '
+        Me.ChangeThemeToolStripMenuItem.Name = "ChangeThemeToolStripMenuItem"
+        Me.ChangeThemeToolStripMenuItem.Size = New System.Drawing.Size(177, 24)
+        Me.ChangeThemeToolStripMenuItem.Text = "Change Theme"
+        '
         'MainPage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -377,4 +391,6 @@ Partial Class MainPage
     Friend WithEvents ModifyToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents DeleteToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents SearchToolStripMenuItem4 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ChangeCredentialsToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ChangeThemeToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class

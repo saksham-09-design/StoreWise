@@ -44,7 +44,7 @@ Partial Class addSales
         Me.cancle = New System.Windows.Forms.Button()
         Me.clear = New System.Windows.Forms.Button()
         Me.save = New System.Windows.Forms.Button()
-        Me.itemName = New System.Windows.Forms.ComboBox()
+        Me.itemNamelist = New System.Windows.Forms.ComboBox()
         Me.Add = New System.Windows.Forms.Button()
         Me.itemList = New System.Windows.Forms.ListBox()
         Me.Label11 = New System.Windows.Forms.Label()
@@ -55,11 +55,11 @@ Partial Class addSales
         Me.Label14 = New System.Windows.Forms.Label()
         Me.totalPrice = New System.Windows.Forms.ListBox()
         Me.Discount = New System.Windows.Forms.TextBox()
-        Me.Label19 = New System.Windows.Forms.Label()
-        Me.fBill = New System.Windows.Forms.Label()
-        Me.Label21 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.Label16 = New System.Windows.Forms.Label()
+        Me.fBill = New System.Windows.Forms.Label()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.print = New System.Windows.Forms.Button()
+        Me.Label15 = New System.Windows.Forms.Label()
         Me.gstAmt = New System.Windows.Forms.ListBox()
         Me.SuspendLayout()
         '
@@ -296,18 +296,18 @@ Partial Class addSales
         Me.save.Text = "&Save"
         Me.save.UseVisualStyleBackColor = False
         '
-        'itemName
+        'itemNamelist
         '
-        Me.itemName.AllowDrop = True
-        Me.itemName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.itemName.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.itemName.Font = New System.Drawing.Font("Now Medium", 15.0!)
-        Me.itemName.FormattingEnabled = True
-        Me.itemName.Items.AddRange(New Object() {"Oil", "Ghee", "Sugar", "Mustard Oil", "Detergent", "Chocolate"})
-        Me.itemName.Location = New System.Drawing.Point(306, 366)
-        Me.itemName.Name = "itemName"
-        Me.itemName.Size = New System.Drawing.Size(308, 38)
-        Me.itemName.TabIndex = 8
+        Me.itemNamelist.AllowDrop = True
+        Me.itemNamelist.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.itemNamelist.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.itemNamelist.Font = New System.Drawing.Font("Now Medium", 15.0!)
+        Me.itemNamelist.FormattingEnabled = True
+        Me.itemNamelist.Items.AddRange(New Object() {"Oil", "Ghee", "Sugar", "Mustard Oil", "Detergent", "Chocolate"})
+        Me.itemNamelist.Location = New System.Drawing.Point(306, 366)
+        Me.itemNamelist.Name = "itemNamelist"
+        Me.itemNamelist.Size = New System.Drawing.Size(308, 38)
+        Me.itemNamelist.TabIndex = 8
         '
         'Add
         '
@@ -413,16 +413,16 @@ Partial Class addSales
         Me.Discount.Size = New System.Drawing.Size(308, 39)
         Me.Discount.TabIndex = 88
         '
-        'Label19
+        'Label16
         '
-        Me.Label19.AutoSize = True
-        Me.Label19.Font = New System.Drawing.Font("Now Medium", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label19.ForeColor = System.Drawing.Color.Red
-        Me.Label19.Location = New System.Drawing.Point(28, 672)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(152, 34)
-        Me.Label19.TabIndex = 89
-        Me.Label19.Text = "Discount:"
+        Me.Label16.AutoSize = True
+        Me.Label16.Font = New System.Drawing.Font("Now Medium", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label16.ForeColor = System.Drawing.Color.Red
+        Me.Label16.Location = New System.Drawing.Point(28, 672)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(152, 34)
+        Me.Label16.TabIndex = 89
+        Me.Label16.Text = "Discount:"
         '
         'fBill
         '
@@ -435,40 +435,40 @@ Partial Class addSales
         Me.fBill.TabIndex = 91
         Me.fBill.Text = "₹0/-"
         '
-        'Label21
+        'Label17
         '
-        Me.Label21.AutoSize = True
-        Me.Label21.Font = New System.Drawing.Font("Now", 16.0!, System.Drawing.FontStyle.Bold)
-        Me.Label21.ForeColor = System.Drawing.Color.Red
-        Me.Label21.Location = New System.Drawing.Point(580, 674)
-        Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(253, 32)
-        Me.Label21.TabIndex = 90
-        Me.Label21.Text = "Final Bill Amount:"
+        Me.Label17.AutoSize = True
+        Me.Label17.Font = New System.Drawing.Font("Now", 16.0!, System.Drawing.FontStyle.Bold)
+        Me.Label17.ForeColor = System.Drawing.Color.Red
+        Me.Label17.Location = New System.Drawing.Point(580, 674)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(253, 32)
+        Me.Label17.TabIndex = 90
+        Me.Label17.Text = "Final Bill Amount:"
         '
-        'Button1
+        'print
         '
-        Me.Button1.BackColor = System.Drawing.Color.Red
-        Me.Button1.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.Button1.Font = New System.Drawing.Font("Now", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.Ivory
-        Me.Button1.Location = New System.Drawing.Point(573, 750)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(168, 52)
-        Me.Button1.TabIndex = 92
-        Me.Button1.Text = "Print"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.print.BackColor = System.Drawing.Color.Red
+        Me.print.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.print.Font = New System.Drawing.Font("Now", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.print.ForeColor = System.Drawing.Color.Ivory
+        Me.print.Location = New System.Drawing.Point(573, 750)
+        Me.print.Name = "print"
+        Me.print.Size = New System.Drawing.Size(168, 52)
+        Me.print.TabIndex = 92
+        Me.print.Text = "Print"
+        Me.print.UseVisualStyleBackColor = False
         '
-        'Label16
+        'Label15
         '
-        Me.Label16.AutoSize = True
-        Me.Label16.Font = New System.Drawing.Font("Now", 16.0!, System.Drawing.FontStyle.Bold)
-        Me.Label16.ForeColor = System.Drawing.Color.Red
-        Me.Label16.Location = New System.Drawing.Point(841, 426)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(78, 32)
-        Me.Label16.TabIndex = 94
-        Me.Label16.Text = "GST:"
+        Me.Label15.AutoSize = True
+        Me.Label15.Font = New System.Drawing.Font("Now", 16.0!, System.Drawing.FontStyle.Bold)
+        Me.Label15.ForeColor = System.Drawing.Color.Red
+        Me.Label15.Location = New System.Drawing.Point(841, 426)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(78, 32)
+        Me.Label15.TabIndex = 94
+        Me.Label15.Text = "GST:"
         '
         'gstAmt
         '
@@ -488,13 +488,13 @@ Partial Class addSales
         Me.AutoScroll = True
         Me.CancelButton = Me.clear
         Me.ClientSize = New System.Drawing.Size(1351, 818)
-        Me.Controls.Add(Me.Label16)
+        Me.Controls.Add(Me.Label15)
         Me.Controls.Add(Me.gstAmt)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.print)
         Me.Controls.Add(Me.fBill)
-        Me.Controls.Add(Me.Label21)
+        Me.Controls.Add(Me.Label17)
         Me.Controls.Add(Me.Discount)
-        Me.Controls.Add(Me.Label19)
+        Me.Controls.Add(Me.Label16)
         Me.Controls.Add(Me.Label14)
         Me.Controls.Add(Me.totalPrice)
         Me.Controls.Add(Me.Label13)
@@ -504,7 +504,7 @@ Partial Class addSales
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.itemList)
         Me.Controls.Add(Me.Add)
-        Me.Controls.Add(Me.itemName)
+        Me.Controls.Add(Me.itemNamelist)
         Me.Controls.Add(Me.cancle)
         Me.Controls.Add(Me.clear)
         Me.Controls.Add(Me.save)
@@ -555,7 +555,7 @@ Partial Class addSales
     Friend WithEvents cancle As System.Windows.Forms.Button
     Friend WithEvents clear As System.Windows.Forms.Button
     Friend WithEvents save As System.Windows.Forms.Button
-    Friend WithEvents itemName As System.Windows.Forms.ComboBox
+    Friend WithEvents itemNamelist As System.Windows.Forms.ComboBox
     Friend WithEvents Add As System.Windows.Forms.Button
     Friend WithEvents itemList As System.Windows.Forms.ListBox
     Friend WithEvents Label11 As System.Windows.Forms.Label
@@ -566,10 +566,10 @@ Partial Class addSales
     Friend WithEvents Label14 As System.Windows.Forms.Label
     Friend WithEvents totalPrice As System.Windows.Forms.ListBox
     Friend WithEvents Discount As System.Windows.Forms.TextBox
-    Friend WithEvents Label19 As System.Windows.Forms.Label
-    Friend WithEvents fBill As System.Windows.Forms.Label
-    Friend WithEvents Label21 As System.Windows.Forms.Label
-    Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Label16 As System.Windows.Forms.Label
+    Friend WithEvents fBill As System.Windows.Forms.Label
+    Friend WithEvents Label17 As System.Windows.Forms.Label
+    Friend WithEvents print As System.Windows.Forms.Button
+    Friend WithEvents Label15 As System.Windows.Forms.Label
     Friend WithEvents gstAmt As System.Windows.Forms.ListBox
 End Class

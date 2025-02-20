@@ -25,8 +25,8 @@ Partial Class loginPage
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.eUName = New System.Windows.Forms.TextBox()
+        Me.eUPass = New System.Windows.Forms.TextBox()
         Me.login = New System.Windows.Forms.Button()
         Me.cancle = New System.Windows.Forms.Button()
         Me.SuspendLayout()
@@ -64,22 +64,22 @@ Partial Class loginPage
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "Password:"
         '
-        'TextBox1
+        'eUName
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Now Medium", 15.8!)
-        Me.TextBox1.Location = New System.Drawing.Point(259, 187)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(336, 39)
-        Me.TextBox1.TabIndex = 3
+        Me.eUName.Font = New System.Drawing.Font("Now Medium", 15.8!)
+        Me.eUName.Location = New System.Drawing.Point(259, 187)
+        Me.eUName.Name = "eUName"
+        Me.eUName.Size = New System.Drawing.Size(336, 39)
+        Me.eUName.TabIndex = 3
         '
-        'TextBox2
+        'eUPass
         '
-        Me.TextBox2.Font = New System.Drawing.Font("Now Medium", 15.0!)
-        Me.TextBox2.Location = New System.Drawing.Point(259, 265)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.TextBox2.Size = New System.Drawing.Size(336, 37)
-        Me.TextBox2.TabIndex = 4
+        Me.eUPass.Font = New System.Drawing.Font("Now Medium", 15.0!)
+        Me.eUPass.Location = New System.Drawing.Point(259, 265)
+        Me.eUPass.Name = "eUPass"
+        Me.eUPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.eUPass.Size = New System.Drawing.Size(336, 37)
+        Me.eUPass.TabIndex = 4
         '
         'login
         '
@@ -115,8 +115,8 @@ Partial Class loginPage
         Me.ClientSize = New System.Drawing.Size(696, 469)
         Me.Controls.Add(Me.cancle)
         Me.Controls.Add(Me.login)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.eUPass)
+        Me.Controls.Add(Me.eUName)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
@@ -129,8 +129,8 @@ Partial Class loginPage
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
+    Friend WithEvents eUName As System.Windows.Forms.TextBox
+    Friend WithEvents eUPass As System.Windows.Forms.TextBox
     Friend WithEvents login As System.Windows.Forms.Button
     Friend WithEvents cancle As System.Windows.Forms.Button
 End Class

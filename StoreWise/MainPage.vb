@@ -82,4 +82,14 @@
         supplier.MdiParent = Me
         supplier.Show()
     End Sub
+
+    Private Sub ChangeCredentialsToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ChangeCredentialsToolStripMenuItem.Click
+        Dim mUser As New modifyUser()
+        mUser.MdiParent = Me
+        mUser.Show()
+    End Sub
+
+    Private Sub ChangeThemeToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ChangeThemeToolStripMenuItem.Click
+        DMode = Not DMode
+    End Sub
 End Class

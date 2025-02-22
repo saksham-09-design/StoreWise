@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class sales
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class sales
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
@@ -51,6 +51,7 @@ Partial Class sales
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Location = New System.Drawing.Point(12, 300)
         Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.RowTemplate.Height = 24
         Me.DataGridView1.Size = New System.Drawing.Size(1295, 410)
         Me.DataGridView1.TabIndex = 77
@@ -74,7 +75,7 @@ Partial Class sales
         Me.Label10.ForeColor = System.Drawing.Color.Red
         Me.Label10.Location = New System.Drawing.Point(80, 104)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(95, 32)
+        Me.Label10.Size = New System.Drawing.Size(94, 32)
         Me.Label10.TabIndex = 78
         Me.Label10.Text = "Filter:"
         '
@@ -174,4 +175,5 @@ Partial Class sales
     Friend WithEvents transactioToDate As System.Windows.Forms.DateTimePicker
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents customerName As System.Windows.Forms.ComboBox
+    Friend WithEvents ItemTableBindingSource As BindingSource
 End Class

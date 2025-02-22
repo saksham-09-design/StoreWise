@@ -25,7 +25,7 @@ Partial Class modifyUser
         Me.cancle = New System.Windows.Forms.Button()
         Me.modify = New System.Windows.Forms.Button()
         Me.oPass = New System.Windows.Forms.TextBox()
-        Me.uName = New System.Windows.Forms.TextBox()
+        Me.OuName = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -33,6 +33,9 @@ Partial Class modifyUser
         Me.Label4 = New System.Windows.Forms.Label()
         Me.cPass = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.nUName = New System.Windows.Forms.TextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'cancle
@@ -41,7 +44,7 @@ Partial Class modifyUser
         Me.cancle.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.cancle.Font = New System.Drawing.Font("Now", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cancle.ForeColor = System.Drawing.Color.Ivory
-        Me.cancle.Location = New System.Drawing.Point(427, 466)
+        Me.cancle.Location = New System.Drawing.Point(428, 542)
         Me.cancle.Name = "cancle"
         Me.cancle.Size = New System.Drawing.Size(168, 52)
         Me.cancle.TabIndex = 13
@@ -53,7 +56,7 @@ Partial Class modifyUser
         Me.modify.BackColor = System.Drawing.Color.Red
         Me.modify.Font = New System.Drawing.Font("Now", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.modify.ForeColor = System.Drawing.Color.Ivory
-        Me.modify.Location = New System.Drawing.Point(197, 466)
+        Me.modify.Location = New System.Drawing.Point(198, 542)
         Me.modify.Name = "modify"
         Me.modify.Size = New System.Drawing.Size(168, 52)
         Me.modify.TabIndex = 12
@@ -63,28 +66,28 @@ Partial Class modifyUser
         'oPass
         '
         Me.oPass.Font = New System.Drawing.Font("Now Medium", 15.0!)
-        Me.oPass.Location = New System.Drawing.Point(387, 221)
+        Me.oPass.Location = New System.Drawing.Point(387, 277)
         Me.oPass.Name = "oPass"
         Me.oPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.oPass.Size = New System.Drawing.Size(336, 37)
         Me.oPass.TabIndex = 11
         '
-        'uName
+        'OuName
         '
-        Me.uName.Font = New System.Drawing.Font("Now Medium", 15.8!)
-        Me.uName.Location = New System.Drawing.Point(387, 143)
-        Me.uName.Name = "uName"
-        Me.uName.Size = New System.Drawing.Size(336, 39)
-        Me.uName.TabIndex = 10
+        Me.OuName.Font = New System.Drawing.Font("Now Medium", 15.8!)
+        Me.OuName.Location = New System.Drawing.Point(387, 143)
+        Me.OuName.Name = "OuName"
+        Me.OuName.Size = New System.Drawing.Size(336, 39)
+        Me.OuName.TabIndex = 10
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Now", 16.0!, System.Drawing.FontStyle.Bold)
         Me.Label3.ForeColor = System.Drawing.Color.Red
-        Me.Label3.Location = New System.Drawing.Point(110, 226)
+        Me.Label3.Location = New System.Drawing.Point(110, 282)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(210, 32)
+        Me.Label3.Size = New System.Drawing.Size(209, 32)
         Me.Label3.TabIndex = 9
         Me.Label3.Text = "Old Password:"
         '
@@ -95,9 +98,9 @@ Partial Class modifyUser
         Me.Label2.ForeColor = System.Drawing.Color.Red
         Me.Label2.Location = New System.Drawing.Point(110, 150)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(168, 32)
+        Me.Label2.Size = New System.Drawing.Size(224, 32)
         Me.Label2.TabIndex = 8
-        Me.Label2.Text = "UserName:"
+        Me.Label2.Text = "Old UserName:"
         '
         'Label1
         '
@@ -113,7 +116,7 @@ Partial Class modifyUser
         'nPass
         '
         Me.nPass.Font = New System.Drawing.Font("Now Medium", 15.0!)
-        Me.nPass.Location = New System.Drawing.Point(387, 297)
+        Me.nPass.Location = New System.Drawing.Point(387, 353)
         Me.nPass.Name = "nPass"
         Me.nPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.nPass.Size = New System.Drawing.Size(336, 37)
@@ -124,16 +127,16 @@ Partial Class modifyUser
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Now", 16.0!, System.Drawing.FontStyle.Bold)
         Me.Label4.ForeColor = System.Drawing.Color.Red
-        Me.Label4.Location = New System.Drawing.Point(110, 302)
+        Me.Label4.Location = New System.Drawing.Point(110, 358)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(224, 32)
+        Me.Label4.Size = New System.Drawing.Size(223, 32)
         Me.Label4.TabIndex = 14
         Me.Label4.Text = "New Password:"
         '
         'cPass
         '
         Me.cPass.Font = New System.Drawing.Font("Now Medium", 15.0!)
-        Me.cPass.Location = New System.Drawing.Point(387, 370)
+        Me.cPass.Location = New System.Drawing.Point(387, 426)
         Me.cPass.Name = "cPass"
         Me.cPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.cPass.Size = New System.Drawing.Size(336, 37)
@@ -144,17 +147,51 @@ Partial Class modifyUser
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Now", 16.0!, System.Drawing.FontStyle.Bold)
         Me.Label5.ForeColor = System.Drawing.Color.Red
-        Me.Label5.Location = New System.Drawing.Point(110, 375)
+        Me.Label5.Location = New System.Drawing.Point(110, 431)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(271, 32)
+        Me.Label5.Size = New System.Drawing.Size(270, 32)
         Me.Label5.TabIndex = 16
         Me.Label5.Text = "Confirm Password:"
+        '
+        'nUName
+        '
+        Me.nUName.Font = New System.Drawing.Font("Now Medium", 15.8!)
+        Me.nUName.Location = New System.Drawing.Point(387, 211)
+        Me.nUName.Name = "nUName"
+        Me.nUName.Size = New System.Drawing.Size(336, 39)
+        Me.nUName.TabIndex = 19
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Now", 16.0!, System.Drawing.FontStyle.Bold)
+        Me.Label6.ForeColor = System.Drawing.Color.Red
+        Me.Label6.Location = New System.Drawing.Point(110, 218)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(238, 32)
+        Me.Label6.TabIndex = 18
+        Me.Label6.Text = "New UserName:"
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.Red
+        Me.Button1.Font = New System.Drawing.Font("Now Black", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button1.Location = New System.Drawing.Point(740, 353)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(58, 37)
+        Me.Button1.TabIndex = 20
+        Me.Button1.Text = "i"
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'modifyUser
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(841, 545)
+        Me.ClientSize = New System.Drawing.Size(841, 640)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.nUName)
+        Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.cPass)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.nPass)
@@ -162,7 +199,7 @@ Partial Class modifyUser
         Me.Controls.Add(Me.cancle)
         Me.Controls.Add(Me.modify)
         Me.Controls.Add(Me.oPass)
-        Me.Controls.Add(Me.uName)
+        Me.Controls.Add(Me.OuName)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
@@ -175,7 +212,7 @@ Partial Class modifyUser
     Friend WithEvents cancle As System.Windows.Forms.Button
     Friend WithEvents modify As System.Windows.Forms.Button
     Friend WithEvents oPass As System.Windows.Forms.TextBox
-    Friend WithEvents uName As System.Windows.Forms.TextBox
+    Friend WithEvents OuName As System.Windows.Forms.TextBox
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
@@ -183,4 +220,7 @@ Partial Class modifyUser
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents cPass As System.Windows.Forms.TextBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents nUName As TextBox
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Button1 As Button
 End Class

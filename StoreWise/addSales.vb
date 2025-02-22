@@ -43,7 +43,7 @@
     End Sub
 
     'function for handelling add button
-    Private Sub Add_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Add.Click
+    Private Sub Add_Click(sender As Object, e As EventArgs) Handles Add.Click
         If itemQuantity.Text <> "" Then
             If CInt(itemQuantity.Text) > 0 Then
                 Dim price As Single

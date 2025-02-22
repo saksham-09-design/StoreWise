@@ -24,3 +24,4 @@ C:\Users\Saksham\documents\visual studio 2010\Projects\StoreWise\StoreWise\obj\x
 C:\Users\Saksham\documents\visual studio 2010\Projects\StoreWise\StoreWise\obj\x86\Debug\StoreWise.modifySupplier.resources
 C:\Users\Saksham\documents\visual studio 2010\Projects\StoreWise\StoreWise\obj\x86\Debug\StoreWise.deleteSupplier.resources
 C:\Users\Saksham\documents\visual studio 2010\Projects\StoreWise\StoreWise\obj\x86\Debug\StoreWise.modifyUser.resources
+C:\Users\Saksham\documents\visual studio 2010\Projects\StoreWise\StoreWise\obj\x86\Debug\StoreWise.Form1.resources

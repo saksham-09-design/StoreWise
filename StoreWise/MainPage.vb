@@ -92,4 +92,7 @@
     Private Sub ChangeThemeToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ChangeThemeToolStripMenuItem.Click
         DMode = Not DMode
     End Sub
+
+    Private Sub SearchToolStripMenuItem4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SearchToolStripMenuItem4.Click
+    End Sub
 End Class

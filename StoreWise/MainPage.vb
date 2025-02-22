@@ -91,6 +91,17 @@
 
     Private Sub ChangeThemeToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ChangeThemeToolStripMenuItem.Click
         DMode = Not DMode
+        Dim conn As OleDb.OleDbConnection
+        Dim cmd As OleDb.OleDbCommand
+        conn = New OleDb.OleDbConnection
+        conn.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Saksham\Documents\StoreWise.accdb"
+        If conn.State = ConnectionState.Closed Then
+            conn.Open()
+        End If
+        Dim sql As String = "update userTable set mode = " & CBool(DMode)
+        cmd = New OleDb.OleDbCommand(sql, conn)
+        cmd.ExecuteNonQuery()
+        conn.Close()
     End Sub
 
     Private Sub SearchToolStripMenuItem4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SearchToolStripMenuItem4.Click

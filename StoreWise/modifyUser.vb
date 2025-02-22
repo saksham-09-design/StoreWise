@@ -27,7 +27,6 @@
         'assigning fetched values to variables
         dbuName = dt.Rows(0).Item(0)
         dbpass = dt.Rows(0).Item(1)
-        DMode = dt.Rows(0).Item(2)
 
         'closing connection
         conn.Close()
@@ -67,15 +66,21 @@
         ElseIf (nepass <> cepass) Then
             MessageBox.Show("Old Password and New Password Doesn't Match", "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Error)
         ElseIf (IsValidPassword(nepass)) Then
+            'Modifing User
             conn = New OleDb.OleDbConnection
             conn.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Saksham\Documents\StoreWise.accdb"
             If conn.State = ConnectionState.Closed Then
                 conn.Open()
             End If
-            Dim sql As String = "update userTable set password = '" & nepass & "', username = '" & oeUname & "' where uName = '" & oeUname & "'"
-            MessageBox.Show("User Updated Successfully", "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Dim sql As String = "update userTable set uPass = '" & nepass & "', uName = '" & oeUname & "' where uName = '" & oeUname & "'"
+            cmd = New OleDb.OleDbCommand(sql, conn)
+            If cmd.ExecuteNonQuery() <> 0 Then
+                MessageBox.Show("User Updated Successfully", "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                Me.Close()
+            End If
+            conn.Close()
         Else
-            MessageBox.Show("Password is weak", "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                MessageBox.Show("Password is weak", "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
     End Sub
 
@@ -106,5 +111,9 @@
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         MessageBox.Show("Password should contain" & vbNewLine & "Minimum 8 Characters" & vbNewLine & "1 Lower Case Character" & vbNewLine & "1 Upper Case Character" & vbNewLine & "1 Special Symbol from (@,$,#,&)", "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Information)
+    End Sub
+
+    Private Sub cancle_Click(sender As Object, e As EventArgs) Handles cancle.Click
+        Me.Close()
     End Sub
 End Class

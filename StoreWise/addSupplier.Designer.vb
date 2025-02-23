@@ -23,9 +23,9 @@ Partial Class addSupplier
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.eMail = New System.Windows.Forms.TextBox()
-        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.phone = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.supplierName = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -42,16 +42,16 @@ Partial Class addSupplier
         Me.eMail.Size = New System.Drawing.Size(470, 39)
         Me.eMail.TabIndex = 15
         '
-        'Label6
+        'Label4
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Now Medium", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.Red
-        Me.Label6.Location = New System.Drawing.Point(41, 265)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(122, 34)
-        Me.Label6.TabIndex = 17
-        Me.Label6.Text = "E-Mail:"
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Now Medium", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.Red
+        Me.Label4.Location = New System.Drawing.Point(41, 265)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(133, 34)
+        Me.Label4.TabIndex = 17
+        Me.Label4.Text = "*E-Mail:"
         '
         'phone
         '
@@ -61,16 +61,16 @@ Partial Class addSupplier
         Me.phone.Size = New System.Drawing.Size(470, 39)
         Me.phone.TabIndex = 14
         '
-        'Label5
+        'Label3
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Now Medium", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.Red
-        Me.Label5.Location = New System.Drawing.Point(41, 191)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(250, 34)
-        Me.Label5.TabIndex = 16
-        Me.Label5.Text = "*Phone Number:"
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Now Medium", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.Red
+        Me.Label3.Location = New System.Drawing.Point(41, 191)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(250, 34)
+        Me.Label3.TabIndex = 16
+        Me.Label3.Text = "*Phone Number:"
         '
         'supplierName
         '
@@ -150,9 +150,9 @@ Partial Class addSupplier
         Me.Controls.Add(Me.save)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.eMail)
-        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.phone)
-        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.supplierName)
         Me.Controls.Add(Me.Label2)
         Me.Name = "addSupplier"
@@ -162,9 +162,9 @@ Partial Class addSupplier
 
     End Sub
     Friend WithEvents eMail As System.Windows.Forms.TextBox
-    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents phone As System.Windows.Forms.TextBox
-    Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents supplierName As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label

@@ -197,7 +197,7 @@ Partial Class addSales
         Me.credit.ForeColor = System.Drawing.Color.Red
         Me.credit.Location = New System.Drawing.Point(1100, 298)
         Me.credit.Name = "credit"
-        Me.credit.Size = New System.Drawing.Size(123, 36)
+        Me.credit.Size = New System.Drawing.Size(122, 36)
         Me.credit.TabIndex = 7
         Me.credit.Text = "Credit"
         Me.credit.UseVisualStyleBackColor = True
@@ -210,7 +210,7 @@ Partial Class addSales
         Me.cash.ForeColor = System.Drawing.Color.Red
         Me.cash.Location = New System.Drawing.Point(915, 298)
         Me.cash.Name = "cash"
-        Me.cash.Size = New System.Drawing.Size(105, 36)
+        Me.cash.Size = New System.Drawing.Size(104, 36)
         Me.cash.TabIndex = 6
         Me.cash.TabStop = True
         Me.cash.Text = "Cash"
@@ -224,7 +224,7 @@ Partial Class addSales
         Me.Label8.ForeColor = System.Drawing.Color.Red
         Me.Label8.Location = New System.Drawing.Point(679, 302)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(98, 32)
+        Me.Label8.Size = New System.Drawing.Size(97, 32)
         Me.Label8.TabIndex = 63
         Me.Label8.Text = "*Type:"
         '
@@ -235,7 +235,7 @@ Partial Class addSales
         Me.Label9.ForeColor = System.Drawing.Color.Red
         Me.Label9.Location = New System.Drawing.Point(679, 366)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(154, 32)
+        Me.Label9.Size = New System.Drawing.Size(153, 32)
         Me.Label9.TabIndex = 69
         Me.Label9.Text = "*Quantity:"
         '
@@ -254,7 +254,7 @@ Partial Class addSales
         Me.Label10.ForeColor = System.Drawing.Color.Red
         Me.Label10.Location = New System.Drawing.Point(28, 366)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(186, 32)
+        Me.Label10.Size = New System.Drawing.Size(185, 32)
         Me.Label10.TabIndex = 68
         Me.Label10.Text = "*Item Name:"
         '
@@ -338,7 +338,7 @@ Partial Class addSales
         Me.Label11.ForeColor = System.Drawing.Color.Red
         Me.Label11.Location = New System.Drawing.Point(28, 426)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(98, 32)
+        Me.Label11.Size = New System.Drawing.Size(97, 32)
         Me.Label11.TabIndex = 77
         Me.Label11.Text = "Items:"
         '
@@ -349,7 +349,7 @@ Partial Class addSales
         Me.Label12.ForeColor = System.Drawing.Color.Red
         Me.Label12.Location = New System.Drawing.Point(377, 426)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(144, 32)
+        Me.Label12.Size = New System.Drawing.Size(143, 32)
         Me.Label12.TabIndex = 79
         Me.Label12.Text = "Quantity:"
         '
@@ -370,7 +370,7 @@ Partial Class addSales
         Me.Label13.ForeColor = System.Drawing.Color.Red
         Me.Label13.Location = New System.Drawing.Point(570, 426)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(95, 32)
+        Me.Label13.Size = New System.Drawing.Size(94, 32)
         Me.Label13.TabIndex = 81
         Me.Label13.Text = "Price:"
         '
@@ -391,7 +391,7 @@ Partial Class addSales
         Me.Label14.ForeColor = System.Drawing.Color.Red
         Me.Label14.Location = New System.Drawing.Point(1054, 426)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(169, 32)
+        Me.Label14.Size = New System.Drawing.Size(168, 32)
         Me.Label14.TabIndex = 83
         Me.Label14.Text = "Final Price:"
         '
@@ -442,7 +442,7 @@ Partial Class addSales
         Me.Label17.ForeColor = System.Drawing.Color.Red
         Me.Label17.Location = New System.Drawing.Point(580, 674)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(253, 32)
+        Me.Label17.Size = New System.Drawing.Size(252, 32)
         Me.Label17.TabIndex = 90
         Me.Label17.Text = "Final Bill Amount:"
         '
@@ -466,7 +466,7 @@ Partial Class addSales
         Me.Label15.ForeColor = System.Drawing.Color.Red
         Me.Label15.Location = New System.Drawing.Point(841, 426)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(78, 32)
+        Me.Label15.Size = New System.Drawing.Size(77, 32)
         Me.Label15.TabIndex = 94
         Me.Label15.Text = "GST:"
         '

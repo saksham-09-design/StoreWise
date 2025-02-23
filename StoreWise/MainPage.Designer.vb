@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class MainPage
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class MainPage
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainPage))
@@ -63,11 +63,9 @@ Partial Class MainPage
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.MenuStrip1.SuspendLayout()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
-        CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -91,19 +89,19 @@ Partial Class MainPage
         'ChangeCredentialsToolStripMenuItem
         '
         Me.ChangeCredentialsToolStripMenuItem.Name = "ChangeCredentialsToolStripMenuItem"
-        Me.ChangeCredentialsToolStripMenuItem.Size = New System.Drawing.Size(191, 26)
+        Me.ChangeCredentialsToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
         Me.ChangeCredentialsToolStripMenuItem.Text = "Modify User"
         '
         'ChangeThemeToolStripMenuItem
         '
         Me.ChangeThemeToolStripMenuItem.Name = "ChangeThemeToolStripMenuItem"
-        Me.ChangeThemeToolStripMenuItem.Size = New System.Drawing.Size(191, 26)
+        Me.ChangeThemeToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
         Me.ChangeThemeToolStripMenuItem.Text = "Change Theme"
         '
         'ExitToolStripMenuItem1
         '
         Me.ExitToolStripMenuItem1.Name = "ExitToolStripMenuItem1"
-        Me.ExitToolStripMenuItem1.Size = New System.Drawing.Size(191, 26)
+        Me.ExitToolStripMenuItem1.Size = New System.Drawing.Size(224, 26)
         Me.ExitToolStripMenuItem1.Text = "Logout"
         '
         'ItemToolStripMenuItem
@@ -222,25 +220,25 @@ Partial Class MainPage
         Me.AddToolStripMenuItem4.Name = "AddToolStripMenuItem4"
         Me.AddToolStripMenuItem4.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Alt) _
             Or System.Windows.Forms.Keys.L), System.Windows.Forms.Keys)
-        Me.AddToolStripMenuItem4.Size = New System.Drawing.Size(198, 26)
+        Me.AddToolStripMenuItem4.Size = New System.Drawing.Size(224, 26)
         Me.AddToolStripMenuItem4.Text = "Add"
         '
         'ModifyToolStripMenuItem4
         '
         Me.ModifyToolStripMenuItem4.Name = "ModifyToolStripMenuItem4"
-        Me.ModifyToolStripMenuItem4.Size = New System.Drawing.Size(198, 26)
+        Me.ModifyToolStripMenuItem4.Size = New System.Drawing.Size(224, 26)
         Me.ModifyToolStripMenuItem4.Text = "Modify"
         '
         'DeleteToolStripMenuItem4
         '
         Me.DeleteToolStripMenuItem4.Name = "DeleteToolStripMenuItem4"
-        Me.DeleteToolStripMenuItem4.Size = New System.Drawing.Size(198, 26)
+        Me.DeleteToolStripMenuItem4.Size = New System.Drawing.Size(224, 26)
         Me.DeleteToolStripMenuItem4.Text = "Delete"
         '
         'DisplayToolStripMenuItem4
         '
         Me.DisplayToolStripMenuItem4.Name = "DisplayToolStripMenuItem4"
-        Me.DisplayToolStripMenuItem4.Size = New System.Drawing.Size(198, 26)
+        Me.DisplayToolStripMenuItem4.Size = New System.Drawing.Size(224, 26)
         Me.DisplayToolStripMenuItem4.Text = "Display"
         '
         'DashboardToolStripMenuItem
@@ -354,7 +352,6 @@ Partial Class MainPage
         Me.ContextMenuStrip1.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -398,5 +395,4 @@ Partial Class MainPage
     Friend WithEvents SearchToolStripMenuItem4 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ChangeCredentialsToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ChangeThemeToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents BindingSource1 As BindingSource
 End Class

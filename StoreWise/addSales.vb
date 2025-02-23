@@ -241,4 +241,8 @@
     Private Sub itemNamelist_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles itemNamelist.SelectedIndexChanged
 
     End Sub
+
+    Private Sub itemQuantity_TextChanged(sender As Object, e As EventArgs) Handles itemQuantity.TextChanged
+
+    End Sub
 End Class

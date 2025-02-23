@@ -90,6 +90,7 @@
     End Sub
 
     Private Sub ChangeThemeToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ChangeThemeToolStripMenuItem.Click
+        'Saving the Dark Mode Prefrences in the database
         DMode = Not DMode
         Dim conn As OleDb.OleDbConnection
         Dim cmd As OleDb.OleDbCommand

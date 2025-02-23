@@ -22,31 +22,31 @@ Partial Class modifySupplier
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.supplierNameList = New System.Windows.Forms.ComboBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.cancle = New System.Windows.Forms.Button()
         Me.clear = New System.Windows.Forms.Button()
         Me.save = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.eMail = New System.Windows.Forms.TextBox()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.phone = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.phone = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.supplierName = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
-        'ComboBox1
+        'supplierNameList
         '
-        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.ComboBox1.Font = New System.Drawing.Font("Now Medium", 15.0!)
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"Sunfeast", "Cremica", "Nestle"})
-        Me.ComboBox1.Location = New System.Drawing.Point(316, 174)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(470, 38)
-        Me.ComboBox1.TabIndex = 93
+        Me.supplierNameList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.supplierNameList.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.supplierNameList.Font = New System.Drawing.Font("Now Medium", 15.0!)
+        Me.supplierNameList.FormattingEnabled = True
+        Me.supplierNameList.Items.AddRange(New Object() {"Sunfeast", "Cremica", "Nestle"})
+        Me.supplierNameList.Location = New System.Drawing.Point(316, 174)
+        Me.supplierNameList.Name = "supplierNameList"
+        Me.supplierNameList.Size = New System.Drawing.Size(470, 38)
+        Me.supplierNameList.TabIndex = 93
         '
         'Label3
         '
@@ -55,7 +55,7 @@ Partial Class modifySupplier
         Me.Label3.ForeColor = System.Drawing.Color.Red
         Me.Label3.Location = New System.Drawing.Point(38, 180)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(137, 32)
+        Me.Label3.Size = New System.Drawing.Size(136, 32)
         Me.Label3.TabIndex = 94
         Me.Label3.Text = "Supplier:"
         '
@@ -116,16 +116,16 @@ Partial Class modifySupplier
         Me.eMail.Size = New System.Drawing.Size(470, 39)
         Me.eMail.TabIndex = 86
         '
-        'Label6
+        'Label5
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Now Medium", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.Red
-        Me.Label6.Location = New System.Drawing.Point(38, 384)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(122, 34)
-        Me.Label6.TabIndex = 88
-        Me.Label6.Text = "E-Mail:"
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Now Medium", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.Red
+        Me.Label5.Location = New System.Drawing.Point(38, 384)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(133, 34)
+        Me.Label5.TabIndex = 88
+        Me.Label5.Text = "*E-Mail:"
         '
         'phone
         '
@@ -135,16 +135,16 @@ Partial Class modifySupplier
         Me.phone.Size = New System.Drawing.Size(470, 39)
         Me.phone.TabIndex = 85
         '
-        'Label5
+        'Label4
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Now Medium", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.Red
-        Me.Label5.Location = New System.Drawing.Point(38, 310)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(250, 34)
-        Me.Label5.TabIndex = 87
-        Me.Label5.Text = "*Phone Number:"
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Now Medium", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.Red
+        Me.Label4.Location = New System.Drawing.Point(38, 310)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(250, 34)
+        Me.Label4.TabIndex = 87
+        Me.Label4.Text = "*Phone Number:"
         '
         'supplierName
         '
@@ -170,16 +170,16 @@ Partial Class modifySupplier
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(824, 580)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.supplierNameList)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.cancle)
         Me.Controls.Add(Me.clear)
         Me.Controls.Add(Me.save)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.eMail)
-        Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.phone)
         Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.phone)
+        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.supplierName)
         Me.Controls.Add(Me.Label2)
         Me.Name = "modifySupplier"
@@ -188,16 +188,16 @@ Partial Class modifySupplier
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
+    Friend WithEvents supplierNameList As System.Windows.Forms.ComboBox
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents cancle As System.Windows.Forms.Button
     Friend WithEvents clear As System.Windows.Forms.Button
     Friend WithEvents save As System.Windows.Forms.Button
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents eMail As System.Windows.Forms.TextBox
-    Friend WithEvents Label6 As System.Windows.Forms.Label
-    Friend WithEvents phone As System.Windows.Forms.TextBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents phone As System.Windows.Forms.TextBox
+    Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents supplierName As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
 End Class

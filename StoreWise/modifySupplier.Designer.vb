@@ -25,7 +25,6 @@ Partial Class modifySupplier
         Me.supplierNameList = New System.Windows.Forms.ComboBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.cancle = New System.Windows.Forms.Button()
-        Me.clear = New System.Windows.Forms.Button()
         Me.save = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.eMail = New System.Windows.Forms.TextBox()
@@ -71,19 +70,6 @@ Partial Class modifySupplier
         Me.cancle.TabIndex = 92
         Me.cancle.Text = "&Cancel"
         Me.cancle.UseVisualStyleBackColor = False
-        '
-        'clear
-        '
-        Me.clear.BackColor = System.Drawing.Color.Red
-        Me.clear.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.clear.Font = New System.Drawing.Font("Now", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.clear.ForeColor = System.Drawing.Color.Ivory
-        Me.clear.Location = New System.Drawing.Point(333, 455)
-        Me.clear.Name = "clear"
-        Me.clear.Size = New System.Drawing.Size(168, 52)
-        Me.clear.TabIndex = 91
-        Me.clear.Text = "Clear"
-        Me.clear.UseVisualStyleBackColor = False
         '
         'save
         '
@@ -173,7 +159,6 @@ Partial Class modifySupplier
         Me.Controls.Add(Me.supplierNameList)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.cancle)
-        Me.Controls.Add(Me.clear)
         Me.Controls.Add(Me.save)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.eMail)
@@ -191,7 +176,6 @@ Partial Class modifySupplier
     Friend WithEvents supplierNameList As System.Windows.Forms.ComboBox
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents cancle As System.Windows.Forms.Button
-    Friend WithEvents clear As System.Windows.Forms.Button
     Friend WithEvents save As System.Windows.Forms.Button
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents eMail As System.Windows.Forms.TextBox

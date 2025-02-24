@@ -30,11 +30,19 @@
             Dim cmd As New OleDb.OleDbCommand(sql, conn)
             If cmd.ExecuteNonQuery() <> 0 Then
                 MessageBox.Show("Supplier Modified Successfully", "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                update_List()
+                Try
+                    update_List()
+                Catch ex As Exception
+                    MessageBox.Show("No Supplier Found", "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                End Try
                 supplierName.Text = ""
                 phone.Text = ""
                 eMail.Text = ""
-                supplierNameList.SelectedIndex = 1
+                Try
+                    supplierNameList.SelectedIndex = 0
+                Catch ex As Exception
+                    MessageBox.Show("No Supplier Found", "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                End Try
             End If
             conn.Close()
         End If
@@ -53,13 +61,21 @@
         Dim dt As New DataTable
         dt.Clear()
         da.Fill(dt)
-        supplierNameList.DataSource = dt
-        supplierNameList.DisplayMember = "sName"
+        If dt.Rows.Count = 0 Then
+            MessageBox.Show("No Supplier found", "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        Else
+            supplierNameList.DataSource = dt
+            supplierNameList.DisplayMember = "sName"
+        End If
         conn.Close()
     End Sub
 
     Private Sub modifySupplier_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        update_List()
+        Try
+            update_List()
+        Catch ex As Exception
+            MessageBox.Show("No Supplier Found", "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
 
         'setting up dark mode
         If (DMode) Then
@@ -73,8 +89,6 @@
             cancle.BackColor = Color.FromArgb(255, 31, 111, 235)
             cancle.BackColor = Color.FromArgb(255, 31, 111, 235)
             cancle.BackColor = Color.FromArgb(255, 31, 111, 235)
-            clear.BackColor = Color.FromArgb(255, 31, 111, 235)
-            clear.BackColor = Color.FromArgb(255, 31, 111, 235)
             supplierName.BackColor = Color.FromArgb(255, 33, 40, 48)
             supplierName.ForeColor = Color.FromArgb(255, 240, 246, 252)
             phone.BackColor = Color.FromArgb(255, 33, 40, 48)
@@ -84,14 +98,6 @@
             supplierNameList.BackColor = Color.FromArgb(255, 33, 40, 48)
             supplierNameList.ForeColor = Color.FromArgb(255, 240, 246, 252)
         End If
-    End Sub
-
-    'Clearing data
-    Private Sub clear_Click(sender As Object, e As EventArgs) Handles clear.Click
-        supplierName.Text = ""
-        phone.Text = ""
-        eMail.Text = ""
-        supplierNameList.SelectedIndex = 1
     End Sub
 
     Private Sub cancle_Click(sender As Object, e As EventArgs) Handles cancle.Click
@@ -112,10 +118,14 @@
         Dim dt As New DataTable
         dt.Clear()
         da.Fill(dt)
-        supplierName.Text = dt.Rows(0).Item(1)
-        phone.Text = dt.Rows(0).Item(2)
-        eMail.Text = dt.Rows(0).Item(3)
-        sid = dt.Rows(0).Item(0)
+        If dt.Rows.Count > 0 Then
+            supplierName.Text = dt.Rows(0).Item(1)
+            phone.Text = dt.Rows(0).Item(2)
+            eMail.Text = dt.Rows(0).Item(3)
+            sid = dt.Rows(0).Item(0)
+        Else
+            MessageBox.Show("No Supplier found", "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End If
         conn.Close()
     End Sub
 End Class

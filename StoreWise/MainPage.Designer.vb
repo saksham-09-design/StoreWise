@@ -89,19 +89,19 @@ Partial Class MainPage
         'ChangeCredentialsToolStripMenuItem
         '
         Me.ChangeCredentialsToolStripMenuItem.Name = "ChangeCredentialsToolStripMenuItem"
-        Me.ChangeCredentialsToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.ChangeCredentialsToolStripMenuItem.Size = New System.Drawing.Size(191, 26)
         Me.ChangeCredentialsToolStripMenuItem.Text = "Modify User"
         '
         'ChangeThemeToolStripMenuItem
         '
         Me.ChangeThemeToolStripMenuItem.Name = "ChangeThemeToolStripMenuItem"
-        Me.ChangeThemeToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.ChangeThemeToolStripMenuItem.Size = New System.Drawing.Size(191, 26)
         Me.ChangeThemeToolStripMenuItem.Text = "Change Theme"
         '
         'ExitToolStripMenuItem1
         '
         Me.ExitToolStripMenuItem1.Name = "ExitToolStripMenuItem1"
-        Me.ExitToolStripMenuItem1.Size = New System.Drawing.Size(224, 26)
+        Me.ExitToolStripMenuItem1.Size = New System.Drawing.Size(191, 26)
         Me.ExitToolStripMenuItem1.Text = "Logout"
         '
         'ItemToolStripMenuItem

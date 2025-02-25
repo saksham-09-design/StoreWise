@@ -13,34 +13,40 @@
         Dim da As OleDb.OleDbDataAdapter
         da = New OleDb.OleDbDataAdapter(cmd)
         Dim dt As New DataTable
-        dt.Clear()
         da.Fill(dt)
         If dt.Rows.Count > 0 Then
             supplierName.Text = dt.Rows(0).Item(1)
             phone.Text = dt.Rows(0).Item(2)
             eMail.Text = dt.Rows(0).Item(3)
             sid = dt.Rows(0).Item(0)
-        Else
-            MessageBox.Show("No Supplier found", "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
         conn.Close()
     End Sub
     Sub update_List()
         Dim conn As New OleDb.OleDbConnection
         conn.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Saksham\Documents\StoreWise.accdb"
-        If conn.State = ConnectionState.Closed Then
-            conn.Open()
-        End If
-        Dim sql As String = "select sName from supplierTable"
-        Dim cmd As New OleDb.OleDbCommand(sql, conn)
-        Dim da As OleDb.OleDbDataAdapter
-        da = New OleDb.OleDbDataAdapter(cmd)
-        Dim dt As New DataTable
-        dt.Clear()
-        da.Fill(dt)
-        supplierNameList.DataSource = dt
-        supplierNameList.DisplayMember = "sName"
-        conn.Close()
+        Try
+            If conn.State = ConnectionState.Closed Then
+                conn.Open()
+            End If
+            Dim sql As String = "SELECT sName FROM supplierTable"
+            Dim cmd As New OleDb.OleDbCommand(sql, conn)
+            Dim da As New OleDb.OleDbDataAdapter(cmd)
+            Dim dt As New DataTable
+            da.Fill(dt)
+            supplierNameList.DataSource = dt
+            supplierNameList.DisplayMember = "sName"
+            If dt.Rows.Count = 0 Then
+                MessageBox.Show("No Supplier found update list ", "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                supplierName.Clear()
+                phone.Clear()
+                eMail.Clear()
+            End If
+        Catch ex As Exception
+            MessageBox.Show("Error: " & ex.Message, "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        Finally
+            conn.Close()
+        End Try
     End Sub
 
     Private Sub deleteSupplier_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -73,12 +79,10 @@
     End Sub
 
     Private Sub delete_Click(sender As Object, e As EventArgs) Handles delete.Click
-
         If supplierName.Text.Trim = "" Then
             MessageBox.Show("No Supplier to delete", "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Exit Sub
         End If
-
         Dim conn As New OleDb.OleDbConnection
         conn.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Saksham\Documents\StoreWise.accdb"
         If conn.State = ConnectionState.Closed Then
@@ -88,11 +92,7 @@
         Dim cmd As New OleDb.OleDbCommand(sql, conn)
         If cmd.ExecuteNonQuery() <> 0 Then
             MessageBox.Show("Supplier Deleted Successfully", "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            Try
-                update_List()
-            Catch ex As Exception
-                MessageBox.Show("No Supplier Found", "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            End Try
+            update_List()
         End If
         conn.Close()
     End Sub

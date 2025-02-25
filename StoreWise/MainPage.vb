@@ -107,4 +107,10 @@
 
     Private Sub SearchToolStripMenuItem4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SearchToolStripMenuItem4.Click
     End Sub
+
+    Private Sub DisplayToolStripMenuItem4_Click(sender As Object, e As EventArgs) Handles DisplayToolStripMenuItem4.Click
+        Dim supplier As New displaySupplier()
+        supplier.MdiParent = Me
+        supplier.Show()
+    End Sub
 End Class

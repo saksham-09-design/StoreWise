@@ -22,6 +22,7 @@ Partial Class displaySupplier
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.eMail = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -31,8 +32,8 @@ Partial Class displaySupplier
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Filter = New System.Windows.Forms.ComboBox()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.supplierGrid = New System.Windows.Forms.DataGridView()
+        CType(Me.supplierGrid, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -42,9 +43,9 @@ Partial Class displaySupplier
         Me.Label1.ForeColor = System.Drawing.SystemColors.HotTrack
         Me.Label1.Location = New System.Drawing.Point(465, 33)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(332, 48)
+        Me.Label1.Size = New System.Drawing.Size(348, 48)
         Me.Label1.TabIndex = 100
-        Me.Label1.Text = "Delete Supplier"
+        Me.Label1.Text = "Display Supplier"
         '
         'eMail
         '
@@ -129,22 +130,25 @@ Partial Class displaySupplier
         Me.Filter.Size = New System.Drawing.Size(388, 38)
         Me.Filter.TabIndex = 102
         '
-        'DataGridView1
+        'supplierGrid
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(33, 258)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowHeadersWidth = 51
-        Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(1269, 471)
-        Me.DataGridView1.TabIndex = 103
+        Me.supplierGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.supplierGrid.Location = New System.Drawing.Point(33, 258)
+        Me.supplierGrid.Name = "supplierGrid"
+        Me.supplierGrid.ReadOnly = True
+        Me.supplierGrid.RowHeadersWidth = 51
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Now Medium", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.supplierGrid.RowsDefaultCellStyle = DataGridViewCellStyle1
+        Me.supplierGrid.RowTemplate.Height = 24
+        Me.supplierGrid.Size = New System.Drawing.Size(1269, 471)
+        Me.supplierGrid.TabIndex = 103
         '
         'displaySupplier
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1334, 759)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.supplierGrid)
         Me.Controls.Add(Me.Filter)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label1)
@@ -156,7 +160,7 @@ Partial Class displaySupplier
         Me.Controls.Add(Me.Label2)
         Me.Name = "displaySupplier"
         Me.Text = "displaySupplier"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.supplierGrid, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -170,5 +174,5 @@ Partial Class displaySupplier
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Filter As ComboBox
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents supplierGrid As DataGridView
 End Class

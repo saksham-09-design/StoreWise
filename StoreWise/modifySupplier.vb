@@ -50,23 +50,31 @@
 
     Sub update_List()
         Dim conn As New OleDb.OleDbConnection
+
         conn.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Saksham\Documents\StoreWise.accdb"
+
         Try
             If conn.State = ConnectionState.Closed Then
                 conn.Open()
             End If
+
             Dim sql As String = "SELECT sName FROM supplierTable"
             Dim cmd As New OleDb.OleDbCommand(sql, conn)
             Dim da As New OleDb.OleDbDataAdapter(cmd)
             Dim dt As New DataTable
+
             da.Fill(dt)
+
             supplierNameList.DataSource = dt
             supplierNameList.DisplayMember = "sName"
+
             If dt.Rows.Count = 0 Then
                 MessageBox.Show("No Supplier found update list ", "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End If
+
         Catch ex As Exception
             MessageBox.Show("Error: " & ex.Message, "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Error)
+
         Finally
             conn.Close()
         End Try

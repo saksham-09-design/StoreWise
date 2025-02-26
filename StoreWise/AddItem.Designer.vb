@@ -38,7 +38,7 @@ Partial Class AddItem
         Me.cancle = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.reOrder = New System.Windows.Forms.TextBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.supplierNameList = New System.Windows.Forms.ComboBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
@@ -93,7 +93,7 @@ Partial Class AddItem
         Me.Label2.ForeColor = System.Drawing.Color.Red
         Me.Label2.Location = New System.Drawing.Point(26, 182)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(176, 32)
+        Me.Label2.Size = New System.Drawing.Size(175, 32)
         Me.Label2.TabIndex = 7
         Me.Label2.Text = "Item Name:"
         '
@@ -104,7 +104,7 @@ Partial Class AddItem
         Me.Label4.ForeColor = System.Drawing.Color.Red
         Me.Label4.Location = New System.Drawing.Point(26, 239)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(82, 32)
+        Me.Label4.Size = New System.Drawing.Size(81, 32)
         Me.Label4.TabIndex = 13
         Me.Label4.Text = "Unit:"
         '
@@ -114,7 +114,7 @@ Partial Class AddItem
         Me.itemUnit.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.itemUnit.Font = New System.Drawing.Font("Now Medium", 15.0!)
         Me.itemUnit.FormattingEnabled = True
-        Me.itemUnit.Items.AddRange(New Object() {"Pcs.", "Kgs.", "Dozen", "Gms.", "Meter", "Units"})
+        Me.itemUnit.Items.AddRange(New Object() {"Pcs.", "Kgs.", "Dozen", "Gms.", "Meter", "Litre", "Units"})
         Me.itemUnit.Location = New System.Drawing.Point(441, 233)
         Me.itemUnit.Name = "itemUnit"
         Me.itemUnit.Size = New System.Drawing.Size(388, 38)
@@ -127,7 +127,7 @@ Partial Class AddItem
         Me.Label6.ForeColor = System.Drawing.Color.Red
         Me.Label6.Location = New System.Drawing.Point(26, 365)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(201, 32)
+        Me.Label6.Size = New System.Drawing.Size(200, 32)
         Me.Label6.TabIndex = 17
         Me.Label6.Text = "Cost per unit:"
         '
@@ -146,7 +146,7 @@ Partial Class AddItem
         Me.Label7.ForeColor = System.Drawing.Color.Red
         Me.Label7.Location = New System.Drawing.Point(26, 429)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(314, 32)
+        Me.Label7.Size = New System.Drawing.Size(313, 32)
         Me.Label7.TabIndex = 19
         Me.Label7.Text = "Selling Price per Unit:"
         '
@@ -165,7 +165,7 @@ Partial Class AddItem
         Me.Label8.ForeColor = System.Drawing.Color.Red
         Me.Label8.Location = New System.Drawing.Point(26, 494)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(133, 32)
+        Me.Label8.Size = New System.Drawing.Size(132, 32)
         Me.Label8.TabIndex = 21
         Me.Label8.Text = "GST (%):"
         '
@@ -175,7 +175,7 @@ Partial Class AddItem
         Me.itemGST.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.itemGST.Font = New System.Drawing.Font("Now Medium", 15.0!)
         Me.itemGST.FormattingEnabled = True
-        Me.itemGST.Items.AddRange(New Object() {"5%", "12%", "18%", "28%", "Exempt"})
+        Me.itemGST.Items.AddRange(New Object() {"0%", "5%", "12%", "18%", "28%"})
         Me.itemGST.Location = New System.Drawing.Point(441, 488)
         Me.itemGST.Name = "itemGST"
         Me.itemGST.Size = New System.Drawing.Size(388, 38)
@@ -201,7 +201,7 @@ Partial Class AddItem
         Me.Label3.ForeColor = System.Drawing.Color.Red
         Me.Label3.Location = New System.Drawing.Point(26, 299)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(232, 32)
+        Me.Label3.Size = New System.Drawing.Size(231, 32)
         Me.Label3.TabIndex = 24
         Me.Label3.Text = "Re-Order Level:"
         '
@@ -213,17 +213,17 @@ Partial Class AddItem
         Me.reOrder.Size = New System.Drawing.Size(388, 37)
         Me.reOrder.TabIndex = 23
         '
-        'ComboBox1
+        'supplierNameList
         '
-        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.ComboBox1.Font = New System.Drawing.Font("Now Medium", 15.0!)
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"Sunfeast", "Cremica", "Nestle"})
-        Me.ComboBox1.Location = New System.Drawing.Point(441, 121)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(388, 38)
-        Me.ComboBox1.TabIndex = 25
+        Me.supplierNameList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.supplierNameList.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.supplierNameList.Font = New System.Drawing.Font("Now Medium", 15.0!)
+        Me.supplierNameList.FormattingEnabled = True
+        Me.supplierNameList.Items.AddRange(New Object() {"Sunfeast", "Cremica", "Nestle"})
+        Me.supplierNameList.Location = New System.Drawing.Point(441, 121)
+        Me.supplierNameList.Name = "supplierNameList"
+        Me.supplierNameList.Size = New System.Drawing.Size(388, 38)
+        Me.supplierNameList.TabIndex = 25
         '
         'Label5
         '
@@ -232,7 +232,7 @@ Partial Class AddItem
         Me.Label5.ForeColor = System.Drawing.Color.Red
         Me.Label5.Location = New System.Drawing.Point(26, 127)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(137, 32)
+        Me.Label5.Size = New System.Drawing.Size(136, 32)
         Me.Label5.TabIndex = 26
         Me.Label5.Text = "Supplier:"
         '
@@ -240,9 +240,9 @@ Partial Class AddItem
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.White
+        Me.BackColor = System.Drawing.Color.WhiteSmoke
         Me.ClientSize = New System.Drawing.Size(877, 661)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.supplierNameList)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.reOrder)
@@ -282,6 +282,6 @@ Partial Class AddItem
     Friend WithEvents cancle As System.Windows.Forms.Button
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents reOrder As System.Windows.Forms.TextBox
-    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
+    Friend WithEvents supplierNameList As System.Windows.Forms.ComboBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
 End Class

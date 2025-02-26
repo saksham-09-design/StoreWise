@@ -6,24 +6,74 @@
 
     Private Sub clear_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles clear.Click
         itemName.Clear()
-        itemUnit.SelectedIndex = 5
+        itemUnit.SelectedIndex = 0
         reOrder.Clear()
         itemCost.Clear()
         itemSP.Clear()
-        itemGST.SelectedIndex = 4
+        itemGST.SelectedIndex = 0
     End Sub
-
     Private Sub save_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles save.Click
-        If (itemName.Text.Trim = "" Or itemCost.Text.Trim = "" Or itemSP.Text.Trim = "" Or reOrder.Text.Trim = "") Then
+        If (supplierNameList.Text = "" Or itemName.Text.Trim = "" Or itemUnit.Text.Trim = "" Or itemSP.Text.Trim = "" Or itemCost.Text.Trim = "" Or itemGST.Text.Trim = "" Or reOrder.Text.Trim = "") Then
             MessageBox.Show("Please Fill All Fields")
         Else
-            MessageBox.Show("Entered Data is: " & itemName.Text & itemCost.Text & itemSP.Text & itemUnit.SelectedItem & itemGST.SelectedItem)
+            Dim conn As New OleDb.OleDbConnection
+            conn.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Saksham\Documents\StoreWise.accdb"
+            If conn.State = ConnectionState.Closed Then
+                conn.Open()
+            End If
+            Dim sql As String = "insert into itemTable (sName, itemName, unit, reOrderLevel, costUnit, sellUnit, gst) values ('" & supplierNameList.Text.Trim & "','" & itemName.Text.Trim & "','" & itemUnit.Text.Trim & "','" & CDbl(reOrder.Text.Trim) & "','" & CDbl(itemCost.Text.Trim) & "','" & CDbl(itemSP.Text.Trim) & "','" & CDbl(itemGST.Text.Trim.Replace("%", "")) & "')"
+            Dim cmd As New OleDb.OleDbCommand(sql, conn)
+            Try
+                cmd.ExecuteNonQuery()
+                MessageBox.Show("Item Added Successfully", "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                itemName.Clear()
+                itemCost.Clear()
+                itemGST.SelectedIndex = 0
+                itemSP.Clear()
+                itemUnit.SelectedIndex = 0
+                reOrder.Clear()
+
+            Catch ex As Exception
+                MessageBox.Show("Error: " & ex.Message, "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Finally
+                conn.Close()
+            End Try
         End If
     End Sub
 
     Private Sub AddItem_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        itemUnit.SelectedIndex = 5
-        itemGST.SelectedIndex = 4
+        Dim conn As New OleDb.OleDbConnection
+
+        conn.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Saksham\Documents\StoreWise.accdb"
+
+        Try
+            If conn.State = ConnectionState.Closed Then
+                conn.Open()
+            End If
+
+            Dim sql As String = "SELECT sName FROM supplierTable"
+            Dim cmd As New OleDb.OleDbCommand(sql, conn)
+            Dim da As New OleDb.OleDbDataAdapter(cmd)
+            Dim dt As New DataTable
+
+            da.Fill(dt)
+
+            supplierNameList.DataSource = dt
+            supplierNameList.DisplayMember = "sName"
+
+            If dt.Rows.Count = 0 Then
+                MessageBox.Show("No Supplier found update list ", "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End If
+
+        Catch ex As Exception
+            MessageBox.Show("Error: " & ex.Message, "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Error)
+
+        Finally
+            conn.Close()
+        End Try
+        'Setting the default values
+        itemUnit.SelectedIndex = 0
+        itemGST.SelectedIndex = 0
         If (DMode) Then
             Me.BackColor = Color.FromArgb(255, 13, 17, 23)
             For i = 1 To 8
@@ -36,8 +86,8 @@
             save.ForeColor = Color.FromArgb(255, Color.White)
             clear.ForeColor = Color.FromArgb(255, Color.White)
             cancle.ForeColor = Color.FromArgb(255, Color.White)
-            ComboBox1.BackColor = Color.FromArgb(255, 33, 40, 48)
-            ComboBox1.ForeColor = Color.FromArgb(255, 240, 246, 252)
+            supplierNameList.BackColor = Color.FromArgb(255, 33, 40, 48)
+            supplierNameList.ForeColor = Color.FromArgb(255, 240, 246, 252)
             itemName.BackColor = Color.FromArgb(255, 33, 40, 48)
             itemName.ForeColor = Color.FromArgb(255, 240, 246, 252)
             itemUnit.BackColor = Color.FromArgb(255, 33, 40, 48)
@@ -81,5 +131,9 @@
             e.Handled = True
             MessageBox.Show("Only one decimal point is allowed.", "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         End If
+    End Sub
+
+    Private Sub supplierNameList_SelectedIndexChanged(sender As Object, e As EventArgs) Handles supplierNameList.SelectedIndexChanged
+
     End Sub
 End Class

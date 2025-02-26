@@ -23,6 +23,7 @@ Partial Class displaySupplier
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.eMail = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -136,9 +137,18 @@ Partial Class displaySupplier
         Me.supplierGrid.Location = New System.Drawing.Point(33, 258)
         Me.supplierGrid.Name = "supplierGrid"
         Me.supplierGrid.ReadOnly = True
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Now", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.supplierGrid.RowHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.supplierGrid.RowHeadersWidth = 51
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Now Medium", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.supplierGrid.RowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Now Medium", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.supplierGrid.RowsDefaultCellStyle = DataGridViewCellStyle2
+        Me.supplierGrid.RowTemplate.DefaultCellStyle.Font = New System.Drawing.Font("Now", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.supplierGrid.RowTemplate.Height = 24
         Me.supplierGrid.Size = New System.Drawing.Size(1269, 471)
         Me.supplierGrid.TabIndex = 103

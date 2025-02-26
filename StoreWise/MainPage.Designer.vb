@@ -116,25 +116,25 @@ Partial Class MainPage
         Me.AddToolStripMenuItem.Name = "AddToolStripMenuItem"
         Me.AddToolStripMenuItem.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Alt) _
             Or System.Windows.Forms.Keys.I), System.Windows.Forms.Keys)
-        Me.AddToolStripMenuItem.Size = New System.Drawing.Size(195, 26)
+        Me.AddToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
         Me.AddToolStripMenuItem.Text = "Add"
         '
         'ModifyToolStripMenuItem
         '
         Me.ModifyToolStripMenuItem.Name = "ModifyToolStripMenuItem"
-        Me.ModifyToolStripMenuItem.Size = New System.Drawing.Size(195, 26)
+        Me.ModifyToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
         Me.ModifyToolStripMenuItem.Text = "Modify"
         '
         'DeleteToolStripMenuItem
         '
         Me.DeleteToolStripMenuItem.Name = "DeleteToolStripMenuItem"
-        Me.DeleteToolStripMenuItem.Size = New System.Drawing.Size(195, 26)
+        Me.DeleteToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
         Me.DeleteToolStripMenuItem.Text = "Delete"
         '
         'DisplayToolStripMenuItem2
         '
         Me.DisplayToolStripMenuItem2.Name = "DisplayToolStripMenuItem2"
-        Me.DisplayToolStripMenuItem2.Size = New System.Drawing.Size(195, 26)
+        Me.DisplayToolStripMenuItem2.Size = New System.Drawing.Size(224, 26)
         Me.DisplayToolStripMenuItem2.Text = "Display"
         '
         'TransactionsToolStripMenuItem
@@ -220,25 +220,25 @@ Partial Class MainPage
         Me.AddToolStripMenuItem4.Name = "AddToolStripMenuItem4"
         Me.AddToolStripMenuItem4.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Alt) _
             Or System.Windows.Forms.Keys.L), System.Windows.Forms.Keys)
-        Me.AddToolStripMenuItem4.Size = New System.Drawing.Size(224, 26)
+        Me.AddToolStripMenuItem4.Size = New System.Drawing.Size(198, 26)
         Me.AddToolStripMenuItem4.Text = "Add"
         '
         'ModifyToolStripMenuItem4
         '
         Me.ModifyToolStripMenuItem4.Name = "ModifyToolStripMenuItem4"
-        Me.ModifyToolStripMenuItem4.Size = New System.Drawing.Size(224, 26)
+        Me.ModifyToolStripMenuItem4.Size = New System.Drawing.Size(198, 26)
         Me.ModifyToolStripMenuItem4.Text = "Modify"
         '
         'DeleteToolStripMenuItem4
         '
         Me.DeleteToolStripMenuItem4.Name = "DeleteToolStripMenuItem4"
-        Me.DeleteToolStripMenuItem4.Size = New System.Drawing.Size(224, 26)
+        Me.DeleteToolStripMenuItem4.Size = New System.Drawing.Size(198, 26)
         Me.DeleteToolStripMenuItem4.Text = "Delete"
         '
         'DisplayToolStripMenuItem4
         '
         Me.DisplayToolStripMenuItem4.Name = "DisplayToolStripMenuItem4"
-        Me.DisplayToolStripMenuItem4.Size = New System.Drawing.Size(224, 26)
+        Me.DisplayToolStripMenuItem4.Size = New System.Drawing.Size(198, 26)
         Me.DisplayToolStripMenuItem4.Text = "Display"
         '
         'DashboardToolStripMenuItem

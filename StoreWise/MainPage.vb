@@ -113,4 +113,10 @@
         supplier.MdiParent = Me
         supplier.Show()
     End Sub
+
+    Private Sub DisplayToolStripMenuItem2_Click(sender As Object, e As EventArgs) Handles DisplayToolStripMenuItem2.Click
+        Dim itemDisplay As New displayItem()
+        itemDisplay.MdiParent = Me
+        itemDisplay.Show()
+    End Sub
 End Class

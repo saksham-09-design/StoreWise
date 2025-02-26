@@ -31,30 +31,34 @@
 
     'fetch All data
     Private Sub fetchData(sql_rec As String)
-        Dim conn As New OleDb.OleDbConnection
-        conn.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Saksham\Documents\StoreWise.accdb"
-        If conn.State = ConnectionState.Closed Then
-            conn.Open()
-        End If
-        Dim sql As String = sql_rec
-        Dim cmd As New OleDb.OleDbCommand(sql, conn)
-        Dim da As OleDb.OleDbDataAdapter
-        da = New OleDb.OleDbDataAdapter(cmd)
-        Dim dt As New DataTable
-        da.Fill(dt)
-        supplierGrid.DataSource = dt
-        supplierGrid.Columns(0).Width = 100
-        supplierGrid.Columns(1).Width = 200
-        supplierGrid.Columns(2).Width = 200
-        supplierGrid.Columns(3).Width = 300
-        supplierGrid.Columns(4).Width = 100
+        Try
+            Dim conn As New OleDb.OleDbConnection
+            conn.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Saksham\Documents\StoreWise.accdb"
+            If conn.State = ConnectionState.Closed Then
+                conn.Open()
+            End If
+            Dim sql As String = sql_rec
+            Dim cmd As New OleDb.OleDbCommand(sql, conn)
+            Dim da As OleDb.OleDbDataAdapter
+            da = New OleDb.OleDbDataAdapter(cmd)
+            Dim dt As New DataTable
+            da.Fill(dt)
+            supplierGrid.DataSource = dt
+            supplierGrid.Columns(0).Width = 100
+            supplierGrid.Columns(1).Width = 200
+            supplierGrid.Columns(2).Width = 200
+            supplierGrid.Columns(3).Width = 300
+            supplierGrid.Columns(4).Width = 100
 
-        supplierGrid.Columns(0).HeaderText = "Supplier ID"
-        supplierGrid.Columns(1).HeaderText = "Supplier Name"
-        supplierGrid.Columns(2).HeaderText = "Phone"
-        supplierGrid.Columns(3).HeaderText = "Email"
-        supplierGrid.Columns(4).HeaderText = "Balance"
-        conn.Close()
+            supplierGrid.Columns(0).HeaderText = "Supplier ID"
+            supplierGrid.Columns(1).HeaderText = "Supplier Name"
+            supplierGrid.Columns(2).HeaderText = "Phone"
+            supplierGrid.Columns(3).HeaderText = "Email"
+            supplierGrid.Columns(4).HeaderText = "Balance"
+            conn.Close()
+        Catch ex As Exception
+            MessageBox.Show("No Supplier found update list ", "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
     End Sub
 
     Private Sub supplierGrid_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles supplierGrid.CellContentClick

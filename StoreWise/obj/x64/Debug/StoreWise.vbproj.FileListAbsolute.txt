@@ -118,3 +118,4 @@ D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.exe
 D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.xml
 D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.pdb
 D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.displaySupplier.resources
+D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.displayItem.resources

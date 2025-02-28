@@ -27,7 +27,6 @@ Partial Class addPurchase
         Me.cancle = New System.Windows.Forms.Button()
         Me.clear = New System.Windows.Forms.Button()
         Me.save = New System.Windows.Forms.Button()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.itemQuantity = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
@@ -38,10 +37,23 @@ Partial Class addPurchase
         Me.Label7 = New System.Windows.Forms.Label()
         Me.transactionDate = New System.Windows.Forms.DateTimePicker()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.sellerName = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.gstAmt = New System.Windows.Forms.ListBox()
+        Me.fBill = New System.Windows.Forms.Label()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.Discount = New System.Windows.Forms.TextBox()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.totalPrice = New System.Windows.Forms.ListBox()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.priceList = New System.Windows.Forms.ListBox()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.quantityList = New System.Windows.Forms.ListBox()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.itemList = New System.Windows.Forms.ListBox()
+        Me.supplierNameList = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
         '
         'Add
@@ -49,7 +61,7 @@ Partial Class addPurchase
         Me.Add.BackColor = System.Drawing.Color.Red
         Me.Add.Font = New System.Drawing.Font("Now", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Add.ForeColor = System.Drawing.Color.Ivory
-        Me.Add.Location = New System.Drawing.Point(307, 533)
+        Me.Add.Location = New System.Drawing.Point(313, 601)
         Me.Add.Name = "Add"
         Me.Add.Size = New System.Drawing.Size(168, 52)
         Me.Add.TabIndex = 100
@@ -74,7 +86,7 @@ Partial Class addPurchase
         Me.cancle.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.cancle.Font = New System.Drawing.Font("Now", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cancle.ForeColor = System.Drawing.Color.Ivory
-        Me.cancle.Location = New System.Drawing.Point(862, 533)
+        Me.cancle.Location = New System.Drawing.Point(868, 601)
         Me.cancle.Name = "cancle"
         Me.cancle.Size = New System.Drawing.Size(168, 52)
         Me.cancle.TabIndex = 98
@@ -87,7 +99,7 @@ Partial Class addPurchase
         Me.clear.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.clear.Font = New System.Drawing.Font("Now", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.clear.ForeColor = System.Drawing.Color.Ivory
-        Me.clear.Location = New System.Drawing.Point(677, 533)
+        Me.clear.Location = New System.Drawing.Point(683, 601)
         Me.clear.Name = "clear"
         Me.clear.Size = New System.Drawing.Size(168, 52)
         Me.clear.TabIndex = 97
@@ -99,21 +111,12 @@ Partial Class addPurchase
         Me.save.BackColor = System.Drawing.Color.Red
         Me.save.Font = New System.Drawing.Font("Now", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.save.ForeColor = System.Drawing.Color.Ivory
-        Me.save.Location = New System.Drawing.Point(493, 533)
+        Me.save.Location = New System.Drawing.Point(499, 601)
         Me.save.Name = "save"
         Me.save.Size = New System.Drawing.Size(168, 52)
         Me.save.TabIndex = 96
         Me.save.Text = "&Save"
         Me.save.UseVisualStyleBackColor = False
-        '
-        'DataGridView1
-        '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(37, 306)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(1270, 198)
-        Me.DataGridView1.TabIndex = 95
         '
         'Label9
         '
@@ -122,7 +125,7 @@ Partial Class addPurchase
         Me.Label9.ForeColor = System.Drawing.Color.Red
         Me.Label9.Location = New System.Drawing.Point(671, 238)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(154, 32)
+        Me.Label9.Size = New System.Drawing.Size(153, 32)
         Me.Label9.TabIndex = 94
         Me.Label9.Text = "*Quantity:"
         '
@@ -141,7 +144,7 @@ Partial Class addPurchase
         Me.Label10.ForeColor = System.Drawing.Color.Red
         Me.Label10.Location = New System.Drawing.Point(20, 238)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(186, 32)
+        Me.Label10.Size = New System.Drawing.Size(185, 32)
         Me.Label10.TabIndex = 93
         Me.Label10.Text = "*Item Name:"
         '
@@ -152,7 +155,7 @@ Partial Class addPurchase
         Me.credit.ForeColor = System.Drawing.Color.Red
         Me.credit.Location = New System.Drawing.Point(1092, 170)
         Me.credit.Name = "credit"
-        Me.credit.Size = New System.Drawing.Size(123, 36)
+        Me.credit.Size = New System.Drawing.Size(122, 36)
         Me.credit.TabIndex = 91
         Me.credit.Text = "Credit"
         Me.credit.UseVisualStyleBackColor = True
@@ -165,7 +168,7 @@ Partial Class addPurchase
         Me.cash.ForeColor = System.Drawing.Color.Red
         Me.cash.Location = New System.Drawing.Point(907, 170)
         Me.cash.Name = "cash"
-        Me.cash.Size = New System.Drawing.Size(105, 36)
+        Me.cash.Size = New System.Drawing.Size(104, 36)
         Me.cash.TabIndex = 90
         Me.cash.TabStop = True
         Me.cash.Text = "Cash"
@@ -179,7 +182,7 @@ Partial Class addPurchase
         Me.Label8.ForeColor = System.Drawing.Color.Red
         Me.Label8.Location = New System.Drawing.Point(671, 174)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(98, 32)
+        Me.Label8.Size = New System.Drawing.Size(97, 32)
         Me.Label8.TabIndex = 89
         Me.Label8.Text = "*Type:"
         '
@@ -191,7 +194,6 @@ Partial Class addPurchase
         Me.tID.ReadOnly = True
         Me.tID.Size = New System.Drawing.Size(308, 39)
         Me.tID.TabIndex = 88
-        Me.tID.Text = "1"
         '
         'Label7
         '
@@ -223,14 +225,6 @@ Partial Class addPurchase
         Me.Label3.TabIndex = 79
         Me.Label3.Text = "*Date:"
         '
-        'sellerName
-        '
-        Me.sellerName.Font = New System.Drawing.Font("Now Medium", 15.8!)
-        Me.sellerName.Location = New System.Drawing.Point(298, 108)
-        Me.sellerName.Name = "sellerName"
-        Me.sellerName.Size = New System.Drawing.Size(308, 39)
-        Me.sellerName.TabIndex = 78
-        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -253,17 +247,189 @@ Partial Class addPurchase
         Me.Label1.TabIndex = 76
         Me.Label1.Text = "Add Purchase Transaction"
         '
-        'purchase
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Font = New System.Drawing.Font("Now", 16.0!, System.Drawing.FontStyle.Bold)
+        Me.Label15.ForeColor = System.Drawing.Color.Red
+        Me.Label15.Location = New System.Drawing.Point(832, 295)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(77, 32)
+        Me.Label15.TabIndex = 114
+        Me.Label15.Text = "GST:"
+        '
+        'gstAmt
+        '
+        Me.gstAmt.Font = New System.Drawing.Font("Now Medium", 12.8!)
+        Me.gstAmt.FormattingEnabled = True
+        Me.gstAmt.ItemHeight = 25
+        Me.gstAmt.Location = New System.Drawing.Point(838, 338)
+        Me.gstAmt.Name = "gstAmt"
+        Me.gstAmt.Size = New System.Drawing.Size(192, 179)
+        Me.gstAmt.TabIndex = 113
+        '
+        'fBill
+        '
+        Me.fBill.AutoSize = True
+        Me.fBill.Font = New System.Drawing.Font("Now", 18.0!, System.Drawing.FontStyle.Bold)
+        Me.fBill.ForeColor = System.Drawing.Color.Red
+        Me.fBill.Location = New System.Drawing.Point(826, 537)
+        Me.fBill.Name = "fBill"
+        Me.fBill.Size = New System.Drawing.Size(89, 36)
+        Me.fBill.TabIndex = 112
+        Me.fBill.Text = "₹0/-"
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Font = New System.Drawing.Font("Now", 16.0!, System.Drawing.FontStyle.Bold)
+        Me.Label17.ForeColor = System.Drawing.Color.Red
+        Me.Label17.Location = New System.Drawing.Point(571, 543)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(252, 32)
+        Me.Label17.TabIndex = 111
+        Me.Label17.Text = "Final Bill Amount:"
+        '
+        'Discount
+        '
+        Me.Discount.Font = New System.Drawing.Font("Now Medium", 15.8!)
+        Me.Discount.Location = New System.Drawing.Point(177, 536)
+        Me.Discount.Name = "Discount"
+        Me.Discount.Size = New System.Drawing.Size(308, 39)
+        Me.Discount.TabIndex = 109
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Font = New System.Drawing.Font("Now Medium", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label16.ForeColor = System.Drawing.Color.Red
+        Me.Label16.Location = New System.Drawing.Point(19, 541)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(152, 34)
+        Me.Label16.TabIndex = 110
+        Me.Label16.Text = "Discount:"
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Font = New System.Drawing.Font("Now", 16.0!, System.Drawing.FontStyle.Bold)
+        Me.Label14.ForeColor = System.Drawing.Color.Red
+        Me.Label14.Location = New System.Drawing.Point(1045, 295)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(168, 32)
+        Me.Label14.TabIndex = 108
+        Me.Label14.Text = "Final Price:"
+        '
+        'totalPrice
+        '
+        Me.totalPrice.Font = New System.Drawing.Font("Now Medium", 12.8!)
+        Me.totalPrice.FormattingEnabled = True
+        Me.totalPrice.ItemHeight = 25
+        Me.totalPrice.Location = New System.Drawing.Point(1049, 338)
+        Me.totalPrice.Name = "totalPrice"
+        Me.totalPrice.Size = New System.Drawing.Size(257, 179)
+        Me.totalPrice.TabIndex = 107
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Now", 16.0!, System.Drawing.FontStyle.Bold)
+        Me.Label13.ForeColor = System.Drawing.Color.Red
+        Me.Label13.Location = New System.Drawing.Point(561, 295)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(94, 32)
+        Me.Label13.TabIndex = 106
+        Me.Label13.Text = "Price:"
+        '
+        'priceList
+        '
+        Me.priceList.Font = New System.Drawing.Font("Now Medium", 12.8!)
+        Me.priceList.FormattingEnabled = True
+        Me.priceList.ItemHeight = 25
+        Me.priceList.Location = New System.Drawing.Point(567, 338)
+        Me.priceList.Name = "priceList"
+        Me.priceList.Size = New System.Drawing.Size(257, 179)
+        Me.priceList.TabIndex = 105
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Now", 16.0!, System.Drawing.FontStyle.Bold)
+        Me.Label12.ForeColor = System.Drawing.Color.Red
+        Me.Label12.Location = New System.Drawing.Point(368, 295)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(143, 32)
+        Me.Label12.TabIndex = 104
+        Me.Label12.Text = "Quantity:"
+        '
+        'quantityList
+        '
+        Me.quantityList.Font = New System.Drawing.Font("Now Medium", 12.8!)
+        Me.quantityList.FormattingEnabled = True
+        Me.quantityList.ItemHeight = 25
+        Me.quantityList.Location = New System.Drawing.Point(374, 338)
+        Me.quantityList.Name = "quantityList"
+        Me.quantityList.Size = New System.Drawing.Size(173, 179)
+        Me.quantityList.TabIndex = 103
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Now", 16.0!, System.Drawing.FontStyle.Bold)
+        Me.Label11.ForeColor = System.Drawing.Color.Red
+        Me.Label11.Location = New System.Drawing.Point(19, 295)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(97, 32)
+        Me.Label11.TabIndex = 102
+        Me.Label11.Text = "Items:"
+        '
+        'itemList
+        '
+        Me.itemList.Font = New System.Drawing.Font("Now Medium", 12.8!)
+        Me.itemList.FormattingEnabled = True
+        Me.itemList.ItemHeight = 25
+        Me.itemList.Location = New System.Drawing.Point(25, 338)
+        Me.itemList.Name = "itemList"
+        Me.itemList.Size = New System.Drawing.Size(331, 179)
+        Me.itemList.TabIndex = 101
+        '
+        'supplierNameList
+        '
+        Me.supplierNameList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.supplierNameList.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.supplierNameList.Font = New System.Drawing.Font("Now Medium", 15.0!)
+        Me.supplierNameList.FormattingEnabled = True
+        Me.supplierNameList.Items.AddRange(New Object() {"Sunfeast", "Cremica", "Nestle"})
+        Me.supplierNameList.Location = New System.Drawing.Point(298, 108)
+        Me.supplierNameList.Name = "supplierNameList"
+        Me.supplierNameList.Size = New System.Drawing.Size(308, 38)
+        Me.supplierNameList.TabIndex = 115
+        '
+        'addPurchase
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1327, 620)
+        Me.ClientSize = New System.Drawing.Size(1327, 680)
+        Me.Controls.Add(Me.supplierNameList)
+        Me.Controls.Add(Me.Label15)
+        Me.Controls.Add(Me.gstAmt)
+        Me.Controls.Add(Me.fBill)
+        Me.Controls.Add(Me.Label17)
+        Me.Controls.Add(Me.Discount)
+        Me.Controls.Add(Me.Label16)
+        Me.Controls.Add(Me.Label14)
+        Me.Controls.Add(Me.totalPrice)
+        Me.Controls.Add(Me.Label13)
+        Me.Controls.Add(Me.priceList)
+        Me.Controls.Add(Me.Label12)
+        Me.Controls.Add(Me.quantityList)
+        Me.Controls.Add(Me.Label11)
+        Me.Controls.Add(Me.itemList)
         Me.Controls.Add(Me.Add)
         Me.Controls.Add(Me.itemName)
         Me.Controls.Add(Me.cancle)
         Me.Controls.Add(Me.clear)
         Me.Controls.Add(Me.save)
-        Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.itemQuantity)
         Me.Controls.Add(Me.Label10)
@@ -274,12 +440,10 @@ Partial Class addPurchase
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.transactionDate)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.sellerName)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Name = "purchase"
+        Me.Name = "addPurchase"
         Me.Text = "purchase"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -289,7 +453,6 @@ Partial Class addPurchase
     Friend WithEvents cancle As System.Windows.Forms.Button
     Friend WithEvents clear As System.Windows.Forms.Button
     Friend WithEvents save As System.Windows.Forms.Button
-    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
     Friend WithEvents Label9 As System.Windows.Forms.Label
     Friend WithEvents itemQuantity As System.Windows.Forms.TextBox
     Friend WithEvents Label10 As System.Windows.Forms.Label
@@ -300,7 +463,21 @@ Partial Class addPurchase
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents transactionDate As System.Windows.Forms.DateTimePicker
     Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents sellerName As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents Label15 As Label
+    Friend WithEvents gstAmt As ListBox
+    Friend WithEvents fBill As Label
+    Friend WithEvents Label17 As Label
+    Friend WithEvents Discount As TextBox
+    Friend WithEvents Label16 As Label
+    Friend WithEvents Label14 As Label
+    Friend WithEvents totalPrice As ListBox
+    Friend WithEvents Label13 As Label
+    Friend WithEvents priceList As ListBox
+    Friend WithEvents Label12 As Label
+    Friend WithEvents quantityList As ListBox
+    Friend WithEvents Label11 As Label
+    Friend WithEvents itemList As ListBox
+    Friend WithEvents supplierNameList As ComboBox
 End Class

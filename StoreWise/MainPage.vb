@@ -119,4 +119,10 @@
         itemDisplay.MdiParent = Me
         itemDisplay.Show()
     End Sub
+
+    Private Sub AddToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles AddToolStripMenuItem1.Click
+        Dim purchase As New addPurchase()
+        purchase.MdiParent = Me
+        purchase.Show()
+    End Sub
 End Class

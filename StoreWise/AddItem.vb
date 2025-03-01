@@ -18,6 +18,8 @@
         Else
             Dim conn As New OleDb.OleDbConnection
             conn.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Saksham\Documents\StoreWise.accdb"
+
+            'Inserting into item table
             If conn.State = ConnectionState.Closed Then
                 conn.Open()
             End If
@@ -26,17 +28,56 @@
             Try
                 cmd.ExecuteNonQuery()
                 MessageBox.Show("Item Added Successfully", "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Catch ex As Exception
+                MessageBox.Show("Error: " & ex.Message, "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Finally
+                conn.Close()
+            End Try
+
+            'fetching Item id
+            Dim itemID As Integer
+
+            If conn.State = ConnectionState.Closed Then
+                conn.Open()
+            End If
+            Try
+                Dim sql2 As String = "SELECT ID FROM itemTable WHERE itemName = '" & itemName.Text.Trim & "'"
+                Dim cmd2 As New OleDb.OleDbCommand(sql2, conn)
+                Dim da As New OleDb.OleDbDataAdapter(cmd2)
+                Dim dt As New DataTable
+                da.Fill(dt)
+                itemID = dt.Rows(0).Item(0)
+            Catch ex As Exception
+                MessageBox.Show("Error: " & ex.Message, "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Finally
+                conn.Close()
+            End Try
+
+            'Inserting into inventory table
+            If conn.State = ConnectionState.Closed Then
+                conn.Open()
+            End If
+            Dim sql1 As String = "insert into inventoryTable (itemId, itemName, quantity) values( '" & itemID & "','" & itemName.Text.Trim & "'," & 0 & ")"
+            Dim cmd1 As New OleDb.OleDbCommand(sql1, conn)
+            Try
+                cmd1.ExecuteNonQuery()
+            Catch ex As Exception
+                MessageBox.Show("Error: " & ex.Message, "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Finally
+                conn.Close()
+            End Try
+
+
+            'clearing data fields
+            Try
                 itemName.Clear()
                 itemCost.Clear()
                 itemGST.SelectedIndex = 0
                 itemSP.Clear()
                 itemUnit.SelectedIndex = 0
                 reOrder.Clear()
-
             Catch ex As Exception
                 MessageBox.Show("Error: " & ex.Message, "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            Finally
-                conn.Close()
             End Try
         End If
     End Sub

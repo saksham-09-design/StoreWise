@@ -49,6 +49,54 @@ Public Class addPurchase
 
         fetchTransId()
 
+        'setting up dark mode
+        If (DMode) Then
+            Me.BackColor = Color.FromArgb(255, 13, 17, 23)
+            For i = 1 To 14
+                Dim lbl As Label = Me.Controls("Label" & i)
+                lbl.ForeColor = Color.FromArgb(255, 240, 246, 252)
+            Next
+            save.BackColor = Color.FromArgb(255, 31, 111, 235)
+            clear.BackColor = Color.FromArgb(255, 31, 111, 235)
+            cancle.BackColor = Color.FromArgb(255, 31, 111, 235)
+            save.ForeColor = Color.FromArgb(255, Color.White)
+            clear.ForeColor = Color.FromArgb(255, Color.White)
+            cancle.ForeColor = Color.FromArgb(255, Color.White)
+            Add.BackColor = Color.FromArgb(255, 31, 111, 235)
+            Add.ForeColor = Color.FromArgb(255, Color.White)
+            transactionDate.BackColor = Color.FromArgb(255, 33, 40, 48)
+            transactionDate.ForeColor = Color.FromArgb(255, 240, 246, 252)
+            tID.BackColor = Color.FromArgb(255, 33, 40, 48)
+            tID.ForeColor = Color.FromArgb(255, 240, 246, 252)
+            itemQuantity.BackColor = Color.FromArgb(255, 33, 40, 48)
+            itemQuantity.ForeColor = Color.FromArgb(255, 240, 246, 252)
+            itemList.BackColor = Color.FromArgb(255, 33, 40, 48)
+            itemList.ForeColor = Color.FromArgb(255, 240, 246, 252)
+            quantityList.BackColor = Color.FromArgb(255, 33, 40, 48)
+            quantityList.ForeColor = Color.FromArgb(255, 240, 246, 252)
+            priceList.BackColor = Color.FromArgb(255, 33, 40, 48)
+            priceList.ForeColor = Color.FromArgb(255, 240, 246, 252)
+            gstAmt.BackColor = Color.FromArgb(255, 33, 40, 48)
+            gstAmt.ForeColor = Color.FromArgb(255, 240, 246, 252)
+            totalPrice.BackColor = Color.FromArgb(255, 33, 40, 48)
+            totalPrice.ForeColor = Color.FromArgb(255, 240, 246, 252)
+            Discount.BackColor = Color.FromArgb(255, 33, 40, 48)
+            Discount.ForeColor = Color.FromArgb(255, 240, 246, 252)
+            fBill.ForeColor = Color.FromArgb(255, 240, 246, 252)
+            cash.ForeColor = Color.FromArgb(255, 240, 246, 252)
+            credit.ForeColor = Color.FromArgb(255, 240, 246, 252)
+            supplierNameList.BackColor = Color.FromArgb(255, 33, 40, 48)
+            supplierNameList.ForeColor = Color.FromArgb(255, 240, 246, 252)
+            itemName.BackColor = Color.FromArgb(255, 33, 40, 48)
+            itemName.ForeColor = Color.FromArgb(255, 240, 246, 252)
+            transactionDate.CalendarMonthBackground = Color.FromArgb(255, 33, 40, 48)
+            transactionDate.CalendarTitleBackColor = Color.FromArgb(255, 33, 40, 48)
+            transactionDate.CalendarTitleForeColor = Color.FromArgb(255, 240, 246, 252)
+            transactionDate.CalendarTrailingForeColor = Color.FromArgb(255, 240, 246, 252)
+            transactionDate.CalendarForeColor = Color.FromArgb(255, 240, 246, 252)
+        End If
+
+
     End Sub
 
     'Fetching Transaction id
@@ -60,12 +108,18 @@ Public Class addPurchase
             If conn.State = ConnectionState.Closed Then
                 conn.Open()
             End If
-            Dim sql As String = "SELECT * FROM purchaseTable"
+            Dim sql As String = "SELECT ID FROM purchaseTable"
             Dim cmd As New OleDb.OleDbCommand(sql, conn)
             Dim da As New OleDb.OleDbDataAdapter(cmd)
             Dim dt As New DataTable
             da.Fill(dt)
-            transID = dt.Rows.Count + 1
+            Dim rowCount As Integer = dt.Rows.Count
+            rowCount -= 1
+            Dim a() As Integer = New Integer(rowCount) {}   'Elements baad m assign krenge
+            For i = 0 To rowCount
+                a(i) = dt.Rows(i).Item(0)
+            Next
+            transID = a.Max + 1
             tID.Text = transID
         Catch ex As Exception
             MessageBox.Show("Error: " & ex.Message, "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -272,6 +326,9 @@ Public Class addPurchase
             MessageBox.Show("Please Add Items", "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Else
 
+            Dim conn As New OleDb.OleDbConnection
+            conn.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Saksham\Documents\StoreWise.accdb"
+
             'Fetching Date
             Dim dateTrans As Date = CDate(Format(transactionDate.Value, "Short Date"))
             MessageBox.Show(dateTrans)
@@ -296,9 +353,6 @@ Public Class addPurchase
             'fetching Total Amount
             Dim totalAmount As Single = CSng(fBill.Text.Replace("₹"c, "").Replace("/-", ""))
 
-            Dim conn As New OleDb.OleDbConnection
-            conn.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Saksham\Documents\StoreWise.accdb"
-
             'pushing data in purchaseSupport table
             Dim transCount As Integer = itemList.Items.Count
             For i = 0 To transCount - 1
@@ -313,6 +367,39 @@ Public Class addPurchase
                         conn.Open()
                     End If
                     Dim sql As String = "INSERT INTO pSupportTable (billId, itemName, itemQuantity, price, gst, priceGST) VALUES (" & billId & ",'" & iNa & "'," & iQu & "," & iPr & "," & iGst & "," & iAmt & ")"
+                    Dim cmd As New OleDb.OleDbCommand(sql, conn)
+                    cmd.ExecuteNonQuery()
+                Catch ex As Exception
+                    MessageBox.Show("Error: " & ex.Message, "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Finally
+                    conn.Close()
+                End Try
+
+                'fetching item Id
+                Dim itemID As Integer
+
+                If conn.State = ConnectionState.Closed Then
+                    conn.Open()
+                End If
+                Try
+                    Dim sql2 As String = "SELECT ID FROM itemTable WHERE itemName = '" & iNa & "'"
+                    Dim cmd2 As New OleDb.OleDbCommand(sql2, conn)
+                    Dim da As New OleDb.OleDbDataAdapter(cmd2)
+                    Dim dt As New DataTable
+                    da.Fill(dt)
+                    itemID = dt.Rows(0).Item(0)
+                Catch ex As Exception
+                    MessageBox.Show("Error: " & ex.Message, "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Finally
+                    conn.Close()
+                End Try
+
+                'Updating Inventory Table
+                Try
+                    If conn.State = ConnectionState.Closed Then
+                        conn.Open()
+                    End If
+                    Dim sql As String = "UPDATE inventoryTable SET quantity = quantity + " & iQu & " WHERE itemId = " & itemID
                     Dim cmd As New OleDb.OleDbCommand(sql, conn)
                     cmd.ExecuteNonQuery()
                 Catch ex As Exception
@@ -366,5 +453,12 @@ Public Class addPurchase
         Finally
             conn.Close()
         End Try
+    End Sub
+
+    Private Sub transactionDate_ValueChanged(sender As Object, e As EventArgs) Handles transactionDate.ValueChanged
+        If transactionDate.Value > Now() Then
+            MessageBox.Show("Transaction Date can't be in Future", "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            transactionDate.Value = Now()
+        End If
     End Sub
 End Class

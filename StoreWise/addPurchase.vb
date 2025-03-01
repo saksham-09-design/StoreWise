@@ -331,7 +331,6 @@ Public Class addPurchase
 
             'Fetching Date
             Dim dateTrans As Date = CDate(Format(transactionDate.Value, "Short Date"))
-            MessageBox.Show(dateTrans)
 
 
             'Fetching Payment Type
@@ -425,6 +424,19 @@ Public Class addPurchase
             End Try
         End If
         fetchTransId()
+
+        'resetting the form
+        supplierNameList.Enabled = True
+        itemList.Items.Clear()
+        quantityList.Items.Clear()
+        priceList.Items.Clear()
+        gstAmt.Items.Clear()
+        totalPrice.Items.Clear()
+        fBill.Text = "₹0.00/-"
+        Discount.Text = ""
+        cash.Checked = True
+        credit.Checked = False
+
     End Sub
 
     Private Sub supplierNameList_SelectedIndexChanged(sender As Object, e As EventArgs) Handles supplierNameList.SelectedIndexChanged

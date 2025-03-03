@@ -1,21 +1,127 @@
 ﻿Public Class purchase
 
     Private Sub purchase_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        Dim conn As New OleDb.OleDbConnection
+        conn.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Saksham\Documents\StoreWise.accdb"
+        'updating the supplier list
+        Try
+            If conn.State = ConnectionState.Closed Then
+                conn.Open()
+            End If
+            Dim sql As String = "SELECT sName FROM supplierTable"
+            Dim cmd As New OleDb.OleDbCommand(sql, conn)
+            Dim da As New OleDb.OleDbDataAdapter(cmd)
+            Dim dt As New DataTable
+            da.Fill(dt)
+            supplierName.DataSource = dt
+            supplierName.DisplayMember = "sName"
+            If dt.Rows.Count = 0 Then
+                MessageBox.Show("No Supplier found update list ", "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End If
 
+        Catch ex As Exception
+            MessageBox.Show("Error: " & ex.Message, "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        Finally
+            conn.Close()
+
+        End Try
+        'setting up data grid
+        fetch_data_UG("select ID, sName, pDate, amtDis, type from purchaseTable")
+
+
+    End Sub
+
+    'fetching Data and updating the datagrid
+    Sub fetch_data_UG(sqlI As String)
+        Dim conn As New OleDb.OleDbConnection
+        conn.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Saksham\Documents\StoreWise.accdb"
+        Try
+            Dim sql As String = sqlI
+            Dim da As New OleDb.OleDbDataAdapter(sql, conn)
+            Dim dt As New DataTable
+            dt.Clear()
+            da.Fill(dt)
+            DataGridView1.DataSource = dt
+            DataGridView1.Columns(0).Width = 100
+            DataGridView1.Columns(1).Width = 270
+            DataGridView1.Columns(2).Width = 160
+            DataGridView1.Columns(3).Width = 160
+            DataGridView1.Columns(4).Width = 160
+
+            DataGridView1.Columns(0).HeaderText = "Transaction ID"
+            DataGridView1.Columns(1).HeaderText = "Supplier Name"
+            DataGridView1.Columns(2).HeaderText = "Date"
+            DataGridView1.Columns(3).HeaderText = "Amount"
+            DataGridView1.Columns(4).HeaderText = "Type"
+        Catch ex As Exception
+            MessageBox.Show("Error: " & ex.Message, "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        Finally
+            conn.Close()
+        End Try
     End Sub
     Private Sub itemName_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles filter.SelectedIndexChanged
         If filter.Text = "Custom Dates" Then
-            transactionFromDate.Enabled = True
-            transactioToDate.Enabled = True
+            Dim dateFrom As Date = CDate(Format(toDate.Value, "Short Date"))
+            Dim dateTo As Date = CDate(Format(fromDate.Value, "Short Date"))
+            fetch_data_UG("select ID, sName, pDate, amtDis, type from purchaseTable where pDate >= #" & dateFrom & "# and pDate <= #" & dateTo & "#")
+            fromDate.Enabled = True
+            toDate.Enabled = True
             supplierName.Enabled = False
-        ElseIf filter.Text = "Customer Name" Then
+        ElseIf filter.Text = "Supplier Name" Then
             supplierName.Enabled = True
-            transactionFromDate.Enabled = False
-            transactioToDate.Enabled = False
-        Else
-            transactionFromDate.Enabled = False
-            transactioToDate.Enabled = False
+            fromDate.Enabled = False
+            toDate.Enabled = False
+        ElseIf filter.Text = "Today" Then
+            Dim dateT As Date = CDate(Format(Now(), "Short Date"))
+            fetch_data_UG("select ID, sName, pDate, amtDis, type from purchaseTable where pDate = #" & dateT & "#")
+            fromDate.Enabled = False
+            toDate.Enabled = False
+            supplierName.Enabled = False
+        ElseIf filter.Text = "Yesterday" Then
+            Dim dateT As Date = CDate(Format(Now().AddDays(-1), "Short Date"))
+            fetch_data_UG("select ID, sName, pDate, amtDis, type from purchaseTable where pDate = #" & dateT & "#")
+            fromDate.Enabled = False
+            toDate.Enabled = False
+            supplierName.Enabled = False
+        ElseIf filter.Text = "Past 7 days" Then
+            Dim dateT As Date = CDate(Format(Now().AddDays(-7), "Short Date"))
+            fetch_data_UG("select ID, sName, pDate, amtDis, type from purchaseTable where pDate >= #" & dateT & "#")
+            fromDate.Enabled = False
+            toDate.Enabled = False
+            supplierName.Enabled = False
+        ElseIf filter.Text = "Past 1 Month" Then
+            Dim dateT As Date = CDate(Format(Now().AddMonths(-1), "Short Date"))
+            fetch_data_UG("select ID, sName, pDate, amtDis, type from purchaseTable where pDate >= #" & dateT & "#")
+            fromDate.Enabled = False
+            toDate.Enabled = False
+            supplierName.Enabled = False
+        ElseIf filter.Text = "Past 1 Year" Then
+            Dim dateT As Date = CDate(Format(Now().AddYears(-1), "Short Date"))
+            fetch_data_UG("select ID, sName, pDate, amtDis, type from purchaseTable where pDate >= #" & dateT & "#")
+            fromDate.Enabled = False
+            toDate.Enabled = False
             supplierName.Enabled = False
         End If
+    End Sub
+
+    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+
+    End Sub
+
+    Private Sub supplierName_SelectedIndexChanged(sender As Object, e As EventArgs) Handles supplierName.SelectedIndexChanged
+        'Updating datagrid according to supplier
+        fetch_data_UG("select ID, sName, pDate, amtDis, type from purchaseTable where sName = '" & supplierName.Text & "'")
+    End Sub
+
+    Private Sub transactionFromDate_ValueChanged(sender As Object, e As EventArgs) Handles fromDate.ValueChanged
+        Dim dateFrom As Date = CDate(Format(toDate.Value, "Short Date"))
+        Dim dateTo As Date = CDate(Format(fromDate.Value, "Short Date"))
+        fetch_data_UG("select ID, sName, pDate, amtDis, type from purchaseTable where pDate >= #" & dateFrom & "# and pDate <= #" & dateTo & "#")
+    End Sub
+
+    Private Sub transactioToDate_ValueChanged(sender As Object, e As EventArgs) Handles toDate.ValueChanged
+        Dim dateFrom As Date = CDate(Format(toDate.Value, "Short Date"))
+        Dim dateTo As Date = CDate(Format(fromDate.Value, "Short Date"))
+        fetch_data_UG("select ID, sName, pDate, amtDis, type from purchaseTable where pDate >= #" & dateFrom & "# and pDate <= #" & dateTo & "#")
     End Sub
 End Class

@@ -45,7 +45,6 @@ Partial Class MainPage
         Me.DisplayToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PurchaseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AddToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ModifyToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.DeleteToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.SearchToolStripMenuItem4 = New System.Windows.Forms.ToolStripMenuItem()
         Me.SupplierToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -201,7 +200,7 @@ Partial Class MainPage
         '
         'PurchaseToolStripMenuItem
         '
-        Me.PurchaseToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddToolStripMenuItem1, Me.ModifyToolStripMenuItem1, Me.DeleteToolStripMenuItem1, Me.SearchToolStripMenuItem4})
+        Me.PurchaseToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddToolStripMenuItem1, Me.DeleteToolStripMenuItem1, Me.SearchToolStripMenuItem4})
         Me.PurchaseToolStripMenuItem.Name = "PurchaseToolStripMenuItem"
         Me.PurchaseToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
         Me.PurchaseToolStripMenuItem.Text = "Purchase"
@@ -211,12 +210,6 @@ Partial Class MainPage
         Me.AddToolStripMenuItem1.Name = "AddToolStripMenuItem1"
         Me.AddToolStripMenuItem1.Size = New System.Drawing.Size(224, 26)
         Me.AddToolStripMenuItem1.Text = "Add"
-        '
-        'ModifyToolStripMenuItem1
-        '
-        Me.ModifyToolStripMenuItem1.Name = "ModifyToolStripMenuItem1"
-        Me.ModifyToolStripMenuItem1.Size = New System.Drawing.Size(224, 26)
-        Me.ModifyToolStripMenuItem1.Text = "Modify"
         '
         'DeleteToolStripMenuItem1
         '
@@ -412,7 +405,6 @@ Partial Class MainPage
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents PurchaseToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents AddToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents ModifyToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents DeleteToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents SearchToolStripMenuItem4 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ChangeCredentialsToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem

@@ -269,7 +269,7 @@
     <Compile Include="AddItem.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DarkMode.vb" />
+    <Compile Include="sVar.vb" />
     <Compile Include="DeleteItem.Designer.vb">
       <DependentUpon>DeleteItem.vb</DependentUpon>
     </Compile>
@@ -300,10 +300,10 @@
     <Compile Include="displaySupplier.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="modifyPurchase.Designer.vb">
-      <DependentUpon>modifyPurchase.vb</DependentUpon>
+    <Compile Include="deletePurchase.Designer.vb">
+      <DependentUpon>deletePurchase.vb</DependentUpon>
     </Compile>
-    <Compile Include="modifyPurchase.vb">
+    <Compile Include="deletePurchase.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="addPurchase.Designer.vb">
@@ -413,8 +413,8 @@
     <EmbeddedResource Include="displaySupplier.resx">
       <DependentUpon>displaySupplier.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="modifyPurchase.resx">
-      <DependentUpon>modifyPurchase.vb</DependentUpon>
+    <EmbeddedResource Include="deletePurchase.resx">
+      <DependentUpon>deletePurchase.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="addPurchase.resx">
       <DependentUpon>addPurchase.vb</DependentUpon>

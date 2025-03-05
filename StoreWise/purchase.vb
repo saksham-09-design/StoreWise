@@ -124,4 +124,17 @@
         Dim dateTo As Date = CDate(Format(fromDate.Value, "Short Date"))
         fetch_data_UG("select ID, sName, pDate, amtDis, type from purchaseTable where pDate >= #" & dateFrom & "# and pDate <= #" & dateTo & "#")
     End Sub
+
+    Private Sub DataGridView1_RowHeaderMouseDoubleClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles DataGridView1.RowHeaderMouseDoubleClick
+        purId = DataGridView1.Rows(e.RowIndex).Cells(0).Value
+        If dPur = True Then
+            Dim pur As New deletePurchase()
+            pur.MdiParent = MainPage
+            pur.Show()
+        ElseIf disPur Then
+            Dim pur As New deletePurchase()
+            pur.MdiParent = MainPage
+            pur.Show()
+        End If
+    End Sub
 End Class

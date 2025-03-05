@@ -131,7 +131,6 @@ Public Class addPurchase
     Private Sub Add_Click(sender As Object, e As EventArgs) Handles Add.Click
         If itemQuantity.Text <> "" Then
             If CInt(itemQuantity.Text) > 0 Then
-                Dim price As Single
                 Dim quantity As Integer
                 Dim fAmt As Single
                 Dim fAmount As String
@@ -316,8 +315,13 @@ Public Class addPurchase
     End Sub
 
     Private Sub clear_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles clear.Click
-        supplierNameList.SelectedIndex = 1
-        itemQuantity.Text = ""
+        itemList.Items.Clear()
+        quantityList.Items.Clear()
+        gstAmt.Items.Clear()
+        totalPrice.Items.Clear()
+        priceList.Items.Clear()
+        fBill.Text = "₹0.00/-"
+        Discount.Text = ""
     End Sub
 
     Private Sub save_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles save.Click

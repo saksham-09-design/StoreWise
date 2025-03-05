@@ -106,6 +106,9 @@
     End Sub
 
     Private Sub SearchToolStripMenuItem4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SearchToolStripMenuItem4.Click
+        dPur = False
+        disPur = True
+
         Dim pur As New purchase()
         pur.MdiParent = Me
         pur.Show()
@@ -127,5 +130,14 @@
         Dim purchase As New addPurchase()
         purchase.MdiParent = Me
         purchase.Show()
+    End Sub
+
+    Private Sub DeleteToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles DeleteToolStripMenuItem1.Click
+        dPur = True
+        disPur = False
+
+        Dim pur As New purchase()
+        pur.MdiParent = Me
+        pur.Show()
     End Sub
 End Class

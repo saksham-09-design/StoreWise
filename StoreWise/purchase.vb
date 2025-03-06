@@ -23,7 +23,6 @@
             MessageBox.Show("Error: " & ex.Message, "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Finally
             conn.Close()
-
         End Try
         'setting up data grid
         fetch_data_UG("select ID, sName, pDate, amtDis, type from purchaseTable")
@@ -132,9 +131,13 @@
             pur.MdiParent = MainPage
             pur.Show()
         ElseIf disPur Then
-            Dim pur As New deletePurchase()
+            Dim pur As New displayPuchase()
             pur.MdiParent = MainPage
             pur.Show()
         End If
+    End Sub
+
+    Private Sub purchase_Activated(sender As Object, e As EventArgs) Handles Me.Activated
+        fetch_data_UG("select ID, sName, pDate, amtDis, type from purchaseTable")
     End Sub
 End Class

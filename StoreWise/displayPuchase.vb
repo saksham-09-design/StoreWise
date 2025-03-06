@@ -84,4 +84,8 @@
             supplierName.ForeColor = Color.FromArgb(255, 240, 246, 252)
         End If
     End Sub
+
+    Private Sub cancle_Click(sender As Object, e As EventArgs) Handles cancle.Click
+        Me.Close()
+    End Sub
 End Class

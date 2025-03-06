@@ -140,4 +140,8 @@
             End Try
         End If
     End Sub
+
+    Private Sub cancle_Click(sender As Object, e As EventArgs) Handles cancle.Click
+        Me.Close()
+    End Sub
 End Class

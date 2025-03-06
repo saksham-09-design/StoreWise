@@ -27,6 +27,39 @@
         'setting up data grid
         fetch_data_UG("select ID, sName, pDate, amtDis, type from purchaseTable")
 
+        'setting up dark mode
+        If DMode Then
+            Me.BackColor = Color.FromArgb(255, 33, 40, 48)
+            For i = 1 To 5
+                Dim lbl As Label = Me.Controls("Label" & i)
+                lbl.ForeColor = Color.FromArgb(255, 240, 246, 252)
+            Next
+            DataGridView1.BackgroundColor = Color.FromArgb(255, 33, 40, 48)
+            DataGridView1.DefaultCellStyle.BackColor = Color.FromArgb(255, 33, 40, 48)
+            DataGridView1.DefaultCellStyle.ForeColor = Color.FromArgb(255, 240, 246, 252)
+            DataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(255, 33, 40, 48)
+            DataGridView1.ColumnHeadersDefaultCellStyle.ForeColor = Color.FromArgb(255, 240, 246, 252)
+            DataGridView1.GridColor = Color.FromArgb(255, 240, 246, 252)
+            filter.BackColor = Color.FromArgb(255, 33, 40, 48)
+            filter.ForeColor = Color.FromArgb(255, 240, 246, 252)
+            supplierName.BackColor = Color.FromArgb(255, 33, 40, 48)
+            supplierName.ForeColor = Color.FromArgb(255, 240, 246, 252)
+            fromDate.BackColor = Color.FromArgb(255, 33, 40, 48)
+            fromDate.ForeColor = Color.FromArgb(255, 240, 246, 252)
+            fromDate.CalendarMonthBackground = Color.FromArgb(255, 33, 40, 48)
+            fromDate.CalendarTitleBackColor = Color.FromArgb(255, 33, 40, 48)
+            fromDate.CalendarTitleForeColor = Color.FromArgb(255, 240, 246, 252)
+            fromDate.CalendarTrailingForeColor = Color.FromArgb(255, 240, 246, 252)
+            fromDate.CalendarForeColor = Color.FromArgb(255, 240, 246, 252)
+            toDate.BackColor = Color.FromArgb(255, 33, 40, 48)
+            toDate.ForeColor = Color.FromArgb(255, 240, 246, 252)
+            toDate.CalendarMonthBackground = Color.FromArgb(255, 33, 40, 48)
+            toDate.CalendarTitleBackColor = Color.FromArgb(255, 33, 40, 48)
+            toDate.CalendarTitleForeColor = Color.FromArgb(255, 240, 246, 252)
+            toDate.CalendarTrailingForeColor = Color.FromArgb(255, 240, 246, 252)
+            toDate.CalendarForeColor = Color.FromArgb(255, 240, 246, 252)
+
+        End If
 
     End Sub
 

@@ -108,18 +108,12 @@ Public Class addPurchase
             If conn.State = ConnectionState.Closed Then
                 conn.Open()
             End If
-            Dim sql As String = "SELECT ID FROM purchaseTable"
+            Dim sql As String = "SELECT purID from support"
             Dim cmd As New OleDb.OleDbCommand(sql, conn)
             Dim da As New OleDb.OleDbDataAdapter(cmd)
             Dim dt As New DataTable
             da.Fill(dt)
-            Dim rowCount As Integer = dt.Rows.Count
-            rowCount -= 1
-            Dim a() As Integer = New Integer(rowCount) {}   'Elements baad m assign krenge
-            For i = 0 To rowCount
-                a(i) = dt.Rows(i).Item(0)
-            Next
-            transID = a.Max + 1
+            transID = CInt(dt.Rows(0).Item(0))
             tID.Text = transID
         Catch ex As Exception
             MessageBox.Show("Error: " & ex.Message, "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -420,6 +414,9 @@ Public Class addPurchase
                 Dim sql As String = "INSERT INTO purchaseTable (sName, pDate, discount, amtDis, type) VALUES ('" & supplierNameList.Text.ToString & "',#" & dateTrans & "#," & discountPer & "," & totalAmount & ",'" & type & "')"
                 Dim cmd As New OleDb.OleDbCommand(sql, conn)
                 cmd.ExecuteNonQuery()
+                Dim sql1 As String = "UPDATE support SET purID = purID + 1"
+                Dim cmd1 As New OleDb.OleDbCommand(sql1, conn)
+                cmd1.ExecuteNonQuery()
                 MessageBox.Show("Transaction Saved Successfully", "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Catch ex As Exception
                 MessageBox.Show("Error: " & ex.Message, "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Error)

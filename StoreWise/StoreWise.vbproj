@@ -269,6 +269,12 @@
     <Compile Include="AddItem.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="displayPuchase.Designer.vb">
+      <DependentUpon>displayPuchase.vb</DependentUpon>
+    </Compile>
+    <Compile Include="displayPuchase.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="sVar.vb" />
     <Compile Include="DeleteItem.Designer.vb">
       <DependentUpon>DeleteItem.vb</DependentUpon>
@@ -409,6 +415,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="displayItem.resx">
       <DependentUpon>displayItem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="displayPuchase.resx">
+      <DependentUpon>displayPuchase.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="displaySupplier.resx">
       <DependentUpon>displaySupplier.vb</DependentUpon>

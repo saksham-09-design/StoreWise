@@ -91,4 +91,53 @@
 
     End Sub
 
+    Private Sub Delete_Click(sender As Object, e As EventArgs) Handles Delete.Click
+        If itemList.Items.Count > 0 Then
+            Dim itemNames As String() = New String(itemList.Items.Count - 1) {}
+            itemNames = itemList.Items.Cast(Of String).ToArray()
+            Dim conn As New OleDb.OleDbConnection
+            conn.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Saksham\Documents\StoreWise.accdb"
+            For Each item In itemNames
+                Try
+                    MessageBox.Show(item)
+                    If conn.State = ConnectionState.Closed Then
+                        conn.Open()
+                    End If
+                    Dim sql As String = "select quantity from inventoryTable where itemName ='" & item & "'"
+                    Dim da As New OleDb.OleDbDataAdapter(sql, conn)
+                    Dim dt As New DataTable
+                    da.Fill(dt)
+                    Dim quantity As Integer = CInt(dt.Rows(0).Item(0))
+                    Dim qInd As Integer = itemList.Items.IndexOf(item)
+                    Dim qu As Integer = CInt(quantityList.Items(qInd))
+                    If qu > quantity Then
+                        MessageBox.Show("Quantity of " & item & " is less than the quantity in the bill", "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                        Me.Close()
+                        Exit Sub
+                    End If
+                    Dim newQuantity As Integer = quantity - qu
+                    Dim sql2 As String = "UPDATE inventoryTable SET quantity = " & newQuantity & " WHERE itemName = '" & item & "'"
+                    Dim cmd As New OleDb.OleDbCommand(sql2, conn)
+                    cmd.ExecuteNonQuery()
+                Catch ex As Exception
+                    MessageBox.Show("Error: " & ex.Message, "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    Exit Sub
+                End Try
+            Next
+            Try
+                Dim sql3 As String = "DELETE FROM pSupportTable WHERE billId = " & purId
+                Dim cmd2 As New OleDb.OleDbCommand(sql3, conn)
+                cmd2.ExecuteNonQuery()
+                Dim sql4 As String = "DELETE FROM purchaseTable WHERE ID = " & purId
+                Dim cmd3 As New OleDb.OleDbCommand(sql4, conn)
+                cmd3.ExecuteNonQuery()
+                MessageBox.Show("Purchase Deleted Successfully", "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Catch ex As Exception
+                MessageBox.Show("Error: " & ex.Message, "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Finally
+                conn.Close()
+                Me.Close()
+            End Try
+        End If
+    End Sub
 End Class

@@ -60,9 +60,9 @@
         'main animation
         textPosition -= textSpeed
         Label1.Left = textPosition
-
         Label1.ForeColor = lightColors(colorIndex)
         colorIndex += 1
+
         If colorIndex = lightColors.Length Then
             colorIndex = 0
         End If

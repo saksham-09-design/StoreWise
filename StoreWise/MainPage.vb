@@ -77,12 +77,6 @@
         supplier.Show()
     End Sub
 
-    Private Sub DeleteToolStripMenuItem4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        Dim supplier As New deleteSupplier()
-        supplier.MdiParent = Me
-        supplier.Show()
-    End Sub
-
     Private Sub ChangeCredentialsToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ChangeCredentialsToolStripMenuItem.Click
         Dim mUser As New modifyUser()
         mUser.MdiParent = Me
@@ -118,12 +112,6 @@
         Dim supplier As New displaySupplier()
         supplier.MdiParent = Me
         supplier.Show()
-    End Sub
-
-    Private Sub DisplayToolStripMenuItem2_Click(sender As Object, e As EventArgs) Handles DisplayToolStripMenuItem2.Click
-        Dim itemDisplay As New displayItem()
-        itemDisplay.MdiParent = Me
-        itemDisplay.Show()
     End Sub
 
     Private Sub AddToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles AddToolStripMenuItem1.Click

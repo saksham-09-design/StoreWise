@@ -25,7 +25,7 @@ Partial Class inventory
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.RadioButton2 = New System.Windows.Forms.RadioButton()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -55,16 +55,16 @@ Partial Class inventory
         Me.DataGridView1.Size = New System.Drawing.Size(707, 558)
         Me.DataGridView1.TabIndex = 89
         '
-        'Label3
+        'Label2
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Now", 16.0!, System.Drawing.FontStyle.Bold)
-        Me.Label3.ForeColor = System.Drawing.Color.Red
-        Me.Label3.Location = New System.Drawing.Point(52, 111)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(94, 32)
-        Me.Label3.TabIndex = 90
-        Me.Label3.Text = "Filter:"
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Now", 16.0!, System.Drawing.FontStyle.Bold)
+        Me.Label2.ForeColor = System.Drawing.Color.Red
+        Me.Label2.Location = New System.Drawing.Point(52, 111)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(94, 32)
+        Me.Label2.TabIndex = 90
+        Me.Label2.Text = "Filter:"
         '
         'RadioButton1
         '
@@ -97,7 +97,7 @@ Partial Class inventory
         Me.ClientSize = New System.Drawing.Size(812, 770)
         Me.Controls.Add(Me.RadioButton2)
         Me.Controls.Add(Me.RadioButton1)
-        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Label1)
         Me.Name = "inventory"
@@ -110,7 +110,7 @@ Partial Class inventory
 
     Friend WithEvents Label1 As Label
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents Label3 As Label
+    Friend WithEvents Label2 As Label
     Friend WithEvents RadioButton1 As RadioButton
     Friend WithEvents RadioButton2 As RadioButton
 End Class

@@ -2,6 +2,25 @@
     Dim itCount As Integer = 0
     Private Sub inventory_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         update_inv("SELECT inventoryTable.itemId, inventoryTable.itemName, inventoryTable.quantity, itemTable.reOrderLevel FROM inventoryTable, itemTable where inventoryTable.itemName = itemTable.itemName")
+
+        'setting up dark mode
+        If DMode Then
+            Me.BackColor = Color.FromArgb(255, 13, 17, 23)
+            For i = 1 To 2
+                Dim lbl As Label = Me.Controls("Label" & i)
+                lbl.ForeColor = Color.FromArgb(255, 240, 246, 252)
+            Next
+            DataGridView1.BackgroundColor = Color.FromArgb(255, 13, 17, 23)
+            DataGridView1.DefaultCellStyle.BackColor = Color.FromArgb(255, 13, 17, 23)
+            DataGridView1.DefaultCellStyle.ForeColor = Color.FromArgb(255, 240, 246, 252)
+            DataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(255, 13, 17, 23)
+            DataGridView1.ColumnHeadersDefaultCellStyle.ForeColor = Color.FromArgb(255, 240, 246, 252)
+            DataGridView1.GridColor = Color.FromArgb(255, 240, 246, 252)
+            RadioButton1.BackColor = Color.FromArgb(255, 13, 17, 23)
+            RadioButton1.ForeColor = Color.FromArgb(255, 240, 246, 252)
+            RadioButton2.BackColor = Color.FromArgb(255, 13, 17, 23)
+            RadioButton2.ForeColor = Color.FromArgb(255, 240, 246, 252)
+        End If
     End Sub
 
     'update inventory grid

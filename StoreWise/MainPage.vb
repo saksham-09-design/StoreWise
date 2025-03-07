@@ -16,7 +16,7 @@
         modifyItem.Show()
     End Sub
 
-    Private Sub DeleteToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DeleteToolStripMenuItem.Click
+    Private Sub DeleteToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Dim deleteItem As New DeleteItem
         deleteItem.MdiParent = Me
         deleteItem.Show()
@@ -77,7 +77,7 @@
         supplier.Show()
     End Sub
 
-    Private Sub DeleteToolStripMenuItem4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DeleteToolStripMenuItem4.Click
+    Private Sub DeleteToolStripMenuItem4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Dim supplier As New deleteSupplier()
         supplier.MdiParent = Me
         supplier.Show()

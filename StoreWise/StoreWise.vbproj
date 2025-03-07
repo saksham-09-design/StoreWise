@@ -294,18 +294,6 @@
     <Compile Include="deleteSales.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="deleteSupplier.Designer.vb">
-      <DependentUpon>deleteSupplier.vb</DependentUpon>
-    </Compile>
-    <Compile Include="deleteSupplier.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="displayItem.Designer.vb">
-      <DependentUpon>displayItem.vb</DependentUpon>
-    </Compile>
-    <Compile Include="displayItem.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="displaySupplier.Designer.vb">
       <DependentUpon>displaySupplier.vb</DependentUpon>
     </Compile>
@@ -415,12 +403,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="deleteSales.resx">
       <DependentUpon>deleteSales.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="deleteSupplier.resx">
-      <DependentUpon>deleteSupplier.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="displayItem.resx">
-      <DependentUpon>displayItem.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="displayPuchase.resx">
       <DependentUpon>displayPuchase.vb</DependentUpon>

@@ -96,7 +96,6 @@ D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.AddItem.resources
 D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.addSupplier.resources
 D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.DeleteItem.resources
 D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.deleteSales.resources
-D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.deleteSupplier.resources
 D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.addPurchase.resources
 D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.modifySupplier.resources
 D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.modifyUser.resources
@@ -117,7 +116,6 @@ D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.exe
 D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.xml
 D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.pdb
 D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.displaySupplier.resources
-D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.displayItem.resources
 D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.deletePurchase.resources
 D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.displayPuchase.resources
 D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.inventory.resources

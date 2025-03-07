@@ -23,7 +23,6 @@ Partial Class MainPage
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainPage))
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.UserToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ChangeCredentialsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -60,8 +59,8 @@ Partial Class MainPage
         Me.SearchToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.MenuStrip1.SuspendLayout()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -69,45 +68,49 @@ Partial Class MainPage
         '
         'MenuStrip1
         '
+        Me.MenuStrip1.BackColor = System.Drawing.SystemColors.Info
         Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UserToolStripMenuItem, Me.ItemToolStripMenuItem, Me.InventoryToolStripMenuItem, Me.TransactionsToolStripMenuItem, Me.SupplierToolStripMenuItem, Me.DashboardToolStripMenuItem})
+        Me.MenuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(1902, 28)
+        Me.MenuStrip1.Size = New System.Drawing.Size(1902, 39)
         Me.MenuStrip1.TabIndex = 1
         Me.MenuStrip1.Text = "MenuStrip1"
         '
         'UserToolStripMenuItem
         '
         Me.UserToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ChangeCredentialsToolStripMenuItem, Me.ChangeThemeToolStripMenuItem, Me.ExitToolStripMenuItem1})
+        Me.UserToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI Semibold", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.UserToolStripMenuItem.Name = "UserToolStripMenuItem"
-        Me.UserToolStripMenuItem.Size = New System.Drawing.Size(52, 24)
+        Me.UserToolStripMenuItem.Size = New System.Drawing.Size(75, 35)
         Me.UserToolStripMenuItem.Text = "User"
         Me.UserToolStripMenuItem.ToolTipText = "User"
         '
         'ChangeCredentialsToolStripMenuItem
         '
         Me.ChangeCredentialsToolStripMenuItem.Name = "ChangeCredentialsToolStripMenuItem"
-        Me.ChangeCredentialsToolStripMenuItem.Size = New System.Drawing.Size(191, 26)
+        Me.ChangeCredentialsToolStripMenuItem.Size = New System.Drawing.Size(256, 36)
         Me.ChangeCredentialsToolStripMenuItem.Text = "Modify User"
         '
         'ChangeThemeToolStripMenuItem
         '
         Me.ChangeThemeToolStripMenuItem.Name = "ChangeThemeToolStripMenuItem"
-        Me.ChangeThemeToolStripMenuItem.Size = New System.Drawing.Size(191, 26)
+        Me.ChangeThemeToolStripMenuItem.Size = New System.Drawing.Size(256, 36)
         Me.ChangeThemeToolStripMenuItem.Text = "Change Theme"
         '
         'ExitToolStripMenuItem1
         '
         Me.ExitToolStripMenuItem1.Name = "ExitToolStripMenuItem1"
-        Me.ExitToolStripMenuItem1.Size = New System.Drawing.Size(191, 26)
+        Me.ExitToolStripMenuItem1.Size = New System.Drawing.Size(256, 36)
         Me.ExitToolStripMenuItem1.Text = "Logout"
         '
         'ItemToolStripMenuItem
         '
         Me.ItemToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddToolStripMenuItem, Me.ModifyToolStripMenuItem, Me.DisplayToolStripMenuItem2})
+        Me.ItemToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI Semibold", 13.8!, System.Drawing.FontStyle.Bold)
         Me.ItemToolStripMenuItem.Name = "ItemToolStripMenuItem"
-        Me.ItemToolStripMenuItem.Size = New System.Drawing.Size(53, 24)
+        Me.ItemToolStripMenuItem.Size = New System.Drawing.Size(75, 35)
         Me.ItemToolStripMenuItem.Text = "Item"
         '
         'AddToolStripMenuItem
@@ -115,46 +118,48 @@ Partial Class MainPage
         Me.AddToolStripMenuItem.Name = "AddToolStripMenuItem"
         Me.AddToolStripMenuItem.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Alt) _
             Or System.Windows.Forms.Keys.I), System.Windows.Forms.Keys)
-        Me.AddToolStripMenuItem.Size = New System.Drawing.Size(195, 26)
+        Me.AddToolStripMenuItem.Size = New System.Drawing.Size(264, 36)
         Me.AddToolStripMenuItem.Text = "Add"
         '
         'ModifyToolStripMenuItem
         '
         Me.ModifyToolStripMenuItem.Name = "ModifyToolStripMenuItem"
-        Me.ModifyToolStripMenuItem.Size = New System.Drawing.Size(195, 26)
+        Me.ModifyToolStripMenuItem.Size = New System.Drawing.Size(264, 36)
         Me.ModifyToolStripMenuItem.Text = "Modify"
         '
         'DisplayToolStripMenuItem2
         '
         Me.DisplayToolStripMenuItem2.Name = "DisplayToolStripMenuItem2"
-        Me.DisplayToolStripMenuItem2.Size = New System.Drawing.Size(195, 26)
+        Me.DisplayToolStripMenuItem2.Size = New System.Drawing.Size(264, 36)
         Me.DisplayToolStripMenuItem2.Text = "Display"
         '
         'InventoryToolStripMenuItem
         '
         Me.InventoryToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DisplayToolStripMenuItem1})
+        Me.InventoryToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI Semibold", 13.8!, System.Drawing.FontStyle.Bold)
         Me.InventoryToolStripMenuItem.Name = "InventoryToolStripMenuItem"
-        Me.InventoryToolStripMenuItem.Size = New System.Drawing.Size(84, 24)
+        Me.InventoryToolStripMenuItem.Size = New System.Drawing.Size(129, 35)
         Me.InventoryToolStripMenuItem.Text = "Inventory"
         '
         'DisplayToolStripMenuItem1
         '
         Me.DisplayToolStripMenuItem1.Name = "DisplayToolStripMenuItem1"
-        Me.DisplayToolStripMenuItem1.Size = New System.Drawing.Size(224, 26)
+        Me.DisplayToolStripMenuItem1.Size = New System.Drawing.Size(179, 36)
         Me.DisplayToolStripMenuItem1.Text = "Display"
         '
         'TransactionsToolStripMenuItem
         '
         Me.TransactionsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SaleToolStripMenuItem, Me.PurchaseToolStripMenuItem})
+        Me.TransactionsToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI Semibold", 13.8!, System.Drawing.FontStyle.Bold)
         Me.TransactionsToolStripMenuItem.Name = "TransactionsToolStripMenuItem"
-        Me.TransactionsToolStripMenuItem.Size = New System.Drawing.Size(104, 24)
+        Me.TransactionsToolStripMenuItem.Size = New System.Drawing.Size(157, 35)
         Me.TransactionsToolStripMenuItem.Text = "Transactions"
         '
         'SaleToolStripMenuItem
         '
         Me.SaleToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddToolStripMenuItem2, Me.ModifyToolStripMenuItem2, Me.DeleteToolStripMenuItem2, Me.DisplayToolStripMenuItem})
         Me.SaleToolStripMenuItem.Name = "SaleToolStripMenuItem"
-        Me.SaleToolStripMenuItem.Size = New System.Drawing.Size(150, 26)
+        Me.SaleToolStripMenuItem.Size = New System.Drawing.Size(195, 36)
         Me.SaleToolStripMenuItem.Text = "Sale"
         '
         'AddToolStripMenuItem2
@@ -162,57 +167,58 @@ Partial Class MainPage
         Me.AddToolStripMenuItem2.Name = "AddToolStripMenuItem2"
         Me.AddToolStripMenuItem2.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Alt) _
             Or System.Windows.Forms.Keys.S), System.Windows.Forms.Keys)
-        Me.AddToolStripMenuItem2.Size = New System.Drawing.Size(199, 26)
+        Me.AddToolStripMenuItem2.Size = New System.Drawing.Size(270, 36)
         Me.AddToolStripMenuItem2.Text = "Add"
         '
         'ModifyToolStripMenuItem2
         '
         Me.ModifyToolStripMenuItem2.Name = "ModifyToolStripMenuItem2"
-        Me.ModifyToolStripMenuItem2.Size = New System.Drawing.Size(199, 26)
+        Me.ModifyToolStripMenuItem2.Size = New System.Drawing.Size(270, 36)
         Me.ModifyToolStripMenuItem2.Text = "Modify"
         '
         'DeleteToolStripMenuItem2
         '
         Me.DeleteToolStripMenuItem2.Name = "DeleteToolStripMenuItem2"
-        Me.DeleteToolStripMenuItem2.Size = New System.Drawing.Size(199, 26)
+        Me.DeleteToolStripMenuItem2.Size = New System.Drawing.Size(270, 36)
         Me.DeleteToolStripMenuItem2.Text = "Delete"
         '
         'DisplayToolStripMenuItem
         '
         Me.DisplayToolStripMenuItem.Name = "DisplayToolStripMenuItem"
-        Me.DisplayToolStripMenuItem.Size = New System.Drawing.Size(199, 26)
+        Me.DisplayToolStripMenuItem.Size = New System.Drawing.Size(270, 36)
         Me.DisplayToolStripMenuItem.Text = "Display"
         '
         'PurchaseToolStripMenuItem
         '
         Me.PurchaseToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddToolStripMenuItem1, Me.DeleteToolStripMenuItem1, Me.SearchToolStripMenuItem4})
         Me.PurchaseToolStripMenuItem.Name = "PurchaseToolStripMenuItem"
-        Me.PurchaseToolStripMenuItem.Size = New System.Drawing.Size(150, 26)
+        Me.PurchaseToolStripMenuItem.Size = New System.Drawing.Size(195, 36)
         Me.PurchaseToolStripMenuItem.Text = "Purchase"
         '
         'AddToolStripMenuItem1
         '
         Me.AddToolStripMenuItem1.Name = "AddToolStripMenuItem1"
-        Me.AddToolStripMenuItem1.Size = New System.Drawing.Size(141, 26)
+        Me.AddToolStripMenuItem1.Size = New System.Drawing.Size(179, 36)
         Me.AddToolStripMenuItem1.Text = "Add"
         '
         'DeleteToolStripMenuItem1
         '
         Me.DeleteToolStripMenuItem1.Name = "DeleteToolStripMenuItem1"
-        Me.DeleteToolStripMenuItem1.Size = New System.Drawing.Size(141, 26)
+        Me.DeleteToolStripMenuItem1.Size = New System.Drawing.Size(179, 36)
         Me.DeleteToolStripMenuItem1.Text = "Delete"
         '
         'SearchToolStripMenuItem4
         '
         Me.SearchToolStripMenuItem4.Name = "SearchToolStripMenuItem4"
-        Me.SearchToolStripMenuItem4.Size = New System.Drawing.Size(141, 26)
+        Me.SearchToolStripMenuItem4.Size = New System.Drawing.Size(179, 36)
         Me.SearchToolStripMenuItem4.Text = "Display"
         '
         'SupplierToolStripMenuItem
         '
         Me.SupplierToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddToolStripMenuItem4, Me.ModifyToolStripMenuItem4, Me.DisplayToolStripMenuItem4})
+        Me.SupplierToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI Semibold", 13.8!, System.Drawing.FontStyle.Bold)
         Me.SupplierToolStripMenuItem.Name = "SupplierToolStripMenuItem"
-        Me.SupplierToolStripMenuItem.Size = New System.Drawing.Size(78, 24)
+        Me.SupplierToolStripMenuItem.Size = New System.Drawing.Size(115, 35)
         Me.SupplierToolStripMenuItem.Text = "Supplier"
         '
         'AddToolStripMenuItem4
@@ -220,27 +226,28 @@ Partial Class MainPage
         Me.AddToolStripMenuItem4.Name = "AddToolStripMenuItem4"
         Me.AddToolStripMenuItem4.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Alt) _
             Or System.Windows.Forms.Keys.L), System.Windows.Forms.Keys)
-        Me.AddToolStripMenuItem4.Size = New System.Drawing.Size(198, 26)
+        Me.AddToolStripMenuItem4.Size = New System.Drawing.Size(268, 36)
         Me.AddToolStripMenuItem4.Text = "Add"
         '
         'ModifyToolStripMenuItem4
         '
         Me.ModifyToolStripMenuItem4.Name = "ModifyToolStripMenuItem4"
-        Me.ModifyToolStripMenuItem4.Size = New System.Drawing.Size(198, 26)
+        Me.ModifyToolStripMenuItem4.Size = New System.Drawing.Size(268, 36)
         Me.ModifyToolStripMenuItem4.Text = "Modify"
         '
         'DisplayToolStripMenuItem4
         '
         Me.DisplayToolStripMenuItem4.Name = "DisplayToolStripMenuItem4"
-        Me.DisplayToolStripMenuItem4.Size = New System.Drawing.Size(198, 26)
+        Me.DisplayToolStripMenuItem4.Size = New System.Drawing.Size(268, 36)
         Me.DisplayToolStripMenuItem4.Text = "Display"
         '
         'DashboardToolStripMenuItem
         '
+        Me.DashboardToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI Semibold", 13.8!, System.Drawing.FontStyle.Bold)
         Me.DashboardToolStripMenuItem.Name = "DashboardToolStripMenuItem"
         Me.DashboardToolStripMenuItem.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Alt) _
             Or System.Windows.Forms.Keys.D), System.Windows.Forms.Keys)
-        Me.DashboardToolStripMenuItem.Size = New System.Drawing.Size(96, 24)
+        Me.DashboardToolStripMenuItem.Size = New System.Drawing.Size(143, 35)
         Me.DashboardToolStripMenuItem.Text = "Dashboard"
         '
         'ContextMenuStrip1
@@ -296,37 +303,27 @@ Partial Class MainPage
         '
         'Panel1
         '
-        Me.Panel1.BackgroundImage = CType(resources.GetObject("Panel1.BackgroundImage"), System.Drawing.Image)
-        Me.Panel1.Controls.Add(Me.Label2)
+        Me.Panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Location = New System.Drawing.Point(1430, 796)
+        Me.Panel1.Location = New System.Drawing.Point(0, 911)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(619, 190)
-        Me.Panel1.TabIndex = 13
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Font = New System.Drawing.Font("Now Black", 20.0!, System.Drawing.FontStyle.Bold)
-        Me.Label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label2.Location = New System.Drawing.Point(71, 119)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(455, 41)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Saksham BCA III(B) 5556"
+        Me.Panel1.Size = New System.Drawing.Size(2050, 66)
+        Me.Panel1.TabIndex = 15
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Now Black", 50.0!, System.Drawing.FontStyle.Bold)
-        Me.Label1.ForeColor = System.Drawing.Color.Yellow
-        Me.Label1.Location = New System.Drawing.Point(61, 18)
+        Me.Label1.Font = New System.Drawing.Font("Now", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label1.Location = New System.Drawing.Point(3, 16)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(498, 101)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Store Wise"
+        Me.Label1.Size = New System.Drawing.Size(1555, 34)
+        Me.Label1.TabIndex = 17
+        Me.Label1.Text = "Store Wise (SAKSHAM BCA III 5556) Store Wise (SAKSHAM BCA III 5556) Store Wise (S" &
+    "AKSHAM BCA III 5556)"
+        '
+        'Timer1
+        '
         '
         'MainPage
         '
@@ -377,9 +374,6 @@ Partial Class MainPage
     Friend WithEvents ToolStripMenuItem2 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents SearchToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolTip1 As System.Windows.Forms.ToolTip
-    Friend WithEvents Panel1 As System.Windows.Forms.Panel
-    Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents PurchaseToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents AddToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents DeleteToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
@@ -388,4 +382,7 @@ Partial Class MainPage
     Friend WithEvents ChangeThemeToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents InventoryToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DisplayToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents Timer1 As Timer
+    Friend WithEvents Label1 As Label
 End Class

@@ -1,5 +1,13 @@
 ﻿Public Class MainPage
 
+
+    'text animation support variables
+    Dim textPosition As Integer
+    Dim textSpeed As Integer = 5
+    Dim colorIndex As Integer = 0
+    Dim lightColors As Color() = {Color.LightBlue, Color.LightGreen, Color.LightPink, Color.LightYellow, Color.LightCyan, Color.LightCoral, Color.LightSkyBlue}
+
+
     Private Sub ExitToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ExitToolStripMenuItem1.Click
         End
     End Sub
@@ -41,9 +49,30 @@
     End Sub
 
     Private Sub MainPage_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        'Initial setting for name animation
+        Label1.Left = Panel1.Width
+        textPosition = Label1.Left
+        Timer1.Interval = 50
+        Timer1.Start()
     End Sub
 
-    Private Sub Panel1_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles Panel1.Paint
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        'main animation
+        textPosition -= textSpeed
+        Label1.Left = textPosition
+
+        Label1.ForeColor = lightColors(colorIndex)
+        colorIndex += 1
+        If colorIndex = lightColors.Length Then
+            colorIndex = 0
+        End If
+
+        If Label1.Right < 0 Then
+            textPosition = Panel1.Width
+        End If
+    End Sub
+
+    Private Sub Panel1_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs)
 
     End Sub
 

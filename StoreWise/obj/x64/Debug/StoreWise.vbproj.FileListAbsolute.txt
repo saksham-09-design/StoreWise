@@ -120,3 +120,4 @@ D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.displaySupplier.resources
 D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.displayItem.resources
 D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.deletePurchase.resources
 D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.displayPuchase.resources
+D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.inventory.resources

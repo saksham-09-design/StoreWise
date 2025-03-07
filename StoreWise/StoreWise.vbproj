@@ -275,6 +275,12 @@
     <Compile Include="displayPuchase.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="inventory.Designer.vb">
+      <DependentUpon>inventory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="inventory.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="sVar.vb" />
     <Compile Include="DeleteItem.Designer.vb">
       <DependentUpon>DeleteItem.vb</DependentUpon>
@@ -427,6 +433,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="addPurchase.resx">
       <DependentUpon>addPurchase.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="inventory.resx">
+      <DependentUpon>inventory.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="modifySupplier.resx">
       <DependentUpon>modifySupplier.vb</DependentUpon>

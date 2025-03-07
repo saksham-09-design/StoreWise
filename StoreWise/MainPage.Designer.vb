@@ -35,7 +35,6 @@ Partial Class MainPage
         Me.DeleteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DisplayToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
         Me.InventoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ManageToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DisplayToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.TransactionsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SaleToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -141,21 +140,15 @@ Partial Class MainPage
         '
         'InventoryToolStripMenuItem
         '
-        Me.InventoryToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ManageToolStripMenuItem, Me.DisplayToolStripMenuItem1})
+        Me.InventoryToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DisplayToolStripMenuItem1})
         Me.InventoryToolStripMenuItem.Name = "InventoryToolStripMenuItem"
         Me.InventoryToolStripMenuItem.Size = New System.Drawing.Size(84, 24)
         Me.InventoryToolStripMenuItem.Text = "Inventory"
         '
-        'ManageToolStripMenuItem
-        '
-        Me.ManageToolStripMenuItem.Name = "ManageToolStripMenuItem"
-        Me.ManageToolStripMenuItem.Size = New System.Drawing.Size(146, 26)
-        Me.ManageToolStripMenuItem.Text = "Manage"
-        '
         'DisplayToolStripMenuItem1
         '
         Me.DisplayToolStripMenuItem1.Name = "DisplayToolStripMenuItem1"
-        Me.DisplayToolStripMenuItem1.Size = New System.Drawing.Size(146, 26)
+        Me.DisplayToolStripMenuItem1.Size = New System.Drawing.Size(224, 26)
         Me.DisplayToolStripMenuItem1.Text = "Display"
         '
         'TransactionsToolStripMenuItem
@@ -169,7 +162,7 @@ Partial Class MainPage
         '
         Me.SaleToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddToolStripMenuItem2, Me.ModifyToolStripMenuItem2, Me.DeleteToolStripMenuItem2, Me.DisplayToolStripMenuItem})
         Me.SaleToolStripMenuItem.Name = "SaleToolStripMenuItem"
-        Me.SaleToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.SaleToolStripMenuItem.Size = New System.Drawing.Size(150, 26)
         Me.SaleToolStripMenuItem.Text = "Sale"
         '
         'AddToolStripMenuItem2
@@ -202,25 +195,25 @@ Partial Class MainPage
         '
         Me.PurchaseToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddToolStripMenuItem1, Me.DeleteToolStripMenuItem1, Me.SearchToolStripMenuItem4})
         Me.PurchaseToolStripMenuItem.Name = "PurchaseToolStripMenuItem"
-        Me.PurchaseToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.PurchaseToolStripMenuItem.Size = New System.Drawing.Size(150, 26)
         Me.PurchaseToolStripMenuItem.Text = "Purchase"
         '
         'AddToolStripMenuItem1
         '
         Me.AddToolStripMenuItem1.Name = "AddToolStripMenuItem1"
-        Me.AddToolStripMenuItem1.Size = New System.Drawing.Size(224, 26)
+        Me.AddToolStripMenuItem1.Size = New System.Drawing.Size(141, 26)
         Me.AddToolStripMenuItem1.Text = "Add"
         '
         'DeleteToolStripMenuItem1
         '
         Me.DeleteToolStripMenuItem1.Name = "DeleteToolStripMenuItem1"
-        Me.DeleteToolStripMenuItem1.Size = New System.Drawing.Size(224, 26)
+        Me.DeleteToolStripMenuItem1.Size = New System.Drawing.Size(141, 26)
         Me.DeleteToolStripMenuItem1.Text = "Delete"
         '
         'SearchToolStripMenuItem4
         '
         Me.SearchToolStripMenuItem4.Name = "SearchToolStripMenuItem4"
-        Me.SearchToolStripMenuItem4.Size = New System.Drawing.Size(224, 26)
+        Me.SearchToolStripMenuItem4.Size = New System.Drawing.Size(141, 26)
         Me.SearchToolStripMenuItem4.Text = "Display"
         '
         'SupplierToolStripMenuItem
@@ -410,6 +403,5 @@ Partial Class MainPage
     Friend WithEvents ChangeCredentialsToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ChangeThemeToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents InventoryToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ManageToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DisplayToolStripMenuItem1 As ToolStripMenuItem
 End Class

@@ -140,4 +140,10 @@
         pur.MdiParent = Me
         pur.Show()
     End Sub
+
+    Private Sub DisplayToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles DisplayToolStripMenuItem1.Click
+        Dim inv As New inventory()
+        inv.MdiParent = Me
+        inv.Show()
+    End Sub
 End Class

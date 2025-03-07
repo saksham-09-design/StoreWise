@@ -58,7 +58,6 @@
             toDate.CalendarTitleForeColor = Color.FromArgb(255, 240, 246, 252)
             toDate.CalendarTrailingForeColor = Color.FromArgb(255, 240, 246, 252)
             toDate.CalendarForeColor = Color.FromArgb(255, 240, 246, 252)
-
         End If
 
     End Sub
@@ -130,6 +129,11 @@
         ElseIf filter.Text = "Past 1 Year" Then
             Dim dateT As Date = CDate(Format(Now().AddYears(-1), "Short Date"))
             fetch_data_UG("select ID, sName, pDate, amtDis, type from purchaseTable where pDate >= #" & dateT & "#")
+            fromDate.Enabled = False
+            toDate.Enabled = False
+            supplierName.Enabled = False
+        Else
+            fetch_data_UG("select ID, sName, pDate, amtDis, type from purchaseTable")
             fromDate.Enabled = False
             toDate.Enabled = False
             supplierName.Enabled = False

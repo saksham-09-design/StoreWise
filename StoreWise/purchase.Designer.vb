@@ -106,7 +106,7 @@ Partial Class purchase
         Me.filter.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.filter.Font = New System.Drawing.Font("Now Medium", 15.0!)
         Me.filter.FormattingEnabled = True
-        Me.filter.Items.AddRange(New Object() {"Today", "Yesterday", "Past 7 days", "Past 1 Month", "Past 1 Year", "Custom Dates", "Supplier Name"})
+        Me.filter.Items.AddRange(New Object() {"All", "Today", "Yesterday", "Past 7 days", "Past 1 Month", "Past 1 Year", "Custom Dates", "Supplier Name"})
         Me.filter.Location = New System.Drawing.Point(231, 104)
         Me.filter.Name = "filter"
         Me.filter.Size = New System.Drawing.Size(1017, 38)

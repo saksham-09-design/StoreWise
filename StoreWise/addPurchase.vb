@@ -144,7 +144,7 @@ Public Class addPurchase
                     If conn.State = ConnectionState.Closed Then
                         conn.Open()
                     End If
-                    Dim sql As String = "SELECT sellUnit FROM itemTable WHERE itemName = '" & itemName.Text & "'"
+                    Dim sql As String = "SELECT costUnit FROM itemTable WHERE itemName = '" & itemName.Text & "'"
                     Dim cmd As New OleDb.OleDbCommand(sql, conn)
                     Dim da As New OleDb.OleDbDataAdapter(cmd)
                     Dim dt As New DataTable

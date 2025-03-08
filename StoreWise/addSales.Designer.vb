@@ -27,12 +27,8 @@ Partial Class addSales
         Me.customerName = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.transactionDate = New System.Windows.Forms.DateTimePicker()
-        Me.customerAddress = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.phone = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.eMail = New System.Windows.Forms.TextBox()
-        Me.Label6 = New System.Windows.Forms.Label()
         Me.tID = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.credit = New System.Windows.Forms.RadioButton()
@@ -55,9 +51,9 @@ Partial Class addSales
         Me.Label14 = New System.Windows.Forms.Label()
         Me.totalPrice = New System.Windows.Forms.ListBox()
         Me.Discount = New System.Windows.Forms.TextBox()
-        Me.Label16 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.fBill = New System.Windows.Forms.Label()
-        Me.Label17 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.print = New System.Windows.Forms.Button()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.gstAmt = New System.Windows.Forms.ListBox()
@@ -92,6 +88,7 @@ Partial Class addSales
         Me.customerName.Name = "customerName"
         Me.customerName.Size = New System.Drawing.Size(308, 39)
         Me.customerName.TabIndex = 1
+        Me.customerName.Text = "Cash"
         '
         'Label3
         '
@@ -112,31 +109,12 @@ Partial Class addSales
         Me.transactionDate.Size = New System.Drawing.Size(470, 33)
         Me.transactionDate.TabIndex = 2
         '
-        'customerAddress
-        '
-        Me.customerAddress.Font = New System.Drawing.Font("Now Medium", 15.8!)
-        Me.customerAddress.Location = New System.Drawing.Point(195, 170)
-        Me.customerAddress.Name = "customerAddress"
-        Me.customerAddress.Size = New System.Drawing.Size(1120, 39)
-        Me.customerAddress.TabIndex = 3
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Now Medium", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.Red
-        Me.Label4.Location = New System.Drawing.Point(28, 172)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(140, 34)
-        Me.Label4.TabIndex = 7
-        Me.Label4.Text = "Address:"
-        '
         'phone
         '
         Me.phone.Font = New System.Drawing.Font("Now Medium", 15.8!)
-        Me.phone.Location = New System.Drawing.Point(306, 235)
+        Me.phone.Location = New System.Drawing.Point(306, 177)
         Me.phone.Name = "phone"
-        Me.phone.Size = New System.Drawing.Size(308, 39)
+        Me.phone.Size = New System.Drawing.Size(1009, 39)
         Me.phone.TabIndex = 4
         '
         'Label5
@@ -144,35 +122,16 @@ Partial Class addSales
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Now Medium", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.Red
-        Me.Label5.Location = New System.Drawing.Point(28, 237)
+        Me.Label5.Location = New System.Drawing.Point(28, 179)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(250, 34)
         Me.Label5.TabIndex = 9
         Me.Label5.Text = "*Phone Number:"
         '
-        'eMail
-        '
-        Me.eMail.Font = New System.Drawing.Font("Now Medium", 15.8!)
-        Me.eMail.Location = New System.Drawing.Point(845, 235)
-        Me.eMail.Name = "eMail"
-        Me.eMail.Size = New System.Drawing.Size(470, 39)
-        Me.eMail.TabIndex = 5
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Now Medium", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.Red
-        Me.Label6.Location = New System.Drawing.Point(679, 237)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(122, 34)
-        Me.Label6.TabIndex = 11
-        Me.Label6.Text = "E-Mail:"
-        '
         'tID
         '
         Me.tID.Font = New System.Drawing.Font("Now Medium", 15.8!)
-        Me.tID.Location = New System.Drawing.Point(306, 300)
+        Me.tID.Location = New System.Drawing.Point(306, 242)
         Me.tID.Name = "tID"
         Me.tID.ReadOnly = True
         Me.tID.Size = New System.Drawing.Size(308, 39)
@@ -184,7 +143,7 @@ Partial Class addSales
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Now Medium", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.Red
-        Me.Label7.Location = New System.Drawing.Point(28, 302)
+        Me.Label7.Location = New System.Drawing.Point(28, 244)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(234, 34)
         Me.Label7.TabIndex = 13
@@ -195,7 +154,7 @@ Partial Class addSales
         Me.credit.AutoSize = True
         Me.credit.Font = New System.Drawing.Font("Now", 16.0!, System.Drawing.FontStyle.Bold)
         Me.credit.ForeColor = System.Drawing.Color.Red
-        Me.credit.Location = New System.Drawing.Point(1100, 298)
+        Me.credit.Location = New System.Drawing.Point(1100, 240)
         Me.credit.Name = "credit"
         Me.credit.Size = New System.Drawing.Size(122, 36)
         Me.credit.TabIndex = 7
@@ -208,7 +167,7 @@ Partial Class addSales
         Me.cash.Checked = True
         Me.cash.Font = New System.Drawing.Font("Now", 16.0!, System.Drawing.FontStyle.Bold)
         Me.cash.ForeColor = System.Drawing.Color.Red
-        Me.cash.Location = New System.Drawing.Point(915, 298)
+        Me.cash.Location = New System.Drawing.Point(915, 240)
         Me.cash.Name = "cash"
         Me.cash.Size = New System.Drawing.Size(104, 36)
         Me.cash.TabIndex = 6
@@ -222,7 +181,7 @@ Partial Class addSales
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Now", 16.0!, System.Drawing.FontStyle.Bold)
         Me.Label8.ForeColor = System.Drawing.Color.Red
-        Me.Label8.Location = New System.Drawing.Point(679, 302)
+        Me.Label8.Location = New System.Drawing.Point(679, 244)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(97, 32)
         Me.Label8.TabIndex = 63
@@ -233,7 +192,7 @@ Partial Class addSales
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Now", 16.0!, System.Drawing.FontStyle.Bold)
         Me.Label9.ForeColor = System.Drawing.Color.Red
-        Me.Label9.Location = New System.Drawing.Point(679, 366)
+        Me.Label9.Location = New System.Drawing.Point(679, 308)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(153, 32)
         Me.Label9.TabIndex = 69
@@ -242,7 +201,7 @@ Partial Class addSales
         'itemQuantity
         '
         Me.itemQuantity.Font = New System.Drawing.Font("Now Medium", 15.0!)
-        Me.itemQuantity.Location = New System.Drawing.Point(855, 366)
+        Me.itemQuantity.Location = New System.Drawing.Point(855, 308)
         Me.itemQuantity.Name = "itemQuantity"
         Me.itemQuantity.Size = New System.Drawing.Size(460, 37)
         Me.itemQuantity.TabIndex = 9
@@ -252,7 +211,7 @@ Partial Class addSales
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Now", 16.0!, System.Drawing.FontStyle.Bold)
         Me.Label10.ForeColor = System.Drawing.Color.Red
-        Me.Label10.Location = New System.Drawing.Point(28, 366)
+        Me.Label10.Location = New System.Drawing.Point(28, 308)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(185, 32)
         Me.Label10.TabIndex = 68
@@ -264,7 +223,7 @@ Partial Class addSales
         Me.cancle.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.cancle.Font = New System.Drawing.Font("Now", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cancle.ForeColor = System.Drawing.Color.Ivory
-        Me.cancle.Location = New System.Drawing.Point(941, 750)
+        Me.cancle.Location = New System.Drawing.Point(941, 692)
         Me.cancle.Name = "cancle"
         Me.cancle.Size = New System.Drawing.Size(168, 52)
         Me.cancle.TabIndex = 73
@@ -277,7 +236,7 @@ Partial Class addSales
         Me.clear.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.clear.Font = New System.Drawing.Font("Now", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.clear.ForeColor = System.Drawing.Color.Ivory
-        Me.clear.Location = New System.Drawing.Point(756, 750)
+        Me.clear.Location = New System.Drawing.Point(756, 692)
         Me.clear.Name = "clear"
         Me.clear.Size = New System.Drawing.Size(168, 52)
         Me.clear.TabIndex = 72
@@ -289,7 +248,7 @@ Partial Class addSales
         Me.save.BackColor = System.Drawing.Color.Red
         Me.save.Font = New System.Drawing.Font("Now", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.save.ForeColor = System.Drawing.Color.Ivory
-        Me.save.Location = New System.Drawing.Point(388, 750)
+        Me.save.Location = New System.Drawing.Point(388, 692)
         Me.save.Name = "save"
         Me.save.Size = New System.Drawing.Size(168, 52)
         Me.save.TabIndex = 71
@@ -304,7 +263,7 @@ Partial Class addSales
         Me.itemNamelist.Font = New System.Drawing.Font("Now Medium", 15.0!)
         Me.itemNamelist.FormattingEnabled = True
         Me.itemNamelist.Items.AddRange(New Object() {"Oil", "Ghee", "Sugar", "Mustard Oil", "Detergent", "Chocolate"})
-        Me.itemNamelist.Location = New System.Drawing.Point(306, 366)
+        Me.itemNamelist.Location = New System.Drawing.Point(306, 308)
         Me.itemNamelist.Name = "itemNamelist"
         Me.itemNamelist.Size = New System.Drawing.Size(308, 38)
         Me.itemNamelist.TabIndex = 8
@@ -314,7 +273,7 @@ Partial Class addSales
         Me.Add.BackColor = System.Drawing.Color.Red
         Me.Add.Font = New System.Drawing.Font("Now", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Add.ForeColor = System.Drawing.Color.Ivory
-        Me.Add.Location = New System.Drawing.Point(202, 750)
+        Me.Add.Location = New System.Drawing.Point(202, 692)
         Me.Add.Name = "Add"
         Me.Add.Size = New System.Drawing.Size(168, 52)
         Me.Add.TabIndex = 75
@@ -326,7 +285,7 @@ Partial Class addSales
         Me.itemList.Font = New System.Drawing.Font("Now Medium", 12.8!)
         Me.itemList.FormattingEnabled = True
         Me.itemList.ItemHeight = 25
-        Me.itemList.Location = New System.Drawing.Point(34, 469)
+        Me.itemList.Location = New System.Drawing.Point(34, 411)
         Me.itemList.Name = "itemList"
         Me.itemList.Size = New System.Drawing.Size(331, 179)
         Me.itemList.TabIndex = 76
@@ -336,7 +295,7 @@ Partial Class addSales
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Now", 16.0!, System.Drawing.FontStyle.Bold)
         Me.Label11.ForeColor = System.Drawing.Color.Red
-        Me.Label11.Location = New System.Drawing.Point(28, 426)
+        Me.Label11.Location = New System.Drawing.Point(28, 368)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(97, 32)
         Me.Label11.TabIndex = 77
@@ -347,7 +306,7 @@ Partial Class addSales
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Now", 16.0!, System.Drawing.FontStyle.Bold)
         Me.Label12.ForeColor = System.Drawing.Color.Red
-        Me.Label12.Location = New System.Drawing.Point(377, 426)
+        Me.Label12.Location = New System.Drawing.Point(377, 368)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(143, 32)
         Me.Label12.TabIndex = 79
@@ -358,7 +317,7 @@ Partial Class addSales
         Me.quantityList.Font = New System.Drawing.Font("Now Medium", 12.8!)
         Me.quantityList.FormattingEnabled = True
         Me.quantityList.ItemHeight = 25
-        Me.quantityList.Location = New System.Drawing.Point(383, 469)
+        Me.quantityList.Location = New System.Drawing.Point(383, 411)
         Me.quantityList.Name = "quantityList"
         Me.quantityList.Size = New System.Drawing.Size(173, 179)
         Me.quantityList.TabIndex = 78
@@ -368,7 +327,7 @@ Partial Class addSales
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Now", 16.0!, System.Drawing.FontStyle.Bold)
         Me.Label13.ForeColor = System.Drawing.Color.Red
-        Me.Label13.Location = New System.Drawing.Point(570, 426)
+        Me.Label13.Location = New System.Drawing.Point(570, 368)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(94, 32)
         Me.Label13.TabIndex = 81
@@ -379,7 +338,7 @@ Partial Class addSales
         Me.priceList.Font = New System.Drawing.Font("Now Medium", 12.8!)
         Me.priceList.FormattingEnabled = True
         Me.priceList.ItemHeight = 25
-        Me.priceList.Location = New System.Drawing.Point(576, 469)
+        Me.priceList.Location = New System.Drawing.Point(576, 411)
         Me.priceList.Name = "priceList"
         Me.priceList.Size = New System.Drawing.Size(257, 179)
         Me.priceList.TabIndex = 80
@@ -389,7 +348,7 @@ Partial Class addSales
         Me.Label14.AutoSize = True
         Me.Label14.Font = New System.Drawing.Font("Now", 16.0!, System.Drawing.FontStyle.Bold)
         Me.Label14.ForeColor = System.Drawing.Color.Red
-        Me.Label14.Location = New System.Drawing.Point(1054, 426)
+        Me.Label14.Location = New System.Drawing.Point(1054, 368)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(168, 32)
         Me.Label14.TabIndex = 83
@@ -400,7 +359,7 @@ Partial Class addSales
         Me.totalPrice.Font = New System.Drawing.Font("Now Medium", 12.8!)
         Me.totalPrice.FormattingEnabled = True
         Me.totalPrice.ItemHeight = 25
-        Me.totalPrice.Location = New System.Drawing.Point(1058, 469)
+        Me.totalPrice.Location = New System.Drawing.Point(1058, 411)
         Me.totalPrice.Name = "totalPrice"
         Me.totalPrice.Size = New System.Drawing.Size(257, 179)
         Me.totalPrice.TabIndex = 82
@@ -408,43 +367,43 @@ Partial Class addSales
         'Discount
         '
         Me.Discount.Font = New System.Drawing.Font("Now Medium", 15.8!)
-        Me.Discount.Location = New System.Drawing.Point(186, 667)
+        Me.Discount.Location = New System.Drawing.Point(186, 609)
         Me.Discount.Name = "Discount"
         Me.Discount.Size = New System.Drawing.Size(308, 39)
         Me.Discount.TabIndex = 88
         '
-        'Label16
+        'Label6
         '
-        Me.Label16.AutoSize = True
-        Me.Label16.Font = New System.Drawing.Font("Now Medium", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.ForeColor = System.Drawing.Color.Red
-        Me.Label16.Location = New System.Drawing.Point(28, 672)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(152, 34)
-        Me.Label16.TabIndex = 89
-        Me.Label16.Text = "Discount:"
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Now Medium", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.Red
+        Me.Label6.Location = New System.Drawing.Point(28, 614)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(152, 34)
+        Me.Label6.TabIndex = 89
+        Me.Label6.Text = "Discount:"
         '
         'fBill
         '
         Me.fBill.AutoSize = True
         Me.fBill.Font = New System.Drawing.Font("Now", 18.0!, System.Drawing.FontStyle.Bold)
         Me.fBill.ForeColor = System.Drawing.Color.Red
-        Me.fBill.Location = New System.Drawing.Point(835, 668)
+        Me.fBill.Location = New System.Drawing.Point(835, 610)
         Me.fBill.Name = "fBill"
         Me.fBill.Size = New System.Drawing.Size(89, 36)
         Me.fBill.TabIndex = 91
         Me.fBill.Text = "₹0/-"
         '
-        'Label17
+        'Label4
         '
-        Me.Label17.AutoSize = True
-        Me.Label17.Font = New System.Drawing.Font("Now", 16.0!, System.Drawing.FontStyle.Bold)
-        Me.Label17.ForeColor = System.Drawing.Color.Red
-        Me.Label17.Location = New System.Drawing.Point(580, 674)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(252, 32)
-        Me.Label17.TabIndex = 90
-        Me.Label17.Text = "Final Bill Amount:"
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Now", 16.0!, System.Drawing.FontStyle.Bold)
+        Me.Label4.ForeColor = System.Drawing.Color.Red
+        Me.Label4.Location = New System.Drawing.Point(580, 616)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(252, 32)
+        Me.Label4.TabIndex = 90
+        Me.Label4.Text = "Final Bill Amount:"
         '
         'print
         '
@@ -452,7 +411,7 @@ Partial Class addSales
         Me.print.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.print.Font = New System.Drawing.Font("Now", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.print.ForeColor = System.Drawing.Color.Ivory
-        Me.print.Location = New System.Drawing.Point(573, 750)
+        Me.print.Location = New System.Drawing.Point(573, 692)
         Me.print.Name = "print"
         Me.print.Size = New System.Drawing.Size(168, 52)
         Me.print.TabIndex = 92
@@ -464,7 +423,7 @@ Partial Class addSales
         Me.Label15.AutoSize = True
         Me.Label15.Font = New System.Drawing.Font("Now", 16.0!, System.Drawing.FontStyle.Bold)
         Me.Label15.ForeColor = System.Drawing.Color.Red
-        Me.Label15.Location = New System.Drawing.Point(841, 426)
+        Me.Label15.Location = New System.Drawing.Point(841, 368)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(77, 32)
         Me.Label15.TabIndex = 94
@@ -475,7 +434,7 @@ Partial Class addSales
         Me.gstAmt.Font = New System.Drawing.Font("Now Medium", 12.8!)
         Me.gstAmt.FormattingEnabled = True
         Me.gstAmt.ItemHeight = 25
-        Me.gstAmt.Location = New System.Drawing.Point(847, 469)
+        Me.gstAmt.Location = New System.Drawing.Point(847, 411)
         Me.gstAmt.Name = "gstAmt"
         Me.gstAmt.Size = New System.Drawing.Size(192, 179)
         Me.gstAmt.TabIndex = 93
@@ -492,9 +451,9 @@ Partial Class addSales
         Me.Controls.Add(Me.gstAmt)
         Me.Controls.Add(Me.print)
         Me.Controls.Add(Me.fBill)
-        Me.Controls.Add(Me.Label17)
+        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Discount)
-        Me.Controls.Add(Me.Label16)
+        Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label14)
         Me.Controls.Add(Me.totalPrice)
         Me.Controls.Add(Me.Label13)
@@ -516,12 +475,8 @@ Partial Class addSales
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.tID)
         Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.eMail)
-        Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.phone)
         Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.customerAddress)
-        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.transactionDate)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.customerName)
@@ -538,12 +493,8 @@ Partial Class addSales
     Friend WithEvents customerName As System.Windows.Forms.TextBox
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents transactionDate As System.Windows.Forms.DateTimePicker
-    Friend WithEvents customerAddress As System.Windows.Forms.TextBox
-    Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents phone As System.Windows.Forms.TextBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents eMail As System.Windows.Forms.TextBox
-    Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents tID As System.Windows.Forms.TextBox
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents credit As System.Windows.Forms.RadioButton
@@ -566,9 +517,9 @@ Partial Class addSales
     Friend WithEvents Label14 As System.Windows.Forms.Label
     Friend WithEvents totalPrice As System.Windows.Forms.ListBox
     Friend WithEvents Discount As System.Windows.Forms.TextBox
-    Friend WithEvents Label16 As System.Windows.Forms.Label
+    Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents fBill As System.Windows.Forms.Label
-    Friend WithEvents Label17 As System.Windows.Forms.Label
+    Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents print As System.Windows.Forms.Button
     Friend WithEvents Label15 As System.Windows.Forms.Label
     Friend WithEvents gstAmt As System.Windows.Forms.ListBox

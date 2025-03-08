@@ -27,63 +27,254 @@
     'function for handelling clear button
     Private Sub clear_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles clear.Click
         customerName.Text = ""
-        customerAddress.Text = ""
         phone.Text = ""
-        eMail.Text = ""
         itemQuantity.Text = ""
+    End Sub
+
+    'Fetching Transaction id
+    Sub fetchTransId()
+        Dim conn As New OleDb.OleDbConnection
+        conn.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Saksham\Documents\StoreWise.accdb"
+        Dim transID As Integer
+        Try
+            If conn.State = ConnectionState.Closed Then
+                conn.Open()
+            End If
+            Dim sql As String = "SELECT saleID from support"
+            Dim cmd As New OleDb.OleDbCommand(sql, conn)
+            Dim da As New OleDb.OleDbDataAdapter(cmd)
+            Dim dt As New DataTable
+            da.Fill(dt)
+            transID = CInt(dt.Rows(0).Item(0))
+            tID.Text = transID
+        Catch ex As Exception
+            MessageBox.Show("Error: " & ex.Message, "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        Finally
+            conn.Close()
+        End Try
     End Sub
 
     'function for handelling save button
     Private Sub save_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles save.Click
-        If (itemNamelist.Text.Trim = "" Or itemQuantity.Text.Trim = "" Or customerName.Text.Trim = "" Or phone.Text.Trim = "" Or itemQuantity.Text.Trim = "") Then
-            MessageBox.Show("Please Fill All Fields", "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+        'validating Items
+        If itemList.Items.Count = 0 Then
+            MessageBox.Show("Please Add Items", "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        ElseIf customerName.Text = "" Then
+            MessageBox.Show("Please Enter Customer Name", "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        ElseIf phone.Text = "" Then
+            MessageBox.Show("Please Enter Phone Number", "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Else
+            Dim conn As New OleDb.OleDbConnection
+            conn.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Saksham\Documents\StoreWise.accdb"
 
+            'Fetching Date
+            Dim dateTrans As Date = CDate(Format(transactionDate.Value, "Short Date"))
+
+
+            'Fetching Payment Type
+            Dim type As String
+            If cash.Checked = True Then
+                type = "Cash"
+            Else
+                type = "Credit"
+            End If
+
+
+            'fetching Discount
+            Dim discountPer As Single
+            If Discount.Text.Trim <> "" Then
+                discountPer = CSng(Discount.Text)
+            End If
+
+
+            'fetching Total Amount
+            Dim totalAmount As Single = CSng(fBill.Text.Replace("₹"c, "").Replace("/-", ""))
+
+            'pushing data in sSupportTable table
+            Dim transCount As Integer = itemList.Items.Count
+            For i = 0 To transCount - 1
+                Dim iNa As String = itemList.Items.Item(i)
+                Dim iQu As Integer = quantityList.Items.Item(i)
+                Dim iPr As Single = Single.Parse(priceList.Items.Item(i))
+                Dim iGst As Single = Single.Parse(gstAmt.Items.Item(i))
+                Dim iAmt As Single = Single.Parse(totalPrice.Items.Item(i))
+                Dim billId As Integer = Integer.Parse(tID.Text)
+                Try
+                    If conn.State = ConnectionState.Closed Then
+                        conn.Open()
+                    End If
+                    Dim sql As String = "INSERT INTO sSupportTable (billId, itemName, itemQuantity, price, gst, priceGST) VALUES (" & billId & ",'" & iNa & "'," & iQu & "," & iPr & "," & iGst & "," & iAmt & ")"
+                    Dim cmd As New OleDb.OleDbCommand(sql, conn)
+                    cmd.ExecuteNonQuery()
+                Catch ex As Exception
+                    MessageBox.Show("Error: " & ex.Message, "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Finally
+                    conn.Close()
+                End Try
+
+                'fetching item Id
+                Dim itemID As Integer
+
+                If conn.State = ConnectionState.Closed Then
+                    conn.Open()
+                End If
+                Try
+                    Dim sql2 As String = "SELECT ID FROM itemTable WHERE itemName = '" & iNa & "'"
+                    Dim cmd2 As New OleDb.OleDbCommand(sql2, conn)
+                    Dim da As New OleDb.OleDbDataAdapter(cmd2)
+                    Dim dt As New DataTable
+                    da.Fill(dt)
+                    itemID = dt.Rows(0).Item(0)
+                Catch ex As Exception
+                    MessageBox.Show("Error: " & ex.Message, "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Finally
+                    conn.Close()
+                End Try
+
+                'Updating Inventory Table
+                Try
+                    If conn.State = ConnectionState.Closed Then
+                        conn.Open()
+                    End If
+                    Dim sql As String = "UPDATE inventoryTable SET quantity = quantity - " & iQu & " WHERE itemId = " & itemID
+                    Dim cmd As New OleDb.OleDbCommand(sql, conn)
+                    cmd.ExecuteNonQuery()
+                Catch ex As Exception
+                    MessageBox.Show("Error: " & ex.Message, "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Finally
+                    conn.Close()
+                End Try
+            Next
+
+            'Pushing data in salesTable
+            Try
+                If conn.State = ConnectionState.Closed Then
+                    conn.Open()
+                End If
+                Dim sql As String = ""   ' to be implemented
+                Dim cmd As New OleDb.OleDbCommand(sql, conn)
+                cmd.ExecuteNonQuery()
+                Dim sql1 As String = "UPDATE support SET sellID = purID + 1"
+                Dim cmd1 As New OleDb.OleDbCommand(sql1, conn)
+                cmd1.ExecuteNonQuery()
+                MessageBox.Show("Transaction Saved Successfully", "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Catch ex As Exception
+                MessageBox.Show("Error: " & ex.Message, "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Finally
+                conn.Close()
+            End Try
         End If
+        fetchTransId()
     End Sub
 
     'function for handelling add button
     Private Sub Add_Click(sender As Object, e As EventArgs) Handles Add.Click
+
+        Dim conn As New OleDb.OleDbConnection
+        conn.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Saksham\Documents\StoreWise.accdb"
+
         If itemQuantity.Text <> "" Then
-            If CInt(itemQuantity.Text) > 0 Then
-                Dim price As Single
-                Dim quantity As Integer
-                Dim fAmt As Single
-                Dim fAmount As String
-                Dim finalAmount As Single
-                Dim gst As Single
+            Dim itemQ As Single
+            Dim itemQD As Single
+
+            'fetching quantity from database
+            Try
+                If conn.State = ConnectionState.Closed Then
+                    conn.Open()
+                End If
+                Dim sql As String = "SELECT quantity FROM inventoryTable WHERE itemName = '" & itemNamelist.Text & "'"
+                Dim cmd As New OleDb.OleDbCommand(sql, conn)
+                Dim da As New OleDb.OleDbDataAdapter(cmd)
+                Dim dt As New DataTable
+                da.Fill(dt)
+                itemQD = CInt(dt.Rows(0).Item(0))
+            Catch ex As Exception
+                MessageBox.Show("Error: " & ex.Message, "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Finally
+                conn.Close()
+            End Try
+
+            'getting quantity from the list
+            itemQ = CSng(itemQuantity.Text)
+            MessageBox.Show(itemQ)
+
+            If itemQ > 0.0 Then
+
+                If itemQ < itemQD Then
+                    Dim quantity As Integer
+                    Dim fAmt As Single
+                    Dim fAmount As String
+                    Dim finalAmount As Single
+                    Dim gst As Single
 
 
-                itemList.Items.Add(itemNamelist.Text)                                   'Quantity and Price Logic
-                quantityList.Items.Add(itemQuantity.Text)
-                priceList.Items.Add("100")
-                price = CSng(priceList.Items.Item(priceList.Items.Count - 1))
+                    itemList.Items.Add(itemNamelist.Text)                                   'Quantity and Price Logic
+                    quantityList.Items.Add(itemQuantity.Text)
+
+                    'fetching price from database
+
+                    Dim priceItem As Single
+                    Try
+                        If conn.State = ConnectionState.Closed Then
+                            conn.Open()
+                        End If
+                        Dim sql As String = "SELECT sellUnit FROM itemTable WHERE itemName = '" & itemNamelist.Text & "'"
+                        Dim cmd As New OleDb.OleDbCommand(sql, conn)
+                        Dim da As New OleDb.OleDbDataAdapter(cmd)
+                        Dim dt As New DataTable
+                        da.Fill(dt)
+                        priceItem = CInt(dt.Rows(0).Item(0))
+                    Catch ex As Exception
+                        MessageBox.Show("Error: " & ex.Message, "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    Finally
+                        conn.Close()
+                    End Try
+
+                    priceList.Items.Add(priceItem)
+                    quantity = CInt(quantityList.Items.Item(quantityList.Items.Count - 1))  'Quantity Logic
 
 
-                quantity = CInt(quantityList.Items.Item(quantityList.Items.Count - 1))  'Quantity Logic
+                    'fetching gst from database
+                    Dim gstItem As Single
+                    Try
+                        If conn.State = ConnectionState.Closed Then
+                            conn.Open()
+                        End If
+                        Dim sql As String = "SELECT gst FROM itemTable WHERE itemName = '" & itemNamelist.Text & "'"
+                        Dim cmd As New OleDb.OleDbCommand(sql, conn)
+                        Dim da As New OleDb.OleDbDataAdapter(cmd)
+                        Dim dt As New DataTable
+                        da.Fill(dt)
+                        gstItem = CInt(dt.Rows(0).Item(0))
+                    Catch ex As Exception
+                        MessageBox.Show("Error: " & ex.Message, "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    Finally
+                        conn.Close()
+                    End Try
+
+                    gst = ((priceItem * gstItem) / 100)                                              'GST Logic
+                    gstAmt.Items.Add(gst)
 
 
-                gst = ((price * 18) / 100)                                              'GST Logic
-                gstAmt.Items.Add(gst)
+                    fAmt = (priceItem + gst) * quantity                                         'Total Amount Logic
+                    totalPrice.Items.Add(fAmt)
+                    itemQuantity.Text = ""
+                    itemList.SelectedIndex = 0
 
 
 
-                fAmt = (price + gst) * quantity                                         'Total Amount Logic
-                totalPrice.Items.Add(fAmt)
-                itemQuantity.Text = ""
-                itemNamelist.SelectedIndex = 0
-
-
-
-                fAmount = fBill.Text                                                    'Final Bill Amount Logic
-                fAmount = fAmount.Replace("₹"c, "")
-                fAmount = fAmount.Replace("/"c, "")
-                fAmount = fAmount.Replace("-"c, "")
-                finalAmount = CSng(fAmount)
-                finalAmount += fAmt
-                fBill.Text = "₹" & Format(finalAmount, "Standard") & "/-"
-                If Discount.Text <> "" Then
-                    Discount_Cal()
+                    fAmount = fBill.Text                                                    'Final Bill Amount Logic
+                    fAmount = fAmount.Replace("₹"c, "")
+                    fAmount = fAmount.Replace("/"c, "")
+                    fAmount = fAmount.Replace("-"c, "")
+                    finalAmount = CSng(fAmount)
+                    finalAmount += fAmt
+                    fBill.Text = "₹" & Format(finalAmount, "Standard") & "/-"
+                    If Discount.Text <> "" Then
+                        Discount_Cal()
+                    End If
+                Else
+                    MessageBox.Show("Stock Not Available. Available Quantity is: " & itemQD, "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 End If
             Else
                 MessageBox.Show("Quantity Can't be Zero or Negative", "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -187,10 +378,31 @@
 
     Private Sub addSales_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
+        'fetching items
+        Dim conn As New OleDb.OleDbConnection
+        conn.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Saksham\Documents\StoreWise.accdb"
+        Try
+            If conn.State = ConnectionState.Closed Then
+                conn.Open()
+            End If
+            Dim sql As String = "SELECT itemName FROM itemTable"
+            Dim cmd As New OleDb.OleDbCommand(sql, conn)
+            Dim da As New OleDb.OleDbDataAdapter(cmd)
+            Dim dt As New DataTable
+            da.Fill(dt)
+            itemNamelist.DataSource = dt
+            itemNamelist.DisplayMember = "itemName"
+        Catch ex As Exception
+            MessageBox.Show("Error: " & ex.Message, "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        Finally
+            conn.Close()
+        End Try
+
+
         'Dark Mode Code
         If (DMode) Then
             Me.BackColor = Color.FromArgb(255, 13, 17, 23)
-            For i = 1 To 17
+            For i = 1 To 15
                 Dim lbl As Label = Me.Controls("Label" & i)
                 lbl.ForeColor = Color.FromArgb(255, 240, 246, 252)
             Next
@@ -206,14 +418,10 @@
             Add.ForeColor = Color.FromArgb(255, Color.White)
             customerName.BackColor = Color.FromArgb(255, 33, 40, 48)
             customerName.ForeColor = Color.FromArgb(255, 240, 246, 252)
-            customerAddress.BackColor = Color.FromArgb(255, 33, 40, 48)
-            customerAddress.ForeColor = Color.FromArgb(255, 240, 246, 252)
             phone.BackColor = Color.FromArgb(255, 33, 40, 48)
             phone.ForeColor = Color.FromArgb(255, 240, 246, 252)
             transactionDate.BackColor = Color.FromArgb(255, 33, 40, 48)
             transactionDate.ForeColor = Color.FromArgb(255, 240, 246, 252)
-            eMail.BackColor = Color.FromArgb(255, 33, 40, 48)
-            eMail.ForeColor = Color.FromArgb(255, 240, 246, 252)
             tID.BackColor = Color.FromArgb(255, 33, 40, 48)
             tID.ForeColor = Color.FromArgb(255, 240, 246, 252)
             itemNamelist.BackColor = Color.FromArgb(255, 33, 40, 48)

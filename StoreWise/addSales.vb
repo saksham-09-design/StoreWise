@@ -103,7 +103,7 @@
                     If conn.State = ConnectionState.Closed Then
                         conn.Open()
                     End If
-                    Dim sql As String = "INSERT INTO sSupportTable (billId, itemName, itemQuantity, price, gst, priceGST) VALUES (" & billId & ",'" & iNa & "'," & iQu & "," & iPr & "," & iGst & "," & iAmt & ")"
+                    Dim sql As String = "INSERT INTO sSupportTable (billId, itemName, quantity, price, gst, tPrice) VALUES (" & billId & ",'" & iNa & "'," & iQu & "," & iPr & "," & iGst & "," & iAmt & ")"
                     Dim cmd As New OleDb.OleDbCommand(sql, conn)
                     cmd.ExecuteNonQuery()
                 Catch ex As Exception
@@ -151,10 +151,10 @@
                 If conn.State = ConnectionState.Closed Then
                     conn.Open()
                 End If
-                Dim sql As String = ""   ' to be implemented
+                Dim sql As String = "insert into saleTable (cName, tDate, phoneNumber, tType, tDiscount, bAmt) values('" & customerName.Text.Trim & "', #" & dateTrans & "# , '" & phone.Text.Trim & "' , '" & type & "'," & discountPer & "," & totalAmount & ")"
                 Dim cmd As New OleDb.OleDbCommand(sql, conn)
                 cmd.ExecuteNonQuery()
-                Dim sql1 As String = "UPDATE support SET sellID = purID + 1"
+                Dim sql1 As String = "UPDATE support SET saleID = saleID + 1"
                 Dim cmd1 As New OleDb.OleDbCommand(sql1, conn)
                 cmd1.ExecuteNonQuery()
                 MessageBox.Show("Transaction Saved Successfully", "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -196,7 +196,6 @@
 
             'getting quantity from the list
             itemQ = CSng(itemQuantity.Text)
-            MessageBox.Show(itemQ)
 
             If itemQ > 0.0 Then
 
@@ -208,7 +207,7 @@
                     Dim gst As Single
 
 
-                    itemList.Items.Add(itemNamelist.Text)                                   'Quantity and Price Logic
+                    itemList.Items.Add(itemNamelist.Text)                      'Quantity and Price Logic
                     quantityList.Items.Add(itemQuantity.Text)
 
                     'fetching price from database
@@ -444,13 +443,5 @@
             cash.ForeColor = Color.FromArgb(255, 240, 246, 252)
             credit.ForeColor = Color.FromArgb(255, 240, 246, 252)
         End If
-    End Sub
-
-    Private Sub itemNamelist_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles itemNamelist.SelectedIndexChanged
-
-    End Sub
-
-    Private Sub itemQuantity_TextChanged(sender As Object, e As EventArgs) Handles itemQuantity.TextChanged
-
     End Sub
 End Class

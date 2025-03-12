@@ -165,7 +165,7 @@ Partial Class bill
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Now", 10.0!, System.Drawing.FontStyle.Bold)
         Me.Label2.ForeColor = System.Drawing.Color.Black
-        Me.Label2.Location = New System.Drawing.Point(-3, 677)
+        Me.Label2.Location = New System.Drawing.Point(-3, 673)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(621, 20)
         Me.Label2.TabIndex = 20
@@ -241,7 +241,7 @@ Partial Class bill
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Now", 10.0!, System.Drawing.FontStyle.Bold)
         Me.Label9.ForeColor = System.Drawing.Color.Black
-        Me.Label9.Location = New System.Drawing.Point(-3, 601)
+        Me.Label9.Location = New System.Drawing.Point(-3, 597)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(621, 20)
         Me.Label9.TabIndex = 27
@@ -252,7 +252,7 @@ Partial Class bill
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Now", 10.0!)
         Me.Label10.ForeColor = System.Drawing.Color.Black
-        Me.Label10.Location = New System.Drawing.Point(12, 618)
+        Me.Label10.Location = New System.Drawing.Point(12, 614)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(121, 21)
         Me.Label10.TabIndex = 28
@@ -263,7 +263,7 @@ Partial Class bill
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Now", 10.0!)
         Me.Label11.ForeColor = System.Drawing.Color.Black
-        Me.Label11.Location = New System.Drawing.Point(12, 639)
+        Me.Label11.Location = New System.Drawing.Point(12, 635)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(85, 21)
         Me.Label11.TabIndex = 29
@@ -274,7 +274,7 @@ Partial Class bill
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Now", 10.0!, System.Drawing.FontStyle.Bold)
         Me.Label12.ForeColor = System.Drawing.Color.Black
-        Me.Label12.Location = New System.Drawing.Point(337, 642)
+        Me.Label12.Location = New System.Drawing.Point(337, 638)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(122, 20)
         Me.Label12.TabIndex = 30
@@ -285,7 +285,7 @@ Partial Class bill
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Now", 10.0!)
         Me.Label13.ForeColor = System.Drawing.Color.Black
-        Me.Label13.Location = New System.Drawing.Point(12, 660)
+        Me.Label13.Location = New System.Drawing.Point(12, 656)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(48, 21)
         Me.Label13.TabIndex = 31

@@ -56,6 +56,7 @@ Partial Class bill
         Me.Label23 = New System.Windows.Forms.Label()
         Me.priceList = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Label19 = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -164,7 +165,7 @@ Partial Class bill
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Now", 10.0!, System.Drawing.FontStyle.Bold)
         Me.Label2.ForeColor = System.Drawing.Color.Black
-        Me.Label2.Location = New System.Drawing.Point(-3, 704)
+        Me.Label2.Location = New System.Drawing.Point(-3, 677)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(621, 20)
         Me.Label2.TabIndex = 20
@@ -185,7 +186,7 @@ Partial Class bill
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Now", 10.0!)
         Me.Label5.ForeColor = System.Drawing.Color.Black
-        Me.Label5.Location = New System.Drawing.Point(12, 724)
+        Me.Label5.Location = New System.Drawing.Point(12, 699)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(193, 21)
         Me.Label5.TabIndex = 22
@@ -196,7 +197,7 @@ Partial Class bill
         Me.term1.AutoSize = True
         Me.term1.Font = New System.Drawing.Font("Now", 10.0!)
         Me.term1.ForeColor = System.Drawing.Color.Black
-        Me.term1.Location = New System.Drawing.Point(12, 745)
+        Me.term1.Location = New System.Drawing.Point(12, 741)
         Me.term1.Name = "term1"
         Me.term1.Size = New System.Drawing.Size(359, 21)
         Me.term1.TabIndex = 23
@@ -240,7 +241,7 @@ Partial Class bill
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Now", 10.0!, System.Drawing.FontStyle.Bold)
         Me.Label9.ForeColor = System.Drawing.Color.Black
-        Me.Label9.Location = New System.Drawing.Point(-3, 630)
+        Me.Label9.Location = New System.Drawing.Point(-3, 601)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(621, 20)
         Me.Label9.TabIndex = 27
@@ -251,7 +252,7 @@ Partial Class bill
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Now", 10.0!)
         Me.Label10.ForeColor = System.Drawing.Color.Black
-        Me.Label10.Location = New System.Drawing.Point(12, 650)
+        Me.Label10.Location = New System.Drawing.Point(12, 618)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(121, 21)
         Me.Label10.TabIndex = 28
@@ -262,7 +263,7 @@ Partial Class bill
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Now", 10.0!)
         Me.Label11.ForeColor = System.Drawing.Color.Black
-        Me.Label11.Location = New System.Drawing.Point(12, 671)
+        Me.Label11.Location = New System.Drawing.Point(12, 639)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(85, 21)
         Me.Label11.TabIndex = 29
@@ -273,7 +274,7 @@ Partial Class bill
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Now", 10.0!, System.Drawing.FontStyle.Bold)
         Me.Label12.ForeColor = System.Drawing.Color.Black
-        Me.Label12.Location = New System.Drawing.Point(343, 684)
+        Me.Label12.Location = New System.Drawing.Point(337, 642)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(122, 20)
         Me.Label12.TabIndex = 30
@@ -284,7 +285,7 @@ Partial Class bill
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Now", 10.0!)
         Me.Label13.ForeColor = System.Drawing.Color.Black
-        Me.Label13.Location = New System.Drawing.Point(12, 692)
+        Me.Label13.Location = New System.Drawing.Point(12, 660)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(48, 21)
         Me.Label13.TabIndex = 31
@@ -420,11 +421,27 @@ Partial Class bill
         Me.PictureBox1.TabIndex = 43
         Me.PictureBox1.TabStop = False
         '
+        'Label19
+        '
+        Me.Label19.AutoSize = True
+        Me.Label19.Font = New System.Drawing.Font("Now", 10.0!)
+        Me.Label19.ForeColor = System.Drawing.Color.Black
+        Me.Label19.Location = New System.Drawing.Point(12, 720)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(94, 21)
+        Me.Label19.TabIndex = 44
+        Me.Label19.Text = "E. and O.E."
+        '
         'bill
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(625, 844)
+        Me.Controls.Add(Me.term1)
+        Me.Controls.Add(Me.Label13)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label19)
+        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.priceList)
         Me.Controls.Add(Me.Label23)
@@ -437,7 +454,6 @@ Partial Class bill
         Me.Controls.Add(Me.Label16)
         Me.Controls.Add(Me.Label15)
         Me.Controls.Add(Me.Label14)
-        Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.Label10)
@@ -445,10 +461,7 @@ Partial Class bill
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.term1)
-        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.iDate)
         Me.Controls.Add(Me.iNo)
@@ -499,4 +512,5 @@ Partial Class bill
     Friend WithEvents Label23 As Label
     Friend WithEvents priceList As Label
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Label19 As Label
 End Class

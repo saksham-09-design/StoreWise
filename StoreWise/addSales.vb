@@ -26,9 +26,19 @@
 
     'function for handelling clear button
     Private Sub clear_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles clear.Click
-        customerName.Text = ""
-        phone.Text = ""
-        itemQuantity.Text = ""
+        'clearing form
+        customerName.Text = "Cash"
+        phone.Text = "NA"
+        cash.Checked = True
+        itemNamelist.SelectedIndex = -1
+        itemQuantity.Clear()
+        itemList.Items.Clear()
+        quantityList.Items.Clear()
+        priceList.Items.Clear()
+        gstAmt.Items.Clear()
+        totalPrice.Items.Clear()
+        Discount.Clear()
+        fBill.Text = "₹0/-"
     End Sub
 
     'Fetching Transaction id
@@ -164,6 +174,20 @@
                 conn.Close()
             End Try
         End If
+
+        'clearing form
+        customerName.Text = "Cash"
+        phone.Text = "NA"
+        cash.Checked = True
+        itemNamelist.SelectedIndex = -1
+        itemQuantity.Clear()
+        itemList.Items.Clear()
+        quantityList.Items.Clear()
+        priceList.Items.Clear()
+        gstAmt.Items.Clear()
+        totalPrice.Items.Clear()
+        Discount.Clear()
+        fBill.Text = "₹0/-"
         fetchTransId()
     End Sub
 
@@ -443,5 +467,9 @@
             cash.ForeColor = Color.FromArgb(255, 240, 246, 252)
             credit.ForeColor = Color.FromArgb(255, 240, 246, 252)
         End If
+    End Sub
+
+    Private Sub print_Click(sender As Object, e As EventArgs) Handles print.Click
+
     End Sub
 End Class

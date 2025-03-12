@@ -21,6 +21,7 @@ D:\StoreWise\StoreWise\bin\x64\Debug\Microsoft.IdentityModel.Logging.dll
 D:\StoreWise\StoreWise\bin\x64\Debug\Microsoft.IdentityModel.Protocols.dll
 D:\StoreWise\StoreWise\bin\x64\Debug\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 D:\StoreWise\StoreWise\bin\x64\Debug\Microsoft.IdentityModel.Tokens.dll
+D:\StoreWise\StoreWise\bin\x64\Debug\Microsoft.VisualBasic.PowerPacks.Vs.dll
 D:\StoreWise\StoreWise\bin\x64\Debug\System.Buffers.dll
 D:\StoreWise\StoreWise\bin\x64\Debug\System.ClientModel.dll
 D:\StoreWise\StoreWise\bin\x64\Debug\System.Configuration.ConfigurationManager.dll
@@ -90,15 +91,19 @@ D:\StoreWise\StoreWise\bin\x64\Debug\ru\Microsoft.Data.SqlClient.resources.dll
 D:\StoreWise\StoreWise\bin\x64\Debug\zh-Hans\Microsoft.Data.SqlClient.resources.dll
 D:\StoreWise\StoreWise\bin\x64\Debug\zh-Hant\Microsoft.Data.SqlClient.resources.dll
 D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.vbproj.AssemblyReference.cache
-D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.vbproj.SuggestedBindingRedirects.cache
-D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.exe.config
 D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.AddItem.resources
 D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.addSupplier.resources
+D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.bill.resources
 D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.DeleteItem.resources
 D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.deleteSales.resources
+D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.displayPuchase.resources
+D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.displaySupplier.resources
+D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.deletePurchase.resources
 D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.addPurchase.resources
+D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.inventory.resources
 D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.modifySupplier.resources
 D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.modifyUser.resources
+D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.printDetails.resources
 D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.purchase.resources
 D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.sales.resources
 D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.ModifySales.resources
@@ -115,7 +120,3 @@ D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.vbproj.Up2Date
 D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.exe
 D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.xml
 D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.pdb
-D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.displaySupplier.resources
-D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.deletePurchase.resources
-D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.displayPuchase.resources
-D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.inventory.resources

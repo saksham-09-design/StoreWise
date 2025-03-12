@@ -8,7 +8,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{588DDDB5-066D-477A-BAD2-BA7670FD3132}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>StoreWise.MainPage</StartupObject>
+    <StartupObject>StoreWise.bill</StartupObject>
     <RootNamespace>StoreWise</RootNamespace>
     <AssemblyName>StoreWise</AssemblyName>
     <FileAlignment>512</FileAlignment>
@@ -133,7 +133,9 @@
     <Reference Include="Microsoft.IdentityModel.Tokens, Version=7.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.IdentityModel.Tokens.7.5.0\lib\net472\Microsoft.IdentityModel.Tokens.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\VisualBasic.PowerPacks.Vs.1.0.0\lib\Microsoft.VisualBasic.PowerPacks.Vs.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
@@ -269,6 +271,12 @@
     <Compile Include="AddItem.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="bill.Designer.vb">
+      <DependentUpon>bill.vb</DependentUpon>
+    </Compile>
+    <Compile Include="bill.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="displayPuchase.Designer.vb">
       <DependentUpon>displayPuchase.vb</DependentUpon>
     </Compile>
@@ -279,6 +287,12 @@
       <DependentUpon>inventory.vb</DependentUpon>
     </Compile>
     <Compile Include="inventory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="printDetails.Designer.vb">
+      <DependentUpon>printDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="printDetails.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="sVar.vb" />
@@ -398,6 +412,9 @@
     <EmbeddedResource Include="addSupplier.resx">
       <DependentUpon>addSupplier.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="bill.resx">
+      <DependentUpon>bill.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DeleteItem.resx">
       <DependentUpon>DeleteItem.vb</DependentUpon>
     </EmbeddedResource>
@@ -424,6 +441,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="modifyUser.resx">
       <DependentUpon>modifyUser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="printDetails.resx">
+      <DependentUpon>printDetails.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="purchase.resx">
       <DependentUpon>purchase.vb</DependentUpon>

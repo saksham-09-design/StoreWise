@@ -49,6 +49,7 @@ Partial Class MainPage
         Me.ModifyToolStripMenuItem4 = New System.Windows.Forms.ToolStripMenuItem()
         Me.DisplayToolStripMenuItem4 = New System.Windows.Forms.ToolStripMenuItem()
         Me.DashboardToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BillFormatToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.AddItemToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AddSalesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -61,7 +62,8 @@ Partial Class MainPage
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.BillFormatToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AddBillFormatToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ModifyBillFormatToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -251,6 +253,14 @@ Partial Class MainPage
         Me.DashboardToolStripMenuItem.Size = New System.Drawing.Size(143, 35)
         Me.DashboardToolStripMenuItem.Text = "Dashboard"
         '
+        'BillFormatToolStripMenuItem
+        '
+        Me.BillFormatToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddBillFormatToolStripMenuItem, Me.ModifyBillFormatToolStripMenuItem})
+        Me.BillFormatToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI Semibold", 13.8!, System.Drawing.FontStyle.Bold)
+        Me.BillFormatToolStripMenuItem.Name = "BillFormatToolStripMenuItem"
+        Me.BillFormatToolStripMenuItem.Size = New System.Drawing.Size(141, 35)
+        Me.BillFormatToolStripMenuItem.Text = "Bill Format"
+        '
         'ContextMenuStrip1
         '
         Me.ContextMenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
@@ -326,12 +336,17 @@ Partial Class MainPage
         'Timer1
         '
         '
-        'BillFormatToolStripMenuItem
+        'AddBillFormatToolStripMenuItem
         '
-        Me.BillFormatToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI Semibold", 13.8!, System.Drawing.FontStyle.Bold)
-        Me.BillFormatToolStripMenuItem.Name = "BillFormatToolStripMenuItem"
-        Me.BillFormatToolStripMenuItem.Size = New System.Drawing.Size(141, 35)
-        Me.BillFormatToolStripMenuItem.Text = "Bill Format"
+        Me.AddBillFormatToolStripMenuItem.Name = "AddBillFormatToolStripMenuItem"
+        Me.AddBillFormatToolStripMenuItem.Size = New System.Drawing.Size(296, 36)
+        Me.AddBillFormatToolStripMenuItem.Text = "Add Bill Format"
+        '
+        'ModifyBillFormatToolStripMenuItem
+        '
+        Me.ModifyBillFormatToolStripMenuItem.Name = "ModifyBillFormatToolStripMenuItem"
+        Me.ModifyBillFormatToolStripMenuItem.Size = New System.Drawing.Size(296, 36)
+        Me.ModifyBillFormatToolStripMenuItem.Text = "Modify Bill Format"
         '
         'MainPage
         '
@@ -394,4 +409,6 @@ Partial Class MainPage
     Friend WithEvents Timer1 As Timer
     Friend WithEvents Label1 As Label
     Friend WithEvents BillFormatToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AddBillFormatToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ModifyBillFormatToolStripMenuItem As ToolStripMenuItem
 End Class

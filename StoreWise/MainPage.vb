@@ -24,12 +24,6 @@
         modifyItem.Show()
     End Sub
 
-    Private Sub DeleteToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        Dim deleteItem As New DeleteItem
-        deleteItem.MdiParent = Me
-        deleteItem.Show()
-    End Sub
-
     Private Sub SearchToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Dim searchItem As New SearchItem
         searchItem.MdiParent = Me
@@ -164,7 +158,7 @@
         inv.Show()
     End Sub
 
-    Private Sub BillFormatToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BillFormatToolStripMenuItem.Click
+    Private Sub AddBillFormatToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AddBillFormatToolStripMenuItem.Click
         Dim con As New OleDb.OleDbConnection
         Dim fBillVal As Boolean = False
 
@@ -184,6 +178,34 @@
                 pBill.Show()
             Else
                 MessageBox.Show("Format already set!", "Storewise", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            End If
+        Catch ex As Exception
+            MessageBox.Show("Unable to fetch Bill Format", "Storewise", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        Finally
+            con.Close()
+        End Try
+    End Sub
+
+    Private Sub ModifyBillFormatToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ModifyBillFormatToolStripMenuItem.Click
+        Dim con As New OleDb.OleDbConnection
+        Dim fBillVal As Boolean = False
+
+        con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Saksham\Documents\StoreWise.accdb"
+        If con.State = ConnectionState.Closed Then
+            con.Open()
+        End If
+        Try
+            Dim sql As String = "select bSet from support"
+            Dim da As New OleDb.OleDbDataAdapter(sql, con)
+            Dim dt As New DataTable
+            da.Fill(dt)
+            fBillVal = CBool(dt.Rows(0).Item(0))
+            If fBillVal Then
+                Dim mBill As New modifyPrintDetails()
+                mBill.MdiParent = Me
+                mBill.Show()
+            Else
+                MessageBox.Show("First set the format of the Bill!", "Storewise", MessageBoxButtons.OK, MessageBoxIcon.Information)
             End If
         Catch ex As Exception
             MessageBox.Show("Unable to fetch Bill Format", "Storewise", MessageBoxButtons.OK, MessageBoxIcon.Error)

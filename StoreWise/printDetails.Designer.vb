@@ -170,7 +170,7 @@ Partial Class printDetails
         Me.t4.Name = "t4"
         Me.t4.Size = New System.Drawing.Size(717, 39)
         Me.t4.TabIndex = 26
-        Me.t4.Text = "3. Subject to 'Punjab' Jurisdiction only."
+        Me.t4.Text = "3. Subject to Punjab Jurisdiction only."
         '
         't3
         '

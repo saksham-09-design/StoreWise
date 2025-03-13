@@ -289,6 +289,12 @@
     <Compile Include="inventory.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="modifyPrintDetails.Designer.vb">
+      <DependentUpon>modifyPrintDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="modifyPrintDetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="printDetails.Designer.vb">
       <DependentUpon>printDetails.vb</DependentUpon>
     </Compile>
@@ -435,6 +441,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="inventory.resx">
       <DependentUpon>inventory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="modifyPrintDetails.resx">
+      <DependentUpon>modifyPrintDetails.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="modifySupplier.resx">
       <DependentUpon>modifySupplier.vb</DependentUpon>

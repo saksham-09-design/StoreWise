@@ -167,6 +167,7 @@ Partial Class ModifyItem
         Me.itemName.Font = New System.Drawing.Font("Now Medium", 15.8!)
         Me.itemName.Location = New System.Drawing.Point(468, 191)
         Me.itemName.Name = "itemName"
+        Me.itemName.ReadOnly = True
         Me.itemName.Size = New System.Drawing.Size(388, 39)
         Me.itemName.TabIndex = 2
         Me.itemName.Visible = False

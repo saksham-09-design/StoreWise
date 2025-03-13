@@ -59,7 +59,7 @@
             If conn.State = ConnectionState.Closed Then
                 conn.Open()
             End If
-            Dim sql As String = "UPDATE itemTable SET itemName = '" & itemName.Text.Trim & "', unit = '" & itemUnit.Text.Trim & "', reOrderLevel = '" & CDbl(reOrder.Text.Trim) & "', costUnit = '" & CDbl(itemCost.Text.Trim) & "', sellUnit = '" & CDbl(itemSP.Text.Trim) & "', gst = '" & CDbl(itemGST.Text.Trim.Replace("%", "")) & "' WHERE itemName = '" & ComboBox1.Text & "'"
+            Dim sql As String = "UPDATE itemTable SET unit = '" & itemUnit.Text.Trim & "', reOrderLevel = '" & CDbl(reOrder.Text.Trim) & "', costUnit = '" & CDbl(itemCost.Text.Trim) & "', sellUnit = '" & CDbl(itemSP.Text.Trim) & "', gst = '" & CDbl(itemGST.Text.Trim.Replace("%", "")) & "' WHERE itemName = '" & ComboBox1.Text & "'"
             Dim cmd As New OleDb.OleDbCommand(sql, conn)
             Try
                 cmd.ExecuteNonQuery()

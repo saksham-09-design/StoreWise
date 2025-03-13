@@ -149,7 +149,7 @@ Public Class addPurchase
                     Dim da As New OleDb.OleDbDataAdapter(cmd)
                     Dim dt As New DataTable
                     da.Fill(dt)
-                    priceItem = CInt(dt.Rows(0).Item(0))
+                    priceItem = CSng(dt.Rows(0).Item(0))
                 Catch ex As Exception
                     MessageBox.Show("Error: " & ex.Message, "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 Finally

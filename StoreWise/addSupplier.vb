@@ -69,4 +69,12 @@
             eMail.ForeColor = Color.FromArgb(255, 240, 246, 252)
         End If
     End Sub
+
+    Private Sub supplierName_TextChanged(sender As Object, e As EventArgs) Handles supplierName.TextChanged
+
+    End Sub
+
+    Private Sub eMail_TextChanged(sender As Object, e As EventArgs) Handles eMail.TextChanged
+
+    End Sub
 End Class

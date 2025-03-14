@@ -105,7 +105,6 @@ D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.modifyUser.resources
 D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.printDetails.resources
 D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.purchase.resources
 D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.sales.resources
-D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.ModifySales.resources
 D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.addSales.resources
 D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.loginPage.resources
 D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.ModifyItem.resources

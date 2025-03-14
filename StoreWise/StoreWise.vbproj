@@ -350,12 +350,6 @@
     <Compile Include="sales.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ModifySales.Designer.vb">
-      <DependentUpon>ModifySales.vb</DependentUpon>
-    </Compile>
-    <Compile Include="ModifySales.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="addSales.Designer.vb">
       <DependentUpon>addSales.vb</DependentUpon>
     </Compile>
@@ -450,9 +444,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="sales.resx">
       <DependentUpon>sales.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ModifySales.resx">
-      <DependentUpon>ModifySales.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="addSales.resx">
       <DependentUpon>addSales.vb</DependentUpon>

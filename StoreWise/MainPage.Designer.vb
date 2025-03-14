@@ -37,7 +37,6 @@ Partial Class MainPage
         Me.TransactionsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SaleToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AddToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ModifyToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
         Me.DeleteToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
         Me.DisplayToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PurchaseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -50,6 +49,8 @@ Partial Class MainPage
         Me.DisplayToolStripMenuItem4 = New System.Windows.Forms.ToolStripMenuItem()
         Me.DashboardToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BillFormatToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AddBillFormatToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ModifyBillFormatToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.AddItemToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AddSalesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -62,8 +63,6 @@ Partial Class MainPage
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.AddBillFormatToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ModifyBillFormatToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -160,9 +159,9 @@ Partial Class MainPage
         '
         'SaleToolStripMenuItem
         '
-        Me.SaleToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddToolStripMenuItem2, Me.ModifyToolStripMenuItem2, Me.DeleteToolStripMenuItem2, Me.DisplayToolStripMenuItem})
+        Me.SaleToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddToolStripMenuItem2, Me.DeleteToolStripMenuItem2, Me.DisplayToolStripMenuItem})
         Me.SaleToolStripMenuItem.Name = "SaleToolStripMenuItem"
-        Me.SaleToolStripMenuItem.Size = New System.Drawing.Size(195, 36)
+        Me.SaleToolStripMenuItem.Size = New System.Drawing.Size(224, 36)
         Me.SaleToolStripMenuItem.Text = "Sale"
         '
         'AddToolStripMenuItem2
@@ -172,12 +171,6 @@ Partial Class MainPage
             Or System.Windows.Forms.Keys.S), System.Windows.Forms.Keys)
         Me.AddToolStripMenuItem2.Size = New System.Drawing.Size(270, 36)
         Me.AddToolStripMenuItem2.Text = "Add"
-        '
-        'ModifyToolStripMenuItem2
-        '
-        Me.ModifyToolStripMenuItem2.Name = "ModifyToolStripMenuItem2"
-        Me.ModifyToolStripMenuItem2.Size = New System.Drawing.Size(270, 36)
-        Me.ModifyToolStripMenuItem2.Text = "Modify"
         '
         'DeleteToolStripMenuItem2
         '
@@ -195,7 +188,7 @@ Partial Class MainPage
         '
         Me.PurchaseToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddToolStripMenuItem1, Me.DeleteToolStripMenuItem1, Me.SearchToolStripMenuItem4})
         Me.PurchaseToolStripMenuItem.Name = "PurchaseToolStripMenuItem"
-        Me.PurchaseToolStripMenuItem.Size = New System.Drawing.Size(195, 36)
+        Me.PurchaseToolStripMenuItem.Size = New System.Drawing.Size(224, 36)
         Me.PurchaseToolStripMenuItem.Text = "Purchase"
         '
         'AddToolStripMenuItem1
@@ -260,6 +253,18 @@ Partial Class MainPage
         Me.BillFormatToolStripMenuItem.Name = "BillFormatToolStripMenuItem"
         Me.BillFormatToolStripMenuItem.Size = New System.Drawing.Size(141, 35)
         Me.BillFormatToolStripMenuItem.Text = "Bill Format"
+        '
+        'AddBillFormatToolStripMenuItem
+        '
+        Me.AddBillFormatToolStripMenuItem.Name = "AddBillFormatToolStripMenuItem"
+        Me.AddBillFormatToolStripMenuItem.Size = New System.Drawing.Size(296, 36)
+        Me.AddBillFormatToolStripMenuItem.Text = "Add Bill Format"
+        '
+        'ModifyBillFormatToolStripMenuItem
+        '
+        Me.ModifyBillFormatToolStripMenuItem.Name = "ModifyBillFormatToolStripMenuItem"
+        Me.ModifyBillFormatToolStripMenuItem.Size = New System.Drawing.Size(296, 36)
+        Me.ModifyBillFormatToolStripMenuItem.Text = "Modify Bill Format"
         '
         'ContextMenuStrip1
         '
@@ -336,18 +341,6 @@ Partial Class MainPage
         'Timer1
         '
         '
-        'AddBillFormatToolStripMenuItem
-        '
-        Me.AddBillFormatToolStripMenuItem.Name = "AddBillFormatToolStripMenuItem"
-        Me.AddBillFormatToolStripMenuItem.Size = New System.Drawing.Size(296, 36)
-        Me.AddBillFormatToolStripMenuItem.Text = "Add Bill Format"
-        '
-        'ModifyBillFormatToolStripMenuItem
-        '
-        Me.ModifyBillFormatToolStripMenuItem.Name = "ModifyBillFormatToolStripMenuItem"
-        Me.ModifyBillFormatToolStripMenuItem.Size = New System.Drawing.Size(296, 36)
-        Me.ModifyBillFormatToolStripMenuItem.Text = "Modify Bill Format"
-        '
         'MainPage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -379,7 +372,6 @@ Partial Class MainPage
     Friend WithEvents TransactionsToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents SaleToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents AddToolStripMenuItem2 As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents ModifyToolStripMenuItem2 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents DeleteToolStripMenuItem2 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents DisplayToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents SupplierToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem

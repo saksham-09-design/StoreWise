@@ -66,23 +66,20 @@
         End If
     End Sub
 
-    Private Sub Panel1_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs)
-
-    End Sub
-
-    Private Sub ModifyToolStripMenuItem2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ModifyToolStripMenuItem2.Click
-        Dim sales As New sales()
-        sales.MdiParent = Me
-        sales.Show()
-    End Sub
-
     Private Sub DeleteToolStripMenuItem2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DeleteToolStripMenuItem2.Click
+        dSale = True
+        disSale = False
+
+
         Dim sales As New sales()
         sales.MdiParent = Me
         sales.Show()
     End Sub
 
     Private Sub DisplayToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DisplayToolStripMenuItem.Click
+        dSale = False
+        disSale = True
+
         Dim sales As New sales()
         sales.MdiParent = Me
         sales.Show()

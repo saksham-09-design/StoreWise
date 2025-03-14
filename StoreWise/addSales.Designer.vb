@@ -54,7 +54,6 @@ Partial Class addSales
         Me.Label6 = New System.Windows.Forms.Label()
         Me.fBill = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.print = New System.Windows.Forms.Button()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.gstAmt = New System.Windows.Forms.ListBox()
         Me.SuspendLayout()
@@ -224,7 +223,7 @@ Partial Class addSales
         Me.cancle.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.cancle.Font = New System.Drawing.Font("Now", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cancle.ForeColor = System.Drawing.Color.Ivory
-        Me.cancle.Location = New System.Drawing.Point(941, 692)
+        Me.cancle.Location = New System.Drawing.Point(874, 692)
         Me.cancle.Name = "cancle"
         Me.cancle.Size = New System.Drawing.Size(168, 52)
         Me.cancle.TabIndex = 73
@@ -237,7 +236,7 @@ Partial Class addSales
         Me.clear.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.clear.Font = New System.Drawing.Font("Now", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.clear.ForeColor = System.Drawing.Color.Ivory
-        Me.clear.Location = New System.Drawing.Point(756, 692)
+        Me.clear.Location = New System.Drawing.Point(689, 692)
         Me.clear.Name = "clear"
         Me.clear.Size = New System.Drawing.Size(168, 52)
         Me.clear.TabIndex = 72
@@ -249,7 +248,7 @@ Partial Class addSales
         Me.save.BackColor = System.Drawing.Color.Red
         Me.save.Font = New System.Drawing.Font("Now", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.save.ForeColor = System.Drawing.Color.Ivory
-        Me.save.Location = New System.Drawing.Point(388, 692)
+        Me.save.Location = New System.Drawing.Point(491, 692)
         Me.save.Name = "save"
         Me.save.Size = New System.Drawing.Size(168, 52)
         Me.save.TabIndex = 71
@@ -274,7 +273,7 @@ Partial Class addSales
         Me.Add.BackColor = System.Drawing.Color.Red
         Me.Add.Font = New System.Drawing.Font("Now", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Add.ForeColor = System.Drawing.Color.Ivory
-        Me.Add.Location = New System.Drawing.Point(202, 692)
+        Me.Add.Location = New System.Drawing.Point(305, 692)
         Me.Add.Name = "Add"
         Me.Add.Size = New System.Drawing.Size(168, 52)
         Me.Add.TabIndex = 75
@@ -406,19 +405,6 @@ Partial Class addSales
         Me.Label4.TabIndex = 90
         Me.Label4.Text = "Final Bill Amount:"
         '
-        'print
-        '
-        Me.print.BackColor = System.Drawing.Color.Red
-        Me.print.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.print.Font = New System.Drawing.Font("Now", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.print.ForeColor = System.Drawing.Color.Ivory
-        Me.print.Location = New System.Drawing.Point(573, 692)
-        Me.print.Name = "print"
-        Me.print.Size = New System.Drawing.Size(168, 52)
-        Me.print.TabIndex = 92
-        Me.print.Text = "Print"
-        Me.print.UseVisualStyleBackColor = False
-        '
         'Label15
         '
         Me.Label15.AutoSize = True
@@ -450,7 +436,6 @@ Partial Class addSales
         Me.ClientSize = New System.Drawing.Size(1351, 818)
         Me.Controls.Add(Me.Label15)
         Me.Controls.Add(Me.gstAmt)
-        Me.Controls.Add(Me.print)
         Me.Controls.Add(Me.fBill)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Discount)
@@ -521,7 +506,6 @@ Partial Class addSales
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents fBill As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents print As System.Windows.Forms.Button
     Friend WithEvents Label15 As System.Windows.Forms.Label
     Friend WithEvents gstAmt As System.Windows.Forms.ListBox
 End Class

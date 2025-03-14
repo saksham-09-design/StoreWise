@@ -25,11 +25,11 @@ Partial Class sales
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.filter = New System.Windows.Forms.ComboBox()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.transactionFromDate = New System.Windows.Forms.DateTimePicker()
-        Me.transactioToDate = New System.Windows.Forms.DateTimePicker()
+        Me.fromDate = New System.Windows.Forms.DateTimePicker()
+        Me.toDate = New System.Windows.Forms.DateTimePicker()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.customerName = New System.Windows.Forms.ComboBox()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -49,11 +49,11 @@ Partial Class sales
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 300)
+        Me.DataGridView1.Location = New System.Drawing.Point(86, 300)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(1295, 410)
+        Me.DataGridView1.Size = New System.Drawing.Size(1164, 410)
         Me.DataGridView1.TabIndex = 77
         '
         'filter
@@ -62,33 +62,33 @@ Partial Class sales
         Me.filter.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.filter.Font = New System.Drawing.Font("Now Medium", 15.0!)
         Me.filter.FormattingEnabled = True
-        Me.filter.Items.AddRange(New Object() {"Today", "Tomorrow", "Past 7 days", "Past 1 Month", "Last Month", "Past 1 Year", "Last Year", "Custom Dates", "Customer Name"})
+        Me.filter.Items.AddRange(New Object() {"All", "Today", "Yesterday", "Past 7 days", "Past 1 Month", "Past 1 Year", "Custom Dates", "Customer Name"})
         Me.filter.Location = New System.Drawing.Point(233, 104)
         Me.filter.Name = "filter"
         Me.filter.Size = New System.Drawing.Size(1017, 38)
         Me.filter.TabIndex = 79
         '
-        'Label10
+        'Label3
         '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Now", 16.0!, System.Drawing.FontStyle.Bold)
-        Me.Label10.ForeColor = System.Drawing.Color.Red
-        Me.Label10.Location = New System.Drawing.Point(80, 104)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(94, 32)
-        Me.Label10.TabIndex = 78
-        Me.Label10.Text = "Filter:"
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Now", 16.0!, System.Drawing.FontStyle.Bold)
+        Me.Label3.ForeColor = System.Drawing.Color.Red
+        Me.Label3.Location = New System.Drawing.Point(80, 104)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(94, 32)
+        Me.Label3.TabIndex = 78
+        Me.Label3.Text = "Filter:"
         '
-        'Label6
+        'Label4
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Now Medium", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.Red
-        Me.Label6.Location = New System.Drawing.Point(751, 166)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(58, 34)
-        Me.Label6.TabIndex = 82
-        Me.Label6.Text = "To:"
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Now Medium", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.Red
+        Me.Label4.Location = New System.Drawing.Point(751, 166)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(58, 34)
+        Me.Label4.TabIndex = 82
+        Me.Label4.Text = "To:"
         '
         'Label5
         '
@@ -101,23 +101,23 @@ Partial Class sales
         Me.Label5.TabIndex = 80
         Me.Label5.Text = "From:"
         '
-        'transactionFromDate
+        'fromDate
         '
-        Me.transactionFromDate.Enabled = False
-        Me.transactionFromDate.Font = New System.Drawing.Font("Now Medium", 12.8!)
-        Me.transactionFromDate.Location = New System.Drawing.Point(233, 167)
-        Me.transactionFromDate.Name = "transactionFromDate"
-        Me.transactionFromDate.Size = New System.Drawing.Size(419, 33)
-        Me.transactionFromDate.TabIndex = 83
+        Me.fromDate.Enabled = False
+        Me.fromDate.Font = New System.Drawing.Font("Now Medium", 12.8!)
+        Me.fromDate.Location = New System.Drawing.Point(233, 167)
+        Me.fromDate.Name = "fromDate"
+        Me.fromDate.Size = New System.Drawing.Size(419, 33)
+        Me.fromDate.TabIndex = 83
         '
-        'transactioToDate
+        'toDate
         '
-        Me.transactioToDate.Enabled = False
-        Me.transactioToDate.Font = New System.Drawing.Font("Now Medium", 12.8!)
-        Me.transactioToDate.Location = New System.Drawing.Point(831, 167)
-        Me.transactioToDate.Name = "transactioToDate"
-        Me.transactioToDate.Size = New System.Drawing.Size(419, 33)
-        Me.transactioToDate.TabIndex = 84
+        Me.toDate.Enabled = False
+        Me.toDate.Font = New System.Drawing.Font("Now Medium", 12.8!)
+        Me.toDate.Location = New System.Drawing.Point(831, 167)
+        Me.toDate.Name = "toDate"
+        Me.toDate.Size = New System.Drawing.Size(419, 33)
+        Me.toDate.TabIndex = 84
         '
         'Label2
         '
@@ -150,12 +150,12 @@ Partial Class sales
         Me.ClientSize = New System.Drawing.Size(1319, 736)
         Me.Controls.Add(Me.customerName)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.transactioToDate)
-        Me.Controls.Add(Me.transactionFromDate)
-        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.toDate)
+        Me.Controls.Add(Me.fromDate)
+        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.filter)
-        Me.Controls.Add(Me.Label10)
+        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Label1)
         Me.Name = "sales"
@@ -168,12 +168,12 @@ Partial Class sales
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
     Friend WithEvents filter As System.Windows.Forms.ComboBox
-    Friend WithEvents Label10 As System.Windows.Forms.Label
-    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents transactionFromDate As System.Windows.Forms.DateTimePicker
-    Friend WithEvents transactioToDate As System.Windows.Forms.DateTimePicker
-    Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents customerName As System.Windows.Forms.ComboBox
+    Friend WithEvents fromDate As System.Windows.Forms.DateTimePicker
+    Friend WithEvents toDate As System.Windows.Forms.DateTimePicker
     Friend WithEvents ItemTableBindingSource As BindingSource
+    Friend WithEvents Label2 As Label
+    Friend WithEvents customerName As ComboBox
 End Class

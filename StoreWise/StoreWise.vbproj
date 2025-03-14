@@ -8,7 +8,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{588DDDB5-066D-477A-BAD2-BA7670FD3132}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>StoreWise.bill</StartupObject>
+    <StartupObject>StoreWise.MainPage</StartupObject>
     <RootNamespace>StoreWise</RootNamespace>
     <AssemblyName>StoreWise</AssemblyName>
     <FileAlignment>512</FileAlignment>

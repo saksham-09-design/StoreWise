@@ -4,5 +4,5 @@
     Public salId As Integer = 0
     Public dPur As Boolean = False
     Public disPur As Boolean = False
-    Public sBill As Integer = 0
+    Public showBillId As Integer = 8
 End Module

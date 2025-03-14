@@ -94,7 +94,6 @@ D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.vbproj.AssemblyReference.cache
 D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.AddItem.resources
 D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.addSupplier.resources
 D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.bill.resources
-D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.DeleteItem.resources
 D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.deleteSales.resources
 D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.displayPuchase.resources
 D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.displaySupplier.resources

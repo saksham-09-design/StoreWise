@@ -477,4 +477,11 @@
             credit.ForeColor = Color.FromArgb(255, 240, 246, 252)
         End If
     End Sub
+
+    Private Sub transactionDate_ValueChanged(sender As Object, e As EventArgs) Handles transactionDate.ValueChanged
+        If transactionDate.Value > Now() Then
+            MessageBox.Show("Transaction Date can't be in Future", "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            transactionDate.Value = Now()
+        End If
+    End Sub
 End Class

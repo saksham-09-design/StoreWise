@@ -74,6 +74,7 @@ Partial Class deleteSales
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Location = New System.Drawing.Point(31, 368)
         Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.RowTemplate.Height = 24
         Me.DataGridView1.Size = New System.Drawing.Size(1270, 260)
         Me.DataGridView1.TabIndex = 119
@@ -86,7 +87,7 @@ Partial Class deleteSales
         Me.credit.ForeColor = System.Drawing.Color.Red
         Me.credit.Location = New System.Drawing.Point(1086, 294)
         Me.credit.Name = "credit"
-        Me.credit.Size = New System.Drawing.Size(123, 36)
+        Me.credit.Size = New System.Drawing.Size(122, 36)
         Me.credit.TabIndex = 115
         Me.credit.Text = "Credit"
         Me.credit.UseVisualStyleBackColor = True
@@ -100,7 +101,7 @@ Partial Class deleteSales
         Me.cash.ForeColor = System.Drawing.Color.Red
         Me.cash.Location = New System.Drawing.Point(901, 294)
         Me.cash.Name = "cash"
-        Me.cash.Size = New System.Drawing.Size(105, 36)
+        Me.cash.Size = New System.Drawing.Size(104, 36)
         Me.cash.TabIndex = 114
         Me.cash.TabStop = True
         Me.cash.Text = "Cash"
@@ -114,7 +115,7 @@ Partial Class deleteSales
         Me.Label8.ForeColor = System.Drawing.Color.Red
         Me.Label8.Location = New System.Drawing.Point(665, 298)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(98, 32)
+        Me.Label8.Size = New System.Drawing.Size(97, 32)
         Me.Label8.TabIndex = 113
         Me.Label8.Text = "*Type:"
         '

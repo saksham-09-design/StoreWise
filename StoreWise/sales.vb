@@ -173,7 +173,7 @@
             sl.MdiParent = MainPage
             sl.Show()
         ElseIf disSale = True Then
-            Dim sl As New deleteSales()
+            Dim sl As New displaySales()
             sl.MdiParent = MainPage
             sl.Show()
         End If

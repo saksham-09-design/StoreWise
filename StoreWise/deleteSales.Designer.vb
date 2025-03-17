@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class deleteSales
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,29 +20,241 @@ Partial Class deleteSales
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.cancle = New System.Windows.Forms.Button()
-        Me.delete = New System.Windows.Forms.Button()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.credit = New System.Windows.Forms.RadioButton()
-        Me.cash = New System.Windows.Forms.RadioButton()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.tID = New System.Windows.Forms.TextBox()
+        Me.discountt = New System.Windows.Forms.Label()
+        Me.ttype = New System.Windows.Forms.Label()
+        Me.tId = New System.Windows.Forms.Label()
+        Me.dateTrans = New System.Windows.Forms.Label()
+        Me.customerName = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.gstAmt = New System.Windows.Forms.ListBox()
+        Me.fBill = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.eMail = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.phone = New System.Windows.Forms.TextBox()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.totalPrice = New System.Windows.Forms.ListBox()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.priceList = New System.Windows.Forms.ListBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.quantityList = New System.Windows.Forms.ListBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.itemList = New System.Windows.Forms.ListBox()
+        Me.Delete = New System.Windows.Forms.Button()
+        Me.cancle = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.customerAddress = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.transactionDate = New System.Windows.Forms.DateTimePicker()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.customerName = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.phone = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
+        '
+        'discountt
+        '
+        Me.discountt.AutoSize = True
+        Me.discountt.Font = New System.Drawing.Font("Now Medium", 16.2!, System.Drawing.FontStyle.Bold)
+        Me.discountt.ForeColor = System.Drawing.Color.Red
+        Me.discountt.Location = New System.Drawing.Point(175, 547)
+        Me.discountt.Name = "discountt"
+        Me.discountt.Size = New System.Drawing.Size(78, 34)
+        Me.discountt.TabIndex = 176
+        Me.discountt.Text = "00%"
+        '
+        'ttype
+        '
+        Me.ttype.AutoSize = True
+        Me.ttype.Font = New System.Drawing.Font("Now Medium", 16.2!, System.Drawing.FontStyle.Bold)
+        Me.ttype.ForeColor = System.Drawing.Color.Red
+        Me.ttype.Location = New System.Drawing.Point(792, 234)
+        Me.ttype.Name = "ttype"
+        Me.ttype.Size = New System.Drawing.Size(89, 34)
+        Me.ttype.TabIndex = 175
+        Me.ttype.Text = "Cash"
+        '
+        'tId
+        '
+        Me.tId.AutoSize = True
+        Me.tId.Font = New System.Drawing.Font("Now Medium", 16.2!, System.Drawing.FontStyle.Bold)
+        Me.tId.ForeColor = System.Drawing.Color.Red
+        Me.tId.Location = New System.Drawing.Point(274, 234)
+        Me.tId.Name = "tId"
+        Me.tId.Size = New System.Drawing.Size(87, 34)
+        Me.tId.TabIndex = 174
+        Me.tId.Text = "0001"
+        '
+        'dateTrans
+        '
+        Me.dateTrans.AutoSize = True
+        Me.dateTrans.Font = New System.Drawing.Font("Now Medium", 16.2!, System.Drawing.FontStyle.Bold)
+        Me.dateTrans.ForeColor = System.Drawing.Color.Red
+        Me.dateTrans.Location = New System.Drawing.Point(792, 127)
+        Me.dateTrans.Name = "dateTrans"
+        Me.dateTrans.Size = New System.Drawing.Size(215, 34)
+        Me.dateTrans.TabIndex = 173
+        Me.dateTrans.Text = "00/00/0000"
+        '
+        'customerName
+        '
+        Me.customerName.AutoSize = True
+        Me.customerName.Font = New System.Drawing.Font("Now Medium", 16.2!, System.Drawing.FontStyle.Bold)
+        Me.customerName.ForeColor = System.Drawing.Color.Red
+        Me.customerName.Location = New System.Drawing.Point(274, 127)
+        Me.customerName.Name = "customerName"
+        Me.customerName.Size = New System.Drawing.Size(236, 34)
+        Me.customerName.TabIndex = 172
+        Me.customerName.Text = "customerName"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Now", 16.0!, System.Drawing.FontStyle.Bold)
+        Me.Label11.ForeColor = System.Drawing.Color.Red
+        Me.Label11.Location = New System.Drawing.Point(830, 305)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(77, 32)
+        Me.Label11.TabIndex = 171
+        Me.Label11.Text = "GST:"
+        '
+        'gstAmt
+        '
+        Me.gstAmt.Font = New System.Drawing.Font("Now Medium", 12.8!)
+        Me.gstAmt.FormattingEnabled = True
+        Me.gstAmt.ItemHeight = 25
+        Me.gstAmt.Location = New System.Drawing.Point(836, 348)
+        Me.gstAmt.Name = "gstAmt"
+        Me.gstAmt.Size = New System.Drawing.Size(192, 179)
+        Me.gstAmt.TabIndex = 170
+        '
+        'fBill
+        '
+        Me.fBill.AutoSize = True
+        Me.fBill.Font = New System.Drawing.Font("Now", 18.0!, System.Drawing.FontStyle.Bold)
+        Me.fBill.ForeColor = System.Drawing.Color.Red
+        Me.fBill.Location = New System.Drawing.Point(824, 547)
+        Me.fBill.Name = "fBill"
+        Me.fBill.Size = New System.Drawing.Size(89, 36)
+        Me.fBill.TabIndex = 169
+        Me.fBill.Text = "₹0/-"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Now", 16.0!, System.Drawing.FontStyle.Bold)
+        Me.Label7.ForeColor = System.Drawing.Color.Red
+        Me.Label7.Location = New System.Drawing.Point(569, 549)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(252, 32)
+        Me.Label7.TabIndex = 168
+        Me.Label7.Text = "Final Bill Amount:"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Now Medium", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.Red
+        Me.Label6.Location = New System.Drawing.Point(17, 547)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(152, 34)
+        Me.Label6.TabIndex = 167
+        Me.Label6.Text = "Discount:"
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Now", 16.0!, System.Drawing.FontStyle.Bold)
+        Me.Label12.ForeColor = System.Drawing.Color.Red
+        Me.Label12.Location = New System.Drawing.Point(1043, 305)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(168, 32)
+        Me.Label12.TabIndex = 166
+        Me.Label12.Text = "Final Price:"
+        '
+        'totalPrice
+        '
+        Me.totalPrice.Font = New System.Drawing.Font("Now Medium", 12.8!)
+        Me.totalPrice.FormattingEnabled = True
+        Me.totalPrice.ItemHeight = 25
+        Me.totalPrice.Location = New System.Drawing.Point(1047, 348)
+        Me.totalPrice.Name = "totalPrice"
+        Me.totalPrice.Size = New System.Drawing.Size(257, 179)
+        Me.totalPrice.TabIndex = 165
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Now", 16.0!, System.Drawing.FontStyle.Bold)
+        Me.Label10.ForeColor = System.Drawing.Color.Red
+        Me.Label10.Location = New System.Drawing.Point(559, 305)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(94, 32)
+        Me.Label10.TabIndex = 164
+        Me.Label10.Text = "Price:"
+        '
+        'priceList
+        '
+        Me.priceList.Font = New System.Drawing.Font("Now Medium", 12.8!)
+        Me.priceList.FormattingEnabled = True
+        Me.priceList.ItemHeight = 25
+        Me.priceList.Location = New System.Drawing.Point(565, 348)
+        Me.priceList.Name = "priceList"
+        Me.priceList.Size = New System.Drawing.Size(257, 179)
+        Me.priceList.TabIndex = 163
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Now", 16.0!, System.Drawing.FontStyle.Bold)
+        Me.Label9.ForeColor = System.Drawing.Color.Red
+        Me.Label9.Location = New System.Drawing.Point(366, 305)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(143, 32)
+        Me.Label9.TabIndex = 162
+        Me.Label9.Text = "Quantity:"
+        '
+        'quantityList
+        '
+        Me.quantityList.Font = New System.Drawing.Font("Now Medium", 12.8!)
+        Me.quantityList.FormattingEnabled = True
+        Me.quantityList.ItemHeight = 25
+        Me.quantityList.Location = New System.Drawing.Point(372, 348)
+        Me.quantityList.Name = "quantityList"
+        Me.quantityList.Size = New System.Drawing.Size(173, 179)
+        Me.quantityList.TabIndex = 161
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Now", 16.0!, System.Drawing.FontStyle.Bold)
+        Me.Label8.ForeColor = System.Drawing.Color.Red
+        Me.Label8.Location = New System.Drawing.Point(17, 305)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(97, 32)
+        Me.Label8.TabIndex = 160
+        Me.Label8.Text = "Items:"
+        '
+        'itemList
+        '
+        Me.itemList.Font = New System.Drawing.Font("Now Medium", 12.8!)
+        Me.itemList.FormattingEnabled = True
+        Me.itemList.ItemHeight = 25
+        Me.itemList.Location = New System.Drawing.Point(23, 348)
+        Me.itemList.Name = "itemList"
+        Me.itemList.Size = New System.Drawing.Size(331, 179)
+        Me.itemList.TabIndex = 159
+        '
+        'Delete
+        '
+        Me.Delete.BackColor = System.Drawing.Color.Red
+        Me.Delete.Font = New System.Drawing.Font("Now", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Delete.ForeColor = System.Drawing.Color.Ivory
+        Me.Delete.Location = New System.Drawing.Point(408, 621)
+        Me.Delete.Name = "Delete"
+        Me.Delete.Size = New System.Drawing.Size(168, 52)
+        Me.Delete.TabIndex = 158
+        Me.Delete.Text = "Delete"
+        Me.Delete.UseVisualStyleBackColor = False
         '
         'cancle
         '
@@ -50,256 +262,154 @@ Partial Class deleteSales
         Me.cancle.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.cancle.Font = New System.Drawing.Font("Now", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cancle.ForeColor = System.Drawing.Color.Ivory
-        Me.cancle.Location = New System.Drawing.Point(720, 657)
+        Me.cancle.Location = New System.Drawing.Point(780, 621)
         Me.cancle.Name = "cancle"
         Me.cancle.Size = New System.Drawing.Size(168, 52)
-        Me.cancle.TabIndex = 122
+        Me.cancle.TabIndex = 157
         Me.cancle.Text = "&Cancel"
         Me.cancle.UseVisualStyleBackColor = False
-        '
-        'delete
-        '
-        Me.delete.BackColor = System.Drawing.Color.Red
-        Me.delete.Font = New System.Drawing.Font("Now", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.delete.ForeColor = System.Drawing.Color.Ivory
-        Me.delete.Location = New System.Drawing.Point(432, 657)
-        Me.delete.Name = "delete"
-        Me.delete.Size = New System.Drawing.Size(168, 52)
-        Me.delete.TabIndex = 120
-        Me.delete.Text = "Delete"
-        Me.delete.UseVisualStyleBackColor = False
-        '
-        'DataGridView1
-        '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(31, 368)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowHeadersWidth = 51
-        Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(1270, 260)
-        Me.DataGridView1.TabIndex = 119
-        '
-        'credit
-        '
-        Me.credit.AutoSize = True
-        Me.credit.Enabled = False
-        Me.credit.Font = New System.Drawing.Font("Now", 16.0!, System.Drawing.FontStyle.Bold)
-        Me.credit.ForeColor = System.Drawing.Color.Red
-        Me.credit.Location = New System.Drawing.Point(1086, 294)
-        Me.credit.Name = "credit"
-        Me.credit.Size = New System.Drawing.Size(122, 36)
-        Me.credit.TabIndex = 115
-        Me.credit.Text = "Credit"
-        Me.credit.UseVisualStyleBackColor = True
-        '
-        'cash
-        '
-        Me.cash.AutoSize = True
-        Me.cash.Checked = True
-        Me.cash.Enabled = False
-        Me.cash.Font = New System.Drawing.Font("Now", 16.0!, System.Drawing.FontStyle.Bold)
-        Me.cash.ForeColor = System.Drawing.Color.Red
-        Me.cash.Location = New System.Drawing.Point(901, 294)
-        Me.cash.Name = "cash"
-        Me.cash.Size = New System.Drawing.Size(104, 36)
-        Me.cash.TabIndex = 114
-        Me.cash.TabStop = True
-        Me.cash.Text = "Cash"
-        Me.cash.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.cash.UseVisualStyleBackColor = True
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Now", 16.0!, System.Drawing.FontStyle.Bold)
-        Me.Label8.ForeColor = System.Drawing.Color.Red
-        Me.Label8.Location = New System.Drawing.Point(665, 298)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(97, 32)
-        Me.Label8.TabIndex = 113
-        Me.Label8.Text = "*Type:"
-        '
-        'tID
-        '
-        Me.tID.Font = New System.Drawing.Font("Now Medium", 15.8!)
-        Me.tID.Location = New System.Drawing.Point(292, 296)
-        Me.tID.Name = "tID"
-        Me.tID.ReadOnly = True
-        Me.tID.Size = New System.Drawing.Size(308, 39)
-        Me.tID.TabIndex = 112
-        Me.tID.Text = "1"
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Now Medium", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.ForeColor = System.Drawing.Color.Red
-        Me.Label7.Location = New System.Drawing.Point(14, 298)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(234, 34)
-        Me.Label7.TabIndex = 111
-        Me.Label7.Text = "Transaction Id:"
-        '
-        'eMail
-        '
-        Me.eMail.Font = New System.Drawing.Font("Now Medium", 15.8!)
-        Me.eMail.Location = New System.Drawing.Point(831, 231)
-        Me.eMail.Name = "eMail"
-        Me.eMail.ReadOnly = True
-        Me.eMail.Size = New System.Drawing.Size(470, 39)
-        Me.eMail.TabIndex = 110
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Now Medium", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.Red
-        Me.Label6.Location = New System.Drawing.Point(665, 233)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(122, 34)
-        Me.Label6.TabIndex = 109
-        Me.Label6.Text = "E-Mail:"
-        '
-        'phone
-        '
-        Me.phone.Font = New System.Drawing.Font("Now Medium", 15.8!)
-        Me.phone.Location = New System.Drawing.Point(292, 231)
-        Me.phone.Name = "phone"
-        Me.phone.ReadOnly = True
-        Me.phone.Size = New System.Drawing.Size(308, 39)
-        Me.phone.TabIndex = 108
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Now Medium", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Font = New System.Drawing.Font("Now", 16.0!, System.Drawing.FontStyle.Bold)
         Me.Label5.ForeColor = System.Drawing.Color.Red
-        Me.Label5.Location = New System.Drawing.Point(14, 233)
+        Me.Label5.Location = New System.Drawing.Point(669, 234)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(250, 34)
-        Me.Label5.TabIndex = 107
-        Me.Label5.Text = "*Phone Number:"
-        '
-        'customerAddress
-        '
-        Me.customerAddress.Font = New System.Drawing.Font("Now Medium", 15.8!)
-        Me.customerAddress.Location = New System.Drawing.Point(181, 166)
-        Me.customerAddress.Name = "customerAddress"
-        Me.customerAddress.ReadOnly = True
-        Me.customerAddress.Size = New System.Drawing.Size(1120, 39)
-        Me.customerAddress.TabIndex = 106
+        Me.Label5.Size = New System.Drawing.Size(97, 32)
+        Me.Label5.TabIndex = 156
+        Me.Label5.Text = "*Type:"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Now Medium", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.Red
-        Me.Label4.Location = New System.Drawing.Point(14, 168)
+        Me.Label4.Location = New System.Drawing.Point(18, 234)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(140, 34)
-        Me.Label4.TabIndex = 105
-        Me.Label4.Text = "Address:"
-        '
-        'transactionDate
-        '
-        Me.transactionDate.Enabled = False
-        Me.transactionDate.Font = New System.Drawing.Font("Now Medium", 12.8!)
-        Me.transactionDate.Location = New System.Drawing.Point(831, 107)
-        Me.transactionDate.Name = "transactionDate"
-        Me.transactionDate.Size = New System.Drawing.Size(470, 33)
-        Me.transactionDate.TabIndex = 104
+        Me.Label4.Size = New System.Drawing.Size(234, 34)
+        Me.Label4.TabIndex = 155
+        Me.Label4.Text = "Transaction Id:"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Now Medium", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Red
-        Me.Label3.Location = New System.Drawing.Point(665, 107)
+        Me.Label3.Location = New System.Drawing.Point(669, 127)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(108, 34)
-        Me.Label3.TabIndex = 103
+        Me.Label3.TabIndex = 154
         Me.Label3.Text = "*Date:"
-        '
-        'customerName
-        '
-        Me.customerName.Font = New System.Drawing.Font("Now Medium", 15.8!)
-        Me.customerName.Location = New System.Drawing.Point(292, 105)
-        Me.customerName.Name = "customerName"
-        Me.customerName.ReadOnly = True
-        Me.customerName.Size = New System.Drawing.Size(308, 39)
-        Me.customerName.TabIndex = 102
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Now Medium", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Red
-        Me.Label2.Location = New System.Drawing.Point(14, 107)
+        Me.Label2.Location = New System.Drawing.Point(18, 127)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(272, 34)
-        Me.Label2.TabIndex = 101
-        Me.Label2.Text = "*Customer Name:"
+        Me.Label2.Size = New System.Drawing.Size(261, 34)
+        Me.Label2.TabIndex = 153
+        Me.Label2.Text = "Customer Name:"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Now", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.Label1.Location = New System.Drawing.Point(410, 33)
+        Me.Label1.Location = New System.Drawing.Point(405, 47)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(502, 48)
-        Me.Label1.TabIndex = 100
+        Me.Label1.TabIndex = 152
         Me.Label1.Text = "Delete Sale Transaction"
+        '
+        'phone
+        '
+        Me.phone.AutoSize = True
+        Me.phone.Font = New System.Drawing.Font("Now Medium", 16.2!, System.Drawing.FontStyle.Bold)
+        Me.phone.ForeColor = System.Drawing.Color.Red
+        Me.phone.Location = New System.Drawing.Point(274, 181)
+        Me.phone.Name = "phone"
+        Me.phone.Size = New System.Drawing.Size(238, 34)
+        Me.phone.TabIndex = 178
+        Me.phone.Text = "customerPhone"
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Now Medium", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.ForeColor = System.Drawing.Color.Red
+        Me.Label13.Location = New System.Drawing.Point(18, 181)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(263, 34)
+        Me.Label13.TabIndex = 177
+        Me.Label13.Text = "Customer Phone:"
         '
         'deleteSales
         '
-        Me.AcceptButton = Me.delete
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1321, 751)
-        Me.Controls.Add(Me.cancle)
-        Me.Controls.Add(Me.delete)
-        Me.Controls.Add(Me.DataGridView1)
-        Me.Controls.Add(Me.credit)
-        Me.Controls.Add(Me.cash)
-        Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.tID)
-        Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.eMail)
-        Me.Controls.Add(Me.Label6)
+        Me.ClientSize = New System.Drawing.Size(1321, 708)
         Me.Controls.Add(Me.phone)
-        Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.customerAddress)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.transactionDate)
-        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.Label13)
+        Me.Controls.Add(Me.discountt)
+        Me.Controls.Add(Me.ttype)
+        Me.Controls.Add(Me.tId)
+        Me.Controls.Add(Me.dateTrans)
         Me.Controls.Add(Me.customerName)
+        Me.Controls.Add(Me.Label11)
+        Me.Controls.Add(Me.gstAmt)
+        Me.Controls.Add(Me.fBill)
+        Me.Controls.Add(Me.Label7)
+        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.Label12)
+        Me.Controls.Add(Me.totalPrice)
+        Me.Controls.Add(Me.Label10)
+        Me.Controls.Add(Me.priceList)
+        Me.Controls.Add(Me.Label9)
+        Me.Controls.Add(Me.quantityList)
+        Me.Controls.Add(Me.Label8)
+        Me.Controls.Add(Me.itemList)
+        Me.Controls.Add(Me.Delete)
+        Me.Controls.Add(Me.cancle)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Name = "deleteSales"
         Me.Text = "Delete Sales"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents cancle As System.Windows.Forms.Button
-    Friend WithEvents delete As System.Windows.Forms.Button
-    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
-    Friend WithEvents credit As System.Windows.Forms.RadioButton
-    Friend WithEvents cash As System.Windows.Forms.RadioButton
-    Friend WithEvents Label8 As System.Windows.Forms.Label
-    Friend WithEvents tID As System.Windows.Forms.TextBox
-    Friend WithEvents Label7 As System.Windows.Forms.Label
-    Friend WithEvents eMail As System.Windows.Forms.TextBox
-    Friend WithEvents Label6 As System.Windows.Forms.Label
-    Friend WithEvents phone As System.Windows.Forms.TextBox
-    Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents customerAddress As System.Windows.Forms.TextBox
-    Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents transactionDate As System.Windows.Forms.DateTimePicker
-    Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents customerName As System.Windows.Forms.TextBox
-    Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents Label1 As System.Windows.Forms.Label
+
+    Friend WithEvents discountt As Label
+    Friend WithEvents ttype As Label
+    Friend WithEvents tId As Label
+    Friend WithEvents dateTrans As Label
+    Friend WithEvents customerName As Label
+    Friend WithEvents Label11 As Label
+    Friend WithEvents gstAmt As ListBox
+    Friend WithEvents fBill As Label
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Label12 As Label
+    Friend WithEvents totalPrice As ListBox
+    Friend WithEvents Label10 As Label
+    Friend WithEvents priceList As ListBox
+    Friend WithEvents Label9 As Label
+    Friend WithEvents quantityList As ListBox
+    Friend WithEvents Label8 As Label
+    Friend WithEvents itemList As ListBox
+    Friend WithEvents Delete As Button
+    Friend WithEvents cancle As Button
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents phone As Label
+    Friend WithEvents Label13 As Label
 End Class

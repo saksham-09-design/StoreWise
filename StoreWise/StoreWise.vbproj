@@ -283,6 +283,12 @@
     <Compile Include="displayPuchase.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="displaySales.Designer.vb">
+      <DependentUpon>displaySales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="displaySales.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="inventory.Designer.vb">
       <DependentUpon>inventory.vb</DependentUpon>
     </Compile>
@@ -414,6 +420,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="displayPuchase.resx">
       <DependentUpon>displayPuchase.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="displaySales.resx">
+      <DependentUpon>displaySales.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="displaySupplier.resx">
       <DependentUpon>displaySupplier.vb</DependentUpon>

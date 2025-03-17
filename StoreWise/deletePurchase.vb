@@ -31,14 +31,12 @@
 
 
         'fetching items from database
-        Dim conn2 As New OleDb.OleDbConnection
-        conn2.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Saksham\Documents\StoreWise.accdb"
         Try
-            If conn2.State = ConnectionState.Closed Then
-                conn2.Open()
+            If conn.State = ConnectionState.Closed Then
+                conn.Open()
             End If
             Dim sql As String = "SELECT * FROM pSupportTable WHERE billId = " & purId
-            Dim cmd As New OleDb.OleDbCommand(sql, conn2)
+            Dim cmd As New OleDb.OleDbCommand(sql, conn)
             Dim da As New OleDb.OleDbDataAdapter(cmd)
             Dim dt As New DataTable
             da.Fill(dt)
@@ -52,7 +50,7 @@
         Catch ex As Exception
             MessageBox.Show("Error: " & ex.Message, "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Finally
-            conn2.Close()
+            conn.Close()
         End Try
 
 

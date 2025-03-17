@@ -92,6 +92,7 @@
     End Sub
 
     Private Sub Print_Click(sender As Object, e As EventArgs) Handles Print.Click
+        showBillId = CInt(tId.Text)
         Dim bil As New bill
         bil.Show()
     End Sub

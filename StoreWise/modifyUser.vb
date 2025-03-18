@@ -35,7 +35,7 @@
         'Dark Mode logic
         If (DMode) Then
             Me.BackColor = Color.FromArgb(255, 13, 17, 23)
-            For i = 1 To 5
+            For i = 1 To 6
                 Dim lbl As Label = Me.Controls("Label" & i)
                 lbl.ForeColor = Color.FromArgb(255, 240, 246, 252)
             Next
@@ -51,6 +51,10 @@
             nPass.ForeColor = Color.FromArgb(255, 240, 246, 252)
             cPass.BackColor = Color.FromArgb(255, 33, 40, 48)
             cPass.ForeColor = Color.FromArgb(255, 240, 246, 252)
+            Button1.BackColor = Color.FromArgb(255, 31, 111, 235)
+            Button1.ForeColor = Color.FromArgb(255, Color.White)
+            nUName.BackColor = Color.FromArgb(255, 33, 40, 48)
+            nUName.ForeColor = Color.FromArgb(255, 240, 246, 252)
         End If
     End Sub
 

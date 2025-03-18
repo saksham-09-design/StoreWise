@@ -66,4 +66,35 @@
             MessageBox.Show("Phone must be in Numbers.", "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         End If
     End Sub
+
+    Private Sub printDetails_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'setting up dark mode
+        If DMode Then
+            Me.BackColor = Color.FromArgb(255, 13, 17, 23)
+            For i = 1 To 6
+                Dim lbl As Label = Me.Controls("Label" & i)
+                lbl.ForeColor = Color.FromArgb(255, 240, 246, 252)
+            Next
+            phone.BackColor = Color.FromArgb(255, 13, 17, 23)
+            phone.ForeColor = Color.FromArgb(255, 240, 246, 252)
+            mail.BackColor = Color.FromArgb(255, 13, 17, 23)
+            mail.ForeColor = Color.FromArgb(255, 240, 246, 252)
+            add.BackColor = Color.FromArgb(255, 13, 17, 23)
+            add.ForeColor = Color.FromArgb(255, 240, 246, 252)
+            fName.BackColor = Color.FromArgb(255, 13, 17, 23)
+            fName.ForeColor = Color.FromArgb(255, 240, 246, 252)
+            t1.BackColor = Color.FromArgb(255, 13, 17, 23)
+            t1.ForeColor = Color.FromArgb(255, 240, 246, 252)
+            t2.BackColor = Color.FromArgb(255, 13, 17, 23)
+            t2.ForeColor = Color.FromArgb(255, 240, 246, 252)
+            t3.BackColor = Color.FromArgb(255, 13, 17, 23)
+            t3.ForeColor = Color.FromArgb(255, 240, 246, 252)
+            t4.BackColor = Color.FromArgb(255, 13, 17, 23)
+            t4.ForeColor = Color.FromArgb(255, 240, 246, 252)
+            sFormat.BackColor = Color.FromArgb(255, 31, 111, 235)
+            sFormat.ForeColor = Color.FromArgb(255, Color.White)
+            cancle.BackColor = Color.FromArgb(255, 31, 111, 235)
+            cancle.ForeColor = Color.FromArgb(255, Color.White)
+        End If
+    End Sub
 End Class

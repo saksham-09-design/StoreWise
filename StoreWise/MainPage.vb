@@ -210,4 +210,10 @@
             con.Close()
         End Try
     End Sub
+
+    Private Sub DashboardToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DashboardToolStripMenuItem.Click
+        Dim dash As New Dashboard()
+        dash.MdiParent = Me
+        dash.Show()
+    End Sub
 End Class

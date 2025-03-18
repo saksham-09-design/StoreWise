@@ -122,9 +122,9 @@
                 lbl.ForeColor = Color.FromArgb(255, 240, 246, 252)
             Next
             save.BackColor = Color.FromArgb(255, 31, 111, 235)
+            save.ForeColor = Color.FromArgb(255, Color.White)
             clear.BackColor = Color.FromArgb(255, 31, 111, 235)
             cancle.BackColor = Color.FromArgb(255, 31, 111, 235)
-            save.ForeColor = Color.FromArgb(255, Color.White)
             clear.ForeColor = Color.FromArgb(255, Color.White)
             cancle.ForeColor = Color.FromArgb(255, Color.White)
             supplierNameList.BackColor = Color.FromArgb(255, 33, 40, 48)

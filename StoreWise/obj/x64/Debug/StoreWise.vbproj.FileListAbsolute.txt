@@ -120,3 +120,4 @@ D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.xml
 D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.pdb
 D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.modifyPrintDetails.resources
 D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.displaySales.resources
+D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.Dashboard.resources

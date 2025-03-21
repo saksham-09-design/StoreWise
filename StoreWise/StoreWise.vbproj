@@ -284,6 +284,12 @@
     <Compile Include="Dashboard.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="dashboardLoading.Designer.vb">
+      <DependentUpon>dashboardLoading.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dashboardLoading.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="displayPuchase.Designer.vb">
       <DependentUpon>displayPuchase.vb</DependentUpon>
     </Compile>
@@ -424,6 +430,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dashboardLoading.resx">
+      <DependentUpon>dashboardLoading.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="deleteSales.resx">
       <DependentUpon>deleteSales.vb</DependentUpon>

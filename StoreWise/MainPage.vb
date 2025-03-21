@@ -212,7 +212,7 @@
     End Sub
 
     Private Sub DashboardToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DashboardToolStripMenuItem.Click
-        Dim dash As New Dashboard()
+        Dim dash As New dashboardLoading()
         dash.MdiParent = Me
         dash.Show()
     End Sub

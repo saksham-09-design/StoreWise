@@ -1,34 +1,21 @@
-﻿Public Class Dashboard
+﻿Imports System.Runtime.InteropServices
+
+Public Class Dashboard
     Private Sub Dashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim con As New OleDb.OleDbConnection
-        con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Saksham\Documents\StoreWise.accdb"
-
-        'fetching total sales
-        Try
-            Dim sql As String = "select sum(bAmt) from saleTable"
-            Dim da As New OleDb.OleDbDataAdapter(sql, con)
-            Dim dt As New DataTable
-            da.Fill(dt)
-            tSales.Text = "₹" & Format(dt.Rows(0)(0), "Standard") & "/-"
-        Catch ex As Exception
-            MessageBox.Show(ex.Message, "Storewise", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        Finally
-            con.Close()
-        End Try
-
-        'fetching total puchase
-        Try
-            Dim sql As String = "select sum(amtDis) from purchaseTable"
-            Dim da As New OleDb.OleDbDataAdapter(sql, con)
-            Dim dt As New DataTable
-            da.Fill(dt)
-            tPur.Text = "₹" & Format(dt.Rows(0)(0), "Standard") & "/-"
-        Catch ex As Exception
-            MessageBox.Show(ex.Message, "Storewise", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        Finally
-            con.Close()
-        End Try
+        tSales.Text = "₹" & Format(TotalSales, "Standard") & "/-"
+        tPur.Text = "₹" & Format(TotalPurhcase, "Standard") & "/-"
+        pay.Text &= " ₹" & Format(netPayable, "Standard") & "/-"
+        rec.Text &= " ₹" & Format(netRecievable, "Standard") & "/-"
+        mValue.Text &= " ₹" & Format(stockMarketValue, "Standard") & "/-"
+        purVal.Text &= " ₹" & Format(stockPurchaseValue, "Standard") & "/-"
+        stock.Text &= " ₹" & Format(stockPurchaseValue, "Standard") & "/-"
+        cSale.Text &= " ₹" & Format(cashSales, "Standard") & "/-"
+        crSales.Text &= " ₹" & Format(creditSales, "Standard") & "/-"
+        cPur.Text &= " ₹" & Format(cashPurchase, "Standard") & "/-"
+        crPur.Text &= " ₹" & Format(creditPurchase, "Standard") & "/-"
+        ogst.Text = " ₹" & Format(outputGST, "Standard") & "/-"
     End Sub
+
 
     Private Sub Modify_Click(sender As Object, e As EventArgs) Handles Modify.Click
         dSale = False
@@ -50,7 +37,7 @@
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Dim inv As New inventory()
-        inv.MdiParent = Me
+        inv.MdiParent = MainPage
         inv.Show()
     End Sub
 End Class

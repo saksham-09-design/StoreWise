@@ -22,61 +22,61 @@ Partial Class Dashboard
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim ChartArea13 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend13 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series13 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim ChartArea14 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend14 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series14 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim ChartArea15 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend15 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series15 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea3 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend3 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series3 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Modify = New System.Windows.Forms.Button()
+        Me.Chart1 = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.tSales = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Chart2 = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.tPur = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Chart1 = New System.Windows.Forms.DataVisualization.Charting.Chart()
-        Me.Chart2 = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Chart3 = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.Modify = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.ReOrderItem = New System.Windows.Forms.Label()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.ReOrderItem = New System.Windows.Forms.Label()
         Me.Panel5 = New System.Windows.Forms.Panel()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.igst = New System.Windows.Forms.Label()
-        Me.ogst = New System.Windows.Forms.Label()
         Me.paygst = New System.Windows.Forms.Label()
+        Me.ogst = New System.Windows.Forms.Label()
+        Me.igst = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.Panel6 = New System.Windows.Forms.Panel()
-        Me.pay = New System.Windows.Forms.Label()
         Me.rec = New System.Windows.Forms.Label()
+        Me.pay = New System.Windows.Forms.Label()
         Me.Panel7 = New System.Windows.Forms.Panel()
-        Me.Label11 = New System.Windows.Forms.Label()
+        Me.purVal = New System.Windows.Forms.Label()
+        Me.mValue = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.Label13 = New System.Windows.Forms.Label()
         Me.Panel8 = New System.Windows.Forms.Panel()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.gstPayble = New System.Windows.Forms.Label()
+        Me.stock = New System.Windows.Forms.Label()
+        Me.crPur = New System.Windows.Forms.Label()
+        Me.cPur = New System.Windows.Forms.Label()
         Me.crSales = New System.Windows.Forms.Label()
         Me.cSale = New System.Windows.Forms.Label()
         Me.Label16 = New System.Windows.Forms.Label()
-        Me.crPur = New System.Windows.Forms.Label()
-        Me.cPur = New System.Windows.Forms.Label()
-        Me.stock = New System.Windows.Forms.Label()
-        Me.gstPayble = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
-        Me.Panel2.SuspendLayout()
         CType(Me.Chart1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel2.SuspendLayout()
         CType(Me.Chart2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel3.SuspendLayout()
         CType(Me.Chart3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -97,6 +97,34 @@ Partial Class Dashboard
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(393, 345)
         Me.Panel1.TabIndex = 0
+        '
+        'Modify
+        '
+        Me.Modify.BackColor = System.Drawing.Color.Red
+        Me.Modify.Font = New System.Drawing.Font("Now", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Modify.ForeColor = System.Drawing.Color.Ivory
+        Me.Modify.Location = New System.Drawing.Point(9, 282)
+        Me.Modify.Name = "Modify"
+        Me.Modify.Size = New System.Drawing.Size(371, 52)
+        Me.Modify.TabIndex = 32
+        Me.Modify.Text = "View All Sales"
+        Me.Modify.UseVisualStyleBackColor = False
+        '
+        'Chart1
+        '
+        ChartArea1.Name = "ChartArea1"
+        Me.Chart1.ChartAreas.Add(ChartArea1)
+        Legend1.Name = "Legend1"
+        Me.Chart1.Legends.Add(Legend1)
+        Me.Chart1.Location = New System.Drawing.Point(9, 60)
+        Me.Chart1.Name = "Chart1"
+        Series1.ChartArea = "ChartArea1"
+        Series1.Legend = "Legend1"
+        Series1.Name = "Series1"
+        Me.Chart1.Series.Add(Series1)
+        Me.Chart1.Size = New System.Drawing.Size(371, 212)
+        Me.Chart1.TabIndex = 4
+        Me.Chart1.Text = "Chart1"
         '
         'tSales
         '
@@ -131,6 +159,34 @@ Partial Class Dashboard
         Me.Panel2.Size = New System.Drawing.Size(422, 345)
         Me.Panel2.TabIndex = 3
         '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.Red
+        Me.Button1.Font = New System.Drawing.Font("Now", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.Ivory
+        Me.Button1.Location = New System.Drawing.Point(26, 281)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(371, 52)
+        Me.Button1.TabIndex = 33
+        Me.Button1.Text = "View All Purchases"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'Chart2
+        '
+        ChartArea2.Name = "ChartArea1"
+        Me.Chart2.ChartAreas.Add(ChartArea2)
+        Legend2.Name = "Legend1"
+        Me.Chart2.Legends.Add(Legend2)
+        Me.Chart2.Location = New System.Drawing.Point(26, 60)
+        Me.Chart2.Name = "Chart2"
+        Series2.ChartArea = "ChartArea1"
+        Series2.Legend = "Legend1"
+        Series2.Name = "Series1"
+        Me.Chart2.Series.Add(Series2)
+        Me.Chart2.Size = New System.Drawing.Size(371, 212)
+        Me.Chart2.TabIndex = 5
+        Me.Chart2.Text = "Chart2"
+        '
         'tPur
         '
         Me.tPur.AutoSize = True
@@ -153,38 +209,6 @@ Partial Class Dashboard
         Me.Label3.TabIndex = 1
         Me.Label3.Text = "Total Purchase:"
         '
-        'Chart1
-        '
-        ChartArea13.Name = "ChartArea1"
-        Me.Chart1.ChartAreas.Add(ChartArea13)
-        Legend13.Name = "Legend1"
-        Me.Chart1.Legends.Add(Legend13)
-        Me.Chart1.Location = New System.Drawing.Point(9, 60)
-        Me.Chart1.Name = "Chart1"
-        Series13.ChartArea = "ChartArea1"
-        Series13.Legend = "Legend1"
-        Series13.Name = "Series1"
-        Me.Chart1.Series.Add(Series13)
-        Me.Chart1.Size = New System.Drawing.Size(371, 212)
-        Me.Chart1.TabIndex = 4
-        Me.Chart1.Text = "Chart1"
-        '
-        'Chart2
-        '
-        ChartArea14.Name = "ChartArea1"
-        Me.Chart2.ChartAreas.Add(ChartArea14)
-        Legend14.Name = "Legend1"
-        Me.Chart2.Legends.Add(Legend14)
-        Me.Chart2.Location = New System.Drawing.Point(26, 60)
-        Me.Chart2.Name = "Chart2"
-        Series14.ChartArea = "ChartArea1"
-        Series14.Legend = "Legend1"
-        Series14.Name = "Series1"
-        Me.Chart2.Series.Add(Series14)
-        Me.Chart2.Size = New System.Drawing.Size(371, 212)
-        Me.Chart2.TabIndex = 5
-        Me.Chart2.Text = "Chart2"
-        '
         'Panel3
         '
         Me.Panel3.Controls.Add(Me.Chart3)
@@ -196,16 +220,16 @@ Partial Class Dashboard
         '
         'Chart3
         '
-        ChartArea15.Name = "ChartArea1"
-        Me.Chart3.ChartAreas.Add(ChartArea15)
-        Legend15.Name = "Legend1"
-        Me.Chart3.Legends.Add(Legend15)
+        ChartArea3.Name = "ChartArea1"
+        Me.Chart3.ChartAreas.Add(ChartArea3)
+        Legend3.Name = "Legend1"
+        Me.Chart3.Legends.Add(Legend3)
         Me.Chart3.Location = New System.Drawing.Point(9, 53)
         Me.Chart3.Name = "Chart3"
-        Series15.ChartArea = "ChartArea1"
-        Series15.Legend = "Legend1"
-        Series15.Name = "Series1"
-        Me.Chart3.Series.Add(Series15)
+        Series3.ChartArea = "ChartArea1"
+        Series3.Legend = "Legend1"
+        Series3.Name = "Series1"
+        Me.Chart3.Series.Add(Series3)
         Me.Chart3.Size = New System.Drawing.Size(388, 212)
         Me.Chart3.TabIndex = 4
         Me.Chart3.Text = "Chart3"
@@ -221,30 +245,6 @@ Partial Class Dashboard
         Me.Label4.TabIndex = 1
         Me.Label4.Text = "Most Sold Items:"
         '
-        'Modify
-        '
-        Me.Modify.BackColor = System.Drawing.Color.Red
-        Me.Modify.Font = New System.Drawing.Font("Now", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Modify.ForeColor = System.Drawing.Color.Ivory
-        Me.Modify.Location = New System.Drawing.Point(9, 282)
-        Me.Modify.Name = "Modify"
-        Me.Modify.Size = New System.Drawing.Size(371, 52)
-        Me.Modify.TabIndex = 32
-        Me.Modify.Text = "View All Sales"
-        Me.Modify.UseVisualStyleBackColor = False
-        '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.Color.Red
-        Me.Button1.Font = New System.Drawing.Font("Now", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.Ivory
-        Me.Button1.Location = New System.Drawing.Point(26, 281)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(371, 52)
-        Me.Button1.TabIndex = 33
-        Me.Button1.Text = "View All Purchases"
-        Me.Button1.UseVisualStyleBackColor = False
-        '
         'Panel4
         '
         Me.Panel4.Controls.Add(Me.ReOrderItem)
@@ -254,6 +254,17 @@ Partial Class Dashboard
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(393, 278)
         Me.Panel4.TabIndex = 33
+        '
+        'ReOrderItem
+        '
+        Me.ReOrderItem.AutoSize = True
+        Me.ReOrderItem.Font = New System.Drawing.Font("Now", 12.8!, System.Drawing.FontStyle.Bold)
+        Me.ReOrderItem.ForeColor = System.Drawing.Color.Blue
+        Me.ReOrderItem.Location = New System.Drawing.Point(14, 59)
+        Me.ReOrderItem.Name = "ReOrderItem"
+        Me.ReOrderItem.Size = New System.Drawing.Size(334, 26)
+        Me.ReOrderItem.TabIndex = 33
+        Me.ReOrderItem.Text = "Items below Re-Order Level:"
         '
         'Button3
         '
@@ -278,17 +289,6 @@ Partial Class Dashboard
         Me.Label5.TabIndex = 1
         Me.Label5.Text = "Items below Re-Order Level:"
         '
-        'ReOrderItem
-        '
-        Me.ReOrderItem.AutoSize = True
-        Me.ReOrderItem.Font = New System.Drawing.Font("Now", 12.8!, System.Drawing.FontStyle.Bold)
-        Me.ReOrderItem.ForeColor = System.Drawing.Color.Blue
-        Me.ReOrderItem.Location = New System.Drawing.Point(14, 59)
-        Me.ReOrderItem.Name = "ReOrderItem"
-        Me.ReOrderItem.Size = New System.Drawing.Size(334, 26)
-        Me.ReOrderItem.TabIndex = 33
-        Me.ReOrderItem.Text = "Items below Re-Order Level:"
-        '
         'Panel5
         '
         Me.Panel5.Controls.Add(Me.paygst)
@@ -303,60 +303,16 @@ Partial Class Dashboard
         Me.Panel5.Size = New System.Drawing.Size(837, 120)
         Me.Panel5.TabIndex = 34
         '
-        'Label6
+        'paygst
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Now", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.Red
-        Me.Label6.Location = New System.Drawing.Point(9, 15)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(66, 28)
-        Me.Label6.TabIndex = 34
-        Me.Label6.Text = "GST:"
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Now", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.ForeColor = System.Drawing.Color.Red
-        Me.Label7.Location = New System.Drawing.Point(9, 47)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(132, 28)
-        Me.Label7.TabIndex = 35
-        Me.Label7.Text = "Input GST:"
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Now", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.ForeColor = System.Drawing.Color.Red
-        Me.Label8.Location = New System.Drawing.Point(9, 84)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(154, 28)
-        Me.Label8.TabIndex = 36
-        Me.Label8.Text = "Output GST:"
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Now", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.ForeColor = System.Drawing.Color.Red
-        Me.Label9.Location = New System.Drawing.Point(450, 19)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(191, 28)
-        Me.Label9.TabIndex = 37
-        Me.Label9.Text = "GST to be Paid:"
-        '
-        'igst
-        '
-        Me.igst.AutoSize = True
-        Me.igst.Font = New System.Drawing.Font("Now", 15.8!, System.Drawing.FontStyle.Bold)
-        Me.igst.ForeColor = System.Drawing.Color.Blue
-        Me.igst.Location = New System.Drawing.Point(169, 45)
-        Me.igst.Name = "igst"
-        Me.igst.Size = New System.Drawing.Size(179, 32)
-        Me.igst.TabIndex = 33
-        Me.igst.Text = "₹1,00,000/-"
+        Me.paygst.AutoSize = True
+        Me.paygst.Font = New System.Drawing.Font("Now", 25.8!, System.Drawing.FontStyle.Bold)
+        Me.paygst.ForeColor = System.Drawing.Color.Blue
+        Me.paygst.Location = New System.Drawing.Point(455, 51)
+        Me.paygst.Name = "paygst"
+        Me.paygst.Size = New System.Drawing.Size(287, 52)
+        Me.paygst.TabIndex = 39
+        Me.paygst.Text = "₹1,00,000/-"
         '
         'ogst
         '
@@ -369,16 +325,60 @@ Partial Class Dashboard
         Me.ogst.TabIndex = 38
         Me.ogst.Text = "₹1,00,000/-"
         '
-        'paygst
+        'igst
         '
-        Me.paygst.AutoSize = True
-        Me.paygst.Font = New System.Drawing.Font("Now", 25.8!, System.Drawing.FontStyle.Bold)
-        Me.paygst.ForeColor = System.Drawing.Color.Blue
-        Me.paygst.Location = New System.Drawing.Point(455, 51)
-        Me.paygst.Name = "paygst"
-        Me.paygst.Size = New System.Drawing.Size(287, 52)
-        Me.paygst.TabIndex = 39
-        Me.paygst.Text = "₹1,00,000/-"
+        Me.igst.AutoSize = True
+        Me.igst.Font = New System.Drawing.Font("Now", 15.8!, System.Drawing.FontStyle.Bold)
+        Me.igst.ForeColor = System.Drawing.Color.Blue
+        Me.igst.Location = New System.Drawing.Point(169, 45)
+        Me.igst.Name = "igst"
+        Me.igst.Size = New System.Drawing.Size(179, 32)
+        Me.igst.TabIndex = 33
+        Me.igst.Text = "₹1,00,000/-"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Now", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.ForeColor = System.Drawing.Color.Red
+        Me.Label9.Location = New System.Drawing.Point(450, 19)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(191, 28)
+        Me.Label9.TabIndex = 37
+        Me.Label9.Text = "GST to be Paid:"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Now", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.ForeColor = System.Drawing.Color.Red
+        Me.Label8.Location = New System.Drawing.Point(9, 84)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(154, 28)
+        Me.Label8.TabIndex = 36
+        Me.Label8.Text = "Output GST:"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Now", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.Color.Red
+        Me.Label7.Location = New System.Drawing.Point(9, 47)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(132, 28)
+        Me.Label7.TabIndex = 35
+        Me.Label7.Text = "Input GST:"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Now", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.Red
+        Me.Label6.Location = New System.Drawing.Point(9, 15)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(66, 28)
+        Me.Label6.TabIndex = 34
+        Me.Label6.Text = "GST:"
         '
         'Panel6
         '
@@ -388,17 +388,6 @@ Partial Class Dashboard
         Me.Panel6.Name = "Panel6"
         Me.Panel6.Size = New System.Drawing.Size(616, 100)
         Me.Panel6.TabIndex = 35
-        '
-        'pay
-        '
-        Me.pay.AutoSize = True
-        Me.pay.Font = New System.Drawing.Font("Now", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.pay.ForeColor = System.Drawing.Color.Red
-        Me.pay.Location = New System.Drawing.Point(19, 16)
-        Me.pay.Name = "pay"
-        Me.pay.Size = New System.Drawing.Size(163, 28)
-        Me.pay.TabIndex = 40
-        Me.pay.Text = "Net Payable:"
         '
         'rec
         '
@@ -411,26 +400,48 @@ Partial Class Dashboard
         Me.rec.TabIndex = 41
         Me.rec.Text = "Net Recievable:"
         '
+        'pay
+        '
+        Me.pay.AutoSize = True
+        Me.pay.Font = New System.Drawing.Font("Now", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.pay.ForeColor = System.Drawing.Color.Red
+        Me.pay.Location = New System.Drawing.Point(19, 16)
+        Me.pay.Name = "pay"
+        Me.pay.Size = New System.Drawing.Size(163, 28)
+        Me.pay.TabIndex = 40
+        Me.pay.Text = "Net Payable:"
+        '
         'Panel7
         '
-        Me.Panel7.Controls.Add(Me.Label13)
-        Me.Panel7.Controls.Add(Me.Label11)
+        Me.Panel7.Controls.Add(Me.purVal)
+        Me.Panel7.Controls.Add(Me.mValue)
         Me.Panel7.Controls.Add(Me.Label12)
         Me.Panel7.Location = New System.Drawing.Point(865, 130)
         Me.Panel7.Name = "Panel7"
         Me.Panel7.Size = New System.Drawing.Size(616, 139)
         Me.Panel7.TabIndex = 42
         '
-        'Label11
+        'purVal
         '
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Now", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.ForeColor = System.Drawing.Color.Red
-        Me.Label11.Location = New System.Drawing.Point(19, 60)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(175, 28)
-        Me.Label11.TabIndex = 41
-        Me.Label11.Text = "Market Value:"
+        Me.purVal.AutoSize = True
+        Me.purVal.Font = New System.Drawing.Font("Now", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.purVal.ForeColor = System.Drawing.Color.Red
+        Me.purVal.Location = New System.Drawing.Point(19, 94)
+        Me.purVal.Name = "purVal"
+        Me.purVal.Size = New System.Drawing.Size(195, 28)
+        Me.purVal.TabIndex = 42
+        Me.purVal.Text = "Purchase Value:"
+        '
+        'mValue
+        '
+        Me.mValue.AutoSize = True
+        Me.mValue.Font = New System.Drawing.Font("Now", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.mValue.ForeColor = System.Drawing.Color.Red
+        Me.mValue.Location = New System.Drawing.Point(19, 60)
+        Me.mValue.Name = "mValue"
+        Me.mValue.Size = New System.Drawing.Size(175, 28)
+        Me.mValue.TabIndex = 41
+        Me.mValue.Text = "Market Value:"
         '
         'Label12
         '
@@ -442,17 +453,6 @@ Partial Class Dashboard
         Me.Label12.Size = New System.Drawing.Size(112, 36)
         Me.Label12.TabIndex = 40
         Me.Label12.Text = "Stock:"
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Now", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.ForeColor = System.Drawing.Color.Red
-        Me.Label13.Location = New System.Drawing.Point(19, 94)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(195, 28)
-        Me.Label13.TabIndex = 42
-        Me.Label13.Text = "Purchase Value:"
         '
         'Panel8
         '
@@ -469,6 +469,72 @@ Partial Class Dashboard
         Me.Panel8.Name = "Panel8"
         Me.Panel8.Size = New System.Drawing.Size(616, 386)
         Me.Panel8.TabIndex = 43
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Now", 30.8!, System.Drawing.FontStyle.Bold)
+        Me.Label10.ForeColor = System.Drawing.Color.Red
+        Me.Label10.Location = New System.Drawing.Point(51, 314)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(389, 62)
+        Me.Label10.TabIndex = 48
+        Me.Label10.Text = "₹10,00,000/-"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Now", 20.8!, System.Drawing.FontStyle.Bold)
+        Me.Label2.ForeColor = System.Drawing.Color.Red
+        Me.Label2.Location = New System.Drawing.Point(20, 266)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(349, 42)
+        Me.Label2.TabIndex = 47
+        Me.Label2.Text = "NET PROFIT/LOSS:"
+        '
+        'gstPayble
+        '
+        Me.gstPayble.AutoSize = True
+        Me.gstPayble.Font = New System.Drawing.Font("Now", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.gstPayble.ForeColor = System.Drawing.Color.Red
+        Me.gstPayble.Location = New System.Drawing.Point(19, 216)
+        Me.gstPayble.Name = "gstPayble"
+        Me.gstPayble.Size = New System.Drawing.Size(166, 28)
+        Me.gstPayble.TabIndex = 46
+        Me.gstPayble.Text = "GST Payable:"
+        '
+        'stock
+        '
+        Me.stock.AutoSize = True
+        Me.stock.Font = New System.Drawing.Font("Now", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.stock.ForeColor = System.Drawing.Color.Red
+        Me.stock.Location = New System.Drawing.Point(20, 188)
+        Me.stock.Name = "stock"
+        Me.stock.Size = New System.Drawing.Size(86, 28)
+        Me.stock.TabIndex = 45
+        Me.stock.Text = "Stock:"
+        '
+        'crPur
+        '
+        Me.crPur.AutoSize = True
+        Me.crPur.Font = New System.Drawing.Font("Now", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.crPur.ForeColor = System.Drawing.Color.Red
+        Me.crPur.Location = New System.Drawing.Point(20, 159)
+        Me.crPur.Name = "crPur"
+        Me.crPur.Size = New System.Drawing.Size(259, 28)
+        Me.crPur.TabIndex = 44
+        Me.crPur.Text = "Total Credit Puchase:"
+        '
+        'cPur
+        '
+        Me.cPur.AutoSize = True
+        Me.cPur.Font = New System.Drawing.Font("Now", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cPur.ForeColor = System.Drawing.Color.Red
+        Me.cPur.Location = New System.Drawing.Point(20, 125)
+        Me.cPur.Name = "cPur"
+        Me.cPur.Size = New System.Drawing.Size(253, 28)
+        Me.cPur.TabIndex = 43
+        Me.cPur.Text = "Total Cash Purchase:"
         '
         'crSales
         '
@@ -503,72 +569,6 @@ Partial Class Dashboard
         Me.Label16.TabIndex = 40
         Me.Label16.Text = "Overall Performance:"
         '
-        'crPur
-        '
-        Me.crPur.AutoSize = True
-        Me.crPur.Font = New System.Drawing.Font("Now", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.crPur.ForeColor = System.Drawing.Color.Red
-        Me.crPur.Location = New System.Drawing.Point(20, 159)
-        Me.crPur.Name = "crPur"
-        Me.crPur.Size = New System.Drawing.Size(259, 28)
-        Me.crPur.TabIndex = 44
-        Me.crPur.Text = "Total Credit Puchase:"
-        '
-        'cPur
-        '
-        Me.cPur.AutoSize = True
-        Me.cPur.Font = New System.Drawing.Font("Now", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cPur.ForeColor = System.Drawing.Color.Red
-        Me.cPur.Location = New System.Drawing.Point(20, 125)
-        Me.cPur.Name = "cPur"
-        Me.cPur.Size = New System.Drawing.Size(253, 28)
-        Me.cPur.TabIndex = 43
-        Me.cPur.Text = "Total Cash Purchase:"
-        '
-        'stock
-        '
-        Me.stock.AutoSize = True
-        Me.stock.Font = New System.Drawing.Font("Now", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.stock.ForeColor = System.Drawing.Color.Red
-        Me.stock.Location = New System.Drawing.Point(20, 188)
-        Me.stock.Name = "stock"
-        Me.stock.Size = New System.Drawing.Size(86, 28)
-        Me.stock.TabIndex = 45
-        Me.stock.Text = "Stock:"
-        '
-        'gstPayble
-        '
-        Me.gstPayble.AutoSize = True
-        Me.gstPayble.Font = New System.Drawing.Font("Now", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.gstPayble.ForeColor = System.Drawing.Color.Red
-        Me.gstPayble.Location = New System.Drawing.Point(19, 216)
-        Me.gstPayble.Name = "gstPayble"
-        Me.gstPayble.Size = New System.Drawing.Size(166, 28)
-        Me.gstPayble.TabIndex = 46
-        Me.gstPayble.Text = "GST Payable:"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Now", 20.8!, System.Drawing.FontStyle.Bold)
-        Me.Label2.ForeColor = System.Drawing.Color.Red
-        Me.Label2.Location = New System.Drawing.Point(20, 266)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(349, 42)
-        Me.Label2.TabIndex = 47
-        Me.Label2.Text = "NET PROFIT/LOSS:"
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Now", 30.8!, System.Drawing.FontStyle.Bold)
-        Me.Label10.ForeColor = System.Drawing.Color.Red
-        Me.Label10.Location = New System.Drawing.Point(51, 314)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(389, 62)
-        Me.Label10.TabIndex = 48
-        Me.Label10.Text = "₹10,00,000/-"
-        '
         'Label14
         '
         Me.Label14.AutoSize = True
@@ -598,9 +598,9 @@ Partial Class Dashboard
         Me.Text = "Dashboard"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.Chart1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
-        CType(Me.Chart1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Chart2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
@@ -649,8 +649,8 @@ Partial Class Dashboard
     Friend WithEvents rec As Label
     Friend WithEvents pay As Label
     Friend WithEvents Panel7 As Panel
-    Friend WithEvents Label13 As Label
-    Friend WithEvents Label11 As Label
+    Friend WithEvents purVal As Label
+    Friend WithEvents mValue As Label
     Friend WithEvents Label12 As Label
     Friend WithEvents Panel8 As Panel
     Friend WithEvents crSales As Label

@@ -1,4 +1,6 @@
-﻿Module sVar
+﻿Imports System.IdentityModel.Metadata
+
+Module sVar
 
     'Support variable for dark mode
     Public DMode = True
@@ -13,4 +15,22 @@
     Public purId As Integer = 0
     Public salId As Integer = 0
     Public showBillId As Integer = 0
+
+
+    'variable for supporting Dashboard
+    Public TotalPurhcase As Single = 0.0
+    Public TotalSales As Single = 0.0
+    Public reOrderLevel() As String = New String(5) {}
+    Public inputGST As Single = 0.0
+    Public outputGST As Single = 0.0
+    Public netPayable As Single = 0.0
+    Public netRecievable As Single = 0.0
+    Public cashSales As Single = 0.0
+    Public creditSales As Single = 0.0
+    Public cashPurchase As Single = 0.0
+    Public creditPurchase As Single = 0.0
+    Public stockPurchaseValue As Single = 0.0
+    Public stockMarketValue As Single = 0.0
+    Public gstPayable As Single = 0.0
+    Public netProfit As Single = 0.0
 End Module

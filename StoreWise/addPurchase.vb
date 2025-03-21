@@ -340,6 +340,7 @@ Public Class addPurchase
             End If
 
 
+
             'fetching Discount
             Dim discountPer As Single
             If Discount.Text.Trim <> "" Then
@@ -405,6 +406,22 @@ Public Class addPurchase
                     conn.Close()
                 End Try
             Next
+
+            'updating credit transactions
+            Try
+                If conn.State = ConnectionState.Closed Then
+                    conn.Open()
+                End If
+                If type = "Credit" Then
+                    Dim sql As String = "Update supplierTable set sBalance = sBalance + " & CSng(totalAmount) & " where sName = '" & supplierNameList.Text & "'"
+                    Dim cmd As New OleDb.OleDbCommand(sql, conn)
+                    cmd.ExecuteNonQuery()
+                End If
+            Catch ex As Exception
+                MessageBox.Show("Erorr: " & ex.Message, "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Finally
+                conn.Close()
+            End Try
 
             'Pushing data in purchaseTable
             Try

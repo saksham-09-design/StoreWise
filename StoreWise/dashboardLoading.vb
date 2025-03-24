@@ -1,6 +1,5 @@
-﻿Imports Microsoft.VisualBasic.Devices
-Imports System.Windows
-Imports System.Threading.Tasks
+﻿Imports System.Threading.Tasks
+Imports System.Data.OleDb
 
 
 Public Class dashboardLoading
@@ -196,6 +195,81 @@ Public Class dashboardLoading
         End Try
 
         'fetching input gst
+        Dim finalInputGST As Single = 0.0
+        Dim itemsListSsupport As String() = {}
+
+        'fetching sold items
+        Try
+            Dim sql As String = "select distinct itemName from sSupportTable"
+            Dim da As New OleDb.OleDbDataAdapter(sql, con)
+            Dim dt As New DataTable
+            da.Fill(dt)
+            Dim count As Integer = dt.Rows.Count
+            itemsListSsupport = New String(count - 1) {}
+            For i = 0 To count - 1
+                itemsListSsupport(i) = dt.Rows(i).Item(0)
+            Next
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Storewise", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        Finally
+            con.Close()
+        End Try
+
+        'fetching total quantity of the unique items and calculating the input gst
+
+        Try
+            If con.State = ConnectionState.Closed Then
+                con.Open()
+            End If
+
+            For Each item In itemsListSsupport
+                Dim itemQ As Single = 0.0
+                Dim costUnit As Single = 0.0
+                Dim totalCost As Single = 0.0
+                Dim gstI As Single = 0.0
+                Dim gsAmount As Single = 0.0
+
+
+                'fetching total quantity
+                Dim sql As String = "select sum(quantity) from sSupportTable where itemName= '" & item & "'"
+                Dim da As New OleDb.OleDbDataAdapter(sql, con)
+                Dim dt As New DataTable
+                da.Fill(dt)
+                itemQ = CSng(dt.Rows(0).Item(0))
+
+                'fetching total amount on which gst should be calculated
+                Dim sql1 As String = "select costUnit from itemTable where itemName = '" & item & "'"
+                Dim da1 As New OleDb.OleDbDataAdapter(sql1, con)
+                Dim dt1 As New DataTable
+                da1.Fill(dt1)
+                costUnit = CSng(dt1.Rows(0).Item(0))
+
+                'calculating total cost
+                totalCost = itemQ * costUnit
+
+
+                'fetching gst % from database
+                Dim sql2 As String = "select gst from itemTable where itemName = '" & item & "'"
+                Dim da2 As New OleDbDataAdapter(sql2, con)
+                Dim dt2 As New DataTable
+                da2.Fill(dt2)
+                gstI = CSng(dt.Rows(0).Item(0))
+
+
+                'calculating total gst of the items
+                gsAmount = (totalCost * gstI) / 100
+
+                finalInputGST += gsAmount
+
+            Next
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Storewise", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        Finally
+            con.Close()
+        End Try
+
+        inputGST = finalInputGST
+
 
     End Function
 

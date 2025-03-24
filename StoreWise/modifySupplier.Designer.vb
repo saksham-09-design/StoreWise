@@ -137,6 +137,7 @@ Partial Class modifySupplier
         Me.supplierName.Font = New System.Drawing.Font("Now Medium", 15.8!)
         Me.supplierName.Location = New System.Drawing.Point(316, 242)
         Me.supplierName.Name = "supplierName"
+        Me.supplierName.ReadOnly = True
         Me.supplierName.Size = New System.Drawing.Size(470, 39)
         Me.supplierName.TabIndex = 83
         '

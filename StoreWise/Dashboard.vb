@@ -14,6 +14,7 @@ Public Class Dashboard
         cPur.Text &= " ₹" & Format(cashPurchase, "Standard") & "/-"
         crPur.Text &= " ₹" & Format(creditPurchase, "Standard") & "/-"
         ogst.Text = " ₹" & Format(outputGST, "Standard") & "/-"
+        igst.Text = " ₹" & Format(inputGST, "Standard") & "/-"
     End Sub
 
 

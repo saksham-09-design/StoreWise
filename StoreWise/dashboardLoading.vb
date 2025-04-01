@@ -115,7 +115,7 @@ Public Class dashboardLoading
             'purchase value
             stockPurchaseValue = totalPV
 
-            ProgressBar1.Value = 50
+            ProgressBar1.Value = 30
 
         Catch ex As Exception
             MessageBox.Show(ex.ToString, "Storewise", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -149,7 +149,7 @@ Public Class dashboardLoading
         Finally
             con.Close()
         End Try
-        ProgressBar1.Value = 60
+        ProgressBar1.Value = 40
 
 
         'fetching cash purchase
@@ -178,7 +178,7 @@ Public Class dashboardLoading
             con.Close()
         End Try
 
-        ProgressBar1.Value = 70
+        ProgressBar1.Value = 50
 
 
         'fetching output gst
@@ -269,6 +269,13 @@ Public Class dashboardLoading
         End Try
 
         inputGST = finalInputGST
+        ProgressBar1.Value = 90
+
+
+        'fetching overall profit or loss
+        netProfit = cashSales + creditSales - cashPurchase - creditPurchase + netRecievable - netPayable + stockMarketValue - gstPayable
+
+        ProgressBar1.Value = 100
 
 
     End Function

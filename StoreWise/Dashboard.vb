@@ -15,6 +15,16 @@ Public Class Dashboard
         crPur.Text &= " ₹" & Format(creditPurchase, "Standard") & "/-"
         ogst.Text = " ₹" & Format(outputGST, "Standard") & "/-"
         igst.Text = " ₹" & Format(inputGST, "Standard") & "/-"
+        gstPayable = outputGST - inputGST
+        paygst.Text = " ₹" & Format(gstPayable, "Standard") & "/-"
+        dashgstPayble.Text &= " ₹" & Format(gstPayable, "Standard") & "/-"
+        nProfitFinal.Text = " ₹" & Format(netProfit, "Standard") & "/-"
+
+        If (netProfit > 0) Then
+            nProfitFinal.ForeColor = Color.Green
+        Else
+            nProfitFinal.ForeColor = Color.Red
+        End If
     End Sub
 
 

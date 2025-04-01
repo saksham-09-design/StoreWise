@@ -64,9 +64,9 @@ Partial Class Dashboard
         Me.mValue = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Panel8 = New System.Windows.Forms.Panel()
-        Me.Label10 = New System.Windows.Forms.Label()
+        Me.nProfitFinal = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.gstPayble = New System.Windows.Forms.Label()
+        Me.dashgstPayble = New System.Windows.Forms.Label()
         Me.stock = New System.Windows.Forms.Label()
         Me.crPur = New System.Windows.Forms.Label()
         Me.cPur = New System.Windows.Forms.Label()
@@ -456,9 +456,9 @@ Partial Class Dashboard
         '
         'Panel8
         '
-        Me.Panel8.Controls.Add(Me.Label10)
+        Me.Panel8.Controls.Add(Me.nProfitFinal)
         Me.Panel8.Controls.Add(Me.Label2)
-        Me.Panel8.Controls.Add(Me.gstPayble)
+        Me.Panel8.Controls.Add(Me.dashgstPayble)
         Me.Panel8.Controls.Add(Me.stock)
         Me.Panel8.Controls.Add(Me.crPur)
         Me.Panel8.Controls.Add(Me.cPur)
@@ -470,16 +470,16 @@ Partial Class Dashboard
         Me.Panel8.Size = New System.Drawing.Size(616, 386)
         Me.Panel8.TabIndex = 43
         '
-        'Label10
+        'nProfitFinal
         '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Now", 30.8!, System.Drawing.FontStyle.Bold)
-        Me.Label10.ForeColor = System.Drawing.Color.Red
-        Me.Label10.Location = New System.Drawing.Point(51, 314)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(389, 62)
-        Me.Label10.TabIndex = 48
-        Me.Label10.Text = "₹10,00,000/-"
+        Me.nProfitFinal.AutoSize = True
+        Me.nProfitFinal.Font = New System.Drawing.Font("Now", 30.8!, System.Drawing.FontStyle.Bold)
+        Me.nProfitFinal.ForeColor = System.Drawing.Color.Red
+        Me.nProfitFinal.Location = New System.Drawing.Point(51, 314)
+        Me.nProfitFinal.Name = "nProfitFinal"
+        Me.nProfitFinal.Size = New System.Drawing.Size(389, 62)
+        Me.nProfitFinal.TabIndex = 48
+        Me.nProfitFinal.Text = "₹10,00,000/-"
         '
         'Label2
         '
@@ -492,16 +492,16 @@ Partial Class Dashboard
         Me.Label2.TabIndex = 47
         Me.Label2.Text = "NET PROFIT/LOSS:"
         '
-        'gstPayble
+        'dashgstPayble
         '
-        Me.gstPayble.AutoSize = True
-        Me.gstPayble.Font = New System.Drawing.Font("Now", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.gstPayble.ForeColor = System.Drawing.Color.Red
-        Me.gstPayble.Location = New System.Drawing.Point(19, 216)
-        Me.gstPayble.Name = "gstPayble"
-        Me.gstPayble.Size = New System.Drawing.Size(166, 28)
-        Me.gstPayble.TabIndex = 46
-        Me.gstPayble.Text = "GST Payable:"
+        Me.dashgstPayble.AutoSize = True
+        Me.dashgstPayble.Font = New System.Drawing.Font("Now", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dashgstPayble.ForeColor = System.Drawing.Color.Red
+        Me.dashgstPayble.Location = New System.Drawing.Point(19, 216)
+        Me.dashgstPayble.Name = "dashgstPayble"
+        Me.dashgstPayble.Size = New System.Drawing.Size(166, 28)
+        Me.dashgstPayble.TabIndex = 46
+        Me.dashgstPayble.Text = "GST Payable:"
         '
         'stock
         '
@@ -658,9 +658,9 @@ Partial Class Dashboard
     Friend WithEvents Label16 As Label
     Friend WithEvents crPur As Label
     Friend WithEvents cPur As Label
-    Friend WithEvents Label10 As Label
+    Friend WithEvents nProfitFinal As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents gstPayble As Label
+    Friend WithEvents dashgstPayble As Label
     Friend WithEvents stock As Label
     Friend WithEvents Label14 As Label
 End Class

@@ -29,7 +29,8 @@
                 cmd.ExecuteNonQuery()
                 MessageBox.Show("Item Added Successfully", "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Catch ex As Exception
-                MessageBox.Show("Error: " & ex.Message, "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                MessageBox.Show("No Item of Same Name Allowed!", "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Exit Sub
             Finally
                 conn.Close()
             End Try

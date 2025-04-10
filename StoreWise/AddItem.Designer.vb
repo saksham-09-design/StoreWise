@@ -84,7 +84,7 @@ Partial Class AddItem
         Me.itemName.Location = New System.Drawing.Point(441, 173)
         Me.itemName.Name = "itemName"
         Me.itemName.Size = New System.Drawing.Size(388, 39)
-        Me.itemName.TabIndex = 1
+        Me.itemName.TabIndex = 2
         '
         'Label2
         '
@@ -211,7 +211,7 @@ Partial Class AddItem
         Me.reOrder.Location = New System.Drawing.Point(441, 294)
         Me.reOrder.Name = "reOrder"
         Me.reOrder.Size = New System.Drawing.Size(388, 37)
-        Me.reOrder.TabIndex = 23
+        Me.reOrder.TabIndex = 4
         '
         'supplierNameList
         '
@@ -223,7 +223,7 @@ Partial Class AddItem
         Me.supplierNameList.Location = New System.Drawing.Point(441, 121)
         Me.supplierNameList.Name = "supplierNameList"
         Me.supplierNameList.Size = New System.Drawing.Size(388, 38)
-        Me.supplierNameList.TabIndex = 25
+        Me.supplierNameList.TabIndex = 1
         '
         'Label5
         '
@@ -238,9 +238,11 @@ Partial Class AddItem
         '
         'AddItem
         '
+        Me.AcceptButton = Me.save
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.CancelButton = Me.cancle
         Me.ClientSize = New System.Drawing.Size(877, 661)
         Me.Controls.Add(Me.supplierNameList)
         Me.Controls.Add(Me.Label5)

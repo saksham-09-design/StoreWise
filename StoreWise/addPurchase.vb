@@ -205,6 +205,8 @@ Public Class addPurchase
         Else
             MessageBox.Show("Quantity Can't be Empty", "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
+        supplierNameList.Enabled = False
+        itemName.Focus()
     End Sub
 
     Private Sub itemList_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles itemList.DoubleClick

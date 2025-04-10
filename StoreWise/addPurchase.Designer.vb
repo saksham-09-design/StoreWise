@@ -78,7 +78,7 @@ Partial Class addPurchase
         Me.itemName.Location = New System.Drawing.Point(298, 238)
         Me.itemName.Name = "itemName"
         Me.itemName.Size = New System.Drawing.Size(308, 38)
-        Me.itemName.TabIndex = 99
+        Me.itemName.TabIndex = 5
         '
         'cancle
         '
@@ -135,7 +135,7 @@ Partial Class addPurchase
         Me.itemQuantity.Location = New System.Drawing.Point(847, 238)
         Me.itemQuantity.Name = "itemQuantity"
         Me.itemQuantity.Size = New System.Drawing.Size(460, 37)
-        Me.itemQuantity.TabIndex = 92
+        Me.itemQuantity.TabIndex = 6
         '
         'Label6
         '
@@ -156,7 +156,7 @@ Partial Class addPurchase
         Me.credit.Location = New System.Drawing.Point(1092, 170)
         Me.credit.Name = "credit"
         Me.credit.Size = New System.Drawing.Size(122, 36)
-        Me.credit.TabIndex = 91
+        Me.credit.TabIndex = 4
         Me.credit.Text = "Credit"
         Me.credit.UseVisualStyleBackColor = True
         '
@@ -169,7 +169,7 @@ Partial Class addPurchase
         Me.cash.Location = New System.Drawing.Point(907, 170)
         Me.cash.Name = "cash"
         Me.cash.Size = New System.Drawing.Size(104, 36)
-        Me.cash.TabIndex = 90
+        Me.cash.TabIndex = 3
         Me.cash.TabStop = True
         Me.cash.Text = "Cash"
         Me.cash.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -212,7 +212,7 @@ Partial Class addPurchase
         Me.transactionDate.Location = New System.Drawing.Point(837, 110)
         Me.transactionDate.Name = "transactionDate"
         Me.transactionDate.Size = New System.Drawing.Size(470, 33)
-        Me.transactionDate.TabIndex = 80
+        Me.transactionDate.TabIndex = 2
         '
         'Label3
         '
@@ -296,7 +296,7 @@ Partial Class addPurchase
         Me.Discount.Location = New System.Drawing.Point(177, 536)
         Me.Discount.Name = "Discount"
         Me.Discount.Size = New System.Drawing.Size(308, 39)
-        Me.Discount.TabIndex = 109
+        Me.Discount.TabIndex = 7
         '
         'Label13
         '
@@ -403,12 +403,14 @@ Partial Class addPurchase
         Me.supplierNameList.Location = New System.Drawing.Point(298, 108)
         Me.supplierNameList.Name = "supplierNameList"
         Me.supplierNameList.Size = New System.Drawing.Size(308, 38)
-        Me.supplierNameList.TabIndex = 115
+        Me.supplierNameList.TabIndex = 1
         '
         'addPurchase
         '
+        Me.AcceptButton = Me.Add
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.CancelButton = Me.cancle
         Me.ClientSize = New System.Drawing.Size(1327, 680)
         Me.Controls.Add(Me.supplierNameList)
         Me.Controls.Add(Me.Label11)

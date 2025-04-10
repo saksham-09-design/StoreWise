@@ -216,4 +216,10 @@
         dash.MdiParent = Me
         dash.Show()
     End Sub
+
+    Private Sub DisplayToolStripMenuItem2_Click(sender As Object, e As EventArgs) Handles DisplayToolStripMenuItem2.Click
+        Dim disp As New displayItem
+        disp.MdiParent = Me
+        disp.Show()
+    End Sub
 End Class

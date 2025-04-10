@@ -8,7 +8,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{588DDDB5-066D-477A-BAD2-BA7670FD3132}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>StoreWise.MainPage</StartupObject>
+    <StartupObject>StoreWise.Splash</StartupObject>
     <RootNamespace>StoreWise</RootNamespace>
     <AssemblyName>StoreWise</AssemblyName>
     <FileAlignment>512</FileAlignment>
@@ -290,6 +290,12 @@
     <Compile Include="dashboardLoading.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="displayItem.Designer.vb">
+      <DependentUpon>displayItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="displayItem.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="displayPuchase.Designer.vb">
       <DependentUpon>displayPuchase.vb</DependentUpon>
     </Compile>
@@ -436,6 +442,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="deleteSales.resx">
       <DependentUpon>deleteSales.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="displayItem.resx">
+      <DependentUpon>displayItem.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="displayPuchase.resx">
       <DependentUpon>displayPuchase.vb</DependentUpon>

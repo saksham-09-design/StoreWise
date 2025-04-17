@@ -320,10 +320,22 @@
     <Compile Include="modifyPrintDetails.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="payablePurchase.Designer.vb">
+      <DependentUpon>payablePurchase.vb</DependentUpon>
+    </Compile>
+    <Compile Include="payablePurchase.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="printDetails.Designer.vb">
       <DependentUpon>printDetails.vb</DependentUpon>
     </Compile>
     <Compile Include="printDetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="receivableSale.Designer.vb">
+      <DependentUpon>receivableSale.vb</DependentUpon>
+    </Compile>
+    <Compile Include="receivableSale.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="sVar.vb" />
@@ -379,12 +391,6 @@
       <DependentUpon>addSales.vb</DependentUpon>
     </Compile>
     <Compile Include="addSales.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SearchItem.Designer.vb">
-      <DependentUpon>SearchItem.vb</DependentUpon>
-    </Compile>
-    <Compile Include="SearchItem.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ModifyItem.Designer.vb">
@@ -473,11 +479,17 @@
     <EmbeddedResource Include="modifyUser.resx">
       <DependentUpon>modifyUser.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="payablePurchase.resx">
+      <DependentUpon>payablePurchase.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="printDetails.resx">
       <DependentUpon>printDetails.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="purchase.resx">
       <DependentUpon>purchase.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="receivableSale.resx">
+      <DependentUpon>receivableSale.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="sales.resx">
       <DependentUpon>sales.vb</DependentUpon>
@@ -490,9 +502,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ModifyItem.resx">
       <DependentUpon>ModifyItem.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SearchItem.resx">
-      <DependentUpon>SearchItem.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Splash.resx">
       <DependentUpon>Splash.vb</DependentUpon>

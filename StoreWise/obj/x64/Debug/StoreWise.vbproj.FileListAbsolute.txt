@@ -108,7 +108,6 @@ D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.sales.resources
 D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.addSales.resources
 D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.loginPage.resources
 D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.ModifyItem.resources
-D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.SearchItem.resources
 D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.Splash.resources
 D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.MainPage.resources
 D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.Resources.resources
@@ -123,3 +122,5 @@ D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.displaySales.resources
 D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.Dashboard.resources
 D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.dashboardLoading.resources
 D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.displayItem.resources
+D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.receivableSale.resources
+D:\StoreWise\StoreWise\obj\x64\Debug\StoreWise.payablePurchase.resources

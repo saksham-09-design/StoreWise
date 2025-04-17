@@ -20,7 +20,7 @@ Module sVar
     'variable for supporting Dashboard
     Public TotalPurhcase As Single = 0.0
     Public TotalSales As Single = 0.0
-    Public reOrderLevel() As String = New String(5) {}
+    Public reOrderLevel(4, 1) As String
     Public inputGST As Single = 0.0
     Public outputGST As Single = 0.0
     Public netPayable As Single = 0.0
@@ -31,6 +31,5 @@ Module sVar
     Public creditPurchase As Single = 0.0
     Public stockPurchaseValue As Single = 0.0
     Public stockMarketValue As Single = 0.0
-    Public gstPayable As Single = 0.0
     Public netProfit As Single = 0.0
 End Module

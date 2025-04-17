@@ -22,15 +22,15 @@ Partial Class Dashboard
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim ChartArea3 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend3 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series3 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea4 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend4 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series4 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea5 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend5 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series5 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea6 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend6 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series6 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Modify = New System.Windows.Forms.Button()
         Me.Chart1 = New System.Windows.Forms.DataVisualization.Charting.Chart()
@@ -66,14 +66,13 @@ Partial Class Dashboard
         Me.Panel8 = New System.Windows.Forms.Panel()
         Me.nProfitFinal = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.dashgstPayble = New System.Windows.Forms.Label()
-        Me.stock = New System.Windows.Forms.Label()
         Me.crPur = New System.Windows.Forms.Label()
         Me.cPur = New System.Windows.Forms.Label()
         Me.crSales = New System.Windows.Forms.Label()
         Me.cSale = New System.Windows.Forms.Label()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
+        Me.stock = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.Chart1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
@@ -112,16 +111,16 @@ Partial Class Dashboard
         '
         'Chart1
         '
-        ChartArea1.Name = "ChartArea1"
-        Me.Chart1.ChartAreas.Add(ChartArea1)
-        Legend1.Name = "Legend1"
-        Me.Chart1.Legends.Add(Legend1)
+        ChartArea4.Name = "ChartArea1"
+        Me.Chart1.ChartAreas.Add(ChartArea4)
+        Legend4.Name = "Legend1"
+        Me.Chart1.Legends.Add(Legend4)
         Me.Chart1.Location = New System.Drawing.Point(9, 60)
         Me.Chart1.Name = "Chart1"
-        Series1.ChartArea = "ChartArea1"
-        Series1.Legend = "Legend1"
-        Series1.Name = "Series1"
-        Me.Chart1.Series.Add(Series1)
+        Series4.ChartArea = "ChartArea1"
+        Series4.Legend = "Legend1"
+        Series4.Name = "Series1"
+        Me.Chart1.Series.Add(Series4)
         Me.Chart1.Size = New System.Drawing.Size(371, 212)
         Me.Chart1.TabIndex = 4
         Me.Chart1.Text = "Chart1"
@@ -173,16 +172,16 @@ Partial Class Dashboard
         '
         'Chart2
         '
-        ChartArea2.Name = "ChartArea1"
-        Me.Chart2.ChartAreas.Add(ChartArea2)
-        Legend2.Name = "Legend1"
-        Me.Chart2.Legends.Add(Legend2)
+        ChartArea5.Name = "ChartArea1"
+        Me.Chart2.ChartAreas.Add(ChartArea5)
+        Legend5.Name = "Legend1"
+        Me.Chart2.Legends.Add(Legend5)
         Me.Chart2.Location = New System.Drawing.Point(26, 60)
         Me.Chart2.Name = "Chart2"
-        Series2.ChartArea = "ChartArea1"
-        Series2.Legend = "Legend1"
-        Series2.Name = "Series1"
-        Me.Chart2.Series.Add(Series2)
+        Series5.ChartArea = "ChartArea1"
+        Series5.Legend = "Legend1"
+        Series5.Name = "Series1"
+        Me.Chart2.Series.Add(Series5)
         Me.Chart2.Size = New System.Drawing.Size(371, 212)
         Me.Chart2.TabIndex = 5
         Me.Chart2.Text = "Chart2"
@@ -220,16 +219,16 @@ Partial Class Dashboard
         '
         'Chart3
         '
-        ChartArea3.Name = "ChartArea1"
-        Me.Chart3.ChartAreas.Add(ChartArea3)
-        Legend3.Name = "Legend1"
-        Me.Chart3.Legends.Add(Legend3)
+        ChartArea6.Name = "ChartArea1"
+        Me.Chart3.ChartAreas.Add(ChartArea6)
+        Legend6.Name = "Legend1"
+        Me.Chart3.Legends.Add(Legend6)
         Me.Chart3.Location = New System.Drawing.Point(9, 53)
         Me.Chart3.Name = "Chart3"
-        Series3.ChartArea = "ChartArea1"
-        Series3.Legend = "Legend1"
-        Series3.Name = "Series1"
-        Me.Chart3.Series.Add(Series3)
+        Series6.ChartArea = "ChartArea1"
+        Series6.Legend = "Legend1"
+        Series6.Name = "Series1"
+        Me.Chart3.Series.Add(Series6)
         Me.Chart3.Size = New System.Drawing.Size(388, 212)
         Me.Chart3.TabIndex = 4
         Me.Chart3.Text = "Chart3"
@@ -458,7 +457,6 @@ Partial Class Dashboard
         '
         Me.Panel8.Controls.Add(Me.nProfitFinal)
         Me.Panel8.Controls.Add(Me.Label2)
-        Me.Panel8.Controls.Add(Me.dashgstPayble)
         Me.Panel8.Controls.Add(Me.stock)
         Me.Panel8.Controls.Add(Me.crPur)
         Me.Panel8.Controls.Add(Me.cPur)
@@ -492,34 +490,12 @@ Partial Class Dashboard
         Me.Label2.TabIndex = 47
         Me.Label2.Text = "NET PROFIT/LOSS:"
         '
-        'dashgstPayble
-        '
-        Me.dashgstPayble.AutoSize = True
-        Me.dashgstPayble.Font = New System.Drawing.Font("Now", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dashgstPayble.ForeColor = System.Drawing.Color.Red
-        Me.dashgstPayble.Location = New System.Drawing.Point(19, 216)
-        Me.dashgstPayble.Name = "dashgstPayble"
-        Me.dashgstPayble.Size = New System.Drawing.Size(166, 28)
-        Me.dashgstPayble.TabIndex = 46
-        Me.dashgstPayble.Text = "GST Payable:"
-        '
-        'stock
-        '
-        Me.stock.AutoSize = True
-        Me.stock.Font = New System.Drawing.Font("Now", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.stock.ForeColor = System.Drawing.Color.Red
-        Me.stock.Location = New System.Drawing.Point(20, 188)
-        Me.stock.Name = "stock"
-        Me.stock.Size = New System.Drawing.Size(86, 28)
-        Me.stock.TabIndex = 45
-        Me.stock.Text = "Stock:"
-        '
         'crPur
         '
         Me.crPur.AutoSize = True
         Me.crPur.Font = New System.Drawing.Font("Now", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.crPur.ForeColor = System.Drawing.Color.Red
-        Me.crPur.Location = New System.Drawing.Point(20, 159)
+        Me.crPur.Location = New System.Drawing.Point(20, 178)
         Me.crPur.Name = "crPur"
         Me.crPur.Size = New System.Drawing.Size(259, 28)
         Me.crPur.TabIndex = 44
@@ -530,7 +506,7 @@ Partial Class Dashboard
         Me.cPur.AutoSize = True
         Me.cPur.Font = New System.Drawing.Font("Now", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cPur.ForeColor = System.Drawing.Color.Red
-        Me.cPur.Location = New System.Drawing.Point(20, 125)
+        Me.cPur.Location = New System.Drawing.Point(20, 138)
         Me.cPur.Name = "cPur"
         Me.cPur.Size = New System.Drawing.Size(253, 28)
         Me.cPur.TabIndex = 43
@@ -541,7 +517,7 @@ Partial Class Dashboard
         Me.crSales.AutoSize = True
         Me.crSales.Font = New System.Drawing.Font("Now", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.crSales.ForeColor = System.Drawing.Color.Red
-        Me.crSales.Location = New System.Drawing.Point(19, 94)
+        Me.crSales.Location = New System.Drawing.Point(19, 100)
         Me.crSales.Name = "crSales"
         Me.crSales.Size = New System.Drawing.Size(224, 28)
         Me.crSales.TabIndex = 42
@@ -579,6 +555,17 @@ Partial Class Dashboard
         Me.Label14.Size = New System.Drawing.Size(531, 102)
         Me.Label14.TabIndex = 49
         Me.Label14.Text = "STOREWISE"
+        '
+        'stock
+        '
+        Me.stock.AutoSize = True
+        Me.stock.Font = New System.Drawing.Font("Now", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.stock.ForeColor = System.Drawing.Color.Red
+        Me.stock.Location = New System.Drawing.Point(20, 217)
+        Me.stock.Name = "stock"
+        Me.stock.Size = New System.Drawing.Size(86, 28)
+        Me.stock.TabIndex = 45
+        Me.stock.Text = "Stock:"
         '
         'Dashboard
         '
@@ -660,7 +647,6 @@ Partial Class Dashboard
     Friend WithEvents cPur As Label
     Friend WithEvents nProfitFinal As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents dashgstPayble As Label
-    Friend WithEvents stock As Label
     Friend WithEvents Label14 As Label
+    Friend WithEvents stock As Label
 End Class

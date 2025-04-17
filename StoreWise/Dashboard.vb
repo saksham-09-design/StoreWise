@@ -8,17 +8,21 @@ Public Class Dashboard
         rec.Text &= " ₹" & Format(netRecievable, "Standard") & "/-"
         mValue.Text &= " ₹" & Format(stockMarketValue, "Standard") & "/-"
         purVal.Text &= " ₹" & Format(stockPurchaseValue, "Standard") & "/-"
-        stock.Text &= " ₹" & Format(stockPurchaseValue, "Standard") & "/-"
+        stock.Text &= " ₹" & Format(stockMarketValue, "Standard") & "/-"
         cSale.Text &= " ₹" & Format(cashSales, "Standard") & "/-"
         crSales.Text &= " ₹" & Format(creditSales, "Standard") & "/-"
         cPur.Text &= " ₹" & Format(cashPurchase, "Standard") & "/-"
         crPur.Text &= " ₹" & Format(creditPurchase, "Standard") & "/-"
         ogst.Text = " ₹" & Format(outputGST, "Standard") & "/-"
         igst.Text = " ₹" & Format(inputGST, "Standard") & "/-"
-        gstPayable = outputGST - inputGST
+        Dim gstPayable As Single = outputGST - inputGST
         paygst.Text = " ₹" & Format(gstPayable, "Standard") & "/-"
-        dashgstPayble.Text &= " ₹" & Format(gstPayable, "Standard") & "/-"
         nProfitFinal.Text = " ₹" & Format(netProfit, "Standard") & "/-"
+
+        ReOrderItem.Text = ""
+        For i = 0 To 4
+            ReOrderItem.Text &= reOrderLevel(i, 0) & " : " & reOrderLevel(i, 1) & vbCrLf
+        Next
 
         If (netProfit > 0) Then
             nProfitFinal.ForeColor = Color.Green

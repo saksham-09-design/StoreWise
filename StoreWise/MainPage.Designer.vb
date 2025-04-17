@@ -39,10 +39,12 @@ Partial Class MainPage
         Me.AddToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
         Me.DeleteToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
         Me.DisplayToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReceivablesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PurchaseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AddToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.DeleteToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.SearchToolStripMenuItem4 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PayablesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SupplierToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AddToolStripMenuItem4 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ModifyToolStripMenuItem4 = New System.Windows.Forms.ToolStripMenuItem()
@@ -159,9 +161,9 @@ Partial Class MainPage
         '
         'SaleToolStripMenuItem
         '
-        Me.SaleToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddToolStripMenuItem2, Me.DeleteToolStripMenuItem2, Me.DisplayToolStripMenuItem})
+        Me.SaleToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddToolStripMenuItem2, Me.DeleteToolStripMenuItem2, Me.DisplayToolStripMenuItem, Me.ReceivablesToolStripMenuItem})
         Me.SaleToolStripMenuItem.Name = "SaleToolStripMenuItem"
-        Me.SaleToolStripMenuItem.Size = New System.Drawing.Size(195, 36)
+        Me.SaleToolStripMenuItem.Size = New System.Drawing.Size(224, 36)
         Me.SaleToolStripMenuItem.Text = "Sale"
         '
         'AddToolStripMenuItem2
@@ -184,30 +186,42 @@ Partial Class MainPage
         Me.DisplayToolStripMenuItem.Size = New System.Drawing.Size(270, 36)
         Me.DisplayToolStripMenuItem.Text = "Display"
         '
+        'ReceivablesToolStripMenuItem
+        '
+        Me.ReceivablesToolStripMenuItem.Name = "ReceivablesToolStripMenuItem"
+        Me.ReceivablesToolStripMenuItem.Size = New System.Drawing.Size(270, 36)
+        Me.ReceivablesToolStripMenuItem.Text = "Receivables"
+        '
         'PurchaseToolStripMenuItem
         '
-        Me.PurchaseToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddToolStripMenuItem1, Me.DeleteToolStripMenuItem1, Me.SearchToolStripMenuItem4})
+        Me.PurchaseToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddToolStripMenuItem1, Me.DeleteToolStripMenuItem1, Me.SearchToolStripMenuItem4, Me.PayablesToolStripMenuItem})
         Me.PurchaseToolStripMenuItem.Name = "PurchaseToolStripMenuItem"
-        Me.PurchaseToolStripMenuItem.Size = New System.Drawing.Size(195, 36)
+        Me.PurchaseToolStripMenuItem.Size = New System.Drawing.Size(224, 36)
         Me.PurchaseToolStripMenuItem.Text = "Purchase"
         '
         'AddToolStripMenuItem1
         '
         Me.AddToolStripMenuItem1.Name = "AddToolStripMenuItem1"
-        Me.AddToolStripMenuItem1.Size = New System.Drawing.Size(179, 36)
+        Me.AddToolStripMenuItem1.Size = New System.Drawing.Size(224, 36)
         Me.AddToolStripMenuItem1.Text = "Add"
         '
         'DeleteToolStripMenuItem1
         '
         Me.DeleteToolStripMenuItem1.Name = "DeleteToolStripMenuItem1"
-        Me.DeleteToolStripMenuItem1.Size = New System.Drawing.Size(179, 36)
+        Me.DeleteToolStripMenuItem1.Size = New System.Drawing.Size(224, 36)
         Me.DeleteToolStripMenuItem1.Text = "Delete"
         '
         'SearchToolStripMenuItem4
         '
         Me.SearchToolStripMenuItem4.Name = "SearchToolStripMenuItem4"
-        Me.SearchToolStripMenuItem4.Size = New System.Drawing.Size(179, 36)
+        Me.SearchToolStripMenuItem4.Size = New System.Drawing.Size(224, 36)
         Me.SearchToolStripMenuItem4.Text = "Display"
+        '
+        'PayablesToolStripMenuItem
+        '
+        Me.PayablesToolStripMenuItem.Name = "PayablesToolStripMenuItem"
+        Me.PayablesToolStripMenuItem.Size = New System.Drawing.Size(224, 36)
+        Me.PayablesToolStripMenuItem.Text = "Payables"
         '
         'SupplierToolStripMenuItem
         '
@@ -403,4 +417,6 @@ Partial Class MainPage
     Friend WithEvents BillFormatToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AddBillFormatToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ModifyBillFormatToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ReceivablesToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents PayablesToolStripMenuItem As ToolStripMenuItem
 End Class

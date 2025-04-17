@@ -24,12 +24,6 @@
         modifyItem.Show()
     End Sub
 
-    Private Sub SearchToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        Dim searchItem As New SearchItem
-        searchItem.MdiParent = Me
-        searchItem.Show()
-    End Sub
-
     Private Sub AddItemToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AddItemToolStripMenuItem.Click
         Dim addItem As New AddItem
         addItem.MdiParent = Me
@@ -221,5 +215,17 @@
         Dim disp As New displayItem
         disp.MdiParent = Me
         disp.Show()
+    End Sub
+
+    Private Sub ReceivablesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReceivablesToolStripMenuItem.Click
+        Dim recSale As New receivableSale
+        recSale.MdiParent = Me
+        recSale.Show()
+    End Sub
+
+    Private Sub PayablesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PayablesToolStripMenuItem.Click
+        Dim payPur As New payablePurchase
+        payPur.MdiParent = Me
+        payPur.Show()
     End Sub
 End Class

@@ -26,6 +26,29 @@
         'fetching item data and updating datagrid view
         UpdateGrid("SELECT itemName, sName, unit, reOrderLevel, costUnit, sellUnit, gst from itemTable")
 
+
+        'setting up dark mode
+        If DMode Then
+            Me.BackColor = Color.FromArgb(255, 13, 17, 23)
+            For i = 1 To 6
+                Dim lbl As Label = Me.Controls("Label" & i)
+                lbl.ForeColor = Color.FromArgb(255, 240, 246, 252)
+            Next
+            DataGridView1.BackgroundColor = Color.FromArgb(255, 13, 17, 23)
+            DataGridView1.DefaultCellStyle.BackColor = Color.FromArgb(255, 13, 17, 23)
+            DataGridView1.DefaultCellStyle.ForeColor = Color.FromArgb(255, 240, 246, 252)
+            DataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(255, 13, 17, 23)
+            DataGridView1.ColumnHeadersDefaultCellStyle.ForeColor = Color.FromArgb(255, 240, 246, 252)
+            DataGridView1.GridColor = Color.FromArgb(255, 240, 246, 252)
+            filter.BackColor = Color.FromArgb(255, 13, 17, 23)
+            filter.ForeColor = Color.FromArgb(255, 240, 246, 252)
+            supplierName.BackColor = Color.FromArgb(255, 13, 17, 23)
+            supplierName.ForeColor = Color.FromArgb(255, 240, 246, 252)
+            pFrom.BackColor = Color.FromArgb(255, 13, 17, 23)
+            pFrom.ForeColor = Color.FromArgb(255, 240, 246, 252)
+            pTo.BackColor = Color.FromArgb(255, 13, 17, 23)
+            pTo.ForeColor = Color.FromArgb(255, 240, 246, 252)
+        End If
     End Sub
 
     Private Sub UpdateGrid(sqlR As String)

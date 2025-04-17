@@ -135,7 +135,6 @@
             DataGridView1.Columns(4).Width = 160
             DataGridView1.Columns(5).Width = 160
 
-
             DataGridView1.Columns(0).HeaderText = "Transaction ID"
             DataGridView1.Columns(1).HeaderText = "Customer Name"
             DataGridView1.Columns(2).HeaderText = "Date"

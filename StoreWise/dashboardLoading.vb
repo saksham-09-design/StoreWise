@@ -31,7 +31,7 @@ Public Class dashboardLoading
             da.Fill(dt)
             TotalSales = CSng(dt.Rows(0).Item(0))
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Storewise", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("No Sales Found", "Storewise", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Finally
             con.Close()
         End Try
@@ -46,7 +46,7 @@ Public Class dashboardLoading
             da.Fill(dt)
             TotalPurhcase = CSng(dt.Rows(0).Item(0))
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Storewise", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("No Purhcases Found!", "Storewise", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Finally
             con.Close()
         End Try
@@ -61,7 +61,7 @@ Public Class dashboardLoading
             da.Fill(dt)
             netPayable = CSng(dt.Rows(0).Item(0))
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Storewise", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("No Net Payables Found", "Storewise", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Finally
             con.Close()
         End Try
@@ -74,7 +74,7 @@ Public Class dashboardLoading
             da.Fill(dt)
             netRecievable = CSng(dt.Rows(0).Item(0))
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Storewise", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("No Recievables Found", "Storewise", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Finally
             con.Close()
         End Try
@@ -118,7 +118,7 @@ Public Class dashboardLoading
             ProgressBar1.Value = 30
 
         Catch ex As Exception
-            MessageBox.Show(ex.ToString, "Storewise", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("No Stock Found", "Storewise", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Finally
             con.Close()
         End Try
@@ -132,7 +132,7 @@ Public Class dashboardLoading
             da.Fill(dt)
             cashSales = CSng(dt.Rows(0).Item(0))
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Storewise", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("No Cash Sales Found", "Storewise", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Finally
             con.Close()
         End Try
@@ -144,8 +144,9 @@ Public Class dashboardLoading
             Dim dt As New DataTable
             da.Fill(dt)
             creditSales = CSng(dt.Rows(0).Item(0))
+
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Storewise", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("No Credit Sales Found", "Storewise", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Finally
             con.Close()
         End Try
@@ -160,7 +161,7 @@ Public Class dashboardLoading
             da.Fill(dt)
             cashPurchase = CSng(dt.Rows(0).Item(0))
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Storewise", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("No Cash Purchases Found", "Storewise", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Finally
             con.Close()
         End Try
@@ -173,7 +174,7 @@ Public Class dashboardLoading
             da.Fill(dt)
             creditPurchase = CSng(dt.Rows(0).Item(0))
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Storewise", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("No Credit Purchases Found", "Storewise", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Finally
             con.Close()
         End Try
@@ -189,7 +190,7 @@ Public Class dashboardLoading
             da.Fill(dt)
             outputGST = CSng(dt.Rows(0).Item(0))
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Storewise", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("No Output GST Found", "Storewise", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Finally
             con.Close()
         End Try
@@ -210,7 +211,7 @@ Public Class dashboardLoading
                 itemsListSsupport(i) = dt.Rows(i).Item(0)
             Next
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Storewise", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("No Sales Found", "Storewise", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Finally
             con.Close()
         End Try
@@ -263,17 +264,40 @@ Public Class dashboardLoading
 
             Next
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Storewise", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("No Input GST Found", "Storewise", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Finally
             con.Close()
         End Try
 
         inputGST = finalInputGST
+
+        'fetching lowest stock items
+        Try
+            If con.State = ConnectionState.Closed Then
+                con.Open()
+            End If
+            Dim sql As String = "select TOP 5 itemTable.itemName, inventoryTable.quantity from inventoryTable, itemTable where inventoryTable.quantity <= itemTable.reorderLevel and inventoryTable.itemName = itemTable.itemName order by inventoryTable.quantity"
+            Dim da As New OleDb.OleDbDataAdapter(sql, con)
+            Dim dt As New DataTable
+            da.Fill(dt)
+            Dim count As Integer = dt.Rows.Count
+            If count > 0 Then
+                For i = 0 To count - 1
+                    reOrderLevel(i, 0) = dt.Rows(i).Item(0)
+                    reOrderLevel(i, 1) = dt.Rows(i).Item(1)
+                Next
+            End If
+        Catch ex As Exception
+            MessageBox.Show("No Stock Found", "Storewise", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        Finally
+            con.Close()
+        End Try
+
         ProgressBar1.Value = 90
 
 
         'fetching overall profit or loss
-        netProfit = cashSales + creditSales - cashPurchase - creditPurchase + netRecievable - netPayable + stockMarketValue - gstPayable
+        netProfit = cashSales + creditSales - cashPurchase - creditPurchase + stockMarketValue
 
         ProgressBar1.Value = 100
 

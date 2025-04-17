@@ -1,4 +1,6 @@
-﻿Public Class addSupplier
+﻿Imports System.ComponentModel.DataAnnotations
+
+Public Class addSupplier
     Dim conn As OleDb.OleDbConnection
     Dim da As OleDb.OleDbDataAdapter
     Dim cmd As OleDb.OleDbCommand
@@ -21,13 +23,15 @@
             MessageBox.Show("All fields are required", "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Error)
         ElseIf ((eMail.Text.Trim.EndsWith(".com") = False) Or (eMail.Text.Trim.Contains("@") = False)) Then
             MessageBox.Show("Invalid Email", "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        ElseIf (phone.Text.Length < 10) Then
+            MessageBox.Show("Invalid Phone", "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Else
             conn = New OleDb.OleDbConnection
             conn.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Saksham\Documents\StoreWise.accdb"
             If conn.State = ConnectionState.Closed Then
                 conn.Open()
             End If
-            Dim sql As String = "insert into supplierTable (sName, sPhone, sEMail, sBalance) values('" & supplierName.Text.Trim & "','" & CInt(phone.Text.Trim) & "','" & eMail.Text.Trim & "'," & 0 & ")"
+            Dim sql As String = "insert into supplierTable (sName, sPhone, sEMail, sBalance) values('" & supplierName.Text.Trim & "','" & phone.Text.Trim & "','" & eMail.Text.Trim & "'," & 0 & ")"
             cmd = New OleDb.OleDbCommand(sql, conn)
             If cmd.ExecuteNonQuery() <> 0 Then
                     MessageBox.Show("Supplier Added Successfully", "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Information)

@@ -63,7 +63,7 @@ Partial Class Splash
         Me.Label2.Font = New System.Drawing.Font("Now", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(404, 331)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(278, 46)
+        Me.Label2.Size = New System.Drawing.Size(271, 45)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Developed By"
         '
@@ -74,7 +74,7 @@ Partial Class Splash
         Me.Label3.ForeColor = System.Drawing.SystemColors.MenuHighlight
         Me.Label3.Location = New System.Drawing.Point(226, 394)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(634, 58)
+        Me.Label3.Size = New System.Drawing.Size(619, 56)
         Me.Label3.TabIndex = 3
         Me.Label3.Text = "Saksham BCA III(B) 5556"
         '
@@ -88,7 +88,7 @@ Partial Class Splash
         Me.Controls.Add(Me.ProgressBar1)
         Me.Controls.Add(Me.Label1)
         Me.Name = "Splash"
-        Me.Text = "Form1"
+        Me.Text = "StoreWise"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

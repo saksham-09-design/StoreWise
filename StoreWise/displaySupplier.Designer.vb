@@ -115,9 +115,9 @@ Partial Class displaySupplier
         Me.Label3.ForeColor = System.Drawing.Color.Red
         Me.Label3.Location = New System.Drawing.Point(645, 180)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(115, 34)
+        Me.Label3.Size = New System.Drawing.Size(114, 34)
         Me.Label3.TabIndex = 101
-        Me.Label3.Text = "Filerts:"
+        Me.Label3.Text = "Filters:"
         '
         'Filter
         '

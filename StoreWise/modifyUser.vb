@@ -63,6 +63,7 @@
         Dim oepass As String = oPass.Text.Trim
         Dim nepass As String = nPass.Text.Trim
         Dim cepass As String = cPass.Text.Trim
+        Dim nUserName As String = nUName.Text.Trim
         If (oeUname = "" Or oepass = "" Or nepass = "" Or cepass = "") Then
             MessageBox.Show("All fields are required", "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Error)
         ElseIf (oeUname <> dbuName Or oepass <> dbpass) Then
@@ -76,7 +77,7 @@
             If conn.State = ConnectionState.Closed Then
                 conn.Open()
             End If
-            Dim sql As String = "update userTable set uPass = '" & nepass & "', uName = '" & oeUname & "' where uName = '" & oeUname & "'"
+            Dim sql As String = "update userTable set uPass = '" & nepass & "', uName = '" & nUserName & "' where uName = '" & oeUname & "'"
             cmd = New OleDb.OleDbCommand(sql, conn)
             If cmd.ExecuteNonQuery() <> 0 Then
                 MessageBox.Show("User Updated Successfully", "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -114,7 +115,7 @@
     End Function
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        MessageBox.Show("Password should contain" & vbNewLine & "Minimum 8 Characters" & vbNewLine & "1 Lower Case Character" & vbNewLine & "1 Upper Case Character" & vbNewLine & "1 Special Symbol from (@,$,#,&)", "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        MessageBox.Show("Password should contain" & vbNewLine & "Minimum 8 Characters" & vbNewLine & "Atleast 1 Lower Case Character" & vbNewLine & "Atleast 1 Upper Case Character" & vbNewLine & "Atleast 1 Special Symbol from (@,$,#,&)", "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
 
     Private Sub cancle_Click(sender As Object, e As EventArgs) Handles cancle.Click

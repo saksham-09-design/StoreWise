@@ -1,4 +1,6 @@
-﻿Public Class loginPage
+﻿Imports System.ComponentModel
+
+Public Class loginPage
     Private uName = ""
     Private pass = ""
 
@@ -31,6 +33,7 @@
     End Sub
 
     Private Sub loginPage_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
         'setting up connection
         conn = New OleDb.OleDbConnection
         conn.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Saksham\Documents\StoreWise.accdb"

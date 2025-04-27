@@ -114,8 +114,8 @@ Public Class bill
             con.Close()
         End Try
 
-        Me.PrintForm1.PrintAction = PrintAction.PrintToPreview    'Printing
-        PrintForm1.PrinterSettings.DefaultPageSettings.Margins = New Margins(0, 0, 0, 0) 'Microsoft.VisualBasic.PowerPacks.Printing
+        Me.PrintForm1.PrintAction = PrintAction.PrintToPreview    'bill print
+        PrintForm1.PrinterSettings.DefaultPageSettings.Margins = New Margins(0, 0, 0, 0)
         PrintForm1.Print(Me, PrintForm.PrintOption.ClientAreaOnly)
         Me.Close()
     End Sub

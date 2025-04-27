@@ -175,7 +175,10 @@
         End If
     End Sub
 
-    Private Sub supplierNameList_SelectedIndexChanged(sender As Object, e As EventArgs) Handles supplierNameList.SelectedIndexChanged
-
+    Private Sub itemName_KeyPress(sender As Object, e As KeyPressEventArgs) Handles itemName.KeyPress
+        If Not Char.IsLetter(e.KeyChar) AndAlso Not e.KeyChar = Chr(Keys.Back) AndAlso Not Char.IsDigit(e.KeyChar) Then
+            e.Handled = True
+            MessageBox.Show("Phone must be in Numbers.", "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+        End If
     End Sub
 End Class

@@ -74,11 +74,10 @@ Public Class addSupplier
         End If
     End Sub
 
-    Private Sub supplierName_TextChanged(sender As Object, e As EventArgs) Handles supplierName.TextChanged
-
-    End Sub
-
-    Private Sub eMail_TextChanged(sender As Object, e As EventArgs) Handles eMail.TextChanged
-
+    Private Sub supplierName_KeyPress(sender As Object, e As KeyPressEventArgs) Handles supplierName.KeyPress
+        If Not Char.IsLetter(e.KeyChar) AndAlso Not e.KeyChar = Chr(Keys.Back) Then
+            e.Handled = True
+            MessageBox.Show("Phone must be in Numbers.", "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+        End If
     End Sub
 End Class

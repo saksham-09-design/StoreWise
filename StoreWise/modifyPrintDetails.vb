@@ -97,4 +97,11 @@ Public Class modifyPrintDetails
             End Try
         End If
     End Sub
+
+    Private Sub fName_KeyPress(sender As Object, e As KeyPressEventArgs) Handles fName.KeyPress
+        If Not Char.IsLetter(e.KeyChar) AndAlso Not e.KeyChar = Chr(Keys.Back) Then
+            e.Handled = True
+            MessageBox.Show("Phone must be in Numbers.", "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+        End If
+    End Sub
 End Class

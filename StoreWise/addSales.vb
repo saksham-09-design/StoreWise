@@ -193,8 +193,30 @@
         fetchTransId()
 
         If MessageBox.Show("Want to print invoice of this transaction?", "Storewise", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
-            Dim bil As New bill
-            bil.Show()
+            Dim con As New OleDb.OleDbConnection
+            Dim fBillVal As Boolean = False
+
+            con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Saksham\Documents\StoreWise.accdb"
+            If con.State = ConnectionState.Closed Then
+                con.Open()
+            End If
+            Try
+                Dim sql As String = "select bSet from support"
+                Dim da As New OleDb.OleDbDataAdapter(sql, con)
+                Dim dt As New DataTable
+                da.Fill(dt)
+                fBillVal = CBool(dt.Rows(0).Item(0))
+                If Not fBillVal Then
+                    MessageBox.Show("Bill format not set please set it first!", "Storewise", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                Else
+                    Dim bil As New bill
+                    bil.Show()
+                End If
+            Catch ex As Exception
+                MessageBox.Show("Unable to fetch Bill Format", "Storewise", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Finally
+                con.Close()
+            End Try
         End If
     End Sub
 
@@ -482,6 +504,13 @@
         If transactionDate.Value > Now() Then
             MessageBox.Show("Transaction Date can't be in Future", "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Error)
             transactionDate.Value = Now()
+        End If
+    End Sub
+
+    Private Sub customerName_KeyPress(sender As Object, e As KeyPressEventArgs) Handles customerName.KeyPress
+        If Not Char.IsLetter(e.KeyChar) AndAlso Not e.KeyChar = Chr(Keys.Back) Then
+            e.Handled = True
+            MessageBox.Show("Phone must be in Numbers.", "Store Wise", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         End If
     End Sub
 End Class

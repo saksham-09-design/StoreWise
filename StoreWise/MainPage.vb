@@ -1,4 +1,6 @@
-﻿Public Class MainPage
+﻿Imports System.ComponentModel
+
+Public Class MainPage
 
 
     'text animation support variables
@@ -9,6 +11,7 @@
 
 
     Private Sub ExitToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ExitToolStripMenuItem1.Click
+        Splash.Close()
         End
     End Sub
 
@@ -227,5 +230,57 @@
         Dim payPur As New payablePurchase
         payPur.MdiParent = Me
         payPur.Show()
+    End Sub
+
+    Private Sub MainPage_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
+        Splash.Close()
+    End Sub
+
+    Private Sub AddSalesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AddSalesToolStripMenuItem.Click
+        Dim sales As New addSales
+        sales.MdiParent = Me
+        sales.Show()
+    End Sub
+
+    Private Sub AddPurchaseToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AddPurchaseToolStripMenuItem.Click
+        Dim pur As New addPurchase
+        pur.MdiParent = Me
+        pur.Show()
+    End Sub
+
+    Private Sub AddSupplierToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AddSupplierToolStripMenuItem.Click
+        Dim sup As New addSupplier
+        sup.MdiParent = Me
+        sup.Show()
+    End Sub
+
+    Private Sub DisplaySaleTransactionToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DisplaySaleTransactionToolStripMenuItem.Click
+        dSale = False
+        disSale = True
+
+        Dim sales As New sales()
+        sales.MdiParent = Me
+        sales.Show()
+    End Sub
+
+    Private Sub DipslayPurchaseTransactionToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DipslayPurchaseTransactionToolStripMenuItem.Click
+        dPur = False
+        disPur = True
+
+        Dim pur As New purchase()
+        pur.MdiParent = Me
+        pur.Show()
+    End Sub
+
+    Private Sub InventoryToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles InventoryToolStripMenuItem1.Click
+        Dim disp As New displayItem
+        disp.MdiParent = Me
+        disp.Show()
+    End Sub
+
+    Private Sub InventoryToolStripMenuItem2_Click(sender As Object, e As EventArgs) Handles InventoryToolStripMenuItem2.Click
+        Dim inv As New inventory()
+        inv.MdiParent = Me
+        inv.Show()
     End Sub
 End Class
